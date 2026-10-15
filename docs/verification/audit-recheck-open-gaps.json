@@ -1,0 +1,27 @@
+{
+  "lexical_synonym_example": {
+    "query": "reimbursement",
+    "document": "refund",
+    "score": 0.0
+  },
+  "year_precision_example": {
+    "query": "What was the refund policy in 2024?",
+    "assumed_as_of": "2024-06-01T12:00:00+05:30",
+    "actual_policy_changes_in_year": 2,
+    "answer": "Please provide the exact historical date; applicable policies changed during that year.",
+    "clarification_needed": true
+  },
+  "high_risk_phrase_coverage_example": {
+    "message": "A second debit appeared for the same purchase.",
+    "expected_category": "duplicate_payment",
+    "detected": []
+  },
+  "unlabelled_name_example": {
+    "message": "Please refund for A\u0301na O\u2019Neil order ORD-4512",
+    "entity_kinds": [
+      "order_id"
+    ],
+    "normalized_restored": "please refund for \u00e1na o\u2019neil order ORD-4512",
+    "original_name_bytes_preserved": false
+  }
+}

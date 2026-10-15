@@ -1,5 +1,7 @@
 # Audit of tasks 1-6 - 2026-10-15
 
+Latest repeat audit: [fresh anonymous public-clone installation, current test outputs and remaining rows](audit-recheck.md). The historical evidence and fixes below are preserved.
+
 The named acceptance tests pass, but the project is **not fully compliant with every task sentence**. All 68 required named scenarios exist (T1:13, T2:8, T3:12, T4:10, T5:11, T6:14). See the [sentence-by-sentence and every-RTM-row audit](audit-rtm.md), [redacted inventory](verification/audit-inventory.json), and [verbatim known gaps and assumptions](audit-disclosures-verbatim.md). Historical RTM outputs remain historical; the current audit does not silently replace their numbers.
 
 ## Rows not fully satisfied after the fixes

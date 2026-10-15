@@ -1,8 +1,8 @@
 # Current audit - 2026-10-15
 
-The latest audit found requirements that remain partial despite passing named tests. See [all findings and raw outputs](audit.md), [every sentence and RTM row](audit-rtm.md), and [verbatim gaps/assumptions](audit-disclosures-verbatim.md).
+The latest audit found requirements that remain partial despite passing named tests. See [the fresh public-clone recheck and raw outputs](audit-recheck.md), [earlier fixes and findings](audit.md), [every sentence and RTM row](audit-rtm.md), and [verbatim gaps/assumptions](audit-disclosures-verbatim.md).
 
-Original checkout: 282 passed, 1 warning in 62.24s (0:01:02). Fresh README-installed checkout: 282 passed, 1 warning in 69.39s (0:01:09). Ruff and dependency checks pass. Live generation remains unconfigured in the fresh example environment.
+Rechecked original checkout: 282 passed, 1 warning in 63.88s (0:01:03). Anonymous public clone installed using README only: 282 passed, 1 warning in 61.39s (0:01:01). Ruff and dependency checks pass. Live generation remains unconfigured in the fresh example environment.
 
 The historical task reports below retain their original dates and outputs.
 
