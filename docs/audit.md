@@ -275,3 +275,19 @@ The user authorized an own public repository, never a push to the mentor's repo.
 ## Verbatim disclosures
 
 [Every line of docs/known_gaps.md and docs/assumptions.md is listed verbatim here](audit-disclosures-verbatim.md), with source-byte hashes. Linked task-specific interpretation files remain separate source documents, not silently expanded or substituted for the requested two files.
+
+## Final anonymous Git clone
+
+Command: git -c credential.helper= -c http.extraHeader= clone --depth 1 --no-tags https://github.com/rxp017/Real_Time_Gen_AI_Customer_Service_Bot.git
+
+`json
+{
+  "anonymous_https_clone": true,
+  "dotenv_absent": true,
+  "tested_application_files_compared": 101,
+  "differences_from_tested_clean_clone": [],
+  "public_disclosures_byte_exact": true
+}
+`
+
+The public clone matches all 101 application/config/resource/test/fixture files compared with the clean checkout that passed the full suite. The final follow-up changes contain audit evidence only.
