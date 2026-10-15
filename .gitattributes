@@ -10,3 +10,4 @@
 *.jpg -text
 *.jpeg -text
 *.csv -text
+docs/audit-disclosures-verbatim.md -text

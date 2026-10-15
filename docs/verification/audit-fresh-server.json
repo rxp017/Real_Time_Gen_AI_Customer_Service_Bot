@@ -1,0 +1,11 @@
+{
+  "command": ".\\.runtime\\python311\\python.exe -m uvicorn app.chatbot:app --host 127.0.0.1 --port 8000",
+  "http_status": 200,
+  "health": {
+    "status": "degraded",
+    "current_time": "2026-10-15T16:13:16.651628+05:30",
+    "timezone": "Asia/Kolkata"
+  },
+  "credentials": "blank copied .env.example; degraded provider is expected",
+  "process_owned_by_audit": true
+}

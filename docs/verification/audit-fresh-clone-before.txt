@@ -1,0 +1,1799 @@
+..E...EE...EE..........................EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE. [ 25%]
+..EEEEEEE..F.........EEEEEEEEE..EEEE..EEEE...EEEE.EEEEEEEEEEEEEEEEEEEEEE [ 51%]
+...........EEEEEEEEEEEEEEEEEEEEEEEEE......EEEEEEEE.EEEEEEEEE..........EE [ 76%]
+EEEEEEEEEEEEEEEEEEEEEEEEEEEE.EEE....EEEEEEEEE.................E.E.       [100%]
+=================================== ERRORS ====================================
+____ ERROR at setup of test_audit_rag_clarification_survives_orchestrator _____
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_audit_policy_validity_compares_instants[2026-01-01T23:00:00+00:00-2026-01-02T00:00:00+05:30-False] _
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_audit_policy_validity_compares_instants[2026-01-02T00:00:00+05:30-2026-01-01T23:00:00+00:00-True] _
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+___________ ERROR at setup of test_config_manager_runtime_override ____________
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+_____________ ERROR at setup of test_config_hot_reload_from_disk ______________
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+_____________ ERROR at setup of test_duplicate_documents_detected _____________
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+____________ ERROR at setup of test_only_new_or_modified_processed ____________
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+___________ ERROR at setup of test_invalid_file_quarantined[empty] ____________
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+__________ ERROR at setup of test_invalid_file_quarantined[corrupt] ___________
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+______ ERROR at setup of test_invalid_file_quarantined[unsupported type] ______
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+______ ERROR at setup of test_invalid_file_quarantined[missing metadata] ______
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+__________ ERROR at setup of test_invalid_file_quarantined[oversize] __________
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+_____ ERROR at setup of test_invalid_file_quarantined[injection-flagged] ______
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+__________ ERROR at setup of test_quality_gate_rejects_accuracy_drop __________
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+_________ ERROR at setup of test_quality_gate_rejects_grounding_drop __________
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+____________________ ERROR at setup of test_retry_15_30_60 ____________________
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+__________ ERROR at setup of test_activation_blocked_outside_window ___________
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+_______________ ERROR at setup of test_activation_inside_window _______________
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+_____ ERROR at setup of test_auto_rollback_on_health_failure_within_5min ______
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+____________ ERROR at setup of test_no_rollback_after_5min_window _____________
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+______ ERROR at setup of test_service_outage_during_update[vector_store] ______
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+__________ ERROR at setup of test_service_outage_during_update[llm] ___________
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+_________ ERROR at setup of test_unauthorised_access_rejected[ingest] _________
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+________ ERROR at setup of test_unauthorised_access_rejected[approve] _________
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+________ ERROR at setup of test_unauthorised_access_rejected[activate] ________
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+________ ERROR at setup of test_unauthorised_access_rejected[rollback] ________
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+__________ ERROR at setup of test_unauthorised_access_rejected[view] __________
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+___________________ ERROR at setup of test_manual_rollback ____________________
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+________ ERROR at setup of test_snapshot_and_schedule_survive_restart _________
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+___________ ERROR at setup of test_atomic_pointer_compare_and_swap ____________
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+_____ ERROR at setup of test_late_failure_retry_offsets_start_at_failure ______
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_daily_scheduler_discovers_files_added_after_schedule _
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+______ ERROR at setup of test_stale_candidate_cannot_replace_new_active _______
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+_____________ ERROR at setup of test_quality_tolerance_hot_reload _____________
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+_____________ ERROR at setup of test_overnight_maintenance_window _____________
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+______________ ERROR at setup of test_separate_management_roles _______________
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+__ ERROR at setup of test_failing_health_check_immediately_after_activation ___
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+____ ERROR at setup of test_delayed_processing_moves_to_queue_and_notifies ____
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+________________ ERROR at setup of test_expired_files_deleted _________________
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+__________ ERROR at setup of test_prompt_injection_in_image_rejected __________
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+____ ERROR at setup of test_unsafe_file_rejected[malformed.png-image/png] _____
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_unsafe_file_rejected[malformed.pdf-application/pdf] __
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+___ ERROR at setup of test_unsafe_file_rejected[active.pdf-application/pdf] ___
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+__________________ ERROR at setup of test_pii_masked_in_logs __________________
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_gate_adversarial_variants_before_decoding[encoded_name] _
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_gate_adversarial_variants_before_decoding[null_separator] _
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_gate_adversarial_variants_before_decoding[object_stream] _
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_gate_adversarial_variants_before_decoding[oversize] __
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_gate_adversarial_variants_before_decoding[wrong_mime] _
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_gate_adversarial_variants_before_decoding[wrong_extension] _
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+__ ERROR at setup of test_image_bomb_limits_apply_before_decoder[pixel_bomb] __
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_image_bomb_limits_apply_before_decoder[inflate_bomb] _
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_image_bomb_limits_apply_before_decoder[compressed_metadata] _
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+____ ERROR at setup of test_expiry_during_processing_cannot_publish_result ____
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+_________ ERROR at setup of test_ocr_dependency_outage_fails_honestly _________
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+_____________ ERROR at setup of test_pending_job_survives_restart _____________
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+___ ERROR at setup of test_api_owner_binding_delivery_and_early_body_limit ____
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_pdf_compression_limit_survives_name_obfuscation[/Filter /FlateDecode] _
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_pdf_compression_limit_survives_name_obfuscation[/Fil#74er /Fl#61teDecode] _
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_pdf_compression_limit_survives_name_obfuscation[/Filter %comment\n /FlateDecode] _
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+____ ERROR at setup of test_stored_bytes_tampering_rejected_before_parser _____
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_application_worker_purges_bytes_without_customer_poll _
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+_______________ ERROR at setup of test_duplicate_ticket_merged ________________
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+__________ ERROR at setup of test_related_grouped_unrelated_separate __________
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+_____________ ERROR at setup of test_missing_mandatory_requested ______________
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+_______________ ERROR at setup of test_routing_skills_workload ________________
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+_______________ ERROR at setup of test_team_unavailable_queued ________________
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+_________________ ERROR at setup of test_after_hours_request __________________
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+__________ ERROR at setup of test_sla_excludes_weekends_and_holidays __________
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+________________ ERROR at setup of test_sla_75_percent_warning ________________
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+________________ ERROR at setup of test_breach_auto_escalates _________________
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+____________ ERROR at setup of test_runtime_sla_change_recomputes _____________
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+________________ ERROR at setup of test_handoff_summary_masked ________________
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_dedup_does_not_cross_customer_order_product_or_owner _
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+_______ ERROR at setup of test_concurrent_duplicate_creation_is_atomic ________
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+___________ ERROR at setup of test_durable_sla_events_after_restart ___________
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_unresolved_chat_collects_separate_drafts_and_reuses_summaries _
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+________ ERROR at setup of test_ticket_api_access_and_draft_completion ________
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+___ ERROR at setup of test_background_ticket_sla_runs_without_next_message ____
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+_________ ERROR at setup of test_calendar_boundaries_and_clock_rewind _________
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_similar_wording_with_conflicting_details_is_not_merged _
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_ticket_priority_uses_existing_history_aware_sentiment _
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+_____ ERROR at setup of test_capacity_released_and_priority_orders_queue ______
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+___ ERROR at setup of test_invalid_sla_config_rolls_back_all_ticket_changes ___
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_duplicate_merge_preserves_earliest_sla_and_highest_severity _
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+____ ERROR at setup of test_ticket_timer_survives_sentiment_worker_outage _____
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_explicit_unresolved_request_creates_draft_despite_factual_answer _
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+__________ ERROR at setup of test_calm_account_compromise_escalates ___________
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+___________ ERROR at setup of test_calm_duplicate_payment_escalates ___________
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+_____________ ERROR at setup of test_calm_legal_threat_escalates ______________
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+_____________ ERROR at setup of test_repeated_negative_escalates ______________
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+____________ ERROR at setup of test_urgent_after_hours_goes_oncall ____________
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+_________ ERROR at setup of test_normal_after_hours_next_working_day __________
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+_________ ERROR at setup of test_unresolved_negative_15min_escalates __________
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+________________ ERROR at setup of test_simulated_time_change _________________
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_tone_changes_policy_unchanged[en-refund policy terrible-Any update on it again?] _
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_tone_changes_policy_unchanged[hi-\u0930\u093f\u092b\u0902\u0921 \u0928\u0940\u0924\u093f \u0916\u0930\u093e\u092c \u0939\u0948-\u0935\u0939\u0940 \u092b\u093f\u0930] _
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_tone_changes_policy_unchanged[te-\u0c30\u0c40\u0c2b\u0c02\u0c21\u0c4d \u0c35\u0c3f\u0c27\u0c3e\u0c28\u0c02 \u0c2c\u0c3e\u0c17\u0c3e\u0c32\u0c47\u0c26\u0c41-\u0c05\u0c26\u0c47 \u0c07\u0c02\u0c15\u0c3e] _
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_tone_changes_policy_unchanged[es-pol\xedtica reembolso terrible-Ese mismo otra vez] _
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+______________ ERROR at setup of test_escalation_record_complete ______________
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_multilingual_risk_independent_of_intent[\u092e\u0947\u0930\u093e \u0916\u093e\u0924\u093e \u0939\u0948\u0915 \u0939\u094b \u0917\u092f\u093e \u0939\u0948-account_compromise] _
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_multilingual_risk_independent_of_intent[\u092e\u0947\u0930\u0947 \u092a\u0948\u0938\u0947 \u0926\u094b \u092c\u093e\u0930 \u0915\u091f\u0947-duplicate_payment] _
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_multilingual_risk_independent_of_intent[\u092e\u0948\u0902 \u0915\u093e\u0928\u0942\u0928\u0940 \u0915\u093e\u0930\u094d\u0930\u0935\u093e\u0908 \u0915\u0930\u0942\u0901\u0917\u093e-legal_threat] _
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_multilingual_risk_independent_of_intent[\u0c28\u0c3e \u0c16\u0c3e\u0c24\u0c3e \u0c39\u0c4d\u0c2f\u0c3e\u0c15\u0c4d \u0c05\u0c2f\u0c3f\u0c02\u0c26\u0c3f-account_compromise] _
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_multilingual_risk_independent_of_intent[\u0c30\u0c46\u0c02\u0c21\u0c41\u0c38\u0c3e\u0c30\u0c4d\u0c32\u0c41 \u0c21\u0c2c\u0c4d\u0c2c\u0c41 \u0c15\u0c1f\u0c4d \u0c05\u0c2f\u0c3f\u0c02\u0c26\u0c3f-duplicate_payment] _
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_multilingual_risk_independent_of_intent[\u0c28\u0c47\u0c28\u0c41 \u0c15\u0c47\u0c38\u0c41 \u0c35\u0c47\u0c38\u0c4d\u0c24\u0c3e\u0c28\u0c41-legal_threat] _
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_multilingual_risk_independent_of_intent[Mi cuenta fue hackeada-account_compromise] _
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_multilingual_risk_independent_of_intent[Me cobraron dos veces-duplicate_payment] _
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_multilingual_risk_independent_of_intent[Voy a demandar-legal_threat] _
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_multilingual_risk_independent_of_intent[mera account hack hua-account_compromise] _
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_multilingual_risk_independent_of_intent[do baar paise kate-duplicate_payment] _
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_multilingual_risk_independent_of_intent[case vesta-legal_threat] _
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_resolution_stops_timer_and_new_episode_can_escalate __
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+_____ ERROR at setup of test_positive_reply_does_not_prove_issue_resolved _____
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+____ ERROR at setup of test_timer_survives_restart_and_session_expiration _____
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_concurrent_escalations_exactly_once_and_owner_bound __
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+__________ ERROR at setup of test_urgency_upgrades_scheduled_record ___________
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+_____ ERROR at setup of test_provider_failure_cannot_suppress_escalation ______
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+_______ ERROR at setup of test_api_support_layer_and_resolution_access ________
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+________ ERROR at setup of test_injected_message_risk_still_escalates _________
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_business_hour_boundaries[2026-10-16T08:59:59+05:30-scheduled] _
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_business_hour_boundaries[2026-10-16T09:00:00+05:30-support] _
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_business_hour_boundaries[2026-10-16T17:59:59+05:30-support] _
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_business_hour_boundaries[2026-10-16T18:00:00+05:30-scheduled] _
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_business_hour_boundaries[2026-10-17T12:00:00+05:30-scheduled] _
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+__ ERROR at setup of test_invalid_calendar_fails_without_partial_escalation ___
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+___________ ERROR at setup of test_clock_rewind_does_not_fire_timer ___________
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_assistant_context_and_failed_turn_history_are_retained _
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+__ ERROR at setup of test_background_timer_runs_despite_maintenance_failure ___
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+________________ ERROR at setup of test_mixed_language_message ________________
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+___________ ERROR at setup of test_language_switch_mid_conversation ___________
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+_____________ ERROR at setup of test_context_retained_10_messages _____________
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+_____________ ERROR at setup of test_concurrent_sessions_isolated _____________
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+___ ERROR at setup of test_low_confidence_asks_clarification[xyz qzx blorp] ___
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+___ ERROR at setup of test_low_confidence_asks_clarification[maybe status] ____
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_low_confidence_asks_clarification[\u092e\u094c\u0938\u092e \u092c\u0939\u0941\u0924 \u0905\u091a\u094d\u091b\u093e \u0939\u0948] _
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_low_confidence_asks_clarification[zzzzz refund nonsense qqq] _
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_misspelling_and_transliteration[en-I need refnd please-refund] _
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_misspelling_and_transliteration[hi-mujhey refnd chahie-refund] _
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_misspelling_and_transliteration[hi-mera order kab ayega-delivery_status] _
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_misspelling_and_transliteration[te-naku dabbu tirigi kavali-refund] _
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_misspelling_and_transliteration[te-naa order epudu vasthundi-delivery_status] _
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_misspelling_and_transliteration[es-Quiero rembolso por favor-refund] _
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_multiple_requests_in_one_message[refund policy and track my order 4512] _
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_multiple_requests_in_one_message[\u092e\u0941\u091d\u0947 \u0930\u093f\u092b\u0902\u0921 \u091a\u093e\u0939\u093f\u090f \u0914\u0930 \u0921\u093f\u0932\u0940\u0935\u0930\u0940 \u092c\u0924\u093e\u0913] _
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_multiple_requests_in_one_message[\u0c28\u0c3e\u0c15\u0c41 \u0c30\u0c40\u0c2b\u0c02\u0c21\u0c4d \u0c15\u0c3e\u0c35\u0c3e\u0c32\u0c3f \u0c2e\u0c30\u0c3f\u0c2f\u0c41 \u0c21\u0c46\u0c32\u0c3f\u0c35\u0c30\u0c40 \u0c35\u0c3f\u0c35\u0c30\u0c3e\u0c32\u0c41] _
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_multiple_requests_in_one_message[Quiero reembolso y ver la entrega] _
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+__________ ERROR at setup of test_correction_overrides_earlier_value __________
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+_____________ ERROR at setup of test_session_expires_after_30min ______________
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+__________ ERROR at setup of test_return_within_24h_restores_summary __________
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+_____________ ERROR at setup of test_return_after_24h_new_session _____________
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+________ ERROR at setup of test_config_changes_thresholds_without_code ________
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+_______________ ERROR at setup of test_unseen_conversation_set ________________
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+________ ERROR at setup of test_fixture_conversations_per_language[en] ________
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+________ ERROR at setup of test_fixture_conversations_per_language[hi] ________
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+________ ERROR at setup of test_fixture_conversations_per_language[te] ________
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+________ ERROR at setup of test_fixture_conversations_per_language[es] ________
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+____ ERROR at setup of test_language_added_using_config_and_resources_only ____
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_sessions_survive_restart_and_owner_mismatch_rejected _
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+_________ ERROR at setup of test_session_timings_are_hot_configurable _________
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+______ ERROR at setup of test_api_multilingual_context_and_owner_binding ______
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+___ ERROR at setup of test_multiple_requests_keep_separate_entity_bindings ____
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+____ ERROR at setup of test_provider_failure_does_not_half_commit_session _____
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_same_session_concurrent_updates_do_not_lose_messages _
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_exactly_24h_restores_and_clock_reset_is_not_wall_time _
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_entities_from_one_request_do_not_pollute_another_request _
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+__ ERROR at setup of test_concurrent_turns_with_persistent_audit_and_metrics __
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_multilingual_request_filler_does_not_hide_grounded_policy[I need a refund please] _
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_multilingual_request_filler_does_not_hide_grounded_policy[mujhe refund chahiye] _
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_multilingual_request_filler_does_not_hide_grounded_policy[naaku refund kavali] _
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_multilingual_request_filler_does_not_hide_grounded_policy[Quiero un reembolso] _
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+________ ERROR at setup of test_management_api_shares_active_rag_store ________
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_api_lifespan_initializes_persistent_service_without_fake_provider _
+
+self = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/audit-install-clone/.verification/pytest')
+mode = 448, parents = False, exist_ok = False
+
+>   ???
+E   FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.verification\\audit-install-clone\\.verification\\pytest'
+
+pathlib.py:1116: FileNotFoundError
+================================== FAILURES ===================================
+______ test_actual_fields_have_confidence_and_source_regions[clean.pdf] _______
+
+name = 'clean.pdf'
+
+    @pytest.mark.parametrize("name", ["clean.png", "clean.jpg", "clean.pdf", "scanned.pdf"])
+    def test_actual_fields_have_confidence_and_source_regions(name: str) -> None:
+>       result = run_file(name)
+                 ^^^^^^^^^^^^^^
+
+tests\test_task2.py:179: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tests\test_task2.py:58: in run_file
+    gated = UploadGate(AuditLogger()).validate(data, name, mime)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+core\upload_gate.py:68: in validate
+    self._pdf(data)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <core.upload_gate.UploadGate object at 0x000001CE663977D0>
+data = b'%PDF-1.4\r\n1 0 obj\r\n<< /Type /Catalog /Pages 2 0 R  >>\r\nendobj\r\n2 0 obj\r\n<< /Type /Pages /Kids [3 0 R] /Cou...r\n0000000242 00000 n \r\n0000000312 00000 n \r\ntrailer\r\n<< /Size 6 /Root 1 0 R >>\r\nstartxref\r\n740\r\n%%EOF\r\n'
+
+    def _pdf(self, data: bytes) -> None:
+        cfg = get_config()
+        if not data.rstrip().endswith(b"%%EOF") or b"\nxref" not in data or b"trailer" not in data:
+            raise UploadRejected("malformed_or_unsupported_pdf")
+        metadata = self._pdf_names(data)
+        for media in re.findall(rb"/MediaBox\s*\[([^\]]+)\]", metadata):
+            box = [float(v) for v in media.split()]
+            if len(box) != 4:
+                raise UploadRejected("malformed_pdf_page_box")
+            scale = float(cfg.get("uploads.pdf_raster_dpi")) / 72
+            check_pixels(math.ceil((box[2] - box[0]) * scale), math.ceil((box[3] - box[1]) * scale))
+        if len(re.findall(rb"\b\d+\s+\d+\s+obj\b", data)) > int(cfg.get("uploads.max_pdf_objects")):
+            raise UploadRejected("pdf_object_limit")
+        counts = [int(c) for c in re.findall(rb"/Count\s+(\d+)", metadata)]
+        if counts and max(counts) > int(cfg.get("uploads.max_pdf_pages")):
+            raise UploadRejected("pdf_page_limit")
+        limit, expanded, position = int(cfg.get("uploads.max_expanded_bytes")), 0, 0
+        while match := re.search(rb"\bstream\r?\n", data[position:]):
+            start = position + match.start()
+            body_start = position + match.end()
+            header_start = data.rfind(b" obj", 0, start)
+            header = data[header_start:start]
+            header = re.sub(rb"%[^\r\n]*", b" ", header)
+            header = self._pdf_names(header)
+            length = re.search(rb"/Length\s+(\d+)(?!\d)(?!\s+\d+\s+R)", header)
+            if length is None:
+                raise UploadRejected("unsupported_pdf_stream_length")
+            end = body_start + int(length[1])
+            if not re.match(rb"\s*endstream\b", data[end:end + 32]):
+>               raise UploadRejected("malformed_pdf_stream")
+E               core.upload_gate.UploadRejected: malformed_pdf_stream
+
+core\upload_gate.py:195: UploadRejected
+============================== warnings summary ===============================
+.runtime\python311\Lib\site-packages\fastapi\testclient.py:1
+  C:\Users\rajashekar\Desktop\Projects_Backup\Real_Time_Gen_AI_Customer_Service_Bot\.verification\audit-install-clone\.runtime\python311\Lib\site-packages\fastapi\testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
+    from starlette.testclient import TestClient as TestClient  # noqa
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ===========================
+FAILED tests/test_task2.py::test_actual_fields_have_confidence_and_source_regions[clean.pdf]
+ERROR tests/test_audit_regressions.py::test_audit_rag_clarification_survives_orchestrator
+ERROR tests/test_audit_regressions.py::test_audit_policy_validity_compares_instants[2026-01-01T23:00:00+00:00-2026-01-02T00:00:00+05:30-False]
+ERROR tests/test_audit_regressions.py::test_audit_policy_validity_compares_instants[2026-01-02T00:00:00+05:30-2026-01-01T23:00:00+00:00-True]
+ERROR tests/test_foundation.py::test_config_manager_runtime_override - FileNo...
+ERROR tests/test_foundation.py::test_config_hot_reload_from_disk - FileNotFou...
+ERROR tests/test_task1.py::test_duplicate_documents_detected - FileNotFoundEr...
+ERROR tests/test_task1.py::test_only_new_or_modified_processed - FileNotFound...
+ERROR tests/test_task1.py::test_invalid_file_quarantined[empty] - FileNotFoun...
+ERROR tests/test_task1.py::test_invalid_file_quarantined[corrupt] - FileNotFo...
+ERROR tests/test_task1.py::test_invalid_file_quarantined[unsupported type] - ...
+ERROR tests/test_task1.py::test_invalid_file_quarantined[missing metadata] - ...
+ERROR tests/test_task1.py::test_invalid_file_quarantined[oversize] - FileNotF...
+ERROR tests/test_task1.py::test_invalid_file_quarantined[injection-flagged]
+ERROR tests/test_task1.py::test_quality_gate_rejects_accuracy_drop - FileNotF...
+ERROR tests/test_task1.py::test_quality_gate_rejects_grounding_drop - FileNot...
+ERROR tests/test_task1.py::test_retry_15_30_60 - FileNotFoundError: [WinError...
+ERROR tests/test_task1.py::test_activation_blocked_outside_window - FileNotFo...
+ERROR tests/test_task1.py::test_activation_inside_window - FileNotFoundError:...
+ERROR tests/test_task1.py::test_auto_rollback_on_health_failure_within_5min
+ERROR tests/test_task1.py::test_no_rollback_after_5min_window - FileNotFoundE...
+ERROR tests/test_task1.py::test_service_outage_during_update[vector_store] - ...
+ERROR tests/test_task1.py::test_service_outage_during_update[llm] - FileNotFo...
+ERROR tests/test_task1.py::test_unauthorised_access_rejected[ingest] - FileNo...
+ERROR tests/test_task1.py::test_unauthorised_access_rejected[approve] - FileN...
+ERROR tests/test_task1.py::test_unauthorised_access_rejected[activate] - File...
+ERROR tests/test_task1.py::test_unauthorised_access_rejected[rollback] - File...
+ERROR tests/test_task1.py::test_unauthorised_access_rejected[view] - FileNotF...
+ERROR tests/test_task1.py::test_manual_rollback - FileNotFoundError: [WinErro...
+ERROR tests/test_task1.py::test_snapshot_and_schedule_survive_restart - FileN...
+ERROR tests/test_task1.py::test_atomic_pointer_compare_and_swap - FileNotFoun...
+ERROR tests/test_task1.py::test_late_failure_retry_offsets_start_at_failure
+ERROR tests/test_task1.py::test_daily_scheduler_discovers_files_added_after_schedule
+ERROR tests/test_task1.py::test_stale_candidate_cannot_replace_new_active - F...
+ERROR tests/test_task1.py::test_quality_tolerance_hot_reload - FileNotFoundEr...
+ERROR tests/test_task1.py::test_overnight_maintenance_window - FileNotFoundEr...
+ERROR tests/test_task1.py::test_separate_management_roles - FileNotFoundError...
+ERROR tests/test_task1.py::test_failing_health_check_immediately_after_activation
+ERROR tests/test_task2.py::test_delayed_processing_moves_to_queue_and_notifies
+ERROR tests/test_task2.py::test_expired_files_deleted - FileNotFoundError: [W...
+ERROR tests/test_task2.py::test_prompt_injection_in_image_rejected - FileNotF...
+ERROR tests/test_task2.py::test_unsafe_file_rejected[malformed.png-image/png]
+ERROR tests/test_task2.py::test_unsafe_file_rejected[malformed.pdf-application/pdf]
+ERROR tests/test_task2.py::test_unsafe_file_rejected[active.pdf-application/pdf]
+ERROR tests/test_task2.py::test_pii_masked_in_logs - FileNotFoundError: [WinE...
+ERROR tests/test_task2.py::test_gate_adversarial_variants_before_decoding[encoded_name]
+ERROR tests/test_task2.py::test_gate_adversarial_variants_before_decoding[null_separator]
+ERROR tests/test_task2.py::test_gate_adversarial_variants_before_decoding[object_stream]
+ERROR tests/test_task2.py::test_gate_adversarial_variants_before_decoding[oversize]
+ERROR tests/test_task2.py::test_gate_adversarial_variants_before_decoding[wrong_mime]
+ERROR tests/test_task2.py::test_gate_adversarial_variants_before_decoding[wrong_extension]
+ERROR tests/test_task2.py::test_image_bomb_limits_apply_before_decoder[pixel_bomb]
+ERROR tests/test_task2.py::test_image_bomb_limits_apply_before_decoder[inflate_bomb]
+ERROR tests/test_task2.py::test_image_bomb_limits_apply_before_decoder[compressed_metadata]
+ERROR tests/test_task2.py::test_expiry_during_processing_cannot_publish_result
+ERROR tests/test_task2.py::test_ocr_dependency_outage_fails_honestly - FileNo...
+ERROR tests/test_task2.py::test_pending_job_survives_restart - FileNotFoundEr...
+ERROR tests/test_task2.py::test_api_owner_binding_delivery_and_early_body_limit
+ERROR tests/test_task2.py::test_pdf_compression_limit_survives_name_obfuscation[/Filter /FlateDecode]
+ERROR tests/test_task2.py::test_pdf_compression_limit_survives_name_obfuscation[/Fil#74er /Fl#61teDecode]
+ERROR tests/test_task2.py::test_pdf_compression_limit_survives_name_obfuscation[/Filter %comment\n /FlateDecode]
+ERROR tests/test_task2.py::test_stored_bytes_tampering_rejected_before_parser
+ERROR tests/test_task2.py::test_application_worker_purges_bytes_without_customer_poll
+ERROR tests/test_task3.py::test_duplicate_ticket_merged - FileNotFoundError: ...
+ERROR tests/test_task3.py::test_related_grouped_unrelated_separate - FileNotF...
+ERROR tests/test_task3.py::test_missing_mandatory_requested - FileNotFoundErr...
+ERROR tests/test_task3.py::test_routing_skills_workload - FileNotFoundError: ...
+ERROR tests/test_task3.py::test_team_unavailable_queued - FileNotFoundError: ...
+ERROR tests/test_task3.py::test_after_hours_request - FileNotFoundError: [Win...
+ERROR tests/test_task3.py::test_sla_excludes_weekends_and_holidays - FileNotF...
+ERROR tests/test_task3.py::test_sla_75_percent_warning - FileNotFoundError: [...
+ERROR tests/test_task3.py::test_breach_auto_escalates - FileNotFoundError: [W...
+ERROR tests/test_task3.py::test_runtime_sla_change_recomputes - FileNotFoundE...
+ERROR tests/test_task3.py::test_handoff_summary_masked - FileNotFoundError: [...
+ERROR tests/test_task3.py::test_dedup_does_not_cross_customer_order_product_or_owner
+ERROR tests/test_task3.py::test_concurrent_duplicate_creation_is_atomic - Fil...
+ERROR tests/test_task3.py::test_durable_sla_events_after_restart - FileNotFou...
+ERROR tests/test_task3.py::test_unresolved_chat_collects_separate_drafts_and_reuses_summaries
+ERROR tests/test_task3.py::test_ticket_api_access_and_draft_completion - File...
+ERROR tests/test_task3.py::test_background_ticket_sla_runs_without_next_message
+ERROR tests/test_task3.py::test_calendar_boundaries_and_clock_rewind - FileNo...
+ERROR tests/test_task3.py::test_similar_wording_with_conflicting_details_is_not_merged
+ERROR tests/test_task3.py::test_ticket_priority_uses_existing_history_aware_sentiment
+ERROR tests/test_task3.py::test_capacity_released_and_priority_orders_queue
+ERROR tests/test_task3.py::test_invalid_sla_config_rolls_back_all_ticket_changes
+ERROR tests/test_task3.py::test_duplicate_merge_preserves_earliest_sla_and_highest_severity
+ERROR tests/test_task3.py::test_ticket_timer_survives_sentiment_worker_outage
+ERROR tests/test_task3.py::test_explicit_unresolved_request_creates_draft_despite_factual_answer
+ERROR tests/test_task5.py::test_calm_account_compromise_escalates - FileNotFo...
+ERROR tests/test_task5.py::test_calm_duplicate_payment_escalates - FileNotFou...
+ERROR tests/test_task5.py::test_calm_legal_threat_escalates - FileNotFoundErr...
+ERROR tests/test_task5.py::test_repeated_negative_escalates - FileNotFoundErr...
+ERROR tests/test_task5.py::test_urgent_after_hours_goes_oncall - FileNotFound...
+ERROR tests/test_task5.py::test_normal_after_hours_next_working_day - FileNot...
+ERROR tests/test_task5.py::test_unresolved_negative_15min_escalates - FileNot...
+ERROR tests/test_task5.py::test_simulated_time_change - FileNotFoundError: [W...
+ERROR tests/test_task5.py::test_tone_changes_policy_unchanged[en-refund policy terrible-Any update on it again?]
+ERROR tests/test_task5.py::test_tone_changes_policy_unchanged[hi-\u0930\u093f\u092b\u0902\u0921 \u0928\u0940\u0924\u093f \u0916\u0930\u093e\u092c \u0939\u0948-\u0935\u0939\u0940 \u092b\u093f\u0930]
+ERROR tests/test_task5.py::test_tone_changes_policy_unchanged[te-\u0c30\u0c40\u0c2b\u0c02\u0c21\u0c4d \u0c35\u0c3f\u0c27\u0c3e\u0c28\u0c02 \u0c2c\u0c3e\u0c17\u0c3e\u0c32\u0c47\u0c26\u0c41-\u0c05\u0c26\u0c47 \u0c07\u0c02\u0c15\u0c3e]
+ERROR tests/test_task5.py::test_tone_changes_policy_unchanged[es-pol\xedtica reembolso terrible-Ese mismo otra vez]
+ERROR tests/test_task5.py::test_escalation_record_complete - FileNotFoundErro...
+ERROR tests/test_task5.py::test_multilingual_risk_independent_of_intent[\u092e\u0947\u0930\u093e \u0916\u093e\u0924\u093e \u0939\u0948\u0915 \u0939\u094b \u0917\u092f\u093e \u0939\u0948-account_compromise]
+ERROR tests/test_task5.py::test_multilingual_risk_independent_of_intent[\u092e\u0947\u0930\u0947 \u092a\u0948\u0938\u0947 \u0926\u094b \u092c\u093e\u0930 \u0915\u091f\u0947-duplicate_payment]
+ERROR tests/test_task5.py::test_multilingual_risk_independent_of_intent[\u092e\u0948\u0902 \u0915\u093e\u0928\u0942\u0928\u0940 \u0915\u093e\u0930\u094d\u0930\u0935\u093e\u0908 \u0915\u0930\u0942\u0901\u0917\u093e-legal_threat]
+ERROR tests/test_task5.py::test_multilingual_risk_independent_of_intent[\u0c28\u0c3e \u0c16\u0c3e\u0c24\u0c3e \u0c39\u0c4d\u0c2f\u0c3e\u0c15\u0c4d \u0c05\u0c2f\u0c3f\u0c02\u0c26\u0c3f-account_compromise]
+ERROR tests/test_task5.py::test_multilingual_risk_independent_of_intent[\u0c30\u0c46\u0c02\u0c21\u0c41\u0c38\u0c3e\u0c30\u0c4d\u0c32\u0c41 \u0c21\u0c2c\u0c4d\u0c2c\u0c41 \u0c15\u0c1f\u0c4d \u0c05\u0c2f\u0c3f\u0c02\u0c26\u0c3f-duplicate_payment]
+ERROR tests/test_task5.py::test_multilingual_risk_independent_of_intent[\u0c28\u0c47\u0c28\u0c41 \u0c15\u0c47\u0c38\u0c41 \u0c35\u0c47\u0c38\u0c4d\u0c24\u0c3e\u0c28\u0c41-legal_threat]
+ERROR tests/test_task5.py::test_multilingual_risk_independent_of_intent[Mi cuenta fue hackeada-account_compromise]
+ERROR tests/test_task5.py::test_multilingual_risk_independent_of_intent[Me cobraron dos veces-duplicate_payment]
+ERROR tests/test_task5.py::test_multilingual_risk_independent_of_intent[Voy a demandar-legal_threat]
+ERROR tests/test_task5.py::test_multilingual_risk_independent_of_intent[mera account hack hua-account_compromise]
+ERROR tests/test_task5.py::test_multilingual_risk_independent_of_intent[do baar paise kate-duplicate_payment]
+ERROR tests/test_task5.py::test_multilingual_risk_independent_of_intent[case vesta-legal_threat]
+ERROR tests/test_task5.py::test_resolution_stops_timer_and_new_episode_can_escalate
+ERROR tests/test_task5.py::test_positive_reply_does_not_prove_issue_resolved
+ERROR tests/test_task5.py::test_timer_survives_restart_and_session_expiration
+ERROR tests/test_task5.py::test_concurrent_escalations_exactly_once_and_owner_bound
+ERROR tests/test_task5.py::test_urgency_upgrades_scheduled_record - FileNotFo...
+ERROR tests/test_task5.py::test_provider_failure_cannot_suppress_escalation
+ERROR tests/test_task5.py::test_api_support_layer_and_resolution_access - Fil...
+ERROR tests/test_task5.py::test_injected_message_risk_still_escalates - FileN...
+ERROR tests/test_task5.py::test_business_hour_boundaries[2026-10-16T08:59:59+05:30-scheduled]
+ERROR tests/test_task5.py::test_business_hour_boundaries[2026-10-16T09:00:00+05:30-support]
+ERROR tests/test_task5.py::test_business_hour_boundaries[2026-10-16T17:59:59+05:30-support]
+ERROR tests/test_task5.py::test_business_hour_boundaries[2026-10-16T18:00:00+05:30-scheduled]
+ERROR tests/test_task5.py::test_business_hour_boundaries[2026-10-17T12:00:00+05:30-scheduled]
+ERROR tests/test_task5.py::test_invalid_calendar_fails_without_partial_escalation
+ERROR tests/test_task5.py::test_clock_rewind_does_not_fire_timer - FileNotFou...
+ERROR tests/test_task5.py::test_assistant_context_and_failed_turn_history_are_retained
+ERROR tests/test_task5.py::test_background_timer_runs_despite_maintenance_failure
+ERROR tests/test_task6.py::test_mixed_language_message - FileNotFoundError: [...
+ERROR tests/test_task6.py::test_language_switch_mid_conversation - FileNotFou...
+ERROR tests/test_task6.py::test_context_retained_10_messages - FileNotFoundEr...
+ERROR tests/test_task6.py::test_concurrent_sessions_isolated - FileNotFoundEr...
+ERROR tests/test_task6.py::test_low_confidence_asks_clarification[xyz qzx blorp]
+ERROR tests/test_task6.py::test_low_confidence_asks_clarification[maybe status]
+ERROR tests/test_task6.py::test_low_confidence_asks_clarification[\u092e\u094c\u0938\u092e \u092c\u0939\u0941\u0924 \u0905\u091a\u094d\u091b\u093e \u0939\u0948]
+ERROR tests/test_task6.py::test_low_confidence_asks_clarification[zzzzz refund nonsense qqq]
+ERROR tests/test_task6.py::test_misspelling_and_transliteration[en-I need refnd please-refund]
+ERROR tests/test_task6.py::test_misspelling_and_transliteration[hi-mujhey refnd chahie-refund]
+ERROR tests/test_task6.py::test_misspelling_and_transliteration[hi-mera order kab ayega-delivery_status]
+ERROR tests/test_task6.py::test_misspelling_and_transliteration[te-naku dabbu tirigi kavali-refund]
+ERROR tests/test_task6.py::test_misspelling_and_transliteration[te-naa order epudu vasthundi-delivery_status]
+ERROR tests/test_task6.py::test_misspelling_and_transliteration[es-Quiero rembolso por favor-refund]
+ERROR tests/test_task6.py::test_multiple_requests_in_one_message[refund policy and track my order 4512]
+ERROR tests/test_task6.py::test_multiple_requests_in_one_message[\u092e\u0941\u091d\u0947 \u0930\u093f\u092b\u0902\u0921 \u091a\u093e\u0939\u093f\u090f \u0914\u0930 \u0921\u093f\u0932\u0940\u0935\u0930\u0940 \u092c\u0924\u093e\u0913]
+ERROR tests/test_task6.py::test_multiple_requests_in_one_message[\u0c28\u0c3e\u0c15\u0c41 \u0c30\u0c40\u0c2b\u0c02\u0c21\u0c4d \u0c15\u0c3e\u0c35\u0c3e\u0c32\u0c3f \u0c2e\u0c30\u0c3f\u0c2f\u0c41 \u0c21\u0c46\u0c32\u0c3f\u0c35\u0c30\u0c40 \u0c35\u0c3f\u0c35\u0c30\u0c3e\u0c32\u0c41]
+ERROR tests/test_task6.py::test_multiple_requests_in_one_message[Quiero reembolso y ver la entrega]
+ERROR tests/test_task6.py::test_correction_overrides_earlier_value - FileNotF...
+ERROR tests/test_task6.py::test_session_expires_after_30min - FileNotFoundErr...
+ERROR tests/test_task6.py::test_return_within_24h_restores_summary - FileNotF...
+ERROR tests/test_task6.py::test_return_after_24h_new_session - FileNotFoundEr...
+ERROR tests/test_task6.py::test_config_changes_thresholds_without_code - File...
+ERROR tests/test_task6.py::test_unseen_conversation_set - FileNotFoundError: ...
+ERROR tests/test_task6.py::test_fixture_conversations_per_language[en] - File...
+ERROR tests/test_task6.py::test_fixture_conversations_per_language[hi] - File...
+ERROR tests/test_task6.py::test_fixture_conversations_per_language[te] - File...
+ERROR tests/test_task6.py::test_fixture_conversations_per_language[es] - File...
+ERROR tests/test_task6.py::test_language_added_using_config_and_resources_only
+ERROR tests/test_task6.py::test_sessions_survive_restart_and_owner_mismatch_rejected
+ERROR tests/test_task6.py::test_session_timings_are_hot_configurable - FileNo...
+ERROR tests/test_task6.py::test_api_multilingual_context_and_owner_binding - ...
+ERROR tests/test_task6.py::test_multiple_requests_keep_separate_entity_bindings
+ERROR tests/test_task6.py::test_provider_failure_does_not_half_commit_session
+ERROR tests/test_task6.py::test_same_session_concurrent_updates_do_not_lose_messages
+ERROR tests/test_task6.py::test_exactly_24h_restores_and_clock_reset_is_not_wall_time
+ERROR tests/test_task6.py::test_entities_from_one_request_do_not_pollute_another_request
+ERROR tests/test_task6.py::test_concurrent_turns_with_persistent_audit_and_metrics
+ERROR tests/test_task6.py::test_multilingual_request_filler_does_not_hide_grounded_policy[I need a refund please]
+ERROR tests/test_task6.py::test_multilingual_request_filler_does_not_hide_grounded_policy[mujhe refund chahiye]
+ERROR tests/test_task6.py::test_multilingual_request_filler_does_not_hide_grounded_policy[naaku refund kavali]
+ERROR tests/test_task6.py::test_multilingual_request_filler_does_not_hide_grounded_policy[Quiero un reembolso]
+ERROR tests/test_verification.py::test_management_api_shares_active_rag_store
+ERROR tests/test_verification.py::test_api_lifespan_initializes_persistent_service_without_fake_provider
+1 failed, 108 passed, 1 warning, 173 errors in 9.88s
