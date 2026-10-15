@@ -11,6 +11,12 @@ if str(repo_root) not in sys.path:
     sys.path.insert(0, str(repo_root))
 
 
+def pytest_sessionstart(session: pytest.Session) -> None:
+    """A fresh checkout has no ignored parent for pytest's configured base directory."""
+    if session.config.option.basetemp:
+        Path(session.config.option.basetemp).resolve().parent.mkdir(parents=True, exist_ok=True)
+
+
 @pytest.fixture(autouse=True)
 def isolated_dependencies(monkeypatch):
     from app.chatbot import (
