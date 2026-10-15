@@ -1,0 +1,2 @@
+Command: git ls-files | Select-String -Pattern '\\.env$|\\.db$|secret|key'
+Actual command output: empty (0 matches)

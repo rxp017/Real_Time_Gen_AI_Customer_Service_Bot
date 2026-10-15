@@ -11,3 +11,5 @@
 *.jpeg -text
 *.csv -text
 docs/audit-disclosures-verbatim.md -text
+docs/known_gaps.md -text
+docs/assumptions.md -text

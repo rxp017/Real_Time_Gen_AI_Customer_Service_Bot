@@ -4,6 +4,31 @@
   "private": false,
   "created_empty": true,
   "mentor_repo_modified": false,
-  "logged_out_verification": null,
-  "submission_attempted": false
+  "logged_out_verification": {
+    "transport": "urllib requests without Authorization or cookies; separately observed signed-out browser",
+    "repository_http_status": 200,
+    "repository_private": false,
+    "browser_sign_in_link_visible": true,
+    "browser_readme_heading_rendered": true,
+    "browser_rtm_and_six_task_tests_visible": true,
+    "browser_mode": "fresh signed-out Codex in-app browser; literal OS incognito window not used",
+    "public_tree_sha": "97aa25127de714bb9ab3104bcc7fd68487504670",
+    "dotenv_raw_http_status": 404,
+    "readme_present": true,
+    "rtm_present": true,
+    "all_six_test_files_present": true,
+    "dotenv_absent": true,
+    "forbidden_tracked_names": []
+  },
+  "submission_attempted": false,
+  "public_byte_preservation": {
+    "dataset/dataset.csv": {
+      "sha256": "930649d927881235ecbd3b53b29de92ddf8dbeca084657774335630eb9361b9a",
+      "matches_local_bytes": true
+    },
+    "tests/fixtures/task2/clean.pdf": {
+      "sha256": "a4baefe79df26807a59311b83433470a373dd36faca8836b8ccc844bcc1641bc",
+      "matches_local_bytes": true
+    }
+  }
 }
