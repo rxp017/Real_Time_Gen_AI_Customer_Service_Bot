@@ -1,0 +1,12 @@
+{
+  "doc_id": "DOC-DISCOUNT-EXPIRED",
+  "version": 1,
+  "product": "bootcamp",
+  "region": "IN",
+  "access_level": "public",
+  "effective_date": "2025-01-01",
+  "expiry_date": "2025-12-31",
+  "doc_family": "fam_discount",
+  "section": "Seasonal Discount",
+  "content": "Get a flat 30% discount on all data science tracks during the holiday promotion period."
+}

@@ -1,0 +1,12 @@
+{
+  "doc_id": "DOC-HARDWARE-FUTURE",
+  "version": 1,
+  "product": "bootcamp",
+  "region": "IN",
+  "access_level": "public",
+  "effective_date": "2027-01-01",
+  "expiry_date": null,
+  "doc_family": "fam_hardware",
+  "section": "Hardware Requirements",
+  "content": "All students must possess a laptop with 32GB RAM and dedicated neural accelerator starting 2027."
+}

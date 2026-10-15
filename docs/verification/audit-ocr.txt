@@ -1,0 +1,17 @@
+{
+  "executable": "C:/Program Files/Tesseract-OCR/tesseract.exe",
+  "version": "tesseract v5.4.0.20240606",
+  "available_languages": [
+    "eng",
+    "hin",
+    "spa",
+    "tel"
+  ],
+  "required_languages": [
+    "eng",
+    "hin",
+    "tel",
+    "spa"
+  ],
+  "missing_languages": []
+}

@@ -1,0 +1,288 @@
+{
+  "markers": [
+    "what",
+    "is",
+    "the",
+    "for",
+    "a",
+    "my",
+    "name",
+    "am",
+    "i",
+    "need",
+    "please",
+    "can",
+    "could",
+    "you",
+    "tell",
+    "me",
+    "about",
+    "order",
+    "refund",
+    "policy",
+    "bootcamp",
+    "where",
+    "when",
+    "will",
+    "arrive",
+    "delivery",
+    "status",
+    "track",
+    "cancel",
+    "payment",
+    "failed",
+    "charged",
+    "twice",
+    "price",
+    "product",
+    "details",
+    "sorry",
+    "not",
+    "and",
+    "also",
+    "check",
+    "want",
+    "help",
+    "with",
+    "how",
+    "do",
+    "get",
+    "money",
+    "back",
+    "fee",
+    "cost",
+    "it",
+    "that",
+    "one",
+    "thanks",
+    "hello",
+    "hi",
+    "enrollment",
+    "any",
+    "update",
+    "show",
+    "return",
+    "rules",
+    "information",
+    "again",
+    "now",
+    "instead",
+    "shipping",
+    "purchase",
+    "paid",
+    "card",
+    "broken",
+    "refunds",
+    "delivered",
+    "late",
+    "enrolment"
+  ],
+  "script_ranges": [],
+  "retrieval_noise_patterns": [
+    "\\b(?:please|want|need|help|show|information|details)\\b"
+  ],
+  "marker_weights": {
+    "order": 0.25,
+    "refund": 0.25,
+    "payment": 0.25,
+    "failed": 0.25,
+    "card": 0.25,
+    "product": 0.25,
+    "price": 0.25,
+    "delivery": 0.25,
+    "cancel": 0.25,
+    "shipping": 0.25
+  },
+  "entities": [
+    {
+      "kind": "order_id",
+      "pattern": "(?:sorry|correction)[, ]+(?:order\\s*)?(?P<new>[A-Za-z0-9_-]+)\\s+not\\s+(?P<old>[A-Za-z0-9_-]+)",
+      "groups": {
+        "new": "current",
+        "old": "superseded"
+      }
+    },
+    {
+      "kind": "order_id",
+      "pattern": "\\border\\s*[:#]?\\s*(?P<value>[0-9]+|ORD[-_#][A-Za-z0-9_-]+)\\b"
+    },
+    {
+      "kind": "name",
+      "pattern": "(?:my name is|i am(?=\\s+(?!(?:not|very|so|happy|unhappy|frustrated|disappointed|fed|tired|urgent|glad|angry|calm)\\b))|name:)\\s+(?P<value>[^\\s,;:.?!]+(?:\\s+(?!(?:and|order|refund|on|product|need|want|please)\\b)[^\\s,;:.?!]+){0,2})"
+    },
+    {
+      "kind": "date",
+      "pattern": "(?P<value>\\b(?:[0-9]{1,2}\\s+(?:January|February|March|April|May|June|July|August|September|October|November|December)|(?:January|February|March|April|May|June|July|August|September|October|November|December)\\s+[0-9]{1,2},?)\\s+[0-9]{4}\\b)"
+    }
+  ],
+  "replacements": [
+    {
+      "pattern": "\\b(?:refnd|refunnd|refnud)\\b",
+      "value": "refund"
+    },
+    {
+      "pattern": "\\b(?:delivry|delvery|shiping)\\b",
+      "value": "delivery"
+    },
+    {
+      "pattern": "\\b(?:cancell|cancle)\\b",
+      "value": "cancel"
+    },
+    {
+      "pattern": "\\b(?:paymnt|payemnt)\\b",
+      "value": "payment"
+    },
+    {
+      "pattern": "\\b(?:prdouct|prodcut)\\b",
+      "value": "product"
+    }
+  ],
+  "intents": {
+    "refund": [
+      {
+        "pattern": "\\b(?:refunds?|money back|return rules)\\b",
+        "confidence": 0.95
+      }
+    ],
+    "delivery_status": [
+      {
+        "pattern": "\\b(?:delivery|shipping|track|arrive|delivered)\\b|\\bwhere\\b.{0,40}\\border\\b",
+        "confidence": 0.95,
+        "exclude": "\\brefund\\b"
+      },
+      {
+        "pattern": "\\bstatus\\b",
+        "confidence": 0.65
+      }
+    ],
+    "cancel_order": [
+      {
+        "pattern": "\\bcancel(?:lation)?\\b",
+        "confidence": 0.95
+      }
+    ],
+    "payment": [
+      {
+        "pattern": "\\b(?:payment|charged|paid|card)\\b",
+        "confidence": 0.95
+      }
+    ],
+    "product_info": [
+      {
+        "pattern": "\\b(?:product|price|cost|fee|hardware|laptop)\\b",
+        "confidence": 0.95
+      }
+    ],
+    "correction": [
+      {
+        "pattern": "\\border\\b[^.!?;]*\\bnot\\b",
+        "confidence": 0.95,
+        "entity_usage": "superseded"
+      }
+    ]
+  },
+  "split_pattern": "\\s+(?:and|also)\\s+|[;\\n]+",
+  "followup_pattern": "\\b(?:it|that one|any update|again)\\b",
+  "canonical_queries": {
+    "refund": "refund policy",
+    "delivery_status": "delivery status",
+    "cancel_order": "cancel order",
+    "payment": "payment policy",
+    "product_info": "product information"
+  },
+  "context_kinds": {
+    "refund": [
+      "order_id",
+      "product_code"
+    ],
+    "delivery_status": [
+      "order_id"
+    ],
+    "cancel_order": [
+      "order_id"
+    ],
+    "payment": [
+      "order_id"
+    ],
+    "product_info": [
+      "product_code"
+    ]
+  },
+  "messages": {
+    "clarification": "Please clarify the language or request.",
+    "correction": "Correction recorded.",
+    "refusal": "I cannot answer this question because no relevant policy or documentation was found."
+  },
+  "answer_translations": [],
+  "support": {
+    "sentiment": {
+      "positive": [
+        {
+          "pattern": "\\b(?:thanks|thank you|great|excellent|happy|helpful|wonderful|love)\\b",
+          "exclude": "\\b(?:not|never)\\s+(?:very\\s+)?(?:happy|great|helpful|excellent)\\b"
+        }
+      ],
+      "negative": [
+        {
+          "pattern": "\\b(?:bad|terrible|unhappy|disappointed|broken|late|not working|failed|poor|unresolved|problem|awful|not happy)\\b",
+          "exclude": "\\b(?:not unhappy|not disappointed|not broken|not late|no problem)\\b"
+        }
+      ],
+      "frustrated": [
+        {
+          "pattern": "\\b(?:frustrated|fed up|sick of|tired of|unacceptable|third time|fourth time)\\b",
+          "exclude": "\\bnot frustrated\\b"
+        }
+      ],
+      "urgent": [
+        {
+          "pattern": "\\b(?:urgent|urgently|emergency|immediately|asap)\\b",
+          "exclude": "\\bnot (?:urgent|an emergency)\\b"
+        }
+      ],
+      "sarcastic": [
+        {
+          "pattern": "\\b(?:yeah right|as if that helps)\\b"
+        }
+      ]
+    },
+    "sarcasm_with_history": [
+      {
+        "pattern": "\\b(?:great|wonderful|excellent|amazing|brilliant|thanks for nothing)\\b"
+      }
+    ],
+    "frustration_with_history": [
+      {
+        "pattern": "\\b(?:again|still|another time|any update|keep waiting)\\b"
+      }
+    ],
+    "high_risk": {
+      "account_compromise": [
+        {
+          "pattern": "\\b(?:account (?:was |is |has been )?(?:hacked|compromised)|someone (?:else )?(?:accessed|logged into) my account|unauthori[sz]ed (?:access|login))\\b",
+          "exclude": "\\b(?:account (?:was |is |has been )?not (?:hacked|compromised)|no unauthori[sz]ed (?:access|login)|if (?:my )?account (?:is |was )?(?:hacked|compromised))\\b"
+        }
+      ],
+      "duplicate_payment": [
+        {
+          "pattern": "\\b(?:charged (?:me )?twice|charged (?:me )?two times|duplicate (?:payment|charge)|paid twice|debited twice|two charges for one (?:order|purchase))\\b",
+          "exclude": "\\b(?:not (?:been )?(?:charged|paid|debited) twice|no duplicate (?:payment|charge)|if .{0,25}charged twice)\\b"
+        }
+      ],
+      "legal_threat": [
+        {
+          "pattern": "\\b(?:will sue|going to sue|file (?:a )?lawsuit|taking legal action|will take legal action|pursue legal action)\\b",
+          "exclude": "\\b(?:not (?:going to |planning to )?sue|no legal action|if .{0,25}legal action)\\b"
+        }
+      ]
+    },
+    "tone": {
+      "positive": "Thank you for the feedback.",
+      "neutral": "",
+      "negative": "I understand your concern.",
+      "frustrated": "I hear your frustration.",
+      "urgent": "I understand the urgency.",
+      "sarcastic": "I hear your concern."
+    }
+  }
+}

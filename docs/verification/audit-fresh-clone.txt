@@ -1,0 +1,9 @@
+Cloning into '.verification/audit-fresh-clone'...
+fatal: detected dubious ownership in repository at 'C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.git'
+'C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.git' is owned by:
+	VICTUS/CodexSandboxOffline (S-1-5-21-586186926-621812777-1917746124-1003)
+but the current user is:
+	VICTUS/rajashekar (S-1-5-21-586186926-621812777-1917746124-1001)
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.git

@@ -1,0 +1,361 @@
+{
+  "mode": "Offline FakeClock/FakeLLM fixture demonstration",
+  "turns": [
+    {
+      "message": "Please note someone accessed my account",
+      "sentiment": {
+        "label": "neutral",
+        "confidence": 0.35,
+        "language": "en",
+        "negative": false,
+        "evidence": []
+      },
+      "high_risk": [
+        "account_compromise"
+      ],
+      "answer": "Please clarify the language or request.",
+      "tone_prefix": "",
+      "escalations": [
+        {
+          "id": "ea8ee7b210e248e4a6287551cb482dc5",
+          "session_id": "risk",
+          "generation": 1,
+          "episode": 1,
+          "created_at": "2026-10-16T20:00:00+05:30",
+          "reason": "High-risk issue: account_compromise",
+          "activated_condition": {
+            "kind": "high_risk:account_compromise",
+            "category": "account_compromise",
+            "sentiment_label": "neutral"
+          },
+          "conversation_summary": {
+            "recent_messages": [
+              {
+                "role": "user",
+                "content": "Please note someone accessed my account"
+              }
+            ],
+            "unresolved_since": null
+          },
+          "urgent": true,
+          "status": "OPEN",
+          "queue": "on_call",
+          "scheduled_for": "2026-10-16T20:00:00+05:30"
+        }
+      ]
+    },
+    {
+      "message": "refund policy is terrible",
+      "sentiment": {
+        "label": "negative",
+        "confidence": 0.85,
+        "language": "en",
+        "negative": true,
+        "evidence": [
+          "negative"
+        ]
+      },
+      "high_risk": [],
+      "answer": "I cannot answer this question because no relevant policy or documentation was found.",
+      "tone_prefix": "I understand your concern.",
+      "escalations": []
+    },
+    {
+      "message": "Any update on it again?",
+      "sentiment": {
+        "label": "frustrated",
+        "confidence": 0.9,
+        "language": "en",
+        "negative": true,
+        "evidence": [
+          "frustrated"
+        ]
+      },
+      "high_risk": [],
+      "answer": "Learners are eligible for a 100% full refund within 14 days of course enrollment. [DOC-REFUND-V2, v2, Refund Policy]",
+      "tone_prefix": "I hear your frustration.",
+      "escalations": [
+        {
+          "id": "7466fd6fbc3543d2959075fa8fbe60fc",
+          "session_id": "normal",
+          "generation": 1,
+          "episode": 1,
+          "created_at": "2026-10-16T20:00:00+05:30",
+          "reason": "Repeated negative messages",
+          "activated_condition": {
+            "kind": "repeated_negative",
+            "count": 2,
+            "required_count": 2,
+            "window_minutes": 15.0
+          },
+          "conversation_summary": {
+            "recent_messages": [
+              {
+                "role": "user",
+                "content": "refund policy is terrible"
+              },
+              {
+                "role": "assistant",
+                "content": "I cannot answer this question because no relevant policy or documentation was found."
+              },
+              {
+                "role": "user",
+                "content": "Any update on it again?"
+              }
+            ],
+            "unresolved_since": "2026-10-16T20:00:00+05:30"
+          },
+          "urgent": false,
+          "status": "OPEN",
+          "queue": "scheduled",
+          "scheduled_for": "2026-10-20T09:00:00+05:30"
+        }
+      ]
+    },
+    {
+      "message": "delivery is late",
+      "sentiment": {
+        "label": "negative",
+        "confidence": 0.85,
+        "language": "en",
+        "negative": true,
+        "evidence": [
+          "negative"
+        ]
+      },
+      "high_risk": [],
+      "answer": "I cannot answer this question because no relevant policy or documentation was found.",
+      "tone_prefix": "I understand your concern.",
+      "escalations": []
+    },
+    {
+      "message": "Wonderful service!",
+      "sentiment": {
+        "label": "sarcastic",
+        "confidence": 0.9,
+        "language": "en",
+        "negative": true,
+        "evidence": [
+          "positive",
+          "sarcastic"
+        ]
+      },
+      "high_risk": [],
+      "answer": "Please clarify the language or request.",
+      "tone_prefix": "I hear your concern.",
+      "escalations": [
+        {
+          "id": "1560d6ab150b46e28929d2734d9931bd",
+          "session_id": "sarcasm",
+          "generation": 1,
+          "episode": 1,
+          "created_at": "2026-10-16T20:00:00+05:30",
+          "reason": "Repeated negative messages",
+          "activated_condition": {
+            "kind": "repeated_negative",
+            "count": 2,
+            "required_count": 2,
+            "window_minutes": 15.0
+          },
+          "conversation_summary": {
+            "recent_messages": [
+              {
+                "role": "user",
+                "content": "delivery is late"
+              },
+              {
+                "role": "assistant",
+                "content": "I cannot answer this question because no relevant policy or documentation was found."
+              },
+              {
+                "role": "user",
+                "content": "Wonderful service!"
+              }
+            ],
+            "unresolved_since": "2026-10-16T20:00:00+05:30"
+          },
+          "urgent": false,
+          "status": "OPEN",
+          "queue": "scheduled",
+          "scheduled_for": "2026-10-20T09:00:00+05:30"
+        }
+      ]
+    },
+    {
+      "message": "The product is broken",
+      "sentiment": {
+        "label": "negative",
+        "confidence": 0.85,
+        "language": "en",
+        "negative": true,
+        "evidence": [
+          "negative"
+        ]
+      },
+      "high_risk": [],
+      "answer": "I cannot answer this question because no relevant policy or documentation was found.",
+      "tone_prefix": "I understand your concern.",
+      "escalations": []
+    }
+  ],
+  "background_timer_records": [
+    {
+      "id": "76ea20453d734cbdb60cca5c08557486",
+      "session_id": "normal",
+      "generation": 1,
+      "episode": 1,
+      "created_at": "2026-10-16T20:15:01+05:30",
+      "reason": "Negative issue remains unresolved",
+      "activated_condition": {
+        "kind": "unresolved_negative",
+        "elapsed_seconds": 901.0,
+        "threshold_seconds": 900.0,
+        "started_at": "2026-10-16T20:00:00+05:30"
+      },
+      "conversation_summary": {
+        "recent_messages": [
+          {
+            "role": "user",
+            "content": "refund policy is terrible"
+          },
+          {
+            "role": "assistant",
+            "content": "I cannot answer this question because no relevant policy or documentation was found."
+          },
+          {
+            "role": "user",
+            "content": "Any update on it again?"
+          }
+        ],
+        "unresolved_since": "2026-10-16T20:00:00+05:30"
+      },
+      "urgent": false,
+      "status": "OPEN",
+      "queue": "scheduled",
+      "scheduled_for": "2026-10-20T09:00:00+05:30"
+    },
+    {
+      "id": "e9d3b1cd3bfb406a8c82bc635f0ca511",
+      "session_id": "sarcasm",
+      "generation": 1,
+      "episode": 1,
+      "created_at": "2026-10-16T20:15:01+05:30",
+      "reason": "Negative issue remains unresolved",
+      "activated_condition": {
+        "kind": "unresolved_negative",
+        "elapsed_seconds": 901.0,
+        "threshold_seconds": 900.0,
+        "started_at": "2026-10-16T20:00:00+05:30"
+      },
+      "conversation_summary": {
+        "recent_messages": [
+          {
+            "role": "user",
+            "content": "delivery is late"
+          },
+          {
+            "role": "assistant",
+            "content": "I cannot answer this question because no relevant policy or documentation was found."
+          },
+          {
+            "role": "user",
+            "content": "Wonderful service!"
+          }
+        ],
+        "unresolved_since": "2026-10-16T20:00:00+05:30"
+      },
+      "urgent": false,
+      "status": "OPEN",
+      "queue": "scheduled",
+      "scheduled_for": "2026-10-20T09:00:00+05:30"
+    },
+    {
+      "id": "d67798522b534ca5a9ab9547f0afac74",
+      "session_id": "timer",
+      "generation": 1,
+      "episode": 1,
+      "created_at": "2026-10-16T20:15:01+05:30",
+      "reason": "Negative issue remains unresolved",
+      "activated_condition": {
+        "kind": "unresolved_negative",
+        "elapsed_seconds": 901.0,
+        "threshold_seconds": 900.0,
+        "started_at": "2026-10-16T20:00:00+05:30"
+      },
+      "conversation_summary": {
+        "recent_messages": [
+          {
+            "role": "user",
+            "content": "The product is broken"
+          }
+        ],
+        "unresolved_since": "2026-10-16T20:00:00+05:30"
+      },
+      "urgent": false,
+      "status": "OPEN",
+      "queue": "scheduled",
+      "scheduled_for": "2026-10-20T09:00:00+05:30"
+    }
+  ],
+  "metrics": {
+    "counters": {
+      "escalations": 6,
+      "conversation_clarifications": 2
+    },
+    "latencies": {
+      "sentiment_latency": {
+        "count": 6,
+        "avg_ms": 0.0,
+        "p50_ms": 0.0,
+        "p95_ms": 0.0,
+        "p99_ms": 0.0,
+        "histogram": {
+          "le_10ms": 6,
+          "le_50ms": 6,
+          "le_100ms": 6,
+          "le_250ms": 6,
+          "le_500ms": 6,
+          "le_1000ms": 6,
+          "le_2500ms": 6,
+          "le_5000ms": 6,
+          "le_inf": 6
+        }
+      },
+      "conversation_latency": {
+        "count": 6,
+        "avg_ms": 0.0,
+        "p50_ms": 0.0,
+        "p95_ms": 0.0,
+        "p99_ms": 0.0,
+        "histogram": {
+          "le_10ms": 6,
+          "le_50ms": 6,
+          "le_100ms": 6,
+          "le_250ms": 6,
+          "le_500ms": 6,
+          "le_1000ms": 6,
+          "le_2500ms": 6,
+          "le_5000ms": 6,
+          "le_inf": 6
+        }
+      }
+    },
+    "values": {
+      "sentiment_confidence": {
+        "count": 6,
+        "mean": 0.7833333333333333,
+        "latest": 0.85
+      },
+      "language_confidence": {
+        "count": 6,
+        "mean": 0.69375,
+        "latest": 1.0
+      },
+      "intent_confidence": {
+        "count": 6,
+        "mean": 0.6166666666666667,
+        "latest": 0.95
+      }
+    }
+  }
+}

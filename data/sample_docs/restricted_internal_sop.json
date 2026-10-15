@@ -1,0 +1,12 @@
+{
+  "doc_id": "DOC-SOP-ADMIN",
+  "version": 1,
+  "product": "all",
+  "region": "all",
+  "access_level": "support_agent",
+  "effective_date": "2025-01-01",
+  "expiry_date": null,
+  "doc_family": "fam_internal_sop",
+  "section": "Agent Escalation Workflow",
+  "content": "Support agents must verify customer credentials before approving manual refunds exceeding 5000 INR."
+}

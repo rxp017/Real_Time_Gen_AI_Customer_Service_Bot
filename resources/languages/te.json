@@ -1,0 +1,210 @@
+{
+  "markers": [
+    "naa",
+    "na",
+    "naaku",
+    "naku",
+    "peru",
+    "eppudu",
+    "epudu",
+    "vastundi",
+    "vasthundi",
+    "ekkada",
+    "undi",
+    "undhi",
+    "kaavali",
+    "kavali",
+    "dabbu",
+    "tirigi",
+    "ivvandi",
+    "cheyandi",
+    "cheyyandi",
+    "cheyali",
+    "cheyyali",
+    "raddhu",
+    "raddu",
+    "ayyindi",
+    "ayindi",
+    "kaadu",
+    "kadu",
+    "mariyu",
+    "inka",
+    "adhe",
+    "ade",
+    "adi",
+    "entha",
+    "vivaralu",
+    "cheppu",
+    "cheppandi",
+    "dayachesi",
+    "kosam",
+    "ela",
+    "pondali",
+    "untundi",
+    "teliyali",
+    "telusukovali"
+  ],
+  "script_ranges": [
+    [
+      "0C00",
+      "0C7F"
+    ]
+  ],
+  "retrieval_noise_patterns": [
+    "\\b(?:naaku|naku|naa|na|kaavali|kavali|cheppu|cheppandi|dayachesi|vivaralu)\\b"
+  ],
+  "entities": [
+    {
+      "kind": "order_id",
+      "pattern": "(?:order|ఆర్డర్)\\s*(?P<new>[0-9]+)\\s+(?:kaadu|kadu|కాదు)\\s*(?P<old>[0-9]+)",
+      "groups": {
+        "new": "current",
+        "old": "superseded"
+      }
+    },
+    {
+      "kind": "order_id",
+      "pattern": "(?:order|ఆర్డర్)\\s*[:#]?\\s*(?P<value>[0-9]+|ORD[-_#][A-Za-z0-9_-]+)"
+    },
+    {
+      "kind": "name",
+      "pattern": "(?:(?:naa|na) peru|నా పేరు)\\s+(?P<value>[^\\s,;:.?!]+(?:\\s+(?!(?:mariyu|మరియు|order|ఆర్డర్|naaku|నాకు)\\b)[^\\s,;:.?!]+){0,2})"
+    },
+    {
+      "kind": "date",
+      "pattern": "(?P<value>[0-9]{1,2}\\s+(?:జనవరి|ఫిబ్రవరి|మార్చి|ఏప్రిల్|మే|జూన్|జూలై|ఆగస్టు|సెప్టెంబర్|అక్టోబర్|నవంబర్|డిసెంబర్)\\s+[0-9]{4})"
+    }
+  ],
+  "replacements": [
+    {
+      "pattern": "విధానం|నియమాలు",
+      "value": "policy"
+    },
+    {
+      "pattern": "డబ్బు\\s+తిరిగి|\\bdabbu\\s+tirigi\\b|రీఫండ్",
+      "value": "refund"
+    },
+    {
+      "pattern": "డెలివరీ|షిప్పింగ్|\\b(?:eppudu|epudu)\\s+(?:vastundi|vasthundi)\\b|\\bekkada (?:undi|undhi)\\b",
+      "value": "delivery"
+    },
+    {
+      "pattern": "రద్దు|\\b(?:raddu|raddhu)\\b",
+      "value": "cancel"
+    },
+    {
+      "pattern": "చెల్లింపు|పేమెంట్",
+      "value": "payment"
+    },
+    {
+      "pattern": "ధర|ఉత్పత్తి|\\bentha\\b",
+      "value": "product price"
+    },
+    {
+      "pattern": "ఆర్డర్",
+      "value": "order"
+    },
+    {
+      "pattern": "కాదు|\\b(?:kaadu|kadu)\\b",
+      "value": "not"
+    },
+    {
+      "pattern": "క్షమించండి",
+      "value": "sorry"
+    },
+    {
+      "pattern": "మరియు|\\bmariyu\\b",
+      "value": "and"
+    },
+    {
+      "pattern": "అదే|\\b(?:adhe|ade|adi)\\b",
+      "value": "that one"
+    }
+  ],
+  "intents": {},
+  "split_pattern": "\\s+మరియు\\s+|\\s+mariyu\\s+",
+  "followup_pattern": "అదే|\\b(?:adhe|ade|adi)\\b",
+  "canonical_queries": {},
+  "messages": {
+    "clarification": "దయచేసి భాష లేదా అభ్యర్థనను స్పష్టం చేయండి.",
+    "correction": "సవరణ నమోదు చేయబడింది.",
+    "refusal": "సంబంధిత విధానం లేదా పత్రం లేనందున నేను సమాధానం ఇవ్వలేను."
+  },
+  "answer_translations": [
+    {
+      "source": "I cannot answer this question because no relevant policy or documentation was found.",
+      "target": "సంబంధిత విధానం లేదా పత్రం లేనందున నేను సమాధానం ఇవ్వలేను."
+    },
+    {
+      "source": "Learners are eligible for a 100% full refund within 14 days of course enrollment.",
+      "target": "కోర్సులో చేరిన 14 రోజులలోపు అభ్యాసకులు 100% పూర్తి రీఫండ్‌కు అర్హులు."
+    }
+  ],
+  "support": {
+    "sentiment": {
+      "positive": [
+        {
+          "pattern": "ధన్యవాదాలు|చాలా బాగుంది|సంతోషం|\\b(?:dhanyavadalu|chala bagundi|santhosham)\\b"
+        }
+      ],
+      "negative": [
+        {
+          "pattern": "చెడ్డ|బాగాలేదు|నిరాశ|పనిచేయడం లేదు|ఆలస్యం|సమస్య|\\b(?:bagaledu|niraasha|pani cheyatledu|alasyam|samasya)\\b"
+        }
+      ],
+      "frustrated": [
+        {
+          "pattern": "విసిగిపోయా|విసుగు|మూడోసారి|\\b(?:visigipoya|visugu|moodosari)\\b"
+        }
+      ],
+      "urgent": [
+        {
+          "pattern": "అత్యవసరం|వెంటనే|తక్షణం|\\b(?:atyavasaram|ventane|takshanam)\\b"
+        }
+      ],
+      "sarcastic": [
+        {
+          "pattern": "అవును అవును తప్పకుండా|\\bavunu avunu tappakunda\\b"
+        }
+      ]
+    },
+    "sarcasm_with_history": [
+      {
+        "pattern": "వావ్|చాలా బాగుంది|అద్భుతం|\\b(?:wow|chala bagundi|adbhutam)\\b"
+      }
+    ],
+    "frustration_with_history": [
+      {
+        "pattern": "మళ్ళీ|ఇంకా|\\b(?:malli|inka)\\b"
+      }
+    ],
+    "high_risk": {
+      "account_compromise": [
+        {
+          "pattern": "(?:ఖాతా|అకౌంట్).{0,25}హ్యాక్|\\b(?:khata|account).{0,25}hack\\b",
+          "exclude": "హ్యాక్ కాలేదు|\\bhack kaaledu\\b"
+        }
+      ],
+      "duplicate_payment": [
+        {
+          "pattern": "రెండుసార్లు.{0,25}(?:డబ్బు|చెల్లింపు)|(?:డబ్బు|చెల్లింపు).{0,25}రెండుసార్లు|\\brendusarlu.{0,25}(?:dabbu|payment)\\b",
+          "exclude": "రెండుసార్లు కాదు|\\brendusarlu kaadu\\b"
+        }
+      ],
+      "legal_threat": [
+        {
+          "pattern": "న్యాయపరమైన చర్య తీసుకుంటా|కేసు వేస్తా|\\b(?:nyayaparamaina charya teesukunta|case vesta)\\b",
+          "exclude": "కేసు వేయను|\\bcase veyanu\\b"
+        }
+      ]
+    },
+    "tone": {
+      "positive": "మీ అభిప్రాయానికి ధన్యవాదాలు.",
+      "neutral": "",
+      "negative": "మీ ఆందోళన అర్థమైంది.",
+      "frustrated": "మీ విసుగు అర్థమైంది.",
+      "urgent": "అత్యవసర పరిస్థితి అర్థమైంది.",
+      "sarcastic": "మీ ఆందోళన అర్థమైంది."
+    }
+  }
+}

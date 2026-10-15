@@ -1,0 +1,30 @@
+[
+  {
+    "file": "src/main.py",
+    "source": "https://raw.githubusercontent.com/aslin72/GEN---AI-course/main/GEN---AI-course/customer_service_chatbot_LLM/src/main.py",
+    "upstream_sha256": "5e1701ad2e4b3538740c2a190e38ab72de116869a11d836f6c77a51ee8e199bf",
+    "local_sha256": "4acce6f9501fb3273ae501632d1e3df6bfb348b0ceff310e4a9d54ac0113b5cd",
+    "exact_match": false,
+    "newline_normalized_match": false,
+    "python_ast_match": false,
+    "function_ast_match": true
+  },
+  {
+    "file": "src/langchain_helper.py",
+    "source": "https://raw.githubusercontent.com/aslin72/GEN---AI-course/main/GEN---AI-course/customer_service_chatbot_LLM/src/langchain_helper.py",
+    "upstream_sha256": "785135df9c3621d61b39dd5d0d9b9c5547f287085bb4cfcd011c5e3752b40176",
+    "local_sha256": "3bd1f8db8dc408eec53394bc77a685b83657219117a1b25c34c138fdf658cea3",
+    "exact_match": false,
+    "newline_normalized_match": false,
+    "python_ast_match": false,
+    "function_ast_match": true
+  },
+  {
+    "file": "dataset/dataset.csv",
+    "source": "https://raw.githubusercontent.com/aslin72/GEN---AI-course/main/GEN---AI-course/customer_service_chatbot_LLM/dataset/dataset.csv",
+    "upstream_sha256": "930649d927881235ecbd3b53b29de92ddf8dbeca084657774335630eb9361b9a",
+    "local_sha256": "930649d927881235ecbd3b53b29de92ddf8dbeca084657774335630eb9361b9a",
+    "exact_match": true,
+    "newline_normalized_match": true
+  }
+]

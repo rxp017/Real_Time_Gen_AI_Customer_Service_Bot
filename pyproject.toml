@@ -1,0 +1,9 @@
+[tool.ruff]
+target-version = "py311"
+extend-exclude = [".runtime", ".verification", ".pytest_temp", "quarantine"]
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F", "I", "BLE001", "RUF059"]
+
+[tool.ruff.lint.per-file-ignores]
+"scripts/*.py" = ["E402"]

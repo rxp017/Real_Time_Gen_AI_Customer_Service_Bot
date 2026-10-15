@@ -1,0 +1,912 @@
+[
+  {
+    "id": "es-refund-0",
+    "language": "es",
+    "messages": [
+      {
+        "text": "Quiero un reembolso",
+        "intents": [
+          "refund"
+        ]
+      },
+      {
+        "text": "perdón, pedido 5500 no 4500",
+        "intents": [
+          "correction"
+        ]
+      },
+      {
+        "text": "ese mismo",
+        "intents": [
+          "refund"
+        ]
+      }
+    ],
+    "latest_order": "5500",
+    "superseded_order": "4500"
+  },
+  {
+    "id": "es-refund-1",
+    "language": "es",
+    "messages": [
+      {
+        "text": "Necesito un reembolso por favor",
+        "intents": [
+          "refund"
+        ]
+      },
+      {
+        "text": "perdón, pedido 5501 no 4501",
+        "intents": [
+          "correction"
+        ]
+      },
+      {
+        "text": "ese mismo",
+        "intents": [
+          "refund"
+        ]
+      }
+    ],
+    "latest_order": "5501",
+    "superseded_order": "4501"
+  },
+  {
+    "id": "es-refund-2",
+    "language": "es",
+    "messages": [
+      {
+        "text": "Cuál es la política de devolución",
+        "intents": [
+          "refund"
+        ]
+      },
+      {
+        "text": "perdón, pedido 5502 no 4502",
+        "intents": [
+          "correction"
+        ]
+      },
+      {
+        "text": "ese mismo",
+        "intents": [
+          "refund"
+        ]
+      }
+    ],
+    "latest_order": "5502",
+    "superseded_order": "4502"
+  },
+  {
+    "id": "es-refund-3",
+    "language": "es",
+    "messages": [
+      {
+        "text": "Puedes ver las reglas de reembolso",
+        "intents": [
+          "refund"
+        ]
+      },
+      {
+        "text": "perdón, pedido 5503 no 4503",
+        "intents": [
+          "correction"
+        ]
+      },
+      {
+        "text": "ese mismo",
+        "intents": [
+          "refund"
+        ]
+      }
+    ],
+    "latest_order": "5503",
+    "superseded_order": "4503"
+  },
+  {
+    "id": "es-refund-4",
+    "language": "es",
+    "messages": [
+      {
+        "text": "Quiero información de devolución",
+        "intents": [
+          "refund"
+        ]
+      },
+      {
+        "text": "perdón, pedido 5504 no 4504",
+        "intents": [
+          "correction"
+        ]
+      },
+      {
+        "text": "ese mismo",
+        "intents": [
+          "refund"
+        ]
+      }
+    ],
+    "latest_order": "5504",
+    "superseded_order": "4504"
+  },
+  {
+    "id": "es-refund-5",
+    "language": "es",
+    "messages": [
+      {
+        "text": "Necesito rembolso por favor",
+        "intents": [
+          "refund"
+        ]
+      },
+      {
+        "text": "perdón, pedido 5505 no 4505",
+        "intents": [
+          "correction"
+        ]
+      },
+      {
+        "text": "ese mismo",
+        "intents": [
+          "refund"
+        ]
+      }
+    ],
+    "latest_order": "5505",
+    "superseded_order": "4505"
+  },
+  {
+    "id": "es-refund-6",
+    "language": "es",
+    "messages": [
+      {
+        "text": "Cómo obtengo un reembolso",
+        "intents": [
+          "refund"
+        ]
+      },
+      {
+        "text": "perdón, pedido 5506 no 4506",
+        "intents": [
+          "correction"
+        ]
+      },
+      {
+        "text": "ese mismo",
+        "intents": [
+          "refund"
+        ]
+      }
+    ],
+    "latest_order": "5506",
+    "superseded_order": "4506"
+  },
+  {
+    "id": "es-delivery_status-0",
+    "language": "es",
+    "messages": [
+      {
+        "text": "Dónde está mi pedido",
+        "intents": [
+          "delivery_status"
+        ]
+      },
+      {
+        "text": "perdón, pedido 5507 no 4507",
+        "intents": [
+          "correction"
+        ]
+      },
+      {
+        "text": "ese mismo",
+        "intents": [
+          "delivery_status"
+        ]
+      }
+    ],
+    "latest_order": "5507",
+    "superseded_order": "4507"
+  },
+  {
+    "id": "es-delivery_status-1",
+    "language": "es",
+    "messages": [
+      {
+        "text": "Cuándo llega mi pedido",
+        "intents": [
+          "delivery_status"
+        ]
+      },
+      {
+        "text": "perdón, pedido 5508 no 4508",
+        "intents": [
+          "correction"
+        ]
+      },
+      {
+        "text": "ese mismo",
+        "intents": [
+          "delivery_status"
+        ]
+      }
+    ],
+    "latest_order": "5508",
+    "superseded_order": "4508"
+  },
+  {
+    "id": "es-delivery_status-2",
+    "language": "es",
+    "messages": [
+      {
+        "text": "Necesito información de entrega",
+        "intents": [
+          "delivery_status"
+        ]
+      },
+      {
+        "text": "perdón, pedido 5509 no 4509",
+        "intents": [
+          "correction"
+        ]
+      },
+      {
+        "text": "ese mismo",
+        "intents": [
+          "delivery_status"
+        ]
+      }
+    ],
+    "latest_order": "5509",
+    "superseded_order": "4509"
+  },
+  {
+    "id": "es-delivery_status-3",
+    "language": "es",
+    "messages": [
+      {
+        "text": "Quiero ver el envío",
+        "intents": [
+          "delivery_status"
+        ]
+      },
+      {
+        "text": "perdón, pedido 5510 no 4510",
+        "intents": [
+          "correction"
+        ]
+      },
+      {
+        "text": "ese mismo",
+        "intents": [
+          "delivery_status"
+        ]
+      }
+    ],
+    "latest_order": "5510",
+    "superseded_order": "4510"
+  },
+  {
+    "id": "es-delivery_status-4",
+    "language": "es",
+    "messages": [
+      {
+        "text": "Puedes ver la entrega del pedido",
+        "intents": [
+          "delivery_status"
+        ]
+      },
+      {
+        "text": "perdón, pedido 5511 no 4511",
+        "intents": [
+          "correction"
+        ]
+      },
+      {
+        "text": "ese mismo",
+        "intents": [
+          "delivery_status"
+        ]
+      }
+    ],
+    "latest_order": "5511",
+    "superseded_order": "4511"
+  },
+  {
+    "id": "es-delivery_status-5",
+    "language": "es",
+    "messages": [
+      {
+        "text": "Dónde esta el pedido",
+        "intents": [
+          "delivery_status"
+        ]
+      },
+      {
+        "text": "perdón, pedido 5512 no 4512",
+        "intents": [
+          "correction"
+        ]
+      },
+      {
+        "text": "ese mismo",
+        "intents": [
+          "delivery_status"
+        ]
+      }
+    ],
+    "latest_order": "5512",
+    "superseded_order": "4512"
+  },
+  {
+    "id": "es-delivery_status-6",
+    "language": "es",
+    "messages": [
+      {
+        "text": "Cuándo llega la entrega",
+        "intents": [
+          "delivery_status"
+        ]
+      },
+      {
+        "text": "perdón, pedido 5513 no 4513",
+        "intents": [
+          "correction"
+        ]
+      },
+      {
+        "text": "ese mismo",
+        "intents": [
+          "delivery_status"
+        ]
+      }
+    ],
+    "latest_order": "5513",
+    "superseded_order": "4513"
+  },
+  {
+    "id": "es-cancel_order-0",
+    "language": "es",
+    "messages": [
+      {
+        "text": "Quiero cancelar mi pedido",
+        "intents": [
+          "cancel_order"
+        ]
+      },
+      {
+        "text": "perdón, pedido 5514 no 4514",
+        "intents": [
+          "correction"
+        ]
+      },
+      {
+        "text": "ese mismo",
+        "intents": [
+          "cancel_order"
+        ]
+      }
+    ],
+    "latest_order": "5514",
+    "superseded_order": "4514"
+  },
+  {
+    "id": "es-cancel_order-1",
+    "language": "es",
+    "messages": [
+      {
+        "text": "Cancela el pedido por favor",
+        "intents": [
+          "cancel_order"
+        ]
+      },
+      {
+        "text": "perdón, pedido 5515 no 4515",
+        "intents": [
+          "correction"
+        ]
+      },
+      {
+        "text": "ese mismo",
+        "intents": [
+          "cancel_order"
+        ]
+      }
+    ],
+    "latest_order": "5515",
+    "superseded_order": "4515"
+  },
+  {
+    "id": "es-cancel_order-2",
+    "language": "es",
+    "messages": [
+      {
+        "text": "Necesito cancelar un pedido",
+        "intents": [
+          "cancel_order"
+        ]
+      },
+      {
+        "text": "perdón, pedido 5516 no 4516",
+        "intents": [
+          "correction"
+        ]
+      },
+      {
+        "text": "ese mismo",
+        "intents": [
+          "cancel_order"
+        ]
+      }
+    ],
+    "latest_order": "5516",
+    "superseded_order": "4516"
+  },
+  {
+    "id": "es-cancel_order-3",
+    "language": "es",
+    "messages": [
+      {
+        "text": "Cómo cancelar el pedido",
+        "intents": [
+          "cancel_order"
+        ]
+      },
+      {
+        "text": "perdón, pedido 5517 no 4517",
+        "intents": [
+          "correction"
+        ]
+      },
+      {
+        "text": "ese mismo",
+        "intents": [
+          "cancel_order"
+        ]
+      }
+    ],
+    "latest_order": "5517",
+    "superseded_order": "4517"
+  },
+  {
+    "id": "es-cancel_order-4",
+    "language": "es",
+    "messages": [
+      {
+        "text": "Quiero información de cancelación",
+        "intents": [
+          "cancel_order"
+        ]
+      },
+      {
+        "text": "perdón, pedido 5518 no 4518",
+        "intents": [
+          "correction"
+        ]
+      },
+      {
+        "text": "ese mismo",
+        "intents": [
+          "cancel_order"
+        ]
+      }
+    ],
+    "latest_order": "5518",
+    "superseded_order": "4518"
+  },
+  {
+    "id": "es-cancel_order-5",
+    "language": "es",
+    "messages": [
+      {
+        "text": "Puedes cancelar mi pedido",
+        "intents": [
+          "cancel_order"
+        ]
+      },
+      {
+        "text": "perdón, pedido 5519 no 4519",
+        "intents": [
+          "correction"
+        ]
+      },
+      {
+        "text": "ese mismo",
+        "intents": [
+          "cancel_order"
+        ]
+      }
+    ],
+    "latest_order": "5519",
+    "superseded_order": "4519"
+  },
+  {
+    "id": "es-cancel_order-6",
+    "language": "es",
+    "messages": [
+      {
+        "text": "Necesito ayuda para cancelar",
+        "intents": [
+          "cancel_order"
+        ]
+      },
+      {
+        "text": "perdón, pedido 5520 no 4520",
+        "intents": [
+          "correction"
+        ]
+      },
+      {
+        "text": "ese mismo",
+        "intents": [
+          "cancel_order"
+        ]
+      }
+    ],
+    "latest_order": "5520",
+    "superseded_order": "4520"
+  },
+  {
+    "id": "es-payment-0",
+    "language": "es",
+    "messages": [
+      {
+        "text": "Mi pago falló",
+        "intents": [
+          "payment"
+        ]
+      },
+      {
+        "text": "perdón, pedido 5521 no 4521",
+        "intents": [
+          "correction"
+        ]
+      },
+      {
+        "text": "ese mismo",
+        "intents": [
+          "payment"
+        ]
+      }
+    ],
+    "latest_order": "5521",
+    "superseded_order": "4521"
+  },
+  {
+    "id": "es-payment-1",
+    "language": "es",
+    "messages": [
+      {
+        "text": "Necesito ayuda con el pago",
+        "intents": [
+          "payment"
+        ]
+      },
+      {
+        "text": "perdón, pedido 5522 no 4522",
+        "intents": [
+          "correction"
+        ]
+      },
+      {
+        "text": "ese mismo",
+        "intents": [
+          "payment"
+        ]
+      }
+    ],
+    "latest_order": "5522",
+    "superseded_order": "4522"
+  },
+  {
+    "id": "es-payment-2",
+    "language": "es",
+    "messages": [
+      {
+        "text": "Quiero información del pago",
+        "intents": [
+          "payment"
+        ]
+      },
+      {
+        "text": "perdón, pedido 5523 no 4523",
+        "intents": [
+          "correction"
+        ]
+      },
+      {
+        "text": "ese mismo",
+        "intents": [
+          "payment"
+        ]
+      }
+    ],
+    "latest_order": "5523",
+    "superseded_order": "4523"
+  },
+  {
+    "id": "es-payment-3",
+    "language": "es",
+    "messages": [
+      {
+        "text": "Me han cobrado dos veces",
+        "intents": [
+          "payment"
+        ]
+      },
+      {
+        "text": "perdón, pedido 5524 no 4524",
+        "intents": [
+          "correction"
+        ]
+      },
+      {
+        "text": "ese mismo",
+        "intents": [
+          "payment"
+        ]
+      }
+    ],
+    "latest_order": "5524",
+    "superseded_order": "4524"
+  },
+  {
+    "id": "es-payment-4",
+    "language": "es",
+    "messages": [
+      {
+        "text": "Puedes ver mi pago",
+        "intents": [
+          "payment"
+        ]
+      },
+      {
+        "text": "perdón, pedido 5525 no 4525",
+        "intents": [
+          "correction"
+        ]
+      },
+      {
+        "text": "ese mismo",
+        "intents": [
+          "payment"
+        ]
+      }
+    ],
+    "latest_order": "5525",
+    "superseded_order": "4525"
+  },
+  {
+    "id": "es-payment-5",
+    "language": "es",
+    "messages": [
+      {
+        "text": "El pago fallo otra vez",
+        "intents": [
+          "payment"
+        ]
+      },
+      {
+        "text": "perdón, pedido 5526 no 4526",
+        "intents": [
+          "correction"
+        ]
+      },
+      {
+        "text": "ese mismo",
+        "intents": [
+          "payment"
+        ]
+      }
+    ],
+    "latest_order": "5526",
+    "superseded_order": "4526"
+  },
+  {
+    "id": "es-payment-6",
+    "language": "es",
+    "messages": [
+      {
+        "text": "Necesito saber la política de pago",
+        "intents": [
+          "payment"
+        ]
+      },
+      {
+        "text": "perdón, pedido 5527 no 4527",
+        "intents": [
+          "correction"
+        ]
+      },
+      {
+        "text": "ese mismo",
+        "intents": [
+          "payment"
+        ]
+      }
+    ],
+    "latest_order": "5527",
+    "superseded_order": "4527"
+  },
+  {
+    "id": "es-product_info-0",
+    "language": "es",
+    "messages": [
+      {
+        "text": "Cuál es el precio del producto",
+        "intents": [
+          "product_info"
+        ]
+      },
+      {
+        "text": "perdón, pedido 5528 no 4528",
+        "intents": [
+          "correction"
+        ]
+      },
+      {
+        "text": "ese mismo",
+        "intents": [
+          "product_info"
+        ]
+      }
+    ],
+    "latest_order": "5528",
+    "superseded_order": "4528"
+  },
+  {
+    "id": "es-product_info-1",
+    "language": "es",
+    "messages": [
+      {
+        "text": "Necesito información del producto",
+        "intents": [
+          "product_info"
+        ]
+      },
+      {
+        "text": "perdón, pedido 5529 no 4529",
+        "intents": [
+          "correction"
+        ]
+      },
+      {
+        "text": "ese mismo",
+        "intents": [
+          "product_info"
+        ]
+      }
+    ],
+    "latest_order": "5529",
+    "superseded_order": "4529"
+  },
+  {
+    "id": "es-product_info-2",
+    "language": "es",
+    "messages": [
+      {
+        "text": "Cuánto cuesta el producto",
+        "intents": [
+          "product_info"
+        ]
+      },
+      {
+        "text": "perdón, pedido 5530 no 4530",
+        "intents": [
+          "correction"
+        ]
+      },
+      {
+        "text": "ese mismo",
+        "intents": [
+          "product_info"
+        ]
+      }
+    ],
+    "latest_order": "5530",
+    "superseded_order": "4530"
+  },
+  {
+    "id": "es-product_info-3",
+    "language": "es",
+    "messages": [
+      {
+        "text": "Quiero ver el precio",
+        "intents": [
+          "product_info"
+        ]
+      },
+      {
+        "text": "perdón, pedido 5531 no 4531",
+        "intents": [
+          "correction"
+        ]
+      },
+      {
+        "text": "ese mismo",
+        "intents": [
+          "product_info"
+        ]
+      }
+    ],
+    "latest_order": "5531",
+    "superseded_order": "4531"
+  },
+  {
+    "id": "es-product_info-4",
+    "language": "es",
+    "messages": [
+      {
+        "text": "Puedes ver el coste del producto",
+        "intents": [
+          "product_info"
+        ]
+      },
+      {
+        "text": "perdón, pedido 5532 no 4532",
+        "intents": [
+          "correction"
+        ]
+      },
+      {
+        "text": "ese mismo",
+        "intents": [
+          "product_info"
+        ]
+      }
+    ],
+    "latest_order": "5532",
+    "superseded_order": "4532"
+  },
+  {
+    "id": "es-product_info-5",
+    "language": "es",
+    "messages": [
+      {
+        "text": "El precio del producto por favor",
+        "intents": [
+          "product_info"
+        ]
+      },
+      {
+        "text": "perdón, pedido 5533 no 4533",
+        "intents": [
+          "correction"
+        ]
+      },
+      {
+        "text": "ese mismo",
+        "intents": [
+          "product_info"
+        ]
+      }
+    ],
+    "latest_order": "5533",
+    "superseded_order": "4533"
+  },
+  {
+    "id": "es-product_info-6",
+    "language": "es",
+    "messages": [
+      {
+        "text": "Necesito saber el precio",
+        "intents": [
+          "product_info"
+        ]
+      },
+      {
+        "text": "perdón, pedido 5534 no 4534",
+        "intents": [
+          "correction"
+        ]
+      },
+      {
+        "text": "ese mismo",
+        "intents": [
+          "product_info"
+        ]
+      }
+    ],
+    "latest_order": "5534",
+    "superseded_order": "4534"
+  }
+]

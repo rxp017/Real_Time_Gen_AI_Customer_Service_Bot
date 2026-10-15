@@ -1,0 +1,912 @@
+[
+  {
+    "id": "te-refund-0",
+    "language": "te",
+    "messages": [
+      {
+        "text": "నాకు డబ్బు తిరిగి కావాలి",
+        "intents": [
+          "refund"
+        ]
+      },
+      {
+        "text": "క్షమించండి, ఆర్డర్ 5500 కాదు 4500",
+        "intents": [
+          "correction"
+        ]
+      },
+      {
+        "text": "అదే",
+        "intents": [
+          "refund"
+        ]
+      }
+    ],
+    "latest_order": "5500",
+    "superseded_order": "4500"
+  },
+  {
+    "id": "te-refund-1",
+    "language": "te",
+    "messages": [
+      {
+        "text": "రీఫండ్ నియమాలు చెప్పండి",
+        "intents": [
+          "refund"
+        ]
+      },
+      {
+        "text": "క్షమించండి, ఆర్డర్ 5501 కాదు 4501",
+        "intents": [
+          "correction"
+        ]
+      },
+      {
+        "text": "అదే",
+        "intents": [
+          "refund"
+        ]
+      }
+    ],
+    "latest_order": "5501",
+    "superseded_order": "4501"
+  },
+  {
+    "id": "te-refund-2",
+    "language": "te",
+    "messages": [
+      {
+        "text": "నా రీఫండ్ గురించి చెప్పండి",
+        "intents": [
+          "refund"
+        ]
+      },
+      {
+        "text": "క్షమించండి, ఆర్డర్ 5502 కాదు 4502",
+        "intents": [
+          "correction"
+        ]
+      },
+      {
+        "text": "అదే",
+        "intents": [
+          "refund"
+        ]
+      }
+    ],
+    "latest_order": "5502",
+    "superseded_order": "4502"
+  },
+  {
+    "id": "te-refund-3",
+    "language": "te",
+    "messages": [
+      {
+        "text": "naaku dabbu tirigi kavali",
+        "intents": [
+          "refund"
+        ]
+      },
+      {
+        "text": "క్షమించండి, ఆర్డర్ 5503 కాదు 4503",
+        "intents": [
+          "correction"
+        ]
+      },
+      {
+        "text": "అదే",
+        "intents": [
+          "refund"
+        ]
+      }
+    ],
+    "latest_order": "5503",
+    "superseded_order": "4503"
+  },
+  {
+    "id": "te-refund-4",
+    "language": "te",
+    "messages": [
+      {
+        "text": "naa refund eppudu vastundi",
+        "intents": [
+          "refund"
+        ]
+      },
+      {
+        "text": "క్షమించండి, ఆర్డర్ 5504 కాదు 4504",
+        "intents": [
+          "correction"
+        ]
+      },
+      {
+        "text": "అదే",
+        "intents": [
+          "refund"
+        ]
+      }
+    ],
+    "latest_order": "5504",
+    "superseded_order": "4504"
+  },
+  {
+    "id": "te-refund-5",
+    "language": "te",
+    "messages": [
+      {
+        "text": "naku refnd kavali",
+        "intents": [
+          "refund"
+        ]
+      },
+      {
+        "text": "క్షమించండి, ఆర్డర్ 5505 కాదు 4505",
+        "intents": [
+          "correction"
+        ]
+      },
+      {
+        "text": "అదే",
+        "intents": [
+          "refund"
+        ]
+      }
+    ],
+    "latest_order": "5505",
+    "superseded_order": "4505"
+  },
+  {
+    "id": "te-refund-6",
+    "language": "te",
+    "messages": [
+      {
+        "text": "refund ela pondali",
+        "intents": [
+          "refund"
+        ]
+      },
+      {
+        "text": "క్షమించండి, ఆర్డర్ 5506 కాదు 4506",
+        "intents": [
+          "correction"
+        ]
+      },
+      {
+        "text": "అదే",
+        "intents": [
+          "refund"
+        ]
+      }
+    ],
+    "latest_order": "5506",
+    "superseded_order": "4506"
+  },
+  {
+    "id": "te-delivery_status-0",
+    "language": "te",
+    "messages": [
+      {
+        "text": "నా ఆర్డర్ డెలివరీ ఎప్పుడు",
+        "intents": [
+          "delivery_status"
+        ]
+      },
+      {
+        "text": "క్షమించండి, ఆర్డర్ 5507 కాదు 4507",
+        "intents": [
+          "correction"
+        ]
+      },
+      {
+        "text": "అదే",
+        "intents": [
+          "delivery_status"
+        ]
+      }
+    ],
+    "latest_order": "5507",
+    "superseded_order": "4507"
+  },
+  {
+    "id": "te-delivery_status-1",
+    "language": "te",
+    "messages": [
+      {
+        "text": "డెలివరీ వివరాలు చెప్పండి",
+        "intents": [
+          "delivery_status"
+        ]
+      },
+      {
+        "text": "క్షమించండి, ఆర్డర్ 5508 కాదు 4508",
+        "intents": [
+          "correction"
+        ]
+      },
+      {
+        "text": "అదే",
+        "intents": [
+          "delivery_status"
+        ]
+      }
+    ],
+    "latest_order": "5508",
+    "superseded_order": "4508"
+  },
+  {
+    "id": "te-delivery_status-2",
+    "language": "te",
+    "messages": [
+      {
+        "text": "నా డెలివరీ ఎక్కడ ఉంది",
+        "intents": [
+          "delivery_status"
+        ]
+      },
+      {
+        "text": "క్షమించండి, ఆర్డర్ 5509 కాదు 4509",
+        "intents": [
+          "correction"
+        ]
+      },
+      {
+        "text": "అదే",
+        "intents": [
+          "delivery_status"
+        ]
+      }
+    ],
+    "latest_order": "5509",
+    "superseded_order": "4509"
+  },
+  {
+    "id": "te-delivery_status-3",
+    "language": "te",
+    "messages": [
+      {
+        "text": "naa order eppudu vastundi",
+        "intents": [
+          "delivery_status"
+        ]
+      },
+      {
+        "text": "క్షమించండి, ఆర్డర్ 5510 కాదు 4510",
+        "intents": [
+          "correction"
+        ]
+      },
+      {
+        "text": "అదే",
+        "intents": [
+          "delivery_status"
+        ]
+      }
+    ],
+    "latest_order": "5510",
+    "superseded_order": "4510"
+  },
+  {
+    "id": "te-delivery_status-4",
+    "language": "te",
+    "messages": [
+      {
+        "text": "delivery ekkada undi",
+        "intents": [
+          "delivery_status"
+        ]
+      },
+      {
+        "text": "క్షమించండి, ఆర్డర్ 5511 కాదు 4511",
+        "intents": [
+          "correction"
+        ]
+      },
+      {
+        "text": "అదే",
+        "intents": [
+          "delivery_status"
+        ]
+      }
+    ],
+    "latest_order": "5511",
+    "superseded_order": "4511"
+  },
+  {
+    "id": "te-delivery_status-5",
+    "language": "te",
+    "messages": [
+      {
+        "text": "naaku shipping vivaralu kavali",
+        "intents": [
+          "delivery_status"
+        ]
+      },
+      {
+        "text": "క్షమించండి, ఆర్డర్ 5512 కాదు 4512",
+        "intents": [
+          "correction"
+        ]
+      },
+      {
+        "text": "అదే",
+        "intents": [
+          "delivery_status"
+        ]
+      }
+    ],
+    "latest_order": "5512",
+    "superseded_order": "4512"
+  },
+  {
+    "id": "te-delivery_status-6",
+    "language": "te",
+    "messages": [
+      {
+        "text": "order epudu vasthundi cheppandi",
+        "intents": [
+          "delivery_status"
+        ]
+      },
+      {
+        "text": "క్షమించండి, ఆర్డర్ 5513 కాదు 4513",
+        "intents": [
+          "correction"
+        ]
+      },
+      {
+        "text": "అదే",
+        "intents": [
+          "delivery_status"
+        ]
+      }
+    ],
+    "latest_order": "5513",
+    "superseded_order": "4513"
+  },
+  {
+    "id": "te-cancel_order-0",
+    "language": "te",
+    "messages": [
+      {
+        "text": "నా ఆర్డర్ రద్దు చేయండి",
+        "intents": [
+          "cancel_order"
+        ]
+      },
+      {
+        "text": "క్షమించండి, ఆర్డర్ 5514 కాదు 4514",
+        "intents": [
+          "correction"
+        ]
+      },
+      {
+        "text": "అదే",
+        "intents": [
+          "cancel_order"
+        ]
+      }
+    ],
+    "latest_order": "5514",
+    "superseded_order": "4514"
+  },
+  {
+    "id": "te-cancel_order-1",
+    "language": "te",
+    "messages": [
+      {
+        "text": "ఆర్డర్ రద్దు చేయాలి",
+        "intents": [
+          "cancel_order"
+        ]
+      },
+      {
+        "text": "క్షమించండి, ఆర్డర్ 5515 కాదు 4515",
+        "intents": [
+          "correction"
+        ]
+      },
+      {
+        "text": "అదే",
+        "intents": [
+          "cancel_order"
+        ]
+      }
+    ],
+    "latest_order": "5515",
+    "superseded_order": "4515"
+  },
+  {
+    "id": "te-cancel_order-2",
+    "language": "te",
+    "messages": [
+      {
+        "text": "దయచేసి ఆర్డర్ రద్దు చేయండి",
+        "intents": [
+          "cancel_order"
+        ]
+      },
+      {
+        "text": "క్షమించండి, ఆర్డర్ 5516 కాదు 4516",
+        "intents": [
+          "correction"
+        ]
+      },
+      {
+        "text": "అదే",
+        "intents": [
+          "cancel_order"
+        ]
+      }
+    ],
+    "latest_order": "5516",
+    "superseded_order": "4516"
+  },
+  {
+    "id": "te-cancel_order-3",
+    "language": "te",
+    "messages": [
+      {
+        "text": "naa order raddu cheyandi",
+        "intents": [
+          "cancel_order"
+        ]
+      },
+      {
+        "text": "క్షమించండి, ఆర్డర్ 5517 కాదు 4517",
+        "intents": [
+          "correction"
+        ]
+      },
+      {
+        "text": "అదే",
+        "intents": [
+          "cancel_order"
+        ]
+      }
+    ],
+    "latest_order": "5517",
+    "superseded_order": "4517"
+  },
+  {
+    "id": "te-cancel_order-4",
+    "language": "te",
+    "messages": [
+      {
+        "text": "order cancel cheyali",
+        "intents": [
+          "cancel_order"
+        ]
+      },
+      {
+        "text": "క్షమించండి, ఆర్డర్ 5518 కాదు 4518",
+        "intents": [
+          "correction"
+        ]
+      },
+      {
+        "text": "అదే",
+        "intents": [
+          "cancel_order"
+        ]
+      }
+    ],
+    "latest_order": "5518",
+    "superseded_order": "4518"
+  },
+  {
+    "id": "te-cancel_order-5",
+    "language": "te",
+    "messages": [
+      {
+        "text": "naaku order cancel cheyandi",
+        "intents": [
+          "cancel_order"
+        ]
+      },
+      {
+        "text": "క్షమించండి, ఆర్డర్ 5519 కాదు 4519",
+        "intents": [
+          "correction"
+        ]
+      },
+      {
+        "text": "అదే",
+        "intents": [
+          "cancel_order"
+        ]
+      }
+    ],
+    "latest_order": "5519",
+    "superseded_order": "4519"
+  },
+  {
+    "id": "te-cancel_order-6",
+    "language": "te",
+    "messages": [
+      {
+        "text": "naa order raddhu cheyyandi",
+        "intents": [
+          "cancel_order"
+        ]
+      },
+      {
+        "text": "క్షమించండి, ఆర్డర్ 5520 కాదు 4520",
+        "intents": [
+          "correction"
+        ]
+      },
+      {
+        "text": "అదే",
+        "intents": [
+          "cancel_order"
+        ]
+      }
+    ],
+    "latest_order": "5520",
+    "superseded_order": "4520"
+  },
+  {
+    "id": "te-payment-0",
+    "language": "te",
+    "messages": [
+      {
+        "text": "నా చెల్లింపు విఫలమైంది",
+        "intents": [
+          "payment"
+        ]
+      },
+      {
+        "text": "క్షమించండి, ఆర్డర్ 5521 కాదు 4521",
+        "intents": [
+          "correction"
+        ]
+      },
+      {
+        "text": "అదే",
+        "intents": [
+          "payment"
+        ]
+      }
+    ],
+    "latest_order": "5521",
+    "superseded_order": "4521"
+  },
+  {
+    "id": "te-payment-1",
+    "language": "te",
+    "messages": [
+      {
+        "text": "పేమెంట్ వివరాలు చెప్పండి",
+        "intents": [
+          "payment"
+        ]
+      },
+      {
+        "text": "క్షమించండి, ఆర్డర్ 5522 కాదు 4522",
+        "intents": [
+          "correction"
+        ]
+      },
+      {
+        "text": "అదే",
+        "intents": [
+          "payment"
+        ]
+      }
+    ],
+    "latest_order": "5522",
+    "superseded_order": "4522"
+  },
+  {
+    "id": "te-payment-2",
+    "language": "te",
+    "messages": [
+      {
+        "text": "చెల్లింపు గురించి చెప్పండి",
+        "intents": [
+          "payment"
+        ]
+      },
+      {
+        "text": "క్షమించండి, ఆర్డర్ 5523 కాదు 4523",
+        "intents": [
+          "correction"
+        ]
+      },
+      {
+        "text": "అదే",
+        "intents": [
+          "payment"
+        ]
+      }
+    ],
+    "latest_order": "5523",
+    "superseded_order": "4523"
+  },
+  {
+    "id": "te-payment-3",
+    "language": "te",
+    "messages": [
+      {
+        "text": "naa payment failed ayyindi",
+        "intents": [
+          "payment"
+        ]
+      },
+      {
+        "text": "క్షమించండి, ఆర్డర్ 5524 కాదు 4524",
+        "intents": [
+          "correction"
+        ]
+      },
+      {
+        "text": "అదే",
+        "intents": [
+          "payment"
+        ]
+      }
+    ],
+    "latest_order": "5524",
+    "superseded_order": "4524"
+  },
+  {
+    "id": "te-payment-4",
+    "language": "te",
+    "messages": [
+      {
+        "text": "naaku payment vivaralu kavali",
+        "intents": [
+          "payment"
+        ]
+      },
+      {
+        "text": "క్షమించండి, ఆర్డర్ 5525 కాదు 4525",
+        "intents": [
+          "correction"
+        ]
+      },
+      {
+        "text": "అదే",
+        "intents": [
+          "payment"
+        ]
+      }
+    ],
+    "latest_order": "5525",
+    "superseded_order": "4525"
+  },
+  {
+    "id": "te-payment-5",
+    "language": "te",
+    "messages": [
+      {
+        "text": "card payment failed ayindi",
+        "intents": [
+          "payment"
+        ]
+      },
+      {
+        "text": "క్షమించండి, ఆర్డర్ 5526 కాదు 4526",
+        "intents": [
+          "correction"
+        ]
+      },
+      {
+        "text": "అదే",
+        "intents": [
+          "payment"
+        ]
+      }
+    ],
+    "latest_order": "5526",
+    "superseded_order": "4526"
+  },
+  {
+    "id": "te-payment-6",
+    "language": "te",
+    "messages": [
+      {
+        "text": "payment ela cheyali",
+        "intents": [
+          "payment"
+        ]
+      },
+      {
+        "text": "క్షమించండి, ఆర్డర్ 5527 కాదు 4527",
+        "intents": [
+          "correction"
+        ]
+      },
+      {
+        "text": "అదే",
+        "intents": [
+          "payment"
+        ]
+      }
+    ],
+    "latest_order": "5527",
+    "superseded_order": "4527"
+  },
+  {
+    "id": "te-product_info-0",
+    "language": "te",
+    "messages": [
+      {
+        "text": "ఉత్పత్తి ధర ఎంత",
+        "intents": [
+          "product_info"
+        ]
+      },
+      {
+        "text": "క్షమించండి, ఆర్డర్ 5528 కాదు 4528",
+        "intents": [
+          "correction"
+        ]
+      },
+      {
+        "text": "అదే",
+        "intents": [
+          "product_info"
+        ]
+      }
+    ],
+    "latest_order": "5528",
+    "superseded_order": "4528"
+  },
+  {
+    "id": "te-product_info-1",
+    "language": "te",
+    "messages": [
+      {
+        "text": "ధర చెప్పండి",
+        "intents": [
+          "product_info"
+        ]
+      },
+      {
+        "text": "క్షమించండి, ఆర్డర్ 5529 కాదు 4529",
+        "intents": [
+          "correction"
+        ]
+      },
+      {
+        "text": "అదే",
+        "intents": [
+          "product_info"
+        ]
+      }
+    ],
+    "latest_order": "5529",
+    "superseded_order": "4529"
+  },
+  {
+    "id": "te-product_info-2",
+    "language": "te",
+    "messages": [
+      {
+        "text": "ఉత్పత్తి ధర వివరాలు కావాలి",
+        "intents": [
+          "product_info"
+        ]
+      },
+      {
+        "text": "క్షమించండి, ఆర్డర్ 5530 కాదు 4530",
+        "intents": [
+          "correction"
+        ]
+      },
+      {
+        "text": "అదే",
+        "intents": [
+          "product_info"
+        ]
+      }
+    ],
+    "latest_order": "5530",
+    "superseded_order": "4530"
+  },
+  {
+    "id": "te-product_info-3",
+    "language": "te",
+    "messages": [
+      {
+        "text": "product price entha",
+        "intents": [
+          "product_info"
+        ]
+      },
+      {
+        "text": "క్షమించండి, ఆర్డర్ 5531 కాదు 4531",
+        "intents": [
+          "correction"
+        ]
+      },
+      {
+        "text": "అదే",
+        "intents": [
+          "product_info"
+        ]
+      }
+    ],
+    "latest_order": "5531",
+    "superseded_order": "4531"
+  },
+  {
+    "id": "te-product_info-4",
+    "language": "te",
+    "messages": [
+      {
+        "text": "naaku product details kavali",
+        "intents": [
+          "product_info"
+        ]
+      },
+      {
+        "text": "క్షమించండి, ఆర్డర్ 5532 కాదు 4532",
+        "intents": [
+          "correction"
+        ]
+      },
+      {
+        "text": "అదే",
+        "intents": [
+          "product_info"
+        ]
+      }
+    ],
+    "latest_order": "5532",
+    "superseded_order": "4532"
+  },
+  {
+    "id": "te-product_info-5",
+    "language": "te",
+    "messages": [
+      {
+        "text": "product cost entha cheppu",
+        "intents": [
+          "product_info"
+        ]
+      },
+      {
+        "text": "క్షమించండి, ఆర్డర్ 5533 కాదు 4533",
+        "intents": [
+          "correction"
+        ]
+      },
+      {
+        "text": "అదే",
+        "intents": [
+          "product_info"
+        ]
+      }
+    ],
+    "latest_order": "5533",
+    "superseded_order": "4533"
+  },
+  {
+    "id": "te-product_info-6",
+    "language": "te",
+    "messages": [
+      {
+        "text": "naa product price teliyali",
+        "intents": [
+          "product_info"
+        ]
+      },
+      {
+        "text": "క్షమించండి, ఆర్డర్ 5534 కాదు 4534",
+        "intents": [
+          "correction"
+        ]
+      },
+      {
+        "text": "అదే",
+        "intents": [
+          "product_info"
+        ]
+      }
+    ],
+    "latest_order": "5534",
+    "superseded_order": "4534"
+  }
+]

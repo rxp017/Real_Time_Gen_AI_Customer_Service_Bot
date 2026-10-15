@@ -1,0 +1,12 @@
+{
+  "doc_id": "DOC-DELIVERY-B",
+  "version": 1,
+  "product": "mentorship",
+  "region": "IN",
+  "access_level": "public",
+  "effective_date": "2026-01-01",
+  "expiry_date": null,
+  "doc_family": "fam_delivery_livecohort",
+  "section": "Live Cohort Track Delivery",
+  "content": "Course materials for the mentorship live cohort track are delivered on Mondays before student orientation."
+}

@@ -1,0 +1,246 @@
+{
+  "markers": [
+    "mi",
+    "nombre",
+    "es",
+    "me",
+    "llamo",
+    "necesito",
+    "quiero",
+    "por",
+    "favor",
+    "el",
+    "la",
+    "los",
+    "las",
+    "un",
+    "una",
+    "de",
+    "del",
+    "para",
+    "pedido",
+    "reembolso",
+    "devolución",
+    "devolucion",
+    "dinero",
+    "dónde",
+    "donde",
+    "está",
+    "esta",
+    "cuándo",
+    "cuando",
+    "llega",
+    "entrega",
+    "envío",
+    "envio",
+    "cancelar",
+    "cancela",
+    "pago",
+    "falló",
+    "fallo",
+    "precio",
+    "producto",
+    "información",
+    "informacion",
+    "perdón",
+    "perdon",
+    "no",
+    "y",
+    "también",
+    "tambien",
+    "ese",
+    "mismo",
+    "cobrado",
+    "dos",
+    "veces",
+    "puedes",
+    "ayuda",
+    "política",
+    "politica",
+    "reglas",
+    "ver",
+    "saber",
+    "cuánto",
+    "cuanto",
+    "cuesta",
+    "coste",
+    "cómo",
+    "como",
+    "obtengo",
+    "compro",
+    "cancelación",
+    "cancelacion",
+    "hola",
+    "gracias"
+  ],
+  "script_ranges": [],
+  "retrieval_noise_patterns": [
+    "\\b(?:quiero|necesito|un|una|el|la|los|las|mi|por|favor|de|del|información|informacion|puedes|ver)\\b"
+  ],
+  "entities": [
+    {
+      "kind": "order_id",
+      "pattern": "(?:pedido)\\s*(?P<new>[0-9]+)\\s+no\\s*(?P<old>[0-9]+)",
+      "groups": {
+        "new": "current",
+        "old": "superseded"
+      }
+    },
+    {
+      "kind": "order_id",
+      "pattern": "\\bpedido\\s*[:#]?\\s*(?P<value>[0-9]+|ORD[-_#][A-Za-z0-9_-]+)\\b"
+    },
+    {
+      "kind": "name",
+      "pattern": "(?:mi nombre es|me llamo)\\s+(?P<value>[^\\s,;:.?!]+(?:\\s+(?!(?:y|pedido|necesito|quiero|para|producto)\\b)[^\\s,;:.?!]+){0,2})"
+    },
+    {
+      "kind": "date",
+      "pattern": "(?P<value>[0-9]{1,2} de (?:enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre) de [0-9]{4})"
+    }
+  ],
+  "replacements": [
+    {
+      "pattern": "\\b(?:política|politica|reglas)\\b",
+      "value": "policy"
+    },
+    {
+      "pattern": "\\b(?:cuál|cual)\\b",
+      "value": "what"
+    },
+    {
+      "pattern": "\\bes\\b",
+      "value": "is"
+    },
+    {
+      "pattern": "\\b(?:reembolso|devolución|devolucion|rembolso|reembolo)\\b",
+      "value": "refund"
+    },
+    {
+      "pattern": "\\b(?:entrega|envío|envio|llega)\\b|\\b(?:dónde|donde)\\s+(?:está|esta)\\b",
+      "value": "delivery"
+    },
+    {
+      "pattern": "\\b(?:cancelar|cancela|cancelación|cancelacion)\\b",
+      "value": "cancel"
+    },
+    {
+      "pattern": "\\b(?:pago|cobrado)\\b",
+      "value": "payment"
+    },
+    {
+      "pattern": "\\b(?:precio|producto|cuesta|coste)\\b",
+      "value": "product price"
+    },
+    {
+      "pattern": "\\bpedido\\b",
+      "value": "order"
+    },
+    {
+      "pattern": "\\b(?:perdón|perdon)\\b",
+      "value": "sorry"
+    },
+    {
+      "pattern": "\\bno\\b",
+      "value": "not"
+    },
+    {
+      "pattern": "\\by\\b",
+      "value": "and"
+    },
+    {
+      "pattern": "\\bese mismo\\b",
+      "value": "that one"
+    }
+  ],
+  "intents": {},
+  "split_pattern": "\\s+y\\s+",
+  "followup_pattern": "\\bese mismo\\b",
+  "canonical_queries": {},
+  "messages": {
+    "clarification": "Aclara el idioma o la solicitud, por favor.",
+    "correction": "Corrección registrada.",
+    "refusal": "No puedo responder porque no se encontró una política o documentación pertinente."
+  },
+  "answer_translations": [
+    {
+      "source": "I cannot answer this question because no relevant policy or documentation was found.",
+      "target": "No puedo responder porque no se encontró una política o documentación pertinente."
+    },
+    {
+      "source": "Learners are eligible for a 100% full refund within 14 days of course enrollment.",
+      "target": "Los estudiantes tienen derecho a un reembolso completo del 100% dentro de los 14 días posteriores a la inscripción en el curso."
+    }
+  ],
+  "support": {
+    "sentiment": {
+      "positive": [
+        {
+          "pattern": "\\b(?:gracias|excelente|genial|maravilloso|contento|feliz)\\b",
+          "exclude": "\\bno (?:estoy )?(?:contento|feliz)\\b"
+        }
+      ],
+      "negative": [
+        {
+          "pattern": "\\b(?:malo|mal|terrible|decepcionado|roto|tarde|no funciona|problema|pésimo)\\b",
+          "exclude": "\\b(?:no hay problema|no está roto)\\b"
+        }
+      ],
+      "frustrated": [
+        {
+          "pattern": "\\b(?:frustrado|harto|cansado de|tercera vez|inaceptable)\\b",
+          "exclude": "\\bno (?:estoy )?frustrado\\b"
+        }
+      ],
+      "urgent": [
+        {
+          "pattern": "\\b(?:urgente|emergencia|inmediatamente|ahora mismo)\\b",
+          "exclude": "\\bno es urgente\\b"
+        }
+      ],
+      "sarcastic": [
+        {
+          "pattern": "\\b(?:sí claro|como si eso ayudara)\\b"
+        }
+      ]
+    },
+    "sarcasm_with_history": [
+      {
+        "pattern": "\\b(?:genial|maravilloso|excelente|fantástico)\\b"
+      }
+    ],
+    "frustration_with_history": [
+      {
+        "pattern": "\\b(?:otra vez|todavía|sigo esperando)\\b"
+      }
+    ],
+    "high_risk": {
+      "account_compromise": [
+        {
+          "pattern": "\\b(?:cuenta.{0,25}(?:hackeada|comprometida)|alguien.{0,25}(?:accedió|entró).{0,25}cuenta)\\b",
+          "exclude": "\\bno (?:está|fue) (?:hackeada|comprometida)\\b"
+        }
+      ],
+      "duplicate_payment": [
+        {
+          "pattern": "\\b(?:cobraron dos veces|cobrado dos veces|pago duplicado|cargo duplicado|pagué dos veces)\\b",
+          "exclude": "\\b(?:no .{0,15}(?:cobraron|cobrado) dos veces|sin (?:pago|cargo) duplicado)\\b"
+        }
+      ],
+      "legal_threat": [
+        {
+          "pattern": "\\b(?:voy a demandar|presentaré una demanda|tomaré acciones legales|voy a tomar acciones legales)\\b",
+          "exclude": "\\bno voy a demandar\\b"
+        }
+      ]
+    },
+    "tone": {
+      "positive": "Gracias por tus comentarios.",
+      "neutral": "",
+      "negative": "Entiendo tu preocupación.",
+      "frustrated": "Entiendo tu frustración.",
+      "urgent": "Entiendo la urgencia.",
+      "sarcastic": "Entiendo tu preocupación."
+    }
+  }
+}

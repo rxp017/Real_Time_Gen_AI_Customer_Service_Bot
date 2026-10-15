@@ -1,0 +1,227 @@
+{
+  "markers": [
+    "mera",
+    "meri",
+    "mere",
+    "mujhe",
+    "mujhey",
+    "kya",
+    "hai",
+    "hain",
+    "kab",
+    "aayega",
+    "ayega",
+    "aega",
+    "kahan",
+    "kaha",
+    "chahiye",
+    "chahie",
+    "paisa",
+    "paise",
+    "wapas",
+    "vapas",
+    "karo",
+    "karna",
+    "kar",
+    "do",
+    "ka",
+    "ki",
+    "ke",
+    "naam",
+    "nam",
+    "maaf",
+    "nahi",
+    "nahin",
+    "aur",
+    "bhi",
+    "hua",
+    "ho",
+    "gaya",
+    "batao",
+    "bataiye",
+    "yeh",
+    "wo",
+    "woh",
+    "khatam",
+    "kitna",
+    "kitne",
+    "bhejna",
+    "samjhao",
+    "kripya",
+    "sakta",
+    "sakte",
+    "milenge",
+    "lene",
+    "janna",
+    "hoga"
+  ],
+  "script_ranges": [
+    [
+      "0900",
+      "097F"
+    ]
+  ],
+  "retrieval_noise_patterns": [
+    "\\b(?:mujhe|mujhey|mera|meri|mere|chahiye|chahie|batao|bataiye|kripya|hai|hain|ka|ki|ke)\\b"
+  ],
+  "entities": [
+    {
+      "kind": "order_id",
+      "pattern": "(?:order|ऑर्डर|आदेश)\\s*(?P<new>[0-9]+)\\s+(?:nahi|nahin|नहीं)\\s*(?P<old>[0-9]+)",
+      "groups": {
+        "new": "current",
+        "old": "superseded"
+      }
+    },
+    {
+      "kind": "order_id",
+      "pattern": "(?:order|ऑर्डर|आदेश)\\s*[:#]?\\s*(?P<value>[0-9]+|ORD[-_#][A-Za-z0-9_-]+)"
+    },
+    {
+      "kind": "name",
+      "pattern": "(?:mera (?:naam|nam)|मेरा नाम)\\s+(?P<value>[^\\s,;:.?!]+(?:\\s+(?!(?:hai|है|aur|और|order|ऑर्डर|mujhe|मुझे)\\b)[^\\s,;:.?!]+){0,2})"
+    },
+    {
+      "kind": "date",
+      "pattern": "(?P<value>[0-9]{1,2}\\s+(?:जनवरी|फ़रवरी|फरवरी|मार्च|अप्रैल|मई|जून|जुलाई|अगस्त|सितंबर|अक्टूबर|नवंबर|दिसंबर)\\s+[0-9]{4})"
+    }
+  ],
+  "replacements": [
+    {
+      "pattern": "नीति|नियम",
+      "value": "policy"
+    },
+    {
+      "pattern": "(?:पैसे|पैसा)\\s+वापस|\\b(?:paise|paisa)\\s+(?:wapas|vapas)\\b",
+      "value": "refund"
+    },
+    {
+      "pattern": "रिफंड|धनवापसी",
+      "value": "refund"
+    },
+    {
+      "pattern": "डिलीवरी|शिपिंग|कहाँ\\s+है|कहां\\s+है|\\b(?:kab (?:aayega|ayega|aega)|kahan hai|kaha hai)\\b",
+      "value": "delivery"
+    },
+    {
+      "pattern": "रद्द|\\b(?:band karo|khatam karo)\\b",
+      "value": "cancel"
+    },
+    {
+      "pattern": "भुगतान|पेमेंट",
+      "value": "payment"
+    },
+    {
+      "pattern": "कीमत|उत्पाद|\\b(?:kitna paisa|kitne paise)\\b",
+      "value": "product price"
+    },
+    {
+      "pattern": "ऑर्डर|आदेश",
+      "value": "order"
+    },
+    {
+      "pattern": "नहीं|\\b(?:nahi|nahin)\\b",
+      "value": "not"
+    },
+    {
+      "pattern": "माफ़|माफ़|माफ|\\bmaaf\\b",
+      "value": "sorry"
+    },
+    {
+      "pattern": "और|\\baur\\b",
+      "value": "and"
+    },
+    {
+      "pattern": "वही|\\b(?:wohi|woh wala)\\b",
+      "value": "that one"
+    }
+  ],
+  "intents": {},
+  "split_pattern": "\\s+और\\s+|\\s+aur\\s+",
+  "followup_pattern": "वही|\\b(?:wohi|woh wala)\\b",
+  "canonical_queries": {},
+  "messages": {
+    "clarification": "कृपया भाषा या अनुरोध स्पष्ट करें।",
+    "correction": "सुधार दर्ज किया गया।",
+    "refusal": "संबंधित नीति या दस्तावेज़ नहीं मिला, इसलिए मैं उत्तर नहीं दे सकता।"
+  },
+  "answer_translations": [
+    {
+      "source": "I cannot answer this question because no relevant policy or documentation was found.",
+      "target": "संबंधित नीति या दस्तावेज़ नहीं मिला, इसलिए मैं उत्तर नहीं दे सकता।"
+    },
+    {
+      "source": "Learners are eligible for a 100% full refund within 14 days of course enrollment.",
+      "target": "पाठ्यक्रम में नामांकन के 14 दिनों के भीतर शिक्षार्थी 100% पूर्ण धनवापसी के पात्र हैं।"
+    }
+  ],
+  "support": {
+    "sentiment": {
+      "positive": [
+        {
+          "pattern": "धन्यवाद|बहुत अच्छा|बहुत बढ़िया|खुश|\\b(?:shukriya|dhanyavaad|bahut accha|khush)\\b",
+          "exclude": "खुश नहीं|\\bkhush nahi\\b"
+        }
+      ],
+      "negative": [
+        {
+          "pattern": "खराब|निराश|काम नहीं|देर|समस्या|\\b(?:kharab|niraash|bekar|kaam nahi|der|samasya)\\b"
+        }
+      ],
+      "frustrated": [
+        {
+          "pattern": "परेशान|तंग आ|तीसरी बार|\\b(?:pareshan|tang aa|teesri baar)\\b",
+          "exclude": "परेशान नहीं|\\bpareshan nahi\\b"
+        }
+      ],
+      "urgent": [
+        {
+          "pattern": "तुरंत|अत्यावश्यक|आपातकाल|\\b(?:turant|abhi chahiye|emergency)\\b"
+        }
+      ],
+      "sarcastic": [
+        {
+          "pattern": "हाँ हाँ जरूर|\\bhaan haan zaroor\\b"
+        }
+      ]
+    },
+    "sarcasm_with_history": [
+      {
+        "pattern": "वाह|बहुत बढ़िया|बहुत अच्छा|\\b(?:wah|bahut badhiya|bahut accha)\\b"
+      }
+    ],
+    "frustration_with_history": [
+      {
+        "pattern": "फिर|अभी भी|\\b(?:phir|abhi bhi|dobara)\\b"
+      }
+    ],
+    "high_risk": {
+      "account_compromise": [
+        {
+          "pattern": "(?:खाता|अकाउंट).{0,25}(?:हैक|अनधिकृत)|\\b(?:account|khata).{0,25}(?:hack|compromise)\\b",
+          "exclude": "हैक नहीं|\\bhack nahi\\b"
+        }
+      ],
+      "duplicate_payment": [
+        {
+          "pattern": "दो बार.{0,25}(?:भुगतान|पैसे|कटे)|(?:पैसे|भुगतान).{0,25}दो बार|\\b(?:do baar.{0,25}(?:paise|payment|kate)|(?:paise|payment).{0,25}do baar)\\b",
+          "exclude": "दो बार नहीं|\\bdo baar nahi\\b"
+        }
+      ],
+      "legal_threat": [
+        {
+          "pattern": "कानूनी कार्रवाई करूँ|कानूनी कार्रवाई करूंगा|मुकदमा करूँ|\\b(?:kanooni karwai karunga|mukadma karunga)\\b",
+          "exclude": "कार्रवाई नहीं|\\bkarwai nahi\\b"
+        }
+      ]
+    },
+    "tone": {
+      "positive": "आपकी प्रतिक्रिया के लिए धन्यवाद।",
+      "neutral": "",
+      "negative": "मैं आपकी चिंता समझता हूँ।",
+      "frustrated": "मैं आपकी परेशानी समझता हूँ।",
+      "urgent": "मैं तात्कालिकता समझता हूँ।",
+      "sarcastic": "मैं आपकी चिंता समझता हूँ।"
+    }
+  }
+}

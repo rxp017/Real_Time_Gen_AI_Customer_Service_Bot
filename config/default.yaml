@@ -1,0 +1,249 @@
+timezone: "Asia/Kolkata"
+
+tickets:
+  fields: [customer, order, product, issue, evidence, contact]
+  mandatory_fields: [customer, order, product, issue, evidence, contact]
+  max_field_characters: 10000
+  default_severity: normal
+  default_impact: individual
+  duplicate_similarity: 0.8
+  similarity_stopwords: [the, a, an, my, please, is, for]
+  duplicate_distinguishing_words: [not, no, never, without]
+  unresolved_patterns:
+    - '\b(still unresolved|not resolved|did not resolve|didn.t solve|speak to (?:a |an )?(?:human|agent)|human agent)\b'
+    - 'अभी भी हल नहीं|मानव एजेंट'
+    - 'ఇంకా పరిష్కారం కాలేదు|మనిషితో మాట్లాడాలి'
+    - '\b(sigue sin resolverse|no se ha resuelto|hablar con un agente)\b'
+  sla_warning_fraction: 0.75
+  sla_minutes: {critical: 30, high: 60, normal: 240, low: 480}
+  queue_escalation_minutes: 60
+  escalation_queue: supervisor
+  poll_seconds: 10
+  agents: []
+  product_skills: {}
+  issue_families:
+    delivery:
+      pattern: '\b(delivery|shipping|shipment|parcel|tracking)\b'
+      skills: [delivery]
+    payment:
+      pattern: '\b(payment|refund|charged|billing|invoice)\b'
+      skills: [billing]
+    account:
+      pattern: '\b(account|login|password)\b'
+      skills: [account]
+  priority:
+    weights: {severity: 0.3, sentiment: 0.2, waiting: 0.15, impact: 0.2, sla: 0.15}
+    waiting_cap_minutes: 480
+    severity: {low: 0.1, normal: 0.4, high: 0.75, critical: 1.0}
+    sentiment: {positive: 0.0, neutral: 0.2, negative: 0.6, frustrated: 0.8, urgent: 1.0, sarcastic: 0.8}
+    impact: {individual: 0.25, team: 0.6, widespread: 1.0}
+
+uploads:
+  directory: ".uploads"
+  max_bytes: 8388608
+  max_request_bytes: 9437184
+  allowed_types: ["image/png", "image/jpeg", "application/pdf"]
+  max_pixels: 12000000
+  max_expanded_bytes: 67108864
+  max_pdf_pages: 10
+  max_pdf_objects: 10000
+  max_pdf_characters: 100000
+  pdf_raster_dpi: 150
+  min_native_characters: 20
+  blur_threshold: 15.0
+  ocr_confidence_threshold: 0.65
+  min_product_text_characters: 8
+  inline_seconds: 30
+  poll_seconds: 0.02
+  purge_interval_seconds: 10
+  retention_hours: 24
+  workers: 2
+  max_pending_jobs: 100
+  vision_model: "gemini-2.5-flash"
+  ocr:
+    executable: "C:/Program Files/Tesseract-OCR/tesseract.exe"
+    tessdata_directory: ".runtime/tessdata"
+    default_language: "en"
+    languages: {en: eng, hi: hin, te: tel, es: spa}
+    process_timeout_seconds: 20
+    page_segmentation: 6
+  pdf_forbidden_names: [JavaScript, JS, AA, OpenAction, Launch, EmbeddedFile, EmbeddedFiles, Filespec, RichMedia, AcroForm, XFA, URI, GoToR, SubmitForm, ImportData, Sound, Movie, Rendition, PS, Encrypt, ObjStm, XRef, Prev]
+  pdf_allowed_filters: [FlateDecode, DCTDecode]
+  date_formats: ["%Y-%m-%d", "%d/%m/%Y", "%d-%m-%Y"]
+  currency_aliases: {"₹": INR, Rs: INR, "Rs.": INR, INR: INR, "$": USD, USD: USD, "€": EUR, EUR: EUR}
+  customer_field_patterns:
+    order_id: '(?i)(?:\bOrder(?:\s*ID|\s*Number)?\s*(?:is\s*|was\s*)?[:#]?\s*(?P<labelled>(?=[A-Za-z0-9_-]*\d)[A-Za-z0-9][A-Za-z0-9_-]*)|\b(?P<bare>ORD[-_#][A-Za-z0-9_-]+))'
+    date: '(?i)(?P<value>\b\d{4}-\d{2}-\d{2}\b|\b\d{2}[/-]\d{2}[/-]\d{4}\b)'
+    amount: '(?i)(?:\b(?:Total|Amount|Paid|Charged)\s*(?:is\s*|was\s*|of\s*)?[:#]?\s*(?P<labelled>(?:(?:INR|USD|EUR|Rs\.?|₹|\$|€)\s*)?\d+(?:,\d{3})*(?:\.\d{1,2})?)|(?P<bare>(?:\bINR|\bUSD|\bEUR|\bRs\.?|₹|\$|€)\s*\d+(?:,\d{3})*(?:\.\d{1,2})?))'
+  field_patterns:
+    order_id: '(?i)\bOrder(?:\s*ID|\s*Number)?\s*[:#]?\s*(?P<value>(?=[A-Za-z0-9_-]*\d)[A-Za-z0-9][A-Za-z0-9_-]*)'
+    date: '(?i)\b(?:Invoice\s+)?Date\s*[:#]?\s*(?P<value>\d{4}-\d{2}-\d{2}|\d{2}[/-]\d{2}[/-]\d{4})'
+    amount: '(?i)\b(?:Total|Amount|Paid|Charged)\s*[:#]?\s*(?P<value>(?:(?:INR|USD|EUR|Rs\.?|₹|\$|€)\s*)?\d+(?:,\d{3})*(?:\.\d{1,2})?)'
+    product_info: '(?i)\bProduct(?:\s*(?:Info|Name))?\s*[:#]\s*(?P<value>[^\n;]+)'
+    error_code: '(?i)\bError(?:\s*Code)?\s*[:#]\s*(?P<value>[A-Z0-9][A-Z0-9_-]*)'
+
+provider:
+  vision_capable_models: ["gemini-2.5-flash"]
+  free_tier_eligible_models:
+    - "gemini-3.5-flash-lite"
+    - "gemini-3.1-flash-lite"
+    - "gemini-2.5-flash-lite"
+    - "gemini-3.8-flash"
+    - "gemini-3.6-flash"
+    - "gemini-2.5-flash"
+  restrict_to_catalog: true
+  fallback_models: []
+  timeout_seconds: 8
+  request_budget_seconds: 20
+  max_model_attempts: 6
+  max_output_tokens: 1024
+  fallback_http_statuses: [404, 408, 429, 500, 502, 503, 504]
+  cooldown_seconds: 60
+  max_cooldown_seconds: 3600
+
+languages:
+  - "en"
+  - "hi"
+  - "te"
+  - "es"
+
+support:
+  risk_clause_pattern: '[;.!?\n]+'
+  history_messages: 10
+  repeated_negative_count: 3
+  negative_window_minutes: 15
+  negative_labels: [negative, frustrated, sarcastic]
+  label_priority: [urgent, sarcastic, frustrated, negative, positive, neutral]
+  evidence_confidence: 0.85
+  context_confidence: 0.9
+  neutral_confidence: 0.35
+  minimum_history_negatives: 1
+  sentiment_threshold: 0.6
+  tone_enabled: true
+  high_risk_urgent: true
+  calendar_search_days: 366
+  queues:
+    business: support
+    urgent_after_hours: on_call
+    normal_after_hours: scheduled
+
+timings:
+  business_hours:
+    start: "09:00"
+    end: "18:00"
+    workdays: [0, 1, 2, 3, 4]
+  escalation_timeout_minutes: 15
+  session_inactivity_timeout_minutes: 30
+  session_restore_hours: 24
+  maintenance_window:
+    day: "Sunday"
+    start: "02:00"
+    end: "04:00"
+
+sla_rules:
+  response_time_seconds: 5.0
+  resolution_time_minutes: 60
+  p1_resolution_time_minutes: 15
+
+roles:
+  public:
+    access_rank: 0
+    permissions:
+      - "query:public"
+  customer:
+    access_rank: 1
+    permissions:
+      - "query:public"
+      - "query:customer"
+      - "order:read"
+      - "upload:create"
+      - "ticket:create"
+      - "ticket:view_own"
+  support_agent:
+    access_rank: 2
+    permissions:
+      - "query:public"
+      - "query:customer"
+      - "query:support"
+      - "order:read"
+      - "order:write"
+      - "ticket:manage"
+      - "ticket:create"
+      - "ticket:view_own"
+      - "upload:create"
+      - "knowledge:view"
+  ingestor:
+    access_rank: 2
+    permissions: ["knowledge:ingest", "knowledge:view"]
+  approver:
+    access_rank: 2
+    permissions: ["knowledge:approve", "knowledge:view"]
+  operator:
+    access_rank: 2
+    permissions: ["knowledge:activate", "knowledge:rollback", "knowledge:view"]
+  admin:
+    access_rank: 3
+    permissions:
+      - "*"
+
+api_keys: {}
+
+holidays:
+  - "2026-01-26"
+  - "2026-08-15"
+  - "2026-10-02"
+  - "2026-11-08"
+
+weights:
+  lexical_cosine_weight: 0.3
+  lexical_overlap_weight: 0.7
+
+thresholds:
+  similarity_threshold: 0.7
+  ambiguity_margin: 0.05
+  max_retrieved_chunks: 5
+  verification_min_confidence: 0.8
+  prompt_injection_score_threshold: 0.6
+  language_confidence: 0.6
+  intent_confidence: 0.75
+
+retention:
+  audit_log_days: 90
+  session_history_days: 30
+
+updates:
+  run_time: "01:00"
+  scheduler_role: "admin"
+  retry_offsets_minutes: [15, 30, 60]
+  health_window_minutes: 5
+  health_poll_seconds: 10
+  quality_tolerance: 0
+  max_file_bytes: 1048576
+  supported_types: [".json"]
+  inbox: "data/inbox"
+  quarantine: "quarantine"
+  golden: "data/golden"
+
+conversation:
+  resource_directory: "resources/languages"
+  default_language: "en"
+  context_messages: 10
+  superseded_limit: 100
+  max_message_characters: 10000
+  max_session_id_characters: 128
+  script_weight: 2.0
+  nondefault_marker_weight: 1.5
+  coverage_weight: 0.75
+  primary_language_weight: 0.25
+  context_intent_confidence: 0.85
+  minimum_intent_evidence: 1
+  entity_token_pattern: "__ENTITY_[a-f0-9]+_[0-9]+__"
+  common_entity_patterns:
+    - kind: "citation"
+      pattern: '(?P<value>\[[^\]\n]+, v[0-9]+, [^\]\n]+\])'
+    - kind: "date"
+      pattern: '(?P<value>\b[0-9]{4}[-/][0-9]{2}[-/][0-9]{2}\b|\b[0-9]{1,2}[-/][0-9]{1,2}[-/][0-9]{4}\b)'
+    - kind: "order_id"
+      pattern: '(?P<value>\b(?:ORD|ORDER)[-_#][A-Za-z0-9_-]+\b)'
+    - kind: "product_code"
+      pattern: '(?P<value>\b(?:PRD|PROD|SKU|NULL)[-_#][A-Za-z0-9_-]+\b)'

@@ -1,0 +1,26 @@
+[
+  {
+    "id": "refund-current",
+    "question": "What is the refund policy for bootcamp?",
+    "role": "customer",
+    "answers": ["Learners are eligible for a 100% full refund within 14 days of course enrollment."]
+  },
+  {
+    "id": "public-no-internal-sop",
+    "question": "Tell me about agent escalation workflow for customer refunds",
+    "role": "public",
+    "expect_refusal": true
+  },
+  {
+    "id": "support-internal-sop",
+    "question": "Tell me about agent escalation workflow for customer refunds",
+    "role": "support_agent",
+    "answers": ["Support agents must verify customer credentials before approving manual refunds exceeding 5000 INR."]
+  },
+  {
+    "id": "historical-laptop",
+    "question": "What were the laptop standards in 2024?",
+    "role": "customer",
+    "answers": ["During the 2024 academic year, a basic laptop with 4GB RAM was standard for data science."]
+  }
+]

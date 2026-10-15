@@ -1,0 +1,113 @@
+{
+  "publishable_file_count": 185,
+  "publishable_bytes": 1584013,
+  "secret_value_count_checked": 7,
+  "working_tree_secret_findings": [],
+  "committed_history_secret_findings": [],
+  "named_test_inventory": {
+    "T1": {
+      "required_named_tests": 13,
+      "missing": [],
+      "tests": {
+        "test_activation_blocked_outside_window": "tests/test_task1.py:172",
+        "test_activation_inside_window": "tests/test_task1.py:181",
+        "test_auto_rollback_on_health_failure_within_5min": "tests/test_task1.py:189",
+        "test_duplicate_documents_detected": "tests/test_task1.py:63",
+        "test_invalid_file_quarantined": "tests/test_task1.py:88",
+        "test_manual_rollback": "tests/test_task1.py:245",
+        "test_no_rollback_after_5min_window": "tests/test_task1.py:201",
+        "test_only_new_or_modified_processed": "tests/test_task1.py:74",
+        "test_quality_gate_rejects_accuracy_drop": "tests/test_task1.py:115",
+        "test_quality_gate_rejects_grounding_drop": "tests/test_task1.py:130",
+        "test_retry_15_30_60": "tests/test_task1.py:147",
+        "test_service_outage_during_update": "tests/test_task1.py:211",
+        "test_unauthorised_access_rejected": "tests/test_task1.py:235"
+      }
+    },
+    "T2": {
+      "required_named_tests": 8,
+      "missing": [],
+      "tests": {
+        "test_blurred_image_requests_new_file": "tests/test_task2.py:73",
+        "test_delayed_processing_moves_to_queue_and_notifies": "tests/test_task2.py:95",
+        "test_expired_files_deleted": "tests/test_task2.py:122",
+        "test_mismatched_invoice_asks_clarification": "tests/test_task2.py:80",
+        "test_missing_field_not_invented": "tests/test_task2.py:88",
+        "test_pii_masked_in_logs": "tests/test_task2.py:164",
+        "test_prompt_injection_in_image_rejected": "tests/test_task2.py:137",
+        "test_unsafe_file_rejected": "tests/test_task2.py:151"
+      }
+    },
+    "T3": {
+      "required_named_tests": 12,
+      "missing": [],
+      "tests": {
+        "test_after_hours_request": "tests/test_task3.py:123",
+        "test_breach_auto_escalates": "tests/test_task3.py:162",
+        "test_duplicate_ticket_merged": "tests/test_task3.py:57",
+        "test_handoff_summary_masked": "tests/test_task3.py:188",
+        "test_missing_mandatory_requested": "tests/test_task3.py:75",
+        "test_priority_formula": "tests/test_task3.py:88",
+        "test_related_grouped_unrelated_separate": "tests/test_task3.py:66",
+        "test_routing_skills_workload": "tests/test_task3.py:97",
+        "test_runtime_sla_change_recomputes": "tests/test_task3.py:172",
+        "test_sla_75_percent_warning": "tests/test_task3.py:148",
+        "test_sla_excludes_weekends_and_holidays": "tests/test_task3.py:137",
+        "test_team_unavailable_queued": "tests/test_task3.py:109"
+      }
+    },
+    "T4": {
+      "required_named_tests": 10,
+      "missing": [],
+      "tests": {
+        "test_ambiguous_asks_clarification": "tests/test_task4.py:127",
+        "test_citation_present_on_every_factual_answer": "tests/test_task4.py:102",
+        "test_conflicting_policies_latest_wins": "tests/test_task4.py:42",
+        "test_expired_policy_ignored_for_current": "tests/test_task4.py:72",
+        "test_future_dated_ignored_for_current": "tests/test_task4.py:82",
+        "test_historical_question_uses_policy_active_on_date": "tests/test_task4.py:92",
+        "test_prompt_injected_doc_ignored": "tests/test_task4.py:160",
+        "test_refuses_when_no_evidence": "tests/test_task4.py:117",
+        "test_restricted_doc_not_retrieved": "tests/test_task4.py:56",
+        "test_unsupported_claim_detected": "tests/test_task4.py:137"
+      }
+    },
+    "T5": {
+      "required_named_tests": 11,
+      "missing": [],
+      "tests": {
+        "test_calm_account_compromise_escalates": "tests/test_task5.py:69",
+        "test_calm_duplicate_payment_escalates": "tests/test_task5.py:73",
+        "test_calm_legal_threat_escalates": "tests/test_task5.py:77",
+        "test_escalation_record_complete": "tests/test_task5.py:179",
+        "test_normal_after_hours_next_working_day": "tests/test_task5.py:107",
+        "test_repeated_negative_escalates": "tests/test_task5.py:81",
+        "test_sarcasm_detected_with_history": "tests/test_task5.py:51",
+        "test_simulated_time_change": "tests/test_task5.py:134",
+        "test_tone_changes_policy_unchanged": "tests/test_task5.py:154",
+        "test_unresolved_negative_15min_escalates": "tests/test_task5.py:119",
+        "test_urgent_after_hours_goes_oncall": "tests/test_task5.py:98"
+      }
+    },
+    "T6": {
+      "required_named_tests": 14,
+      "missing": [],
+      "tests": {
+        "test_concurrent_sessions_isolated": "tests/test_task6.py:100",
+        "test_config_changes_thresholds_without_code": "tests/test_task6.py:216",
+        "test_context_retained_10_messages": "tests/test_task6.py:85",
+        "test_correction_overrides_earlier_value": "tests/test_task6.py:165",
+        "test_entities_preserved_across_languages": "tests/test_task6.py:48",
+        "test_language_switch_mid_conversation": "tests/test_task6.py:76",
+        "test_low_confidence_asks_clarification": "tests/test_task6.py:129",
+        "test_misspelling_and_transliteration": "tests/test_task6.py:148",
+        "test_mixed_language_message": "tests/test_task6.py:66",
+        "test_multiple_requests_in_one_message": "tests/test_task6.py:157",
+        "test_return_after_24h_new_session": "tests/test_task6.py:205",
+        "test_return_within_24h_restores_summary": "tests/test_task6.py:191",
+        "test_session_expires_after_30min": "tests/test_task6.py:179",
+        "test_unseen_conversation_set": "tests/test_task6.py:228"
+      }
+    }
+  }
+}
