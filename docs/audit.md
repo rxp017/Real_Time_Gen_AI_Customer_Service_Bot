@@ -280,7 +280,7 @@ The user authorized an own public repository, never a push to the mentor's repo.
 
 Command: git -c credential.helper= -c http.extraHeader= clone --depth 1 --no-tags https://github.com/rxp017/Real_Time_Gen_AI_Customer_Service_Bot.git
 
-`json
+```json
 {
   "anonymous_https_clone": true,
   "dotenv_absent": true,
@@ -288,6 +288,6 @@ Command: git -c credential.helper= -c http.extraHeader= clone --depth 1 --no-tag
   "differences_from_tested_clean_clone": [],
   "public_disclosures_byte_exact": true
 }
-`
+```
 
 The public clone matches all 101 application/config/resource/test/fixture files compared with the clean checkout that passed the full suite. The final follow-up changes contain audit evidence only.
