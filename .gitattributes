@@ -5,11 +5,13 @@
 *.json text eol=lf
 *.jsonl text eol=lf
 *.txt text eol=lf
-*.pdf -text
+*.pdf -text -diff
 *.png -text
 *.jpg -text
 *.jpeg -text
 *.csv -text
-docs/audit-disclosures-verbatim.md -text
-docs/known_gaps.md -text
-docs/assumptions.md -text
+docs/archive/audit-disclosures-verbatim.md -text
+docs/archive/known_gaps-2026-10-15.md -text
+docs/archive/assumptions-2026-10-15.md -text
+docs/archive/** -whitespace
+docs/verification/release-ci-*.txt -whitespace

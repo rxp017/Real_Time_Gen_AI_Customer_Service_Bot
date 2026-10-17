@@ -156,3 +156,11 @@ def test_quality_gate_uses_ingested_hybrid_vectors(tmp_path: Path) -> None:
     assert result["candidate"]["accuracy"] == 1 and result["candidate"]["grounding"] == 1
     assert any(c["task"] == "RETRIEVAL_DOCUMENT" for c in fake.calls)
     assert any(c["task"] == "RETRIEVAL_QUERY" for c in fake.calls)
+    service.approve(version, "admin-key-charlie")
+    clock.set("2026-10-18T02:00:00+05:30")
+    service.activate(version, "admin-key-charlie")
+    fake.embedding_model = "replacement-model"
+    calls = len(fake.calls)
+    assert service.ingest([path], "admin-key-charlie")["version"] is None
+    assert len(fake.calls) == calls + 1
+    assert service.repo.load_vector(vector_key(doc), "replacement-model")

@@ -20,7 +20,7 @@ Observed live evidence:
 
 - `scripts/check_provider_models.py`: models.list authenticated successfully. [Sanitized inventory](verification/provider-models.json).
 - Initial `scripts/check_provider_generation.py`: newer candidates timed out/returned 503; 2.5 Flash-Lite returned 404. That model was removed from the active chain. [Original failure report](verification/provider-generation.json).
-- Isolated 2.5 Flash probe returned HTTP 200 with READY. [Actual result](verification/provider-flash-probe.json).
+- Isolated 2.5 Flash probe returned HTTP 200 with READY. [Actual result](../verification/provider-flash-probe.json).
 - `scripts/check_live_task6.py`: four explicit synthetic refund-policy questions passed through the real provider, with en/hi/te/es recognition, localized answers and verified citations. [Actual result](verification/task6-live-provider.json). [Earlier smoke results](verification/task6-live-provider-runs.jsonl) remain available, including safe refusals to unsupported action instructions.
 
 These checks establish connectivity and four supported fixture answers. Backup generation success, project billing tier, real customer-policy quality and general language accuracy remain unverified. Project-wide quota cannot be bypassed by changing models; see [Google's rate-limit documentation](https://ai.google.dev/gemini-api/docs/rate-limits).

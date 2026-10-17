@@ -35,7 +35,7 @@ Routing requires configured issue/product skills, agent availability and remaini
 
 `tickets.agents` intentionally defaults to an empty list. Supply real agent IDs, skills, availability and capacity there. Each agent entry uses `id`, `skills` (list), `available` (boolean), `capacity` (integer). `tickets.product_skills` can add product-specific requirements. The authored test/demo agents exist only in their temporary configurations.
 
-[Priority formula](priority.md), [assumptions](task3_assumptions.md), [RTM](RTM.md), [actual pytest output](verification/pytest-task3.txt).
+[Priority formula](../priority.md), [assumptions](../task3_assumptions.md), [RTM](../RTM.md), [actual pytest output](verification/pytest-task3.txt).
 
 Offline demonstration:
 

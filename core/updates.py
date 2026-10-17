@@ -71,6 +71,8 @@ class UpdateService:
                 self.metrics.increment("update_validation_failures")
                 continue
             if old and old["hash"] == digest:
+                # A model change refreshes vectors even when source bytes are unchanged.
+                PolicyRetrievalEngine(self.repo, self.llm, embedder=self.embedder).prepare_embedding(docs[data["doc_id"]])
                 skipped.append({"file": path.name, "reason": "unchanged"})
                 self.audit.log_info("document_unchanged", role, "Unchanged file skipped", filename=path.name)
                 continue

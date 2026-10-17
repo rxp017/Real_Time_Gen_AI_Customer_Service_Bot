@@ -29,12 +29,13 @@ def evaluate(live: bool = False) -> dict:
     for case in data["cases"]:
         try:
             result = engine.query(case["question"], case["role"])
-            answered = not result.refusal and not result.clarification_needed and result.verified
-            correct = answered and any(c["doc_id"] == case["expected_doc_id"] for c in result.citations)
+            answered = not result.refusal and not result.clarification_needed
+            correct = answered and result.verified and any(c["doc_id"] == case["expected_doc_id"] for c in result.citations)
             outcomes.append({"id": case["id"], "answerable": not case["expected_refusal"],
                              "answered": answered, "correct_cited_answer": correct,
                              "false_answer": answered and (case["expected_refusal"] or not correct),
-                             "answer": result.answer, "citations": result.citations})
+                             "answer": result.answer, "citations": result.citations, "verified": result.verified,
+                             "refusal": result.refusal, "clarification_needed": result.clarification_needed})
         except (RuntimeError, ValueError, OSError) as exc:
             outcomes.append({"id": case["id"], "answerable": not case["expected_refusal"],
                              "answered": False, "correct_cited_answer": False, "false_answer": False,
