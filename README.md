@@ -1,95 +1,101 @@
-# Customer Service Bot: Controlled Updates and Multilingual Sessions
+# Customer service bot
 
-Based on the mentor's [GEN---AI-course/customer_service_chatbot_LLM](https://github.com/aslin72/GEN---AI-course/tree/main/GEN---AI-course/customer_service_chatbot_LLM). The original FAQ dataset is preserved in `dataset/dataset.csv`; the original bot functions remain under `src/`. This repository adds the shared API and tasks 1-6 around that workspace. The supported API uses the shared policy engine; direct operation of the old Streamlit/GooglePalm chain remains unverified. [Audit and remaining requirement gaps](docs/audit.md).
+A Python 3.11/FastAPI customer-service application with policy citations, controlled knowledge updates, document extraction, multilingual sessions, escalation and tickets. It extends the mentor's [customer_service_chatbot_LLM training project](https://github.com/aslin72/GEN---AI-course/tree/main/GEN---AI-course/customer_service_chatbot_LLM). The original `dataset/dataset.csv` and `src/` entry points are retained; the FAQ CSV is imported into the shared document schema when a configured service initializes a new store.
 
-Task 3 adds structured ticket drafts, weighted priority, skill/capacity routing, business-time SLA warnings and escalation, runtime SLA changes, safe deduplication/grouping and masked handoff summaries. [Ticket API and configuration](docs/task3.md) · [Priority formula](docs/priority.md).
+## Architecture
 
-Task 2 adds authenticated uploads, a gate before content decoders, actual Tesseract/PDFium extraction with source regions, message conflict checks, real Gemini image-input support, background jobs/notifications, and Clock-driven byte deletion. [Upload API, install steps and actual evidence](docs/task2.md).
-
-Task 1 is implemented against the shared SQLite/RAG foundation. Antigravity's original completion claim failed the source audit; critical API, grounding, injection, access, and runtime defects were repaired. Task 4's general semantic search remains incomplete.
-
-Task 6 adds resource-driven en/hi/te/es recognition, entity preservation, corrections, multiple requests, and persistent owner-bound sessions. Unknown input asks clarification. See [user setup steps](docs/next_steps.md).
-
-AI Studio configuration now uses live-verified gemini-2.5-flash and four free-tier-eligible model backups. The Google key was preserved, and blank role keys were generated locally. [Fallback design and actual provider evidence](docs/provider_fallback.md). Confirm the project's billing tier is Free; selecting eligible models does not force free billing.
-
-- [Current verification and command output](docs/README.md)
-- [Audit findings](docs/verification.md)
-- [Task 1 requirements](docs/tasks/T1.md)
-- [Task 6 requirements](docs/tasks/T6.md)
-- [Task 2 requirements](docs/tasks/T2.md)
-- [Requirements trace matrix](docs/RTM.md)
-- [Known limits](docs/known_gaps.md)
-- [Original training baseline](docs/baseline.md)
-
-## Fresh Windows checkout installation
-
-Run the following from the cloned repository root in PowerShell. This creates an isolated Python 3.11.9 runtime from python.org; it does not require the ignored runtime from the author's machine or change system Python. Network access is required for installation. Existing `.env` files are preserved.
-
-```powershell
-New-Item -ItemType Directory -Force .runtime/python311 | Out-Null
-Invoke-WebRequest -Uri https://www.python.org/ftp/python/3.11.9/python-3.11.9-embed-amd64.zip -OutFile .runtime/python311.zip
-Expand-Archive -LiteralPath .runtime/python311.zip -DestinationPath .runtime/python311 -Force
-Set-Content -LiteralPath .runtime/python311/python311._pth -Encoding ascii -Value @('python311.zip', '.', 'import site')
-Invoke-WebRequest -Uri https://bootstrap.pypa.io/get-pip.py -OutFile .runtime/get-pip.py
-.\.runtime\python311\python.exe .runtime/get-pip.py --no-warn-script-location
-.\.runtime\python311\python.exe -m pip install --no-warn-script-location -r requirements.txt
-if (-not (Test-Path -LiteralPath .env)) { Copy-Item -LiteralPath .env.example -Destination .env }
-.\.runtime\python311\python.exe --version
-.\.runtime\python311\python.exe -m pip check
+```mermaid
+flowchart TD
+  UI[Customer chat / upload / tickets] --> API[FastAPI: origin / rate / size / RBAC gates]
+  API --> CHAT[Language / sessions / sentiment / separate risk rules]
+  CHAT --> RAG[Authorize / dates / versions / hybrid retrieval / cited answer]
+  API --> OCR[Upload gate / Tesseract / PDFium / background jobs]
+  API --> TICKETS[Ticket drafts / routing / business-time SLA]
+  RAG --> DB[(SQLite snapshots / vectors / sessions / audit)]
+  OCR --> DB
+  TICKETS --> DB
+  RAG --> PROVIDER[Provider: generation / embeddings / translation]
+  CLOCK[Clock + hot configuration] --> CHAT
+  CLOCK --> TICKETS
+  CLOCK --> UPDATES[Quality gate / maintenance activation / rollback]
+  UPDATES --> DB
 ```
 
-OCR is required for Task 2's extraction and full tests. Install the Windows Tesseract prerequisite if absent, then download the four configured language packs from the official tagged resources:
+## Tasks and coverage
+
+| Task requirement | Main modules | Representative tests |
+| --- | --- | --- |
+| T1: hash/dedupe, quarantine, quality gate, timed activation and rollback | `core/ingestion.py`, `updates.py`, `store.py` | `test_duplicate_documents_detected`, `test_retry_15_30_60`, `test_quality_gate_uses_ingested_hybrid_vectors` |
+| T2: bounded uploads, actual extraction, conflicts, retention | `core/upload_gate.py`, `ocr.py`, `uploads.py` | `test_missing_field_not_invented`, `test_mismatched_invoice_asks_clarification`, `test_expired_files_deleted` |
+| T3: mandatory ticket fields, priority, business SLA and routing | `core/tickets.py`, `priority.py`, `business_time.py` | `test_priority_formula`, `test_runtime_sla_change_recomputes` |
+| T4: filtered hybrid retrieval, FAQ/guide metadata, citations | `core/retrieval.py`, `embeddings.py`, `training.py` | `test_hybrid_query_to_cited_answer`, `test_filters_and_versions_precede_all_similarity`, `test_training_faqs_are_ingested_with_metadata` |
+| T5: provider sentiment with pattern fallback; independent risk | `core/sentiment.py`, `risk.py`, `escalation.py` | `test_classifier_output_enum_and_schema_validation`, `test_high_risk_independent_of_provider_positive_label` |
+| T6: language/context, protected translation, isolated sessions | `core/language.py`, `entities.py`, `sessions.py` | `test_provider_translation_preserves_original_entity_bytes`, `test_concurrent_sessions_isolated` |
+
+[Full requirements matrix](docs/RTM.md) · [Engineering report](docs/REPORT.md) · [PDF report](docs/REPORT.pdf)
+
+## Quickstart: Linux
+
+Use Python 3.11 (already installed), with Debian/Ubuntu OCR packages:
+
+```sh
+sudo apt-get update
+sudo apt-get install -y python3-venv tesseract-ocr tesseract-ocr-eng tesseract-ocr-hin tesseract-ocr-tel tesseract-ocr-spa
+python3.11 -m venv .venv
+. .venv/bin/activate
+python -m pip install -r requirements.txt
+[ -f .env ] || cp .env.example .env
+python scripts/check_ocr.py
+python -m uvicorn app.chatbot:app --host 127.0.0.1 --port 8000 --workers 1
+```
+
+No OCR environment overrides are needed. The system language directory is detected automatically. An optional `python scripts/fetch_tessdata.py` installs tagged local resources.
+
+## Quickstart: Windows
+
+Run from the cloned project root in PowerShell. The bootstrap creates an isolated official Python 3.11.9 runtime and installs pinned dependencies/language resources, preserving an existing `.env`:
 
 ```powershell
-if (-not (Test-Path -LiteralPath 'C:/Program Files/Tesseract-OCR/tesseract.exe')) {
+if (-not (Get-Command tesseract -ErrorAction SilentlyContinue) -and -not (Test-Path 'C:/Program Files/Tesseract-OCR/tesseract.exe')) {
     winget install --id UB-Mannheim.TesseractOCR --source winget --exact --version 5.4.0.20240606 --silent --accept-package-agreements --accept-source-agreements
 }
-New-Item -ItemType Directory -Force .runtime/tessdata | Out-Null
-foreach ($code in @('eng','hin','tel','spa')) {
-    Invoke-WebRequest -Uri "https://raw.githubusercontent.com/tesseract-ocr/tessdata_fast/4.1.0/$code.traineddata" -OutFile ".runtime/tessdata/$code.traineddata"
-}
-.\.runtime\python311\python.exe -X utf8 scripts/check_ocr.py
+.\scripts\bootstrap_windows.ps1
 ```
-
-Alternatively, use an installed Python 3.11 with `py -3.11 -m venv .venv` and install `requirements.txt` with that environment's interpreter. Substitute it for the portable interpreter in commands below. Run all commands from the repository root. The archived upstream manifest is retained for audit, not used by the supported installer.
-
-## Run locally
-
-For live queries, fill the copied `.env` with your own `GOOGLE_API_KEY`, model and private role keys. Empty credentials permit offline tests and server startup, but do not provide live generation or authenticated management access. Run from the project root:
 
 ```powershell
-.\.runtime\python311\python.exe -m uvicorn app.chatbot:app --host 127.0.0.1 --port 8000
+.\.runtime\python311\python.exe -m uvicorn app.chatbot:app --host 127.0.0.1 --port 8000 --workers 1
 ```
 
-Put complete policy JSON files in data/inbox/. Use the metadata schema shown by data/sample_docs/policy_v2_refund.json. The ingestion API scans this local directory; it accepts no arbitrary server file path.
+OCR discovery prefers PATH, with the standard Windows location as fallback. A runtime config override takes precedence over `TESSERACT_CMD`.
 
-## Workflow
+## Quickstart: Docker
 
-1. POST /knowledge/ingest with an ingestor/admin x-api-key creates a candidate and reports skipped/quarantined files.
-2. POST /knowledge/{version}/quality with an approver/admin key measures ACTIVE and candidate on data/golden/.
-3. POST /knowledge/{version}/approve approves a passing candidate.
-4. POST /knowledge/{version}/activate with an operator/admin key activates only in the configured window. The worker also activates held approved candidates inside the window.
-5. POST /knowledge/{version}/rollback with an operator/admin key atomically restores an eligible snapshot.
-6. GET /knowledge or /knowledge/{version} requires view permission and returns status/reports, not document content.
-
-POST /knowledge/schedule configures a daily inbox job. Startup also schedules it when API_KEY_ADMIN is set. Retry offsets are +15/+30/+60 minutes from the first failure, followed by a durable FAILED alert. Default maintenance is Sunday 02:00-04:00 Asia/Kolkata. The worker checks activation health for five minutes and records automatic rollback reasons.
-
-POST /query reads ACTIVE. With an empty store it refuses unsupported questions. The application uses the real configured provider; it never enables FakeLLM by default. The original training source is preserved under src/, and unavailable legacy/provider calls return 503.
-
-Keep the returned session_id and send it on later /query calls. Each response includes per-message language/intent confidence, mixed-language flags, protected entities, request-specific context, clarification state, and session generation/transition. Use the same API key for that session. Sessions expire after configured 30-minute inactivity; returning within configured 24 hours restores a structured summary; later returns start a fresh generation. The window retains at least ten user/assistant messages.
-
-Language support is configured by languages and conversation/thresholds/timings in config/default.yaml, with resources/languages/<code>.json. Add resources and a config entry to enable another language. Untranslated factual answers explicitly report their actual answer_language. This is bounded resource recognition and curated translation, not a general multilingual model.
-
-## Offline verification
-
-```powershell
-.\.runtime\python311\python.exe -m pytest -q
-.\.runtime\python311\python.exe -m ruff check .
-.\.runtime\python311\python.exe scripts/demo_t1.py
-.\.runtime\python311\python.exe scripts/demo_t4.py
-.\.runtime\python311\python.exe -X utf8 scripts/evaluate_t6.py
-.\.runtime\python311\python.exe -X utf8 scripts/check_ocr.py
-.\.runtime\python311\python.exe -X utf8 scripts/demo_t2.py
+```sh
+[ -f .env ] || cp .env.example .env
+docker build -t customer-service-bot .
+docker run --rm -p 8000:8000 --env-file .env -v customer-service-data:/app/data customer-service-bot
 ```
 
-The earlier policy/update demos use FakeClock/FakeLLM. Task 2's offline demo runs real local OCR/PDF extraction and explicitly disables vision; its optional manual live-vision script uses the real provider. No demo establishes broad customer-policy or vision accuracy. Alerts and upload notifications are local records; external notification delivery is not configured.
+The image includes Tesseract and eng/hin/tel/spa, runs as UID 1000 and starts one worker. The volume holds SQLite, uploads, quarantine and inbox state.
+
+## Configuration and demo
+
+Open the [local customer UI](http://127.0.0.1:8000/). Fill `.env` with your own Google key and distinct random application role keys before live use. Generate keys locally with `python -c "import secrets; print(secrets.token_urlsafe(32))"`; keep the output private. Never put the Google key in the browser. Uploads and tickets require a customer key. With no provider configured, the app starts but refuses unsupported factual answers.
+
+The default generation model is `gemini-2.5-flash`, supported by [successful provider evidence](docs/verification/provider-flash-probe.json). Fallback models are empty because no other model has proven successful generation. Model eligibility does not establish the account's billing tier or available quota. Languages, thresholds, weights and timings live in `config/default.yaml` and `resources/languages/`.
+
+Demo: [UI screenshot](docs/assets/customer-ui.jpg), [2–5 minute video script](docs/demo-script.md), and `python scripts/demo_t1.py` / `python scripts/demo_t4.py` for explicitly offline FakeClock/FakeLLM demonstrations. Live URL: **not deployed**. [Render deployment guide](docs/deploy-render.md).
+
+## Verification
+
+```sh
+python -m pytest -q
+python -m ruff check .
+python scripts/export_report.py
+```
+
+On Windows, substitute `.\.runtime\python311\python.exe` for `python`. [CI](https://github.com/rxp017/Real_Time_Gen_AI_Customer_Service_Bot/actions/workflows/ci.yml) installs OCR and runs the full suite/Ruff on Ubuntu and Windows, plus a Docker build/OCR check. Current command outputs and frozen-set measurements are in [the report](docs/REPORT.md). Historical audits and verification exhaust are preserved in [docs/archive](docs/archive/README.md).
+
+## Limits
+
+The frozen live retrieval set answered 3/20 supported questions with correct citations and 0/52 false answers; recall is limited. The new sentiment pipeline scored 22/48, with only six accepted provider classifications. Live translation hit HTTP 429; source fallback preserved entities, while successful live translation remains unverified. Rules/OCR/name recognition are bounded; source verification does not independently certify translation meaning. The legacy Streamlit chain is unverified. SQLite, scheduling and rate budgets require one worker; external alerts are local records. Render Free sleeps and loses ephemeral state, so it is suitable for a demonstration, not durable support operations. See [details](docs/REPORT.md).

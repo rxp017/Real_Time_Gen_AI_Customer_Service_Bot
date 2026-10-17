@@ -1,3 +1,21 @@
+# Project assumptions - current release 2026-10-17
+
+The approved 2026-10-17 request governs the following changes. Earlier notes below are retained as historical design context; the source snapshot is archived separately.
+
+- Original task documents remain unchanged. The new approved ordering resolves latest applicable family/product/region versions before either embedding or lexical similarity, superseding the historical T4 sequence.
+- Document vectors are computed at trusted ingestion after validity-interval and injection scans. Historical/future documents may be embedded for later authorized as-of queries. Query-time scoring reads only authorized/applicable/latest survivors; flagged chunks are excluded. Provider outages or absent vectors fall back to lexical retrieval. Model/content-keyed cache rows do not mutate snapshot documents. Unchanged source ingestion refreshes a missing vector after a model change; explicit reindex is also available.
+- Flagged instruction spans are neutralized while retaining surrounding text for review; the flagged document remains ineligible for retrieval/embedding. T1's quarantine behavior is retained.
+- The training CSV's original bytes and Windows-1252 punctuation are preserved. Metadata identifies source FAQ rows separately. A configured new empty store imports FAQs; an existing ACTIVE snapshot or an unconfigured offline empty store is not silently changed.
+- The T4 corpus was frozen in 74643de and the new T5 labels in 9ecebee, before their implementation changes. No synonym/threshold/sentiment/risk rule tuning against these sets is performed. Measured pipeline fallback is part of the reported results; scripted vectors do not establish semantic accuracy.
+- Classification accepts only the six stated enum labels with bounded confidence and configured language. Complete JSON code fences are transport formatting, not instructions. Risk decisions remain rule-based and separate from provider sentiment.
+- Translation operates on protected original spans and numeric/citation tokens; malformed/missing/duplicated tokens fail to curated or source fallback. The canonical source_answer is separate from translated presentation. Name detection remains bounded, and structural translation checks are not semantic certification.
+- OCR precedence is runtime override, environment, then config/PATH, with a standard Windows fallback. System tessdata or tagged local resources are detected without Linux environment changes.
+- Customer UI controls are limited to chat, uploads and own-ticket workflow. Access keys are not persisted in the browser; origins, rate buckets and request bodies are bounded server-side. One worker/instance is required. Default persistent state paths share data/.
+- The public example has no fallback models beyond the proven primary because no other model has successful generation evidence. Existing private environment values are not published. Live translation requests encountered rate limits and fall back honestly.
+- Render Free is demonstration hosting: sleep suspends timers and ephemeral storage can lose state. No live URL or completed video is claimed. A deployment guide, PDF report and 2–5 minute recording script are delivered.
+
+## Historical notes (through 2026-10-15)
+
 # Project Assumptions
 
 ## Environment & Runtime

@@ -1,0 +1,13 @@
+{
+  "source": "https://github.com/rxp017/Real_Time_Gen_AI_Customer_Service_Bot",
+  "candidate_commit": "1f7eaa075f3a9e4f27234bcd99c8c6892ec9deed",
+  "clone_authentication": "credential.helper empty, http.extraHeader empty, GIT_TERMINAL_PROMPT=0",
+  "install": "Executed first README PowerShell block verbatim; new official Python 3.11 runtime, pinned dependencies, tagged OCR resources",
+  "host_prerequisite": "Windows Tesseract already installed; conditional installer skipped",
+  "install_log_sha256": "eca7742c92e5fb06affe99dec728a173255bab480d75d8e214825e3a06309b7c",
+  "source_files_matched": 129,
+  "source_parity": "All implementation, test, fixture, dependency, container and workflow files match the README-installed candidate via Git clean filters",
+  "candidate_ci": "https://github.com/rxp017/Real_Time_Gen_AI_Customer_Service_Bot/actions/runs/39044763666",
+  "candidate_ci_result": "Ubuntu tests/Ruff, Windows tests/Ruff and Docker build/OCR all success",
+  "final_amendment": "Evidence and report only; implementation remains identical to this tested candidate"
+}

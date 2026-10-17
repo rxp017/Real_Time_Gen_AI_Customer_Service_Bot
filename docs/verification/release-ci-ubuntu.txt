@@ -1,0 +1,445 @@
+﻿2026-10-17T15:03:23.7023250Z Current runner version: '2.337.0'
+2026-10-17T15:03:23.7043292Z ##[group]Runner Image Provisioner
+2026-10-17T15:03:23.7044073Z Hosted Compute Agent
+2026-10-17T15:03:23.7044565Z Version: 20261012.601
+2026-10-17T15:03:23.7045161Z Commit: f3dc54e1fb89da6852db922499a0233137369e1d
+2026-10-17T15:03:23.7045782Z Build Date: 2026-10-12T17:48:21Z
+2026-10-17T15:03:23.7046340Z Worker ID: {90037062-834e-4cdd-be13-4bcf5a1e9e7f}
+2026-10-17T15:03:23.7046985Z Region: northcentralus
+2026-10-17T15:03:23.7047465Z Cloud: Azure
+2026-10-17T15:03:23.7047909Z ##[endgroup]
+2026-10-17T15:03:23.7048991Z ##[group]Operating System
+2026-10-17T15:03:23.7049530Z Ubuntu
+2026-10-17T15:03:23.7050039Z 24.04.5
+2026-10-17T15:03:23.7050489Z LTS
+2026-10-17T15:03:23.7050927Z ##[endgroup]
+2026-10-17T15:03:23.7051460Z ##[group]Runner Image
+2026-10-17T15:03:23.7052225Z Image: ubuntu-24.04
+2026-10-17T15:03:23.7052771Z Version: 20261012.334.1
+2026-10-17T15:03:23.7053825Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261012.334/images/ubuntu/Ubuntu2404-Readme.md
+2026-10-17T15:03:23.7055132Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261012.334
+2026-10-17T15:03:23.7055915Z ##[endgroup]
+2026-10-17T15:03:23.7057147Z ##[group]GITHUB_TOKEN Permissions
+2026-10-17T15:03:23.7058919Z Contents: read
+2026-10-17T15:03:23.7059454Z Metadata: read
+2026-10-17T15:03:23.7059921Z ##[endgroup]
+2026-10-17T15:03:23.7061622Z Secret source: Actions
+2026-10-17T15:03:23.7062780Z Cache mode: write
+2026-10-17T15:03:23.7063519Z Prepare workflow directory
+2026-10-17T15:03:23.7482820Z Prepare all required actions
+2026-10-17T15:03:23.7536149Z Getting action download info
+2026-10-17T15:03:23.9414090Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+2026-10-17T15:03:24.2147127Z Download action repository 'actions/setup-python@v5' (SHA:a26af69be951a213d495a4c3e4e4022e16d87065)
+2026-10-17T15:03:25.0300886Z Complete job name: tests (ubuntu-latest)
+2026-10-17T15:03:25.2042826Z ##[group]Run actions/checkout@v4
+2026-10-17T15:03:25.2043930Z with:
+2026-10-17T15:03:25.2044726Z   repository: rxp017/Real_Time_Gen_AI_Customer_Service_Bot
+2026-10-17T15:03:25.2051773Z   token: ***
+2026-10-17T15:03:25.2052410Z   ssh-strict: true
+2026-10-17T15:03:25.2053059Z   ssh-user: git
+2026-10-17T15:03:25.2053709Z   persist-credentials: true
+2026-10-17T15:03:25.2054426Z   clean: true
+2026-10-17T15:03:25.2055074Z   sparse-checkout-cone-mode: true
+2026-10-17T15:03:25.2055847Z   fetch-depth: 1
+2026-10-17T15:03:25.2056479Z   fetch-tags: false
+2026-10-17T15:03:25.2057134Z   show-progress: true
+2026-10-17T15:03:25.2057793Z   lfs: false
+2026-10-17T15:03:25.2058405Z   submodules: false
+2026-10-17T15:03:25.2059067Z   set-safe-directory: true
+2026-10-17T15:03:25.2059822Z   allow-unsafe-pr-checkout: false
+2026-10-17T15:03:25.2060764Z ##[endgroup]
+2026-10-17T15:03:25.2888793Z Syncing repository: rxp017/Real_Time_Gen_AI_Customer_Service_Bot
+2026-10-17T15:03:25.2892152Z ##[group]Getting Git version info
+2026-10-17T15:03:25.2894303Z Working directory is '/home/runner/work/Real_Time_Gen_AI_Customer_Service_Bot/Real_Time_Gen_AI_Customer_Service_Bot'
+2026-10-17T15:03:25.2897375Z [command]/usr/bin/git version
+2026-10-17T15:03:25.2987325Z git version 2.55.0
+2026-10-17T15:03:25.3004963Z ##[endgroup]
+2026-10-17T15:03:25.3016731Z Temporarily overriding HOME='/home/runner/work/_temp/d91b4263-4acd-476e-8c47-5dbb54cf5567' before making global git config changes
+2026-10-17T15:03:25.3019150Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-17T15:03:25.3021972Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/Real_Time_Gen_AI_Customer_Service_Bot/Real_Time_Gen_AI_Customer_Service_Bot
+2026-10-17T15:03:25.3126798Z Deleting the contents of '/home/runner/work/Real_Time_Gen_AI_Customer_Service_Bot/Real_Time_Gen_AI_Customer_Service_Bot'
+2026-10-17T15:03:25.3133599Z ##[group]Initializing the repository
+2026-10-17T15:03:25.3135950Z [command]/usr/bin/git init /home/runner/work/Real_Time_Gen_AI_Customer_Service_Bot/Real_Time_Gen_AI_Customer_Service_Bot
+2026-10-17T15:03:25.4321493Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-10-17T15:03:25.4323841Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-10-17T15:03:25.4326006Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-10-17T15:03:25.4327629Z hint: call:
+2026-10-17T15:03:25.4328420Z hint:
+2026-10-17T15:03:25.4329497Z hint: 	git config --global init.defaultBranch <name>
+2026-10-17T15:03:25.4330843Z hint:
+2026-10-17T15:03:25.4332274Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-10-17T15:03:25.4334433Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-10-17T15:03:25.4336101Z hint:
+2026-10-17T15:03:25.4336947Z hint: 	git branch -m <name>
+2026-10-17T15:03:25.4337947Z hint:
+2026-10-17T15:03:25.4339342Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-10-17T15:03:25.4347528Z Initialized empty Git repository in /home/runner/work/Real_Time_Gen_AI_Customer_Service_Bot/Real_Time_Gen_AI_Customer_Service_Bot/.git/
+2026-10-17T15:03:25.4356734Z [command]/usr/bin/git remote add origin https://github.com/rxp017/Real_Time_Gen_AI_Customer_Service_Bot
+2026-10-17T15:03:25.4496151Z ##[endgroup]
+2026-10-17T15:03:25.4496871Z ##[group]Disabling automatic garbage collection
+2026-10-17T15:03:25.4500101Z [command]/usr/bin/git config --local gc.auto 0
+2026-10-17T15:03:25.4532060Z ##[endgroup]
+2026-10-17T15:03:25.4532741Z ##[group]Setting up auth
+2026-10-17T15:03:25.4537685Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-17T15:03:25.4566709Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-17T15:03:25.4877386Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-17T15:03:25.4909531Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-17T15:03:25.5096758Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-17T15:03:25.5126141Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-17T15:03:25.5312473Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-10-17T15:03:25.5346019Z ##[endgroup]
+2026-10-17T15:03:25.5346533Z ##[group]Fetching the repository
+2026-10-17T15:03:25.5354736Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +2f6620fc2c3353b8c6f8793bf5bef468fddba99f:refs/remotes/origin/main
+2026-10-17T15:03:25.9430849Z From https://github.com/rxp017/Real_Time_Gen_AI_Customer_Service_Bot
+2026-10-17T15:03:25.9431878Z  * [new ref]         2f6620fc2c3353b8c6f8793bf5bef468fddba99f -> origin/main
+2026-10-17T15:03:25.9434940Z ##[endgroup]
+2026-10-17T15:03:25.9435615Z ##[group]Determining the checkout info
+2026-10-17T15:03:25.9437558Z ##[endgroup]
+2026-10-17T15:03:25.9443544Z [command]/usr/bin/git sparse-checkout disable
+2026-10-17T15:03:25.9490686Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-10-17T15:03:25.9517647Z ##[group]Checking out the ref
+2026-10-17T15:03:25.9521191Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2026-10-17T15:03:25.9702240Z Switched to a new branch 'main'
+2026-10-17T15:03:25.9706900Z branch 'main' set up to track 'origin/main'.
+2026-10-17T15:03:25.9711413Z ##[endgroup]
+2026-10-17T15:03:25.9746316Z [command]/usr/bin/git log -1 --format=%H
+2026-10-17T15:03:25.9768185Z 2f6620fc2c3353b8c6f8793bf5bef468fddba99f
+2026-10-17T15:03:25.9987804Z ##[group]Run actions/setup-python@v5
+2026-10-17T15:03:25.9988225Z with:
+2026-10-17T15:03:25.9988432Z   python-version: 3.11
+2026-10-17T15:03:25.9988659Z   cache: pip
+2026-10-17T15:03:25.9988866Z   check-latest: false
+2026-10-17T15:03:25.9990863Z   token: ***
+2026-10-17T15:03:25.9991082Z   update-environment: true
+2026-10-17T15:03:25.9991334Z   allow-prereleases: false
+2026-10-17T15:03:25.9991567Z   freethreaded: false
+2026-10-17T15:03:25.9992012Z ##[endgroup]
+2026-10-17T15:03:26.0992409Z ##[group]Installed versions
+2026-10-17T15:03:26.1109673Z (node:2080) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-17T15:03:26.1110458Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-17T15:03:26.1111045Z Successfully set up CPython (3.11.17)
+2026-10-17T15:03:26.1111616Z ##[endgroup]
+2026-10-17T15:03:26.1566993Z [command]/opt/hostedtoolcache/Python/3.11.17/x64/bin/pip cache dir
+2026-10-17T15:03:26.4170974Z /home/runner/.cache/pip
+2026-10-17T15:03:26.5313384Z Cache hit for: setup-python-Linux-x64-24.04-Ubuntu-python-3.11.17-pip-330c82fa54f6a9f2ec180a7352150d00aacac5a6ceb6d285556c3f6317d07d97
+2026-10-17T15:03:26.5392853Z (node:2080) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2026-10-17T15:03:27.1445998Z Received 31569213 of 31569213 (100.0%), 60.9 MBs/sec
+2026-10-17T15:03:27.1446357Z Cache Size: ~30 MB (31569213 B)
+2026-10-17T15:03:27.1494741Z [command]/usr/bin/tar -xf /home/runner/work/_temp/ac0639ca-7603-45d4-9933-8b354d3c3901/cache.tzst -P -C /home/runner/work/Real_Time_Gen_AI_Customer_Service_Bot/Real_Time_Gen_AI_Customer_Service_Bot --use-compress-program unzstd
+2026-10-17T15:03:27.2074215Z Cache restored successfully
+2026-10-17T15:03:27.2090955Z Cache restored from key: setup-python-Linux-x64-24.04-Ubuntu-python-3.11.17-pip-330c82fa54f6a9f2ec180a7352150d00aacac5a6ceb6d285556c3f6317d07d97
+2026-10-17T15:03:27.2231510Z ##[group]Run sudo apt-get update && sudo apt-get install -y tesseract-ocr tesseract-ocr-eng tesseract-ocr-hin tesseract-ocr-tel tesseract-ocr-spa
+2026-10-17T15:03:27.2232620Z [36;1msudo apt-get update && sudo apt-get install -y tesseract-ocr tesseract-ocr-eng tesseract-ocr-hin tesseract-ocr-tel tesseract-ocr-spa[0m
+2026-10-17T15:03:27.2463233Z shell: /usr/bin/bash -e {0}
+2026-10-17T15:03:27.2463490Z env:
+2026-10-17T15:03:27.2463731Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.17/x64
+2026-10-17T15:03:27.2464093Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.17/x64/lib/pkgconfig
+2026-10-17T15:03:27.2464446Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.17/x64
+2026-10-17T15:03:27.2464754Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.17/x64
+2026-10-17T15:03:27.2465052Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.17/x64
+2026-10-17T15:03:27.2465371Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.17/x64/lib
+2026-10-17T15:03:27.2465715Z ##[endgroup]
+2026-10-17T15:03:27.3149239Z Get:1 file:/etc/apt/apt-mirrors.txt Mirrorlist [144 B]
+2026-10-17T15:03:27.3419855Z Hit:2 http://azure.archive.ubuntu.com/ubuntu noble InRelease
+2026-10-17T15:03:27.3421270Z Get:6 https://packages.microsoft.com/ubuntu/24.04/prod noble InRelease [3600 B]
+2026-10-17T15:03:27.3445669Z Get:3 http://azure.archive.ubuntu.com/ubuntu noble-updates InRelease [126 kB]
+2026-10-17T15:03:27.3505356Z Get:4 http://azure.archive.ubuntu.com/ubuntu noble-backports InRelease [126 kB]
+2026-10-17T15:03:27.3530505Z Get:5 http://azure.archive.ubuntu.com/ubuntu noble-security InRelease [126 kB]
+2026-10-17T15:03:27.4507568Z Get:7 https://packages.microsoft.com/ubuntu/24.04/prod noble/main amd64 Packages [617 kB]
+2026-10-17T15:03:27.4672927Z Get:8 https://packages.microsoft.com/ubuntu/24.04/prod noble/main arm64 Packages [556 kB]
+2026-10-17T15:03:27.4745354Z Get:9 https://packages.microsoft.com/ubuntu/24.04/prod noble/main armhf Packages [12.4 kB]
+2026-10-17T15:03:27.4936398Z Get:10 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [1397 kB]
+2026-10-17T15:03:27.5016348Z Get:11 http://azure.archive.ubuntu.com/ubuntu noble-updates/main Translation-en [308 kB]
+2026-10-17T15:03:27.5039552Z Get:12 http://azure.archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [1704 kB]
+2026-10-17T15:03:27.5114307Z Get:13 http://azure.archive.ubuntu.com/ubuntu noble-updates/universe Translation-en [342 kB]
+2026-10-17T15:03:27.5137625Z Get:14 http://azure.archive.ubuntu.com/ubuntu noble-updates/restricted amd64 Packages [1805 kB]
+2026-10-17T15:03:27.5230928Z Get:15 http://azure.archive.ubuntu.com/ubuntu noble-updates/restricted Translation-en [411 kB]
+2026-10-17T15:03:27.5786201Z Get:16 http://azure.archive.ubuntu.com/ubuntu noble-security/main amd64 Packages [1144 kB]
+2026-10-17T15:03:27.5839657Z Get:17 http://azure.archive.ubuntu.com/ubuntu noble-security/main Translation-en [231 kB]
+2026-10-17T15:03:27.5861814Z Get:18 http://azure.archive.ubuntu.com/ubuntu noble-security/universe amd64 Packages [1222 kB]
+2026-10-17T15:03:27.5915184Z Get:19 http://azure.archive.ubuntu.com/ubuntu noble-security/universe Translation-en [246 kB]
+2026-10-17T15:03:27.6411252Z Get:20 http://azure.archive.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [1713 kB]
+2026-10-17T15:03:27.6465118Z Get:21 http://azure.archive.ubuntu.com/ubuntu noble-security/restricted Translation-en [392 kB]
+2026-10-17T15:03:33.8244866Z Fetched 12.5 MB in 1s (12.0 MB/s)
+2026-10-17T15:03:34.5119809Z Reading package lists...
+2026-10-17T15:03:34.5383803Z Reading package lists...
+2026-10-17T15:03:34.7031779Z Building dependency tree...
+2026-10-17T15:03:34.7051348Z Reading state information...
+2026-10-17T15:03:34.8273698Z The following additional packages will be installed:
+2026-10-17T15:03:34.8276961Z   libgif7 liblept5 libtesseract5 tesseract-ocr-osd
+2026-10-17T15:03:34.8432777Z The following NEW packages will be installed:
+2026-10-17T15:03:34.8435974Z   libgif7 liblept5 libtesseract5 tesseract-ocr tesseract-ocr-eng
+2026-10-17T15:03:34.8436804Z   tesseract-ocr-hin tesseract-ocr-osd tesseract-ocr-spa tesseract-ocr-tel
+2026-10-17T15:03:34.8577229Z 0 upgraded, 9 newly installed, 0 to remove and 44 not upgraded.
+2026-10-17T15:03:34.8577582Z Need to get 11.5 MB of archives.
+2026-10-17T15:03:34.8577884Z After this operation, 28.1 MB of additional disk space will be used.
+2026-10-17T15:03:34.8578237Z Get:1 file:/etc/apt/apt-mirrors.txt Mirrorlist [144 B]
+2026-10-17T15:03:34.8943484Z Get:2 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 libgif7 amd64 5.2.2-1ubuntu1.2 [35.6 kB]
+2026-10-17T15:03:34.9170822Z Get:3 http://azure.archive.ubuntu.com/ubuntu noble/universe amd64 liblept5 amd64 1.82.0-3build4 [1099 kB]
+2026-10-17T15:03:34.9474983Z Get:4 http://azure.archive.ubuntu.com/ubuntu noble/universe amd64 libtesseract5 amd64 5.3.4-1build5 [1291 kB]
+2026-10-17T15:03:34.9831900Z Get:5 http://azure.archive.ubuntu.com/ubuntu noble/universe amd64 tesseract-ocr-eng all 1:4.1.0-2 [1818 kB]
+2026-10-17T15:03:35.0431953Z Get:6 http://azure.archive.ubuntu.com/ubuntu noble/universe amd64 tesseract-ocr-osd all 1:4.1.0-2 [3841 kB]
+2026-10-17T15:03:35.1017962Z Get:7 http://azure.archive.ubuntu.com/ubuntu noble/universe amd64 tesseract-ocr amd64 5.3.4-1build5 [328 kB]
+2026-10-17T15:03:35.1256995Z Get:8 http://azure.archive.ubuntu.com/ubuntu noble/universe amd64 tesseract-ocr-hin all 1:4.1.0-2 [923 kB]
+2026-10-17T15:03:35.1549513Z Get:9 http://azure.archive.ubuntu.com/ubuntu noble/universe amd64 tesseract-ocr-spa all 1:4.1.0-2 [1065 kB]
+2026-10-17T15:03:35.1869748Z Get:10 http://azure.archive.ubuntu.com/ubuntu noble/universe amd64 tesseract-ocr-tel all 1:4.1.0-2 [1144 kB]
+2026-10-17T15:03:35.4022170Z Fetched 11.5 MB in 0s (32.9 MB/s)
+2026-10-17T15:03:35.4211845Z Selecting previously unselected package libgif7:amd64.
+2026-10-17T15:03:35.4466001Z (Reading database ... 
+2026-10-17T15:03:35.4466514Z (Reading database ... 5%
+2026-10-17T15:03:35.4466938Z (Reading database ... 10%
+2026-10-17T15:03:35.4467227Z (Reading database ... 15%
+2026-10-17T15:03:35.4467816Z (Reading database ... 20%
+2026-10-17T15:03:35.4468003Z (Reading database ... 25%
+2026-10-17T15:03:35.4468183Z (Reading database ... 30%
+2026-10-17T15:03:35.4468368Z (Reading database ... 35%
+2026-10-17T15:03:35.4468667Z (Reading database ... 40%
+2026-10-17T15:03:35.4468948Z (Reading database ... 45%
+2026-10-17T15:03:35.4469225Z (Reading database ... 50%
+2026-10-17T15:03:35.4520141Z (Reading database ... 55%
+2026-10-17T15:03:35.5596361Z (Reading database ... 60%
+2026-10-17T15:03:35.7695196Z (Reading database ... 65%
+2026-10-17T15:03:35.9913298Z (Reading database ... 70%
+2026-10-17T15:03:36.1649239Z (Reading database ... 75%
+2026-10-17T15:03:36.3644472Z (Reading database ... 80%
+2026-10-17T15:03:36.5123840Z (Reading database ... 85%
+2026-10-17T15:03:36.6867350Z (Reading database ... 90%
+2026-10-17T15:03:36.8258139Z (Reading database ... 95%
+2026-10-17T15:03:36.8258433Z (Reading database ... 100%
+2026-10-17T15:03:36.8258752Z (Reading database ... 203540 files and directories currently installed.)
+2026-10-17T15:03:36.8296591Z Preparing to unpack .../0-libgif7_5.2.2-1ubuntu1.2_amd64.deb ...
+2026-10-17T15:03:36.8415404Z Unpacking libgif7:amd64 (5.2.2-1ubuntu1.2) ...
+2026-10-17T15:03:37.5475992Z Selecting previously unselected package liblept5:amd64.
+2026-10-17T15:03:37.5586876Z Preparing to unpack .../1-liblept5_1.82.0-3build4_amd64.deb ...
+2026-10-17T15:03:37.5597860Z Unpacking liblept5:amd64 (1.82.0-3build4) ...
+2026-10-17T15:03:37.6002654Z Selecting previously unselected package libtesseract5:amd64.
+2026-10-17T15:03:37.6108210Z Preparing to unpack .../2-libtesseract5_5.3.4-1build5_amd64.deb ...
+2026-10-17T15:03:37.6114586Z Unpacking libtesseract5:amd64 (5.3.4-1build5) ...
+2026-10-17T15:03:37.6489920Z Selecting previously unselected package tesseract-ocr-eng.
+2026-10-17T15:03:37.6594443Z Preparing to unpack .../3-tesseract-ocr-eng_1%3a4.1.0-2_all.deb ...
+2026-10-17T15:03:37.6600819Z Unpacking tesseract-ocr-eng (1:4.1.0-2) ...
+2026-10-17T15:03:37.6945049Z Selecting previously unselected package tesseract-ocr-osd.
+2026-10-17T15:03:37.7050556Z Preparing to unpack .../4-tesseract-ocr-osd_1%3a4.1.0-2_all.deb ...
+2026-10-17T15:03:37.7168357Z Unpacking tesseract-ocr-osd (1:4.1.0-2) ...
+2026-10-17T15:03:37.8095550Z Selecting previously unselected package tesseract-ocr.
+2026-10-17T15:03:37.8204813Z Preparing to unpack .../5-tesseract-ocr_5.3.4-1build5_amd64.deb ...
+2026-10-17T15:03:37.8211059Z Unpacking tesseract-ocr (5.3.4-1build5) ...
+2026-10-17T15:03:37.8666678Z Selecting previously unselected package tesseract-ocr-hin.
+2026-10-17T15:03:37.8772208Z Preparing to unpack .../6-tesseract-ocr-hin_1%3a4.1.0-2_all.deb ...
+2026-10-17T15:03:37.8779135Z Unpacking tesseract-ocr-hin (1:4.1.0-2) ...
+2026-10-17T15:03:37.8971571Z Selecting previously unselected package tesseract-ocr-spa.
+2026-10-17T15:03:37.9074537Z Preparing to unpack .../7-tesseract-ocr-spa_1%3a4.1.0-2_all.deb ...
+2026-10-17T15:03:37.9081238Z Unpacking tesseract-ocr-spa (1:4.1.0-2) ...
+2026-10-17T15:03:37.9370761Z Selecting previously unselected package tesseract-ocr-tel.
+2026-10-17T15:03:37.9474773Z Preparing to unpack .../8-tesseract-ocr-tel_1%3a4.1.0-2_all.deb ...
+2026-10-17T15:03:37.9479708Z Unpacking tesseract-ocr-tel (1:4.1.0-2) ...
+2026-10-17T15:03:38.0152461Z Setting up tesseract-ocr-eng (1:4.1.0-2) ...
+2026-10-17T15:03:38.0169902Z Setting up libgif7:amd64 (5.2.2-1ubuntu1.2) ...
+2026-10-17T15:03:38.0186389Z Setting up tesseract-ocr-spa (1:4.1.0-2) ...
+2026-10-17T15:03:38.0202375Z Setting up tesseract-ocr-osd (1:4.1.0-2) ...
+2026-10-17T15:03:38.0218123Z Setting up tesseract-ocr-hin (1:4.1.0-2) ...
+2026-10-17T15:03:38.0232351Z Setting up tesseract-ocr-tel (1:4.1.0-2) ...
+2026-10-17T15:03:38.0248476Z Setting up liblept5:amd64 (1.82.0-3build4) ...
+2026-10-17T15:03:38.0264228Z Setting up libtesseract5:amd64 (5.3.4-1build5) ...
+2026-10-17T15:03:38.0279664Z Setting up tesseract-ocr (5.3.4-1build5) ...
+2026-10-17T15:03:38.0297636Z Processing triggers for man-db (2.12.0-4build2) ...
+2026-10-17T15:03:38.0314973Z Not building database; man-db/auto-update is not 'true'.
+2026-10-17T15:03:38.0323855Z Processing triggers for libc-bin (2.39-0ubuntu8.9) ...
+2026-10-17T15:03:38.8144728Z 
+2026-10-17T15:03:38.8145232Z Running kernel seems to be up-to-date.
+2026-10-17T15:03:38.8145517Z 
+2026-10-17T15:03:38.8145647Z No services need to be restarted.
+2026-10-17T15:03:38.8145865Z 
+2026-10-17T15:03:38.8145987Z No containers need to be restarted.
+2026-10-17T15:03:38.8146201Z 
+2026-10-17T15:03:38.8146366Z No user sessions are running outdated binaries.
+2026-10-17T15:03:38.8146616Z 
+2026-10-17T15:03:38.8146855Z No VM guests are running outdated hypervisor (qemu) binaries on this host.
+2026-10-17T15:03:39.5629422Z ##[group]Run python -m pip install -r requirements.txt
+2026-10-17T15:03:39.5629782Z [36;1mpython -m pip install -r requirements.txt[0m
+2026-10-17T15:03:39.5686063Z shell: /usr/bin/bash -e {0}
+2026-10-17T15:03:39.5686277Z env:
+2026-10-17T15:03:39.5686500Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.17/x64
+2026-10-17T15:03:39.5686856Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.17/x64/lib/pkgconfig
+2026-10-17T15:03:39.5687213Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.17/x64
+2026-10-17T15:03:39.5687510Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.17/x64
+2026-10-17T15:03:39.5687798Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.17/x64
+2026-10-17T15:03:39.5688111Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.17/x64/lib
+2026-10-17T15:03:39.5688365Z ##[endgroup]
+2026-10-17T15:03:40.1982576Z Collecting Pillow==12.3.0 (from -r requirements.txt (line 3))
+2026-10-17T15:03:40.1999127Z   Using cached pillow-12.3.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (9.1 kB)
+2026-10-17T15:03:40.2569582Z Collecting pypdfium2==5.14.0 (from -r requirements.txt (line 4))
+2026-10-17T15:03:40.2583121Z   Using cached pypdfium2-5.14.0-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (62 kB)
+2026-10-17T15:03:40.2686790Z Collecting python-multipart==0.0.32 (from -r requirements.txt (line 5))
+2026-10-17T15:03:40.2698424Z   Using cached python_multipart-0.0.32-py3-none-any.whl.metadata (2.1 kB)
+2026-10-17T15:03:40.2762871Z Collecting annotated-doc==0.0.5 (from -r requirements.txt (line 6))
+2026-10-17T15:03:40.2774819Z   Using cached annotated_doc-0.0.5-py3-none-any.whl.metadata (6.5 kB)
+2026-10-17T15:03:40.2840497Z Collecting annotated-types==0.8.0 (from -r requirements.txt (line 7))
+2026-10-17T15:03:40.2851562Z   Using cached annotated_types-0.8.0-py3-none-any.whl.metadata (15 kB)
+2026-10-17T15:03:40.2950363Z Collecting anyio==4.15.1 (from -r requirements.txt (line 8))
+2026-10-17T15:03:40.2962202Z   Using cached anyio-4.15.1-py3-none-any.whl.metadata (4.7 kB)
+2026-10-17T15:03:40.3056925Z Collecting certifi==2026.7.22 (from -r requirements.txt (line 9))
+2026-10-17T15:03:40.3068798Z   Using cached certifi-2026.7.22-py3-none-any.whl.metadata (2.5 kB)
+2026-10-17T15:03:40.3165058Z Collecting click==8.5.0 (from -r requirements.txt (line 10))
+2026-10-17T15:03:40.3176541Z   Using cached click-8.5.0-py3-none-any.whl.metadata (2.6 kB)
+2026-10-17T15:03:40.3366248Z Collecting colorama==0.4.6 (from -r requirements.txt (line 11))
+2026-10-17T15:03:40.3376766Z   Using cached colorama-0.4.6-py2.py3-none-any.whl.metadata (17 kB)
+2026-10-17T15:03:40.3612347Z Collecting fastapi==0.143.0 (from -r requirements.txt (line 12))
+2026-10-17T15:03:40.3623642Z   Using cached fastapi-0.143.0-py3-none-any.whl.metadata (26 kB)
+2026-10-17T15:03:40.3715559Z Collecting h11==0.16.0 (from -r requirements.txt (line 13))
+2026-10-17T15:03:40.3725933Z   Using cached h11-0.16.0-py3-none-any.whl.metadata (8.3 kB)
+2026-10-17T15:03:40.3816291Z Collecting httpcore==1.0.9 (from -r requirements.txt (line 14))
+2026-10-17T15:03:40.3826940Z   Using cached httpcore-1.0.9-py3-none-any.whl.metadata (21 kB)
+2026-10-17T15:03:40.3947671Z Collecting httpx==0.28.1 (from -r requirements.txt (line 15))
+2026-10-17T15:03:40.3958577Z   Using cached httpx-0.28.1-py3-none-any.whl.metadata (7.1 kB)
+2026-10-17T15:03:40.4040629Z Collecting idna==3.20 (from -r requirements.txt (line 16))
+2026-10-17T15:03:40.4051296Z   Using cached idna-3.20-py3-none-any.whl.metadata (7.2 kB)
+2026-10-17T15:03:40.4117440Z Collecting iniconfig==2.3.1 (from -r requirements.txt (line 17))
+2026-10-17T15:03:40.4128798Z   Using cached iniconfig-2.3.1-py3-none-any.whl.metadata (2.8 kB)
+2026-10-17T15:03:40.4230825Z Collecting opentelemetry-api==1.45.1 (from -r requirements.txt (line 18))
+2026-10-17T15:03:40.4241801Z   Using cached opentelemetry_api-1.45.1-py3-none-any.whl.metadata (1.4 kB)
+2026-10-17T15:03:40.4325812Z Collecting packaging==26.3 (from -r requirements.txt (line 19))
+2026-10-17T15:03:40.4337133Z   Using cached packaging-26.3-py3-none-any.whl.metadata (3.5 kB)
+2026-10-17T15:03:40.4414891Z Collecting pluggy==1.6.0 (from -r requirements.txt (line 20))
+2026-10-17T15:03:40.4425320Z   Using cached pluggy-1.6.0-py3-none-any.whl.metadata (4.8 kB)
+2026-10-17T15:03:40.5186274Z Collecting pydantic==2.14.1 (from -r requirements.txt (line 21))
+2026-10-17T15:03:40.5198703Z   Using cached pydantic-2.14.1-py3-none-any.whl.metadata (133 kB)
+2026-10-17T15:03:40.9785159Z Collecting pydantic_core==2.50.1 (from -r requirements.txt (line 22))
+2026-10-17T15:03:40.9799095Z   Using cached pydantic_core-2.50.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.5 kB)
+2026-10-17T15:03:40.9906118Z Collecting Pygments==2.21.0 (from -r requirements.txt (line 23))
+2026-10-17T15:03:40.9917292Z   Using cached pygments-2.21.0-py3-none-any.whl.metadata (2.5 kB)
+2026-10-17T15:03:41.0069799Z Collecting pytest==9.1.1 (from -r requirements.txt (line 24))
+2026-10-17T15:03:41.0081978Z   Using cached pytest-9.1.1-py3-none-any.whl.metadata (7.6 kB)
+2026-10-17T15:03:41.0181804Z Collecting python-dotenv==1.0.0 (from -r requirements.txt (line 25))
+2026-10-17T15:03:41.0192170Z   Using cached python_dotenv-1.0.0-py3-none-any.whl.metadata (21 kB)
+2026-10-17T15:03:41.0414904Z Collecting PyYAML==6.0.3 (from -r requirements.txt (line 26))
+2026-10-17T15:03:41.0425939Z   Using cached pyyaml-6.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.4 kB)
+2026-10-17T15:03:41.2650558Z Collecting ruff==0.17.0 (from -r requirements.txt (line 27))
+2026-10-17T15:03:41.2663314Z   Using cached ruff-0.17.0-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (20 kB)
+2026-10-17T15:03:41.2810216Z Collecting starlette==1.8.0 (from -r requirements.txt (line 28))
+2026-10-17T15:03:41.2821854Z   Using cached starlette-1.8.0-py3-none-any.whl.metadata (6.6 kB)
+2026-10-17T15:03:41.2893356Z Collecting typing-inspection==0.4.4 (from -r requirements.txt (line 29))
+2026-10-17T15:03:41.2903595Z   Using cached typing_inspection-0.4.4-py3-none-any.whl.metadata (2.6 kB)
+2026-10-17T15:03:41.2992053Z Collecting typing_extensions==4.16.0 (from -r requirements.txt (line 30))
+2026-10-17T15:03:41.3003500Z   Using cached typing_extensions-4.16.0-py3-none-any.whl.metadata (3.3 kB)
+2026-10-17T15:03:41.3080558Z Collecting tzdata==2026.5 (from -r requirements.txt (line 31))
+2026-10-17T15:03:41.3091607Z   Using cached tzdata-2026.5-py2.py3-none-any.whl.metadata (1.4 kB)
+2026-10-17T15:03:41.3223228Z Collecting uvicorn==0.54.0 (from -r requirements.txt (line 32))
+2026-10-17T15:03:41.3234043Z   Using cached uvicorn-0.54.0-py3-none-any.whl.metadata (6.6 kB)
+2026-10-17T15:03:41.3429981Z Using cached pillow-12.3.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (6.9 MB)
+2026-10-17T15:03:41.3459993Z Using cached pypdfium2-5.14.0-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.8 MB)
+2026-10-17T15:03:41.3479989Z Using cached python_multipart-0.0.32-py3-none-any.whl (30 kB)
+2026-10-17T15:03:41.3490235Z Using cached annotated_doc-0.0.5-py3-none-any.whl (5.3 kB)
+2026-10-17T15:03:41.3500235Z Using cached annotated_types-0.8.0-py3-none-any.whl (13 kB)
+2026-10-17T15:03:41.3510275Z Using cached anyio-4.15.1-py3-none-any.whl (132 kB)
+2026-10-17T15:03:41.3520700Z Using cached certifi-2026.7.22-py3-none-any.whl (136 kB)
+2026-10-17T15:03:41.3530936Z Using cached click-8.5.0-py3-none-any.whl (125 kB)
+2026-10-17T15:03:41.3541174Z Using cached colorama-0.4.6-py2.py3-none-any.whl (25 kB)
+2026-10-17T15:03:41.3551272Z Using cached fastapi-0.143.0-py3-none-any.whl (144 kB)
+2026-10-17T15:03:41.3561342Z Using cached h11-0.16.0-py3-none-any.whl (37 kB)
+2026-10-17T15:03:41.3571512Z Using cached httpcore-1.0.9-py3-none-any.whl (78 kB)
+2026-10-17T15:03:41.3582027Z Using cached httpx-0.28.1-py3-none-any.whl (73 kB)
+2026-10-17T15:03:41.3591938Z Using cached idna-3.20-py3-none-any.whl (69 kB)
+2026-10-17T15:03:41.3602079Z Using cached iniconfig-2.3.1-py3-none-any.whl (7.6 kB)
+2026-10-17T15:03:41.3611908Z Using cached opentelemetry_api-1.45.1-py3-none-any.whl (60 kB)
+2026-10-17T15:03:41.3622171Z Using cached packaging-26.3-py3-none-any.whl (129 kB)
+2026-10-17T15:03:41.3632174Z Using cached pluggy-1.6.0-py3-none-any.whl (20 kB)
+2026-10-17T15:03:41.3642192Z Using cached pydantic-2.14.1-py3-none-any.whl (488 kB)
+2026-10-17T15:03:41.3653860Z Using cached pydantic_core-2.50.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.2 MB)
+2026-10-17T15:03:41.3669387Z Using cached pygments-2.21.0-py3-none-any.whl (1.3 MB)
+2026-10-17T15:03:41.3682662Z Using cached pytest-9.1.1-py3-none-any.whl (386 kB)
+2026-10-17T15:03:41.3693750Z Using cached python_dotenv-1.0.0-py3-none-any.whl (19 kB)
+2026-10-17T15:03:41.3704034Z Using cached pyyaml-6.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (806 kB)
+2026-10-17T15:03:41.3716367Z Using cached ruff-0.17.0-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (10.4 MB)
+2026-10-17T15:03:41.3756537Z Using cached starlette-1.8.0-py3-none-any.whl (79 kB)
+2026-10-17T15:03:41.3766932Z Using cached typing_inspection-0.4.4-py3-none-any.whl (14 kB)
+2026-10-17T15:03:41.3777020Z Using cached typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+2026-10-17T15:03:41.3786956Z Using cached tzdata-2026.5-py2.py3-none-any.whl (347 kB)
+2026-10-17T15:03:41.3797805Z Using cached uvicorn-0.54.0-py3-none-any.whl (87 kB)
+2026-10-17T15:03:41.5475874Z Installing collected packages: tzdata, typing_extensions, ruff, PyYAML, python-multipart, python-dotenv, pypdfium2, Pygments, pluggy, Pillow, packaging, iniconfig, idna, h11, colorama, click, certifi, annotated-types, annotated-doc, uvicorn, typing-inspection, pytest, pydantic_core, opentelemetry-api, httpcore, anyio, starlette, pydantic, httpx, fastapi
+2026-10-17T15:03:46.2968975Z 
+2026-10-17T15:03:46.2983703Z Successfully installed Pillow-12.3.0 PyYAML-6.0.3 Pygments-2.21.0 annotated-doc-0.0.5 annotated-types-0.8.0 anyio-4.15.1 certifi-2026.7.22 click-8.5.0 colorama-0.4.6 fastapi-0.143.0 h11-0.16.0 httpcore-1.0.9 httpx-0.28.1 idna-3.20 iniconfig-2.3.1 opentelemetry-api-1.45.1 packaging-26.3 pluggy-1.6.0 pydantic-2.14.1 pydantic_core-2.50.1 pypdfium2-5.14.0 pytest-9.1.1 python-dotenv-1.0.0 python-multipart-0.0.32 ruff-0.17.0 starlette-1.8.0 typing-inspection-0.4.4 typing_extensions-4.16.0 tzdata-2026.5 uvicorn-0.54.0
+2026-10-17T15:03:46.3940646Z ##[group]Run python scripts/check_ocr.py
+2026-10-17T15:03:46.3940953Z [36;1mpython scripts/check_ocr.py[0m
+2026-10-17T15:03:46.3998020Z shell: /usr/bin/bash -e {0}
+2026-10-17T15:03:46.3998238Z env:
+2026-10-17T15:03:46.3998471Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.17/x64
+2026-10-17T15:03:46.3998845Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.17/x64/lib/pkgconfig
+2026-10-17T15:03:46.3999190Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.17/x64
+2026-10-17T15:03:46.3999487Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.17/x64
+2026-10-17T15:03:46.3999790Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.17/x64
+2026-10-17T15:03:46.4000085Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.17/x64/lib
+2026-10-17T15:03:46.4000339Z ##[endgroup]
+2026-10-17T15:03:46.4990996Z {
+2026-10-17T15:03:46.4991341Z   "executable": "/usr/bin/tesseract",
+2026-10-17T15:03:46.4991843Z   "version": "tesseract 5.3.4",
+2026-10-17T15:03:46.4992253Z   "available_languages": [
+2026-10-17T15:03:46.4992535Z     "eng",
+2026-10-17T15:03:46.4992758Z     "hin",
+2026-10-17T15:03:46.4992972Z     "osd",
+2026-10-17T15:03:46.4993448Z     "spa",
+2026-10-17T15:03:46.4993663Z     "tel"
+2026-10-17T15:03:46.4993874Z   ],
+2026-10-17T15:03:46.4994103Z   "required_languages": [
+2026-10-17T15:03:46.4994378Z     "eng",
+2026-10-17T15:03:46.4994522Z     "hin",
+2026-10-17T15:03:46.4994663Z     "tel",
+2026-10-17T15:03:46.4994816Z     "spa"
+2026-10-17T15:03:46.4994963Z   ],
+2026-10-17T15:03:46.4995128Z   "missing_languages": []
+2026-10-17T15:03:46.4995306Z }
+2026-10-17T15:03:46.5104451Z ##[group]Run python -m ruff check .
+2026-10-17T15:03:46.5104720Z [36;1mpython -m ruff check .[0m
+2026-10-17T15:03:46.5159636Z shell: /usr/bin/bash -e {0}
+2026-10-17T15:03:46.5159843Z env:
+2026-10-17T15:03:46.5160068Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.17/x64
+2026-10-17T15:03:46.5160415Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.17/x64/lib/pkgconfig
+2026-10-17T15:03:46.5160759Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.17/x64
+2026-10-17T15:03:46.5161055Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.17/x64
+2026-10-17T15:03:46.5161357Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.17/x64
+2026-10-17T15:03:46.5161815Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.17/x64/lib
+2026-10-17T15:03:46.5162168Z ##[endgroup]
+2026-10-17T15:03:46.5540187Z All checks passed!
+2026-10-17T15:03:46.5572103Z ##[group]Run python -m pytest -q
+2026-10-17T15:03:46.5572381Z [36;1mpython -m pytest -q[0m
+2026-10-17T15:03:46.5625843Z shell: /usr/bin/bash -e {0}
+2026-10-17T15:03:46.5626057Z env:
+2026-10-17T15:03:46.5626289Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.17/x64
+2026-10-17T15:03:46.5626648Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.17/x64/lib/pkgconfig
+2026-10-17T15:03:46.5626986Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.17/x64
+2026-10-17T15:03:46.5627283Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.17/x64
+2026-10-17T15:03:46.5627587Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.17/x64
+2026-10-17T15:03:46.5627884Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.17/x64/lib
+2026-10-17T15:03:46.5628150Z ##[endgroup]
+2026-10-17T15:03:48.9129870Z ........................................................................ [ 21%]
+2026-10-17T15:03:56.4997999Z ........................................................................ [ 43%]
+2026-10-17T15:04:00.5231905Z ........................................................................ [ 65%]
+2026-10-17T15:04:05.6817311Z ........................................................................ [ 87%]
+2026-10-17T15:04:17.7408726Z .........................................                                [100%]
+2026-10-17T15:04:17.7409277Z =============================== warnings summary ===============================
+2026-10-17T15:04:17.7409955Z ../../../../../opt/hostedtoolcache/Python/3.11.17/x64/lib/python3.11/site-packages/fastapi/testclient.py:1
+2026-10-17T15:04:17.7411240Z   /opt/hostedtoolcache/Python/3.11.17/x64/lib/python3.11/site-packages/fastapi/testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
+2026-10-17T15:04:17.7412619Z     from starlette.testclient import TestClient as TestClient  # noqa
+2026-10-17T15:04:17.7412961Z 
+2026-10-17T15:04:17.7413232Z -- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+2026-10-17T15:04:17.7413714Z 329 passed, 1 warning in 30.81s
+2026-10-17T15:04:17.8244574Z Post job cleanup.
+2026-10-17T15:04:17.9173607Z Cache hit occurred on the primary key setup-python-Linux-x64-24.04-Ubuntu-python-3.11.17-pip-330c82fa54f6a9f2ec180a7352150d00aacac5a6ceb6d285556c3f6317d07d97, not saving cache.
+2026-10-17T15:04:17.9174682Z (node:2922) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-17T15:04:17.9175422Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-17T15:04:17.9297383Z Post job cleanup.
+2026-10-17T15:04:17.9980019Z [command]/usr/bin/git version
+2026-10-17T15:04:18.0014624Z git version 2.55.0
+2026-10-17T15:04:18.0041587Z Temporarily overriding HOME='/home/runner/work/_temp/67a0b7d5-1e10-492a-a8d1-3e626b1e7bde' before making global git config changes
+2026-10-17T15:04:18.0042997Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-17T15:04:18.0045832Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/Real_Time_Gen_AI_Customer_Service_Bot/Real_Time_Gen_AI_Customer_Service_Bot
+2026-10-17T15:04:18.0075880Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-17T15:04:18.0106066Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-17T15:04:18.0360330Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-17T15:04:18.0384607Z http.https://github.com/.extraheader
+2026-10-17T15:04:18.0393514Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-10-17T15:04:18.0425069Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-17T15:04:18.0681206Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-17T15:04:18.0714818Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-17T15:04:18.1045584Z Cleaning up orphan processes
+2026-10-17T15:04:18.1329192Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-python@v5. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
