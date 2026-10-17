@@ -1,0 +1,549 @@
+{
+  "purpose": "Development only; independent workshop service scenarios",
+  "examples": [
+    {
+      "id": "dev5-en-1",
+      "language": "en",
+      "message": "The replacement stove knob fits beautifully; thanks for sorting it.",
+      "label": "positive",
+      "history": [],
+      "high_risk": []
+    },
+    {
+      "id": "dev5-en-2",
+      "language": "en",
+      "message": "Your technician explained the chair assembly clearly and I am pleased.",
+      "label": "positive",
+      "history": [],
+      "high_risk": []
+    },
+    {
+      "id": "dev5-en-3",
+      "language": "en",
+      "message": "Please send the assembly booklet for the oak stool.",
+      "label": "neutral",
+      "history": [],
+      "high_risk": []
+    },
+    {
+      "id": "dev5-en-4",
+      "language": "en",
+      "message": "I want to check the opening hours of the repair workshop.",
+      "label": "neutral",
+      "history": [],
+      "high_risk": []
+    },
+    {
+      "id": "dev5-en-5",
+      "language": "en",
+      "message": "The replacement hinge is bent and I am disappointed.",
+      "label": "negative",
+      "history": [],
+      "high_risk": []
+    },
+    {
+      "id": "dev5-en-6",
+      "language": "en",
+      "message": "The workshop visit was poor and the fault remains.",
+      "label": "negative",
+      "history": [],
+      "high_risk": []
+    },
+    {
+      "id": "dev5-en-7",
+      "language": "en",
+      "message": "This is my fourth explanation of the broken stove knob. I am fed up.",
+      "label": "frustrated",
+      "history": [],
+      "high_risk": []
+    },
+    {
+      "id": "dev5-en-8",
+      "language": "en",
+      "message": "You keep asking for the same photo and nothing gets fixed.",
+      "label": "frustrated",
+      "history": [],
+      "high_risk": []
+    },
+    {
+      "id": "dev5-en-9",
+      "language": "en",
+      "message": "Smoke is coming from the stove socket; I need assistance immediately.",
+      "label": "urgent",
+      "history": [],
+      "high_risk": []
+    },
+    {
+      "id": "dev5-en-10",
+      "language": "en",
+      "message": "The chair has collapsed under someone; get help right away.",
+      "label": "urgent",
+      "history": [],
+      "high_risk": []
+    },
+    {
+      "id": "dev5-en-11",
+      "language": "en",
+      "message": "Wonderful craftsmanship, another hinge that snaps on day one.",
+      "label": "sarcastic",
+      "history": [
+        {
+          "role": "user",
+          "content": "The first hinge snapped yesterday."
+        }
+      ],
+      "high_risk": []
+    },
+    {
+      "id": "dev5-en-12",
+      "language": "en",
+      "message": "Such lightning-fast repairs, only three weeks with an unusable stove.",
+      "label": "sarcastic",
+      "history": [
+        {
+          "role": "user",
+          "content": "The stove repair is still unfinished."
+        }
+      ],
+      "high_risk": []
+    },
+    {
+      "id": "dev5-en-13",
+      "language": "en",
+      "message": "For your records, an unknown device signed into my account overnight.",
+      "label": "neutral",
+      "history": [],
+      "high_risk": [
+        "account_compromise"
+      ]
+    },
+    {
+      "id": "dev5-en-14",
+      "language": "en",
+      "message": "Please review the statement: the same stool purchase appears as two settled charges.",
+      "label": "neutral",
+      "history": [],
+      "high_risk": [
+        "duplicate_payment"
+      ]
+    },
+    {
+      "id": "dev5-en-15",
+      "language": "en",
+      "message": "I am notifying you that my solicitor will file a consumer claim next week.",
+      "label": "neutral",
+      "history": [],
+      "high_risk": [
+        "legal_threat"
+      ]
+    },
+    {
+      "id": "dev5-hi-1",
+      "language": "hi",
+      "message": "नया चूल्हे का बटन ठीक बैठ गया, आपकी सहायता से मैं खुश हूँ।",
+      "label": "positive",
+      "history": [],
+      "high_risk": []
+    },
+    {
+      "id": "dev5-hi-2",
+      "language": "hi",
+      "message": "कारीगर ने कुर्सी जोड़ना अच्छी तरह समझाया, बहुत धन्यवाद।",
+      "label": "positive",
+      "history": [],
+      "high_risk": []
+    },
+    {
+      "id": "dev5-hi-3",
+      "language": "hi",
+      "message": "मुझे लकड़ी के स्टूल की जोड़ने वाली पुस्तिका चाहिए।",
+      "label": "neutral",
+      "history": [],
+      "high_risk": []
+    },
+    {
+      "id": "dev5-hi-4",
+      "language": "hi",
+      "message": "मरम्मत की दुकान कितने बजे खुलती है?",
+      "label": "neutral",
+      "history": [],
+      "high_risk": []
+    },
+    {
+      "id": "dev5-hi-5",
+      "language": "hi",
+      "message": "बदला हुआ कब्ज़ा टेढ़ा है और मुझे निराशा हुई।",
+      "label": "negative",
+      "history": [],
+      "high_risk": []
+    },
+    {
+      "id": "dev5-hi-6",
+      "language": "hi",
+      "message": "दुकान की सेवा खराब थी, दिक्कत अभी भी बाकी है।",
+      "label": "negative",
+      "history": [],
+      "high_risk": []
+    },
+    {
+      "id": "dev5-hi-7",
+      "language": "hi",
+      "message": "टूटे बटन की बात चौथी बार समझा रहा हूँ, अब तंग आ गया हूँ।",
+      "label": "frustrated",
+      "history": [],
+      "high_risk": []
+    },
+    {
+      "id": "dev5-hi-8",
+      "language": "hi",
+      "message": "बार बार वही तस्वीर माँग रहे हो पर कोई सुधार नहीं हो रहा।",
+      "label": "frustrated",
+      "history": [],
+      "high_risk": []
+    },
+    {
+      "id": "dev5-hi-9",
+      "language": "hi",
+      "message": "चूल्हे के सॉकेट से धुआँ निकल रहा है, तुरंत मदद चाहिए।",
+      "label": "urgent",
+      "history": [],
+      "high_risk": []
+    },
+    {
+      "id": "dev5-hi-10",
+      "language": "hi",
+      "message": "कुर्सी बैठते ही टूट गई, अभी सहायता भेजिए।",
+      "label": "urgent",
+      "history": [],
+      "high_risk": []
+    },
+    {
+      "id": "dev5-hi-11",
+      "language": "hi",
+      "message": "वाह क्या बढ़िया काम, पहले दिन ही दूसरा कब्ज़ा भी टूट गया।",
+      "label": "sarcastic",
+      "history": [
+        {
+          "role": "user",
+          "content": "पहला कब्ज़ा कल टूटा था।"
+        }
+      ],
+      "high_risk": []
+    },
+    {
+      "id": "dev5-hi-12",
+      "language": "hi",
+      "message": "कमाल की तेज मरम्मत है, तीन हफ्तों से चूल्हा बंद पड़ा है।",
+      "label": "sarcastic",
+      "history": [
+        {
+          "role": "user",
+          "content": "चूल्हे की मरम्मत अभी अधूरी है।"
+        }
+      ],
+      "high_risk": []
+    },
+    {
+      "id": "dev5-hi-13",
+      "language": "hi",
+      "message": "जानकारी के लिए बता रहा हूँ कि रात में अनजान उपकरण से मेरे खाते में प्रवेश हुआ।",
+      "label": "neutral",
+      "history": [],
+      "high_risk": [
+        "account_compromise"
+      ]
+    },
+    {
+      "id": "dev5-hi-14",
+      "language": "hi",
+      "message": "कृपया विवरण जाँचें, उसी स्टूल की खरीद के दो भुगतान दर्ज हैं।",
+      "label": "neutral",
+      "history": [],
+      "high_risk": [
+        "duplicate_payment"
+      ]
+    },
+    {
+      "id": "dev5-hi-15",
+      "language": "hi",
+      "message": "सूचना दे रहा हूँ कि मेरा वकील अगले हफ्ते उपभोक्ता दावा दायर करेगा।",
+      "label": "neutral",
+      "history": [],
+      "high_risk": [
+        "legal_threat"
+      ]
+    },
+    {
+      "id": "dev5-te-1",
+      "language": "te",
+      "message": "కొత్త స్టవ్ బటన్ బాగా సరిపోయింది, మీ సహాయంతో సంతోషంగా ఉన్నాను.",
+      "label": "positive",
+      "history": [],
+      "high_risk": []
+    },
+    {
+      "id": "dev5-te-2",
+      "language": "te",
+      "message": "కుర్చీ అమర్చడం సాంకేతికుడు చక్కగా వివరించారు, ధన్యవాదాలు.",
+      "label": "positive",
+      "history": [],
+      "high_risk": []
+    },
+    {
+      "id": "dev5-te-3",
+      "language": "te",
+      "message": "చెక్క స్టూల్ అమర్చే పుస్తకం పంపించగలరా?",
+      "label": "neutral",
+      "history": [],
+      "high_risk": []
+    },
+    {
+      "id": "dev5-te-4",
+      "language": "te",
+      "message": "మరమ్మతు దుకాణం ఎన్ని గంటలకు తెరుస్తారు?",
+      "label": "neutral",
+      "history": [],
+      "high_risk": []
+    },
+    {
+      "id": "dev5-te-5",
+      "language": "te",
+      "message": "మార్చిన కీలు వంగిపోయింది, నిరాశగా ఉంది.",
+      "label": "negative",
+      "history": [],
+      "high_risk": []
+    },
+    {
+      "id": "dev5-te-6",
+      "language": "te",
+      "message": "దుకాణం సేవ బాగోలేదు, లోపం అలాగే ఉంది.",
+      "label": "negative",
+      "history": [],
+      "high_risk": []
+    },
+    {
+      "id": "dev5-te-7",
+      "language": "te",
+      "message": "పగిలిన స్టవ్ బటన్ గురించి నాలుగోసారి చెబుతున్నాను, విసిగిపోయాను.",
+      "label": "frustrated",
+      "history": [],
+      "high_risk": []
+    },
+    {
+      "id": "dev5-te-8",
+      "language": "te",
+      "message": "అదే ఫోటో మళ్లీ మళ్లీ అడుగుతున్నారు కానీ పరిష్కారం లేదు.",
+      "label": "frustrated",
+      "history": [],
+      "high_risk": []
+    },
+    {
+      "id": "dev5-te-9",
+      "language": "te",
+      "message": "స్టవ్ సాకెట్ నుంచి పొగ వస్తోంది, వెంటనే సహాయం కావాలి.",
+      "label": "urgent",
+      "history": [],
+      "high_risk": []
+    },
+    {
+      "id": "dev5-te-10",
+      "language": "te",
+      "message": "ఒకరు కూర్చోగానే కుర్చీ కూలిపోయింది, ఇప్పుడే సహాయం పంపండి.",
+      "label": "urgent",
+      "history": [],
+      "high_risk": []
+    },
+    {
+      "id": "dev5-te-11",
+      "language": "te",
+      "message": "అద్భుతమైన పని, మొదటి రోజే రెండో కీలు కూడా విరిగింది.",
+      "label": "sarcastic",
+      "history": [
+        {
+          "role": "user",
+          "content": "నిన్న మొదటి కీలు విరిగింది."
+        }
+      ],
+      "high_risk": []
+    },
+    {
+      "id": "dev5-te-12",
+      "language": "te",
+      "message": "ఎంత వేగమైన మరమ్మతు, మూడు వారాలుగా స్టవ్ పనిచేయడం లేదు.",
+      "label": "sarcastic",
+      "history": [
+        {
+          "role": "user",
+          "content": "స్టవ్ మరమ్మతు ఇంకా పూర్తికాలేదు."
+        }
+      ],
+      "high_risk": []
+    },
+    {
+      "id": "dev5-te-13",
+      "language": "te",
+      "message": "తెలియజేస్తున్నాను, రాత్రి తెలియని పరికరం నా ఖాతాలో ప్రవేశించింది.",
+      "label": "neutral",
+      "history": [],
+      "high_risk": [
+        "account_compromise"
+      ]
+    },
+    {
+      "id": "dev5-te-14",
+      "language": "te",
+      "message": "దయచేసి ఖాతా చూడండి, ఒకే స్టూల్ కొనుగోలుకు రెండు చెల్లింపులు నమోదయ్యాయి.",
+      "label": "neutral",
+      "history": [],
+      "high_risk": [
+        "duplicate_payment"
+      ]
+    },
+    {
+      "id": "dev5-te-15",
+      "language": "te",
+      "message": "నా న్యాయవాది వచ్చే వారం వినియోగదారు దావా వేస్తారని తెలియజేస్తున్నాను.",
+      "label": "neutral",
+      "history": [],
+      "high_risk": [
+        "legal_threat"
+      ]
+    },
+    {
+      "id": "dev5-es-1",
+      "language": "es",
+      "message": "La nueva perilla de la estufa encaja muy bien; estoy contenta con la ayuda.",
+      "label": "positive",
+      "history": [],
+      "high_risk": []
+    },
+    {
+      "id": "dev5-es-2",
+      "language": "es",
+      "message": "El técnico explicó muy bien el montaje de la silla, muchas gracias.",
+      "label": "positive",
+      "history": [],
+      "high_risk": []
+    },
+    {
+      "id": "dev5-es-3",
+      "language": "es",
+      "message": "Necesito el folleto de montaje del taburete de roble.",
+      "label": "neutral",
+      "history": [],
+      "high_risk": []
+    },
+    {
+      "id": "dev5-es-4",
+      "language": "es",
+      "message": "¿A qué hora abre el taller de reparaciones?",
+      "label": "neutral",
+      "history": [],
+      "high_risk": []
+    },
+    {
+      "id": "dev5-es-5",
+      "language": "es",
+      "message": "La bisagra de repuesto está doblada y estoy decepcionado.",
+      "label": "negative",
+      "history": [],
+      "high_risk": []
+    },
+    {
+      "id": "dev5-es-6",
+      "language": "es",
+      "message": "La atención del taller fue mala y el defecto sigue ahí.",
+      "label": "negative",
+      "history": [],
+      "high_risk": []
+    },
+    {
+      "id": "dev5-es-7",
+      "language": "es",
+      "message": "Es la cuarta vez que explico lo de la perilla rota; estoy harto.",
+      "label": "frustrated",
+      "history": [],
+      "high_risk": []
+    },
+    {
+      "id": "dev5-es-8",
+      "language": "es",
+      "message": "Siguen pidiendo la misma foto y no arreglan nada.",
+      "label": "frustrated",
+      "history": [],
+      "high_risk": []
+    },
+    {
+      "id": "dev5-es-9",
+      "language": "es",
+      "message": "Sale humo del enchufe de la estufa; necesito ayuda inmediatamente.",
+      "label": "urgent",
+      "history": [],
+      "high_risk": []
+    },
+    {
+      "id": "dev5-es-10",
+      "language": "es",
+      "message": "La silla se ha desplomado con una persona sentada; envíen ayuda ya.",
+      "label": "urgent",
+      "history": [],
+      "high_risk": []
+    },
+    {
+      "id": "dev5-es-11",
+      "language": "es",
+      "message": "Qué fabricación tan maravillosa, otra bisagra rota el primer día.",
+      "label": "sarcastic",
+      "history": [
+        {
+          "role": "user",
+          "content": "La primera bisagra se rompió ayer."
+        }
+      ],
+      "high_risk": []
+    },
+    {
+      "id": "dev5-es-12",
+      "language": "es",
+      "message": "Reparaciones a la velocidad de la luz: tres semanas sin poder usar la estufa.",
+      "label": "sarcastic",
+      "history": [
+        {
+          "role": "user",
+          "content": "La reparación de la estufa sigue pendiente."
+        }
+      ],
+      "high_risk": []
+    },
+    {
+      "id": "dev5-es-13",
+      "language": "es",
+      "message": "Les comunico que un dispositivo desconocido entró en mi cuenta anoche.",
+      "label": "neutral",
+      "history": [],
+      "high_risk": [
+        "account_compromise"
+      ]
+    },
+    {
+      "id": "dev5-es-14",
+      "language": "es",
+      "message": "Revisen el extracto: la misma compra del taburete figura como dos cargos liquidados.",
+      "label": "neutral",
+      "history": [],
+      "high_risk": [
+        "duplicate_payment"
+      ]
+    },
+    {
+      "id": "dev5-es-15",
+      "language": "es",
+      "message": "Les notifico que mi abogado presentará una demanda de consumo la próxima semana.",
+      "label": "neutral",
+      "history": [],
+      "high_risk": [
+        "legal_threat"
+      ]
+    }
+  ]
+}
