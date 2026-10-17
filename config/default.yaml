@@ -114,6 +114,8 @@ languages:
   - "es"
 
 support:
+  llm_classification: true
+  llm_confidence_threshold: 0.65
   risk_clause_pattern: '[;.!?\n]+'
   history_messages: 10
   repeated_negative_count: 3

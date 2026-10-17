@@ -1,0 +1,573 @@
+{
+  "scope": "Actual LLM-assisted pipeline including reported pattern fallbacks",
+  "corpus_sha256": "bf58e610a821461b56d38d0d68a3370333b7db5d6ca63cd3f42d0d76dbbd76af",
+  "total": 48,
+  "correct": 17,
+  "accuracy": 0.3541666666666667,
+  "provider_classifications": 0,
+  "outcomes": [
+    {
+      "id": "new-en-01",
+      "language": "en",
+      "expected": "positive",
+      "predicted": "neutral",
+      "confidence": 0.35,
+      "correct": false,
+      "evidence": [],
+      "expected_risk": [],
+      "detected_risk": []
+    },
+    {
+      "id": "new-en-02",
+      "language": "en",
+      "expected": "neutral",
+      "predicted": "neutral",
+      "confidence": 0.35,
+      "correct": true,
+      "evidence": [],
+      "expected_risk": [],
+      "detected_risk": []
+    },
+    {
+      "id": "new-en-03",
+      "language": "en",
+      "expected": "negative",
+      "predicted": "neutral",
+      "confidence": 0.35,
+      "correct": false,
+      "evidence": [],
+      "expected_risk": [],
+      "detected_risk": []
+    },
+    {
+      "id": "new-en-04",
+      "language": "en",
+      "expected": "frustrated",
+      "predicted": "neutral",
+      "confidence": 0.35,
+      "correct": false,
+      "evidence": [],
+      "expected_risk": [],
+      "detected_risk": []
+    },
+    {
+      "id": "new-en-05",
+      "language": "en",
+      "expected": "urgent",
+      "predicted": "neutral",
+      "confidence": 0.35,
+      "correct": false,
+      "evidence": [],
+      "expected_risk": [],
+      "detected_risk": []
+    },
+    {
+      "id": "new-en-06",
+      "language": "en",
+      "expected": "sarcastic",
+      "predicted": "neutral",
+      "confidence": 0.35,
+      "correct": false,
+      "evidence": [],
+      "expected_risk": [],
+      "detected_risk": []
+    },
+    {
+      "id": "new-en-07",
+      "language": "en",
+      "expected": "neutral",
+      "predicted": "neutral",
+      "confidence": 0.35,
+      "correct": true,
+      "evidence": [],
+      "expected_risk": [
+        "account_compromise"
+      ],
+      "detected_risk": []
+    },
+    {
+      "id": "new-en-08",
+      "language": "en",
+      "expected": "neutral",
+      "predicted": "neutral",
+      "confidence": 0.35,
+      "correct": true,
+      "evidence": [],
+      "expected_risk": [
+        "duplicate_payment"
+      ],
+      "detected_risk": []
+    },
+    {
+      "id": "new-en-09",
+      "language": "en",
+      "expected": "neutral",
+      "predicted": "neutral",
+      "confidence": 0.35,
+      "correct": true,
+      "evidence": [],
+      "expected_risk": [
+        "legal_threat"
+      ],
+      "detected_risk": []
+    },
+    {
+      "id": "new-en-10",
+      "language": "en",
+      "expected": "sarcastic",
+      "predicted": "positive",
+      "confidence": 0.85,
+      "correct": false,
+      "evidence": [
+        "positive"
+      ],
+      "expected_risk": [],
+      "detected_risk": []
+    },
+    {
+      "id": "new-en-11",
+      "language": "en",
+      "expected": "negative",
+      "predicted": "neutral",
+      "confidence": 0.35,
+      "correct": false,
+      "evidence": [],
+      "expected_risk": [],
+      "detected_risk": []
+    },
+    {
+      "id": "new-en-12",
+      "language": "en",
+      "expected": "frustrated",
+      "predicted": "neutral",
+      "confidence": 0.35,
+      "correct": false,
+      "evidence": [],
+      "expected_risk": [],
+      "detected_risk": []
+    },
+    {
+      "id": "new-hi-01",
+      "language": "hi",
+      "expected": "positive",
+      "predicted": "frustrated",
+      "confidence": 0.85,
+      "correct": false,
+      "evidence": [
+        "frustrated"
+      ],
+      "expected_risk": [],
+      "detected_risk": []
+    },
+    {
+      "id": "new-hi-02",
+      "language": "hi",
+      "expected": "neutral",
+      "predicted": "neutral",
+      "confidence": 0.35,
+      "correct": true,
+      "evidence": [],
+      "expected_risk": [],
+      "detected_risk": []
+    },
+    {
+      "id": "new-hi-03",
+      "language": "hi",
+      "expected": "negative",
+      "predicted": "neutral",
+      "confidence": 0.35,
+      "correct": false,
+      "evidence": [],
+      "expected_risk": [],
+      "detected_risk": []
+    },
+    {
+      "id": "new-hi-04",
+      "language": "hi",
+      "expected": "frustrated",
+      "predicted": "neutral",
+      "confidence": 0.35,
+      "correct": false,
+      "evidence": [],
+      "expected_risk": [],
+      "detected_risk": []
+    },
+    {
+      "id": "new-hi-05",
+      "language": "hi",
+      "expected": "urgent",
+      "predicted": "neutral",
+      "confidence": 0.35,
+      "correct": false,
+      "evidence": [],
+      "expected_risk": [],
+      "detected_risk": []
+    },
+    {
+      "id": "new-hi-06",
+      "language": "hi",
+      "expected": "sarcastic",
+      "predicted": "neutral",
+      "confidence": 0.35,
+      "correct": false,
+      "evidence": [],
+      "expected_risk": [],
+      "detected_risk": []
+    },
+    {
+      "id": "new-hi-07",
+      "language": "hi",
+      "expected": "neutral",
+      "predicted": "neutral",
+      "confidence": 0.35,
+      "correct": true,
+      "evidence": [],
+      "expected_risk": [
+        "account_compromise"
+      ],
+      "detected_risk": []
+    },
+    {
+      "id": "new-hi-08",
+      "language": "hi",
+      "expected": "neutral",
+      "predicted": "neutral",
+      "confidence": 0.35,
+      "correct": true,
+      "evidence": [],
+      "expected_risk": [
+        "duplicate_payment"
+      ],
+      "detected_risk": [
+        "duplicate_payment"
+      ]
+    },
+    {
+      "id": "new-hi-09",
+      "language": "hi",
+      "expected": "neutral",
+      "predicted": "neutral",
+      "confidence": 0.35,
+      "correct": true,
+      "evidence": [],
+      "expected_risk": [
+        "legal_threat"
+      ],
+      "detected_risk": []
+    },
+    {
+      "id": "new-hi-10",
+      "language": "hi",
+      "expected": "sarcastic",
+      "predicted": "neutral",
+      "confidence": 0.35,
+      "correct": false,
+      "evidence": [],
+      "expected_risk": [],
+      "detected_risk": []
+    },
+    {
+      "id": "new-hi-11",
+      "language": "hi",
+      "expected": "negative",
+      "predicted": "negative",
+      "confidence": 0.85,
+      "correct": true,
+      "evidence": [
+        "negative"
+      ],
+      "expected_risk": [],
+      "detected_risk": []
+    },
+    {
+      "id": "new-hi-12",
+      "language": "hi",
+      "expected": "frustrated",
+      "predicted": "neutral",
+      "confidence": 0.35,
+      "correct": false,
+      "evidence": [],
+      "expected_risk": [],
+      "detected_risk": []
+    },
+    {
+      "id": "new-te-01",
+      "language": "te",
+      "expected": "positive",
+      "predicted": "negative",
+      "confidence": 0.85,
+      "correct": false,
+      "evidence": [
+        "negative",
+        "positive"
+      ],
+      "expected_risk": [],
+      "detected_risk": []
+    },
+    {
+      "id": "new-te-02",
+      "language": "te",
+      "expected": "neutral",
+      "predicted": "neutral",
+      "confidence": 0.35,
+      "correct": true,
+      "evidence": [],
+      "expected_risk": [],
+      "detected_risk": []
+    },
+    {
+      "id": "new-te-03",
+      "language": "te",
+      "expected": "negative",
+      "predicted": "neutral",
+      "confidence": 0.35,
+      "correct": false,
+      "evidence": [],
+      "expected_risk": [],
+      "detected_risk": []
+    },
+    {
+      "id": "new-te-04",
+      "language": "te",
+      "expected": "frustrated",
+      "predicted": "neutral",
+      "confidence": 0.35,
+      "correct": false,
+      "evidence": [],
+      "expected_risk": [],
+      "detected_risk": []
+    },
+    {
+      "id": "new-te-05",
+      "language": "te",
+      "expected": "urgent",
+      "predicted": "neutral",
+      "confidence": 0.35,
+      "correct": false,
+      "evidence": [],
+      "expected_risk": [],
+      "detected_risk": []
+    },
+    {
+      "id": "new-te-06",
+      "language": "te",
+      "expected": "sarcastic",
+      "predicted": "neutral",
+      "confidence": 0.35,
+      "correct": false,
+      "evidence": [],
+      "expected_risk": [],
+      "detected_risk": []
+    },
+    {
+      "id": "new-te-07",
+      "language": "te",
+      "expected": "neutral",
+      "predicted": "neutral",
+      "confidence": 0.35,
+      "correct": true,
+      "evidence": [],
+      "expected_risk": [
+        "account_compromise"
+      ],
+      "detected_risk": []
+    },
+    {
+      "id": "new-te-08",
+      "language": "te",
+      "expected": "neutral",
+      "predicted": "neutral",
+      "confidence": 0.35,
+      "correct": true,
+      "evidence": [],
+      "expected_risk": [
+        "duplicate_payment"
+      ],
+      "detected_risk": []
+    },
+    {
+      "id": "new-te-09",
+      "language": "te",
+      "expected": "neutral",
+      "predicted": "neutral",
+      "confidence": 0.35,
+      "correct": true,
+      "evidence": [],
+      "expected_risk": [
+        "legal_threat"
+      ],
+      "detected_risk": []
+    },
+    {
+      "id": "new-te-10",
+      "language": "te",
+      "expected": "sarcastic",
+      "predicted": "neutral",
+      "confidence": 0.35,
+      "correct": false,
+      "evidence": [],
+      "expected_risk": [],
+      "detected_risk": []
+    },
+    {
+      "id": "new-te-11",
+      "language": "te",
+      "expected": "negative",
+      "predicted": "neutral",
+      "confidence": 0.35,
+      "correct": false,
+      "evidence": [],
+      "expected_risk": [],
+      "detected_risk": []
+    },
+    {
+      "id": "new-te-12",
+      "language": "te",
+      "expected": "frustrated",
+      "predicted": "neutral",
+      "confidence": 0.35,
+      "correct": false,
+      "evidence": [],
+      "expected_risk": [],
+      "detected_risk": []
+    },
+    {
+      "id": "new-es-01",
+      "language": "es",
+      "expected": "positive",
+      "predicted": "neutral",
+      "confidence": 0.35,
+      "correct": false,
+      "evidence": [],
+      "expected_risk": [],
+      "detected_risk": []
+    },
+    {
+      "id": "new-es-02",
+      "language": "es",
+      "expected": "neutral",
+      "predicted": "neutral",
+      "confidence": 0.35,
+      "correct": true,
+      "evidence": [],
+      "expected_risk": [],
+      "detected_risk": []
+    },
+    {
+      "id": "new-es-03",
+      "language": "es",
+      "expected": "negative",
+      "predicted": "neutral",
+      "confidence": 0.35,
+      "correct": false,
+      "evidence": [],
+      "expected_risk": [],
+      "detected_risk": []
+    },
+    {
+      "id": "new-es-04",
+      "language": "es",
+      "expected": "frustrated",
+      "predicted": "neutral",
+      "confidence": 0.35,
+      "correct": false,
+      "evidence": [],
+      "expected_risk": [],
+      "detected_risk": []
+    },
+    {
+      "id": "new-es-05",
+      "language": "es",
+      "expected": "urgent",
+      "predicted": "neutral",
+      "confidence": 0.35,
+      "correct": false,
+      "evidence": [],
+      "expected_risk": [],
+      "detected_risk": []
+    },
+    {
+      "id": "new-es-06",
+      "language": "es",
+      "expected": "sarcastic",
+      "predicted": "neutral",
+      "confidence": 0.35,
+      "correct": false,
+      "evidence": [],
+      "expected_risk": [],
+      "detected_risk": []
+    },
+    {
+      "id": "new-es-07",
+      "language": "es",
+      "expected": "neutral",
+      "predicted": "neutral",
+      "confidence": 0.35,
+      "correct": true,
+      "evidence": [],
+      "expected_risk": [
+        "account_compromise"
+      ],
+      "detected_risk": []
+    },
+    {
+      "id": "new-es-08",
+      "language": "es",
+      "expected": "neutral",
+      "predicted": "neutral",
+      "confidence": 0.35,
+      "correct": true,
+      "evidence": [],
+      "expected_risk": [
+        "duplicate_payment"
+      ],
+      "detected_risk": []
+    },
+    {
+      "id": "new-es-09",
+      "language": "es",
+      "expected": "neutral",
+      "predicted": "neutral",
+      "confidence": 0.35,
+      "correct": true,
+      "evidence": [],
+      "expected_risk": [
+        "legal_threat"
+      ],
+      "detected_risk": []
+    },
+    {
+      "id": "new-es-10",
+      "language": "es",
+      "expected": "sarcastic",
+      "predicted": "neutral",
+      "confidence": 0.35,
+      "correct": false,
+      "evidence": [],
+      "expected_risk": [],
+      "detected_risk": []
+    },
+    {
+      "id": "new-es-11",
+      "language": "es",
+      "expected": "negative",
+      "predicted": "neutral",
+      "confidence": 0.35,
+      "correct": false,
+      "evidence": [],
+      "expected_risk": [],
+      "detected_risk": []
+    },
+    {
+      "id": "new-es-12",
+      "language": "es",
+      "expected": "frustrated",
+      "predicted": "neutral",
+      "confidence": 0.35,
+      "correct": false,
+      "evidence": [],
+      "expected_risk": [],
+      "detected_risk": []
+    }
+  ]
+}

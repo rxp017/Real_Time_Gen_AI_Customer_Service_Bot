@@ -1,0 +1,10 @@
+{
+  "model": "gemini-2.5-flash",
+  "content": "```json\n{\n  \"label\": \"positive\",\n  \"confidence\": 0.98,\n  \"language\": \"en\"\n}\n```",
+  "attempts": [
+    {
+      "model": "gemini-2.5-flash",
+      "status": 200
+    }
+  ]
+}
