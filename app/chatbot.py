@@ -20,7 +20,11 @@ from typing import Any
 from dotenv import load_dotenv
 from fastapi import FastAPI, Header, HTTPException
 from pydantic import BaseModel, Field
+from starlette.staticfiles import StaticFiles
 
+from app.customer_web import ROOT as WEB_ROOT
+from app.customer_web import router as customer_router
+from app.security_middleware import CustomerBoundary
 from app.upload_api import UploadBodyLimit, set_upload_service, upload_service
 from app.upload_api import router as upload_router
 from core.audit import get_audit_logger, set_audit_logger
@@ -236,7 +240,10 @@ app = FastAPI(
     lifespan=lifespan,
 )
 app.add_middleware(UploadBodyLimit)
+app.add_middleware(CustomerBoundary)
 app.include_router(upload_router)
+app.include_router(customer_router)
+app.mount("/assets", StaticFiles(directory=WEB_ROOT), name="customer-assets")
 
 
 @app.get("/health")

@@ -1,0 +1,11 @@
+{
+  "date": "2026-10-17",
+  "transport": "Signed-out in-app browser, isolated localhost service on port 8017",
+  "provider": "Disabled for this UI test; no factual generation success claimed",
+  "chat": {"http_status": 200, "missing_evidence_refused": true},
+  "literal_html_test": {"rendered_as_text": true, "image_elements_in_message_log": 0},
+  "ticket": {"draft_questions_shown": true, "customer_fields_submitted": true, "terminal_status": "QUEUED"},
+  "upload": {"fixture": "tests/fixtures/task2/clean.png", "http_status": 200,
+    "actual_ocr_fields": {"order_id": "ORD-1001", "date": "2026-10-15", "amount": "INR 1299.00", "product_info": "Blue Widget PRD-X100", "error_code": "E-PAY-042"}},
+  "screenshot": "docs/assets/customer-ui.jpg"
+}

@@ -1,5 +1,13 @@
 timezone: "Asia/Kolkata"
 
+web:
+  allowed_origins: ["http://localhost:8000", "http://127.0.0.1:8000"]
+  requests_per_window: 120
+  uploads_per_window: 6
+  rate_window_seconds: 60
+  max_rate_buckets: 10000
+  max_json_bytes: 65536
+
 retrieval:
   embedding_model: gemini-embedding-001
   semantic_weight: 0.65
@@ -45,7 +53,7 @@ tickets:
     impact: {individual: 0.25, team: 0.6, widespread: 1.0}
 
 uploads:
-  directory: ".uploads"
+  directory: "data/uploads"
   max_bytes: 8388608
   max_request_bytes: 9437184
   allowed_types: ["image/png", "image/jpeg", "application/pdf"]
@@ -229,7 +237,7 @@ updates:
   max_file_bytes: 1048576
   supported_types: [".json"]
   inbox: "data/inbox"
-  quarantine: "quarantine"
+  quarantine: "data/quarantine"
   golden: "data/golden"
 
 conversation:

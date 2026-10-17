@@ -15,3 +15,7 @@ venv
 uploads
 quarantine
 data/inbox
+data/uploads
+data/quarantine
+**/*.sqlite
+**/*.sqlite3
