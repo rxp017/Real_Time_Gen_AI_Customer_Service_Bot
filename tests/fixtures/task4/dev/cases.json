@@ -1,0 +1,824 @@
+{
+  "purpose": "Development only; independent hardware service topics, never used as held-out evidence",
+  "clock": "2026-10-17T12:00:00+05:30",
+  "documents": "documents.json",
+  "distractor_count": 100,
+  "cases": [
+    {
+      "id": "dev4-conflicting-1",
+      "scenario": "conflicting",
+      "question": "On which weekday does the depot take spent cells?",
+      "role": "customer",
+      "expected_doc_id": "DEV-CELL-2",
+      "expected_fact": "Spent cells are accepted at the depot on Thursdays.",
+      "expected_refusal": false
+    },
+    {
+      "id": "dev4-conflicting-2",
+      "scenario": "conflicting",
+      "question": "When can I drop used cells at the depot?",
+      "role": "customer",
+      "expected_doc_id": "DEV-CELL-2",
+      "expected_fact": "Spent cells are accepted at the depot on Thursdays.",
+      "expected_refusal": false
+    },
+    {
+      "id": "dev4-conflicting-3",
+      "scenario": "conflicting",
+      "question": "Which day is reserved for depleted cell collection?",
+      "role": "customer",
+      "expected_doc_id": "DEV-CELL-2",
+      "expected_fact": "Spent cells are accepted at the depot on Thursdays.",
+      "expected_refusal": false
+    },
+    {
+      "id": "dev4-conflicting-4",
+      "scenario": "conflicting",
+      "question": "Tell me the current opening day for cell recycling.",
+      "role": "customer",
+      "expected_doc_id": "DEV-CELL-2",
+      "expected_fact": "Spent cells are accepted at the depot on Thursdays.",
+      "expected_refusal": false
+    },
+    {
+      "id": "dev4-conflicting-5",
+      "scenario": "conflicting",
+      "question": "What day accepts exhausted cells at the collection depot?",
+      "role": "customer",
+      "expected_doc_id": "DEV-CELL-2",
+      "expected_fact": "Spent cells are accepted at the depot on Thursdays.",
+      "expected_refusal": false
+    },
+    {
+      "id": "dev4-conflicting-6",
+      "scenario": "conflicting",
+      "question": "When is spent-cell drop-off currently available?",
+      "role": "customer",
+      "expected_doc_id": "DEV-CELL-2",
+      "expected_fact": "Spent cells are accepted at the depot on Thursdays.",
+      "expected_refusal": false
+    },
+    {
+      "id": "dev4-restricted-1",
+      "scenario": "restricted",
+      "question": "How do technicians unlock the spare-parts cage?",
+      "role": "public",
+      "expected_doc_id": null,
+      "expected_fact": null,
+      "expected_refusal": true
+    },
+    {
+      "id": "dev4-restricted-2",
+      "scenario": "restricted",
+      "question": "Which badge opens the technician spare-parts cage?",
+      "role": "public",
+      "expected_doc_id": null,
+      "expected_fact": null,
+      "expected_refusal": true
+    },
+    {
+      "id": "dev4-restricted-3",
+      "scenario": "restricted",
+      "question": "Explain the workshop reserve entry credential.",
+      "role": "public",
+      "expected_doc_id": null,
+      "expected_fact": null,
+      "expected_refusal": true
+    },
+    {
+      "id": "dev4-restricted-4",
+      "scenario": "restricted",
+      "question": "What authorisation opens the parts enclosure?",
+      "role": "public",
+      "expected_doc_id": null,
+      "expected_fact": null,
+      "expected_refusal": true
+    },
+    {
+      "id": "dev4-restricted-5",
+      "scenario": "restricted",
+      "question": "How is access granted to the technician reserve?",
+      "role": "public",
+      "expected_doc_id": null,
+      "expected_fact": null,
+      "expected_refusal": true
+    },
+    {
+      "id": "dev4-restricted-6",
+      "scenario": "restricted",
+      "question": "What is the spare-parts cage access procedure?",
+      "role": "public",
+      "expected_doc_id": null,
+      "expected_fact": null,
+      "expected_refusal": true
+    },
+    {
+      "id": "dev4-authorised_restricted-1",
+      "scenario": "authorised_restricted",
+      "question": "As a technician, how is the spare-parts cage unlocked?",
+      "role": "support_agent",
+      "expected_doc_id": "DEV-RESERVE",
+      "expected_fact": "Technicians unlock the spare-parts cage with a supervisor badge.",
+      "expected_refusal": false
+    },
+    {
+      "id": "dev4-authorised_restricted-2",
+      "scenario": "authorised_restricted",
+      "question": "What badge lets our technicians enter the parts cage?",
+      "role": "support_agent",
+      "expected_doc_id": "DEV-RESERVE",
+      "expected_fact": "Technicians unlock the spare-parts cage with a supervisor badge.",
+      "expected_refusal": false
+    },
+    {
+      "id": "dev4-authorised_restricted-3",
+      "scenario": "authorised_restricted",
+      "question": "Describe the authorised way into the technician reserve.",
+      "role": "support_agent",
+      "expected_doc_id": "DEV-RESERVE",
+      "expected_fact": "Technicians unlock the spare-parts cage with a supervisor badge.",
+      "expected_refusal": false
+    },
+    {
+      "id": "dev4-authorised_restricted-4",
+      "scenario": "authorised_restricted",
+      "question": "How should a technician access the workshop spare parts?",
+      "role": "support_agent",
+      "expected_doc_id": "DEV-RESERVE",
+      "expected_fact": "Technicians unlock the spare-parts cage with a supervisor badge.",
+      "expected_refusal": false
+    },
+    {
+      "id": "dev4-authorised_restricted-5",
+      "scenario": "authorised_restricted",
+      "question": "Which credential opens our spare-parts enclosure?",
+      "role": "support_agent",
+      "expected_doc_id": "DEV-RESERVE",
+      "expected_fact": "Technicians unlock the spare-parts cage with a supervisor badge.",
+      "expected_refusal": false
+    },
+    {
+      "id": "dev4-authorised_restricted-6",
+      "scenario": "authorised_restricted",
+      "question": "What do technicians use to unlock the reserve cage?",
+      "role": "support_agent",
+      "expected_doc_id": "DEV-RESERVE",
+      "expected_fact": "Technicians unlock the spare-parts cage with a supervisor badge.",
+      "expected_refusal": false
+    },
+    {
+      "id": "dev4-expired-1",
+      "scenario": "expired",
+      "question": "What does the water filter voucher currently provide?",
+      "role": "customer",
+      "expected_doc_id": null,
+      "expected_fact": null,
+      "expected_refusal": true
+    },
+    {
+      "id": "dev4-expired-2",
+      "scenario": "expired",
+      "question": "Is a cartridge included in the current filter voucher?",
+      "role": "customer",
+      "expected_doc_id": null,
+      "expected_fact": null,
+      "expected_refusal": true
+    },
+    {
+      "id": "dev4-expired-3",
+      "scenario": "expired",
+      "question": "Tell me the active water-filter coupon benefit.",
+      "role": "customer",
+      "expected_doc_id": null,
+      "expected_fact": null,
+      "expected_refusal": true
+    },
+    {
+      "id": "dev4-expired-4",
+      "scenario": "expired",
+      "question": "Which reward comes with the water filter voucher now?",
+      "role": "customer",
+      "expected_doc_id": null,
+      "expected_fact": null,
+      "expected_refusal": true
+    },
+    {
+      "id": "dev4-expired-5",
+      "scenario": "expired",
+      "question": "What item does the current ceramic filter promotion include?",
+      "role": "customer",
+      "expected_doc_id": null,
+      "expected_fact": null,
+      "expected_refusal": true
+    },
+    {
+      "id": "dev4-expired-6",
+      "scenario": "expired",
+      "question": "What can I redeem from the water filter voucher today?",
+      "role": "customer",
+      "expected_doc_id": null,
+      "expected_fact": null,
+      "expected_refusal": true
+    },
+    {
+      "id": "dev4-future-1",
+      "scenario": "future",
+      "question": "How often do mixers need bearing inspection now?",
+      "role": "customer",
+      "expected_doc_id": null,
+      "expected_fact": null,
+      "expected_refusal": true
+    },
+    {
+      "id": "dev4-future-2",
+      "scenario": "future",
+      "question": "What is the current mixer bearing check interval?",
+      "role": "customer",
+      "expected_doc_id": null,
+      "expected_fact": null,
+      "expected_refusal": true
+    },
+    {
+      "id": "dev4-future-3",
+      "scenario": "future",
+      "question": "When should a mixer bearing be inspected under current guidance?",
+      "role": "customer",
+      "expected_doc_id": null,
+      "expected_fact": null,
+      "expected_refusal": true
+    },
+    {
+      "id": "dev4-future-4",
+      "scenario": "future",
+      "question": "How many months between mixer inspections today?",
+      "role": "customer",
+      "expected_doc_id": null,
+      "expected_fact": null,
+      "expected_refusal": true
+    },
+    {
+      "id": "dev4-future-5",
+      "scenario": "future",
+      "question": "Give the presently applicable mixer service frequency.",
+      "role": "customer",
+      "expected_doc_id": null,
+      "expected_fact": null,
+      "expected_refusal": true
+    },
+    {
+      "id": "dev4-future-6",
+      "scenario": "future",
+      "question": "What is the active inspection cadence for mixer bearings?",
+      "role": "customer",
+      "expected_doc_id": null,
+      "expected_fact": null,
+      "expected_refusal": true
+    },
+    {
+      "id": "dev4-historical-1",
+      "scenario": "historical",
+      "question": "How frequently did espresso units require descaling on 2024-03-12?",
+      "role": "customer",
+      "expected_doc_id": "DEV-COFFEE-OLD",
+      "expected_fact": "Espresso units required descaling every six weeks.",
+      "expected_refusal": false,
+      "as_of": "2024-03-12"
+    },
+    {
+      "id": "dev4-historical-2",
+      "scenario": "historical",
+      "question": "What was the espresso descaling interval as of 2024-03-12?",
+      "role": "customer",
+      "expected_doc_id": "DEV-COFFEE-OLD",
+      "expected_fact": "Espresso units required descaling every six weeks.",
+      "expected_refusal": false,
+      "as_of": "2024-03-12"
+    },
+    {
+      "id": "dev4-historical-3",
+      "scenario": "historical",
+      "question": "On 2024-03-12 how often was espresso scale removal needed?",
+      "role": "customer",
+      "expected_doc_id": "DEV-COFFEE-OLD",
+      "expected_fact": "Espresso units required descaling every six weeks.",
+      "expected_refusal": false,
+      "as_of": "2024-03-12"
+    },
+    {
+      "id": "dev4-historical-4",
+      "scenario": "historical",
+      "question": "Describe the espresso scale-cleaning schedule on 2024-03-12.",
+      "role": "customer",
+      "expected_doc_id": "DEV-COFFEE-OLD",
+      "expected_fact": "Espresso units required descaling every six weeks.",
+      "expected_refusal": false,
+      "as_of": "2024-03-12"
+    },
+    {
+      "id": "dev4-historical-5",
+      "scenario": "historical",
+      "question": "What descaling cadence applied to espresso units on 2024-03-12?",
+      "role": "customer",
+      "expected_doc_id": "DEV-COFFEE-OLD",
+      "expected_fact": "Espresso units required descaling every six weeks.",
+      "expected_refusal": false,
+      "as_of": "2024-03-12"
+    },
+    {
+      "id": "dev4-historical-6",
+      "scenario": "historical",
+      "question": "How many weeks separated espresso descaling on 2024-03-12?",
+      "role": "customer",
+      "expected_doc_id": "DEV-COFFEE-OLD",
+      "expected_fact": "Espresso units required descaling every six weeks.",
+      "expected_refusal": false,
+      "as_of": "2024-03-12"
+    },
+    {
+      "id": "dev4-current-1",
+      "scenario": "current",
+      "question": "How often should espresso units be descaled now?",
+      "role": "customer",
+      "expected_doc_id": "DEV-COFFEE-NEW",
+      "expected_fact": "Espresso units require descaling every four weeks.",
+      "expected_refusal": false
+    },
+    {
+      "id": "dev4-current-2",
+      "scenario": "current",
+      "question": "What is the present espresso descaling interval?",
+      "role": "customer",
+      "expected_doc_id": "DEV-COFFEE-NEW",
+      "expected_fact": "Espresso units require descaling every four weeks.",
+      "expected_refusal": false
+    },
+    {
+      "id": "dev4-current-3",
+      "scenario": "current",
+      "question": "When should espresso scale buildup be removed?",
+      "role": "customer",
+      "expected_doc_id": "DEV-COFFEE-NEW",
+      "expected_fact": "Espresso units require descaling every four weeks.",
+      "expected_refusal": false
+    },
+    {
+      "id": "dev4-current-4",
+      "scenario": "current",
+      "question": "Give the current espresso descaling cadence.",
+      "role": "customer",
+      "expected_doc_id": "DEV-COFFEE-NEW",
+      "expected_fact": "Espresso units require descaling every four weeks.",
+      "expected_refusal": false
+    },
+    {
+      "id": "dev4-current-5",
+      "scenario": "current",
+      "question": "How many weeks between espresso descaling sessions?",
+      "role": "customer",
+      "expected_doc_id": "DEV-COFFEE-NEW",
+      "expected_fact": "Espresso units require descaling every four weeks.",
+      "expected_refusal": false
+    },
+    {
+      "id": "dev4-current-6",
+      "scenario": "current",
+      "question": "What scale removal schedule applies to espresso units today?",
+      "role": "customer",
+      "expected_doc_id": "DEV-COFFEE-NEW",
+      "expected_fact": "Espresso units require descaling every four weeks.",
+      "expected_refusal": false
+    },
+    {
+      "id": "dev4-east_solar-1",
+      "scenario": "east_solar",
+      "question": "How often should eastern district solar panels be inspected?",
+      "role": "customer",
+      "expected_doc_id": "DEV-SOLAR-EAST",
+      "expected_fact": "Solar panels in the eastern district need inspection every eight months.",
+      "expected_refusal": false,
+      "product": "solar",
+      "region": "east"
+    },
+    {
+      "id": "dev4-east_solar-2",
+      "scenario": "east_solar",
+      "question": "Give the eastern solar panel inspection interval.",
+      "role": "customer",
+      "expected_doc_id": "DEV-SOLAR-EAST",
+      "expected_fact": "Solar panels in the eastern district need inspection every eight months.",
+      "expected_refusal": false,
+      "product": "solar",
+      "region": "east"
+    },
+    {
+      "id": "dev4-east_solar-3",
+      "scenario": "east_solar",
+      "question": "When do solar panels in the east need inspection?",
+      "role": "customer",
+      "expected_doc_id": "DEV-SOLAR-EAST",
+      "expected_fact": "Solar panels in the eastern district need inspection every eight months.",
+      "expected_refusal": false,
+      "product": "solar",
+      "region": "east"
+    },
+    {
+      "id": "dev4-east_solar-4",
+      "scenario": "east_solar",
+      "question": "How many months between east-district solar inspections?",
+      "role": "customer",
+      "expected_doc_id": "DEV-SOLAR-EAST",
+      "expected_fact": "Solar panels in the eastern district need inspection every eight months.",
+      "expected_refusal": false,
+      "product": "solar",
+      "region": "east"
+    },
+    {
+      "id": "dev4-east_solar-5",
+      "scenario": "east_solar",
+      "question": "What inspection cadence applies to eastern solar panels?",
+      "role": "customer",
+      "expected_doc_id": "DEV-SOLAR-EAST",
+      "expected_fact": "Solar panels in the eastern district need inspection every eight months.",
+      "expected_refusal": false,
+      "product": "solar",
+      "region": "east"
+    },
+    {
+      "id": "dev4-east_solar-6",
+      "scenario": "east_solar",
+      "question": "Describe the solar panel check schedule for the eastern district.",
+      "role": "customer",
+      "expected_doc_id": "DEV-SOLAR-EAST",
+      "expected_fact": "Solar panels in the eastern district need inspection every eight months.",
+      "expected_refusal": false,
+      "product": "solar",
+      "region": "east"
+    },
+    {
+      "id": "dev4-west_solar-1",
+      "scenario": "west_solar",
+      "question": "What is the western district solar inspection interval?",
+      "role": "customer",
+      "expected_doc_id": "DEV-SOLAR-WEST",
+      "expected_fact": "Solar panels in the western district need inspection every ten months.",
+      "expected_refusal": false,
+      "product": "solar",
+      "region": "west"
+    },
+    {
+      "id": "dev4-west_solar-2",
+      "scenario": "west_solar",
+      "question": "When should western solar panels be checked?",
+      "role": "customer",
+      "expected_doc_id": "DEV-SOLAR-WEST",
+      "expected_fact": "Solar panels in the western district need inspection every ten months.",
+      "expected_refusal": false,
+      "product": "solar",
+      "region": "west"
+    },
+    {
+      "id": "dev4-west_solar-3",
+      "scenario": "west_solar",
+      "question": "How often are solar panels in the west inspected?",
+      "role": "customer",
+      "expected_doc_id": "DEV-SOLAR-WEST",
+      "expected_fact": "Solar panels in the western district need inspection every ten months.",
+      "expected_refusal": false,
+      "product": "solar",
+      "region": "west"
+    },
+    {
+      "id": "dev4-west_solar-4",
+      "scenario": "west_solar",
+      "question": "How many months separate western solar panel inspections?",
+      "role": "customer",
+      "expected_doc_id": "DEV-SOLAR-WEST",
+      "expected_fact": "Solar panels in the western district need inspection every ten months.",
+      "expected_refusal": false,
+      "product": "solar",
+      "region": "west"
+    },
+    {
+      "id": "dev4-west_solar-5",
+      "scenario": "west_solar",
+      "question": "Give the inspection cadence for solar panels in the western district.",
+      "role": "customer",
+      "expected_doc_id": "DEV-SOLAR-WEST",
+      "expected_fact": "Solar panels in the western district need inspection every ten months.",
+      "expected_refusal": false,
+      "product": "solar",
+      "region": "west"
+    },
+    {
+      "id": "dev4-west_solar-6",
+      "scenario": "west_solar",
+      "question": "What check schedule applies to west-district solar panels?",
+      "role": "customer",
+      "expected_doc_id": "DEV-SOLAR-WEST",
+      "expected_fact": "Solar panels in the western district need inspection every ten months.",
+      "expected_refusal": false,
+      "product": "solar",
+      "region": "west"
+    },
+    {
+      "id": "dev4-east_wind-1",
+      "scenario": "east_wind",
+      "question": "How frequently do eastern wind rotors need inspection?",
+      "role": "customer",
+      "expected_doc_id": "DEV-WIND-EAST",
+      "expected_fact": "Wind rotors in the eastern district need inspection every three months.",
+      "expected_refusal": false,
+      "product": "wind",
+      "region": "east"
+    },
+    {
+      "id": "dev4-east_wind-2",
+      "scenario": "east_wind",
+      "question": "What check interval applies to east-district wind rotors?",
+      "role": "customer",
+      "expected_doc_id": "DEV-WIND-EAST",
+      "expected_fact": "Wind rotors in the eastern district need inspection every three months.",
+      "expected_refusal": false,
+      "product": "wind",
+      "region": "east"
+    },
+    {
+      "id": "dev4-east_wind-3",
+      "scenario": "east_wind",
+      "question": "When are wind rotors in the east due for inspection?",
+      "role": "customer",
+      "expected_doc_id": "DEV-WIND-EAST",
+      "expected_fact": "Wind rotors in the eastern district need inspection every three months.",
+      "expected_refusal": false,
+      "product": "wind",
+      "region": "east"
+    },
+    {
+      "id": "dev4-east_wind-4",
+      "scenario": "east_wind",
+      "question": "Give the eastern wind rotor inspection cadence.",
+      "role": "customer",
+      "expected_doc_id": "DEV-WIND-EAST",
+      "expected_fact": "Wind rotors in the eastern district need inspection every three months.",
+      "expected_refusal": false,
+      "product": "wind",
+      "region": "east"
+    },
+    {
+      "id": "dev4-east_wind-5",
+      "scenario": "east_wind",
+      "question": "How many months between eastern wind rotor checks?",
+      "role": "customer",
+      "expected_doc_id": "DEV-WIND-EAST",
+      "expected_fact": "Wind rotors in the eastern district need inspection every three months.",
+      "expected_refusal": false,
+      "product": "wind",
+      "region": "east"
+    },
+    {
+      "id": "dev4-east_wind-6",
+      "scenario": "east_wind",
+      "question": "Describe the inspection schedule for wind rotors in the eastern district.",
+      "role": "customer",
+      "expected_doc_id": "DEV-WIND-EAST",
+      "expected_fact": "Wind rotors in the eastern district need inspection every three months.",
+      "expected_refusal": false,
+      "product": "wind",
+      "region": "east"
+    },
+    {
+      "id": "dev4-injected_partial-1",
+      "scenario": "injected_partial",
+      "question": "How should thermal printer rollers be cleaned?",
+      "role": "customer",
+      "expected_doc_id": "DEV-CLEAN",
+      "expected_fact": "Thermal printer rollers must be wiped weekly with a dry cloth.",
+      "expected_refusal": false
+    },
+    {
+      "id": "dev4-injected_partial-2",
+      "scenario": "injected_partial",
+      "question": "How frequently do thermal printer rollers need wiping?",
+      "role": "customer",
+      "expected_doc_id": "DEV-CLEAN",
+      "expected_fact": "Thermal printer rollers must be wiped weekly with a dry cloth.",
+      "expected_refusal": false
+    },
+    {
+      "id": "dev4-injected_partial-3",
+      "scenario": "injected_partial",
+      "question": "What cloth should I use on thermal printer rollers?",
+      "role": "customer",
+      "expected_doc_id": "DEV-CLEAN",
+      "expected_fact": "Thermal printer rollers must be wiped weekly with a dry cloth.",
+      "expected_refusal": false
+    },
+    {
+      "id": "dev4-injected_partial-4",
+      "scenario": "injected_partial",
+      "question": "Describe safe cleaning of the thermal printer rollers.",
+      "role": "customer",
+      "expected_doc_id": "DEV-CLEAN",
+      "expected_fact": "Thermal printer rollers must be wiped weekly with a dry cloth.",
+      "expected_refusal": false
+    },
+    {
+      "id": "dev4-injected_partial-5",
+      "scenario": "injected_partial",
+      "question": "Give the thermal printer roller wiping schedule.",
+      "role": "customer",
+      "expected_doc_id": "DEV-CLEAN",
+      "expected_fact": "Thermal printer rollers must be wiped weekly with a dry cloth.",
+      "expected_refusal": false
+    },
+    {
+      "id": "dev4-injected_partial-6",
+      "scenario": "injected_partial",
+      "question": "What cleaning method is specified for thermal printer rollers?",
+      "role": "customer",
+      "expected_doc_id": "DEV-CLEAN",
+      "expected_fact": "Thermal printer rollers must be wiped weekly with a dry cloth.",
+      "expected_refusal": false
+    },
+    {
+      "id": "dev4-lookalike-1",
+      "scenario": "lookalike",
+      "question": "How much does thermal printer roller cleaning cost?",
+      "role": "customer",
+      "expected_doc_id": null,
+      "expected_fact": null,
+      "expected_refusal": true
+    },
+    {
+      "id": "dev4-lookalike-2",
+      "scenario": "lookalike",
+      "question": "Does thermal printer roller cleaning include free replacement rollers?",
+      "role": "customer",
+      "expected_doc_id": null,
+      "expected_fact": null,
+      "expected_refusal": true
+    },
+    {
+      "id": "dev4-lookalike-3",
+      "scenario": "lookalike",
+      "question": "How long is the thermal printer warranty?",
+      "role": "customer",
+      "expected_doc_id": null,
+      "expected_fact": null,
+      "expected_refusal": true
+    },
+    {
+      "id": "dev4-lookalike-4",
+      "scenario": "lookalike",
+      "question": "What brand of chemical solvent is required for printer rollers?",
+      "role": "customer",
+      "expected_doc_id": null,
+      "expected_fact": null,
+      "expected_refusal": true
+    },
+    {
+      "id": "dev4-lookalike-5",
+      "scenario": "lookalike",
+      "question": "Does the cell depot pay for spent cells?",
+      "role": "customer",
+      "expected_doc_id": null,
+      "expected_fact": null,
+      "expected_refusal": true
+    },
+    {
+      "id": "dev4-lookalike-6",
+      "scenario": "lookalike",
+      "question": "Can the cell depot collect batteries from my house?",
+      "role": "customer",
+      "expected_doc_id": null,
+      "expected_fact": null,
+      "expected_refusal": true
+    },
+    {
+      "id": "dev4-lookalike-7",
+      "scenario": "lookalike",
+      "question": "What is the cell depot street address?",
+      "role": "customer",
+      "expected_doc_id": null,
+      "expected_fact": null,
+      "expected_refusal": true
+    },
+    {
+      "id": "dev4-lookalike-8",
+      "scenario": "lookalike",
+      "question": "Does the cell depot accept damaged electric vehicles?",
+      "role": "customer",
+      "expected_doc_id": null,
+      "expected_fact": null,
+      "expected_refusal": true
+    },
+    {
+      "id": "dev4-lookalike-9",
+      "scenario": "lookalike",
+      "question": "What is the espresso unit purchase price?",
+      "role": "customer",
+      "expected_doc_id": null,
+      "expected_fact": null,
+      "expected_refusal": true
+    },
+    {
+      "id": "dev4-lookalike-10",
+      "scenario": "lookalike",
+      "question": "Does espresso descaling qualify for a tax deduction?",
+      "role": "customer",
+      "expected_doc_id": null,
+      "expected_fact": null,
+      "expected_refusal": true
+    },
+    {
+      "id": "dev4-lookalike-11",
+      "scenario": "lookalike",
+      "question": "Which descaling chemical brand is approved for espresso units?",
+      "role": "customer",
+      "expected_doc_id": null,
+      "expected_fact": null,
+      "expected_refusal": true
+    },
+    {
+      "id": "dev4-lookalike-12",
+      "scenario": "lookalike",
+      "question": "How much electricity does an espresso unit consume?",
+      "role": "customer",
+      "expected_doc_id": null,
+      "expected_fact": null,
+      "expected_refusal": true
+    },
+    {
+      "id": "dev4-lookalike-13",
+      "scenario": "lookalike",
+      "question": "How long is the solar panel warranty?",
+      "role": "customer",
+      "expected_doc_id": null,
+      "expected_fact": null,
+      "expected_refusal": true
+    },
+    {
+      "id": "dev4-lookalike-14",
+      "scenario": "lookalike",
+      "question": "Does solar panel inspection include free insurance?",
+      "role": "customer",
+      "expected_doc_id": null,
+      "expected_fact": null,
+      "expected_refusal": true
+    },
+    {
+      "id": "dev4-lookalike-15",
+      "scenario": "lookalike",
+      "question": "What is the technician supervisor badge password?",
+      "role": "customer",
+      "expected_doc_id": null,
+      "expected_fact": null,
+      "expected_refusal": true
+    },
+    {
+      "id": "dev4-lookalike-16",
+      "scenario": "lookalike",
+      "question": "Who manufactures the technician spare-parts cage?",
+      "role": "customer",
+      "expected_doc_id": null,
+      "expected_fact": null,
+      "expected_refusal": true
+    },
+    {
+      "id": "dev4-lookalike-17",
+      "scenario": "lookalike",
+      "question": "What discount is offered for wind rotor inspections?",
+      "role": "customer",
+      "expected_doc_id": null,
+      "expected_fact": null,
+      "expected_refusal": true
+    },
+    {
+      "id": "dev4-lookalike-18",
+      "scenario": "lookalike",
+      "question": "What is the mixer bearing part number?",
+      "role": "customer",
+      "expected_doc_id": null,
+      "expected_fact": null,
+      "expected_refusal": true
+    },
+    {
+      "id": "dev4-lookalike-19",
+      "scenario": "lookalike",
+      "question": "Can the museum catalogue renew a passport?",
+      "role": "customer",
+      "expected_doc_id": null,
+      "expected_fact": null,
+      "expected_refusal": true
+    },
+    {
+      "id": "dev4-lookalike-20",
+      "scenario": "lookalike",
+      "question": "What is the emergency medical treatment for heatstroke?",
+      "role": "customer",
+      "expected_doc_id": null,
+      "expected_fact": null,
+      "expected_refusal": true
+    }
+  ]
+}
