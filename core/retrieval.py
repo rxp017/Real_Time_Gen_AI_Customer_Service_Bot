@@ -16,6 +16,7 @@ Includes:
 
 import json
 import re
+from contextvars import ContextVar
 from dataclasses import dataclass, field
 from datetime import datetime
 from math import sqrt
@@ -53,6 +54,7 @@ class GenerationResult:
     verified: bool = True
     refusal: bool = False
     clarification_needed: bool = False
+    trace: dict[str, Any] = field(default_factory=dict)
 
 
 STOPWORDS = {
@@ -135,6 +137,7 @@ class PolicyRetrievalEngine:
         self.searcher = searcher or SemanticSearcher()
         self.embedder = embedder or (llm if getattr(llm, "supports_embeddings", False) else None)
         self.embedding_failures = 0
+        self._trace: ContextVar[dict[str, Any]] = ContextVar("retrieval_trace", default={})
 
     def prepare_embedding(self, doc: Document) -> None:
         """Only ingest/reindex dispatches document vectors; queries use cached survivors."""
@@ -254,6 +257,8 @@ class PolicyRetrievalEngine:
         region: str | None = None,
     ) -> list[RetrievalResult]:
         """Execute the fixed 5-stage retrieval pipeline."""
+        trace: dict[str, Any] = {"filters": [], "scores": [], "embedding_fallback": None}
+        self._trace.set(trace)
         cfg = get_config()
         min_threshold = float(cfg.thresholds.get("similarity_threshold", 0.7))
         target_as_of = self._parse_query_as_of_date(query, as_of)
@@ -271,23 +276,28 @@ class PolicyRetrievalEngine:
         # ====================================================================
         # Stage 2: Validity filter by as_of date
         # ====================================================================
+        trace["filters"] += [{"doc_id": d.doc_id, "reason": "role"} for d in all_docs if d not in authorized_docs]
         valid_docs = []
         for doc in authorized_docs:
             if doc.is_injected or detect_prompt_injection(doc.content)[0]:
+                trace["filters"].append({"doc_id": doc.doc_id, "reason": "injection"})
                 continue
             if product and doc.product not in (product, "all"):
+                trace["filters"].append({"doc_id": doc.doc_id, "reason": "product"})
                 continue
             if region and doc.region not in (region, "all"):
+                trace["filters"].append({"doc_id": doc.doc_id, "reason": "region"})
                 continue
             eff_dt = self._parse_iso_date(doc.effective_date)
             exp_dt = self._parse_iso_date(doc.expiry_date)
             if eff_dt is None or (doc.expiry_date and exp_dt is None):
+                trace["filters"].append({"doc_id": doc.doc_id, "reason": "invalid_date"})
                 continue
             if eff_dt and target_as_of < eff_dt:
-                # Future-dated relative to evaluation target -> ignore
+                trace["filters"].append({"doc_id": doc.doc_id, "reason": "future"})
                 continue
             if exp_dt and target_as_of >= exp_dt:
-                # Expired relative to evaluation target -> ignore
+                trace["filters"].append({"doc_id": doc.doc_id, "reason": "expired"})
                 continue
             valid_docs.append(doc)
 
@@ -299,7 +309,9 @@ class PolicyRetrievalEngine:
         for doc in valid_docs:
             group = (doc.doc_family, doc.product, doc.region)
             latest[group] = max(latest.get(group, 0), doc.version)
+        trace["filters"] += [{"doc_id": d.doc_id, "reason": "superseded"} for d in valid_docs if d.version != latest[(d.doc_family, d.product, d.region)]]
         valid_docs = [doc for doc in valid_docs if doc.version == latest[(doc.doc_family, doc.product, doc.region)]]
+        trace["survivor_count"] = len(valid_docs)
         vectors: dict[str, list[float]] = {}
         query_vector = None
         if self.embedder is not None and valid_docs:
@@ -312,9 +324,13 @@ class PolicyRetrievalEngine:
                     query_vector = validate_vector(self.embedder.embed([query], "RETRIEVAL_QUERY")[0])
                 except (RuntimeError, ValueError, KeyError, IndexError, OSError):
                     self.embedding_failures += 1
+                    trace["embedding_fallback"] = "query_embedding_failure"
+            if len(vectors) < len(valid_docs):
+                trace["embedding_fallback"] = trace["embedding_fallback"] or "missing_ingest_vectors"
         scored_candidates: list[RetrievalResult] = []
         for doc in valid_docs:
             sim = self.searcher.compute_similarity(query, document_text(doc))
+            lexical, semantic = sim, None
             vector = vectors.get(vector_key(doc))
             threshold = min_threshold
             if query_vector is not None and vector is not None:
@@ -327,9 +343,16 @@ class PolicyRetrievalEngine:
                     threshold = float(cfg.get("retrieval.hybrid_threshold"))
                 except ValueError:
                     self.embedding_failures += 1
+            trace["scores"].append({"doc_id": doc.doc_id, "lexical": lexical, "embedding": semantic,
+                                    "fused": sim, "threshold": threshold, "threshold_pass": sim >= threshold})
             if sim >= threshold:
                 scored_candidates.append(RetrievalResult(document=doc, score=sim))
 
+        trace["scores"].sort(key=lambda c: c["fused"], reverse=True)
+        for rank, item in enumerate(trace["scores"], 1):
+            item["rank"] = rank
+            item["margin"] = item["fused"] - (trace["scores"][rank]["fused"] if rank < len(trace["scores"]) else 0)
+        trace["decision"] = "retrieved" if scored_candidates else "threshold" if valid_docs else "filters"
         scored_candidates.sort(key=lambda c: c.score, reverse=True)
         return scored_candidates[:int(cfg.thresholds.get("max_retrieved_chunks", 5))]
 
@@ -360,11 +383,36 @@ class PolicyRetrievalEngine:
         expected = signature(survivors)
         return any(signature(self.retrieve(question, role, at.isoformat())) != expected for at in boundaries)
 
-    def query(
+    @property
+    def diagnostic_trace(self) -> dict[str, Any]:
+        return self._trace.get()
+
+    def query(self, question: str, caller_role: str = "public", as_of: str | None = None,
+              product: str | None = None, region: str | None = None) -> GenerationResult:
+        self._trace.set({"decision": "input_injection", "scores": [], "filters": []})
+        try:
+            result = self._query(question, caller_role, as_of, product, region)
+        except (RuntimeError, OSError) as exc:
+            self._trace.get()["decision"] = "provider_failure"
+            self._trace.get()["provider_attempts"] = getattr(exc, "attempts", [])
+            raise
+        trace = self._trace.get()
+        if result.clarification_needed:
+            trace["decision"] = "ambiguity"
+        elif result.refusal and not result.verified and not result.is_injected:
+            trace["decision"] = "grounding_verifier"
+        elif not result.refusal:
+            trace["decision"] = "answer"
+        result.trace = trace
+        return result
+
+    def _query(
         self,
         question: str,
         caller_role: str = "public",
         as_of: str | None = None,
+        product: str | None = None,
+        region: str | None = None,
     ) -> GenerationResult:
         """End-to-end query answering with retrieval, ambiguity check, citations, and verifier."""
         # 1. Inspect user query for prompt injection
@@ -379,7 +427,7 @@ class PolicyRetrievalEngine:
             )
 
         # 2. Execute 5-stage retrieval pipeline
-        survivors = self.retrieve(question, caller_role=caller_role, as_of=as_of)
+        survivors = self.retrieve(question, caller_role=caller_role, as_of=as_of, product=product, region=region)
 
         if as_of is None and self._ambiguous_year(question, caller_role, survivors):
             return GenerationResult(answer="Please provide the exact historical date; applicable policies changed during that year.",
