@@ -48,6 +48,9 @@ class SQLiteRepository:
 
     def _init_tables(self) -> None:
         with self.conn:
+            self.conn.execute("""CREATE TABLE IF NOT EXISTS embedding_vectors (
+                content_hash TEXT NOT NULL, model TEXT NOT NULL, vector_json TEXT NOT NULL,
+                PRIMARY KEY(content_hash, model))""")
             self.conn.execute("""
                 CREATE TABLE IF NOT EXISTS documents (
                     doc_id TEXT PRIMARY KEY,
@@ -130,6 +133,17 @@ class TicketRepository(SQLiteRepository):
 
 class DocumentRepository(SQLiteRepository):
     """Repository for document metadata and contents."""
+
+    def save_vector(self, key: str, model: str, vector: list[float]) -> None:
+        with self.lock, self.conn:
+            self.conn.execute("INSERT OR IGNORE INTO embedding_vectors VALUES (?,?,?)",
+                              (key, model, json.dumps(vector)))
+
+    def load_vector(self, key: str, model: str) -> list[float] | None:
+        with self.lock:
+            row = self.conn.execute("SELECT vector_json FROM embedding_vectors WHERE content_hash=? AND model=?",
+                                    (key, model)).fetchone()
+        return json.loads(row[0]) if row else None
 
     def upsert_document(self, doc: Document) -> None:
         clock = get_clock()
@@ -444,6 +458,12 @@ class SnapshotView:
 
     def list_all(self) -> list[Document]:
         return self.repo.documents_at(self.version)
+
+    def load_vector(self, key: str, model: str) -> list[float] | None:
+        return self.repo.load_vector(key, model)
+
+    def save_vector(self, key: str, model: str, vector: list[float]) -> None:
+        self.repo.save_vector(key, model, vector)
 
 
 class SessionRepository(SQLiteRepository):

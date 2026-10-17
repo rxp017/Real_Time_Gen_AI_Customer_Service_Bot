@@ -3,8 +3,8 @@
 Implements strict 5-stage retrieval pipeline:
 1. Authorise by caller role (filter before search).
 2. Validity filter by as_of date (default clock.now(); parse past dates from query; ignore future & expired).
-3. Semantic search over only the survivors.
-4. Conflict resolution: latest version wins within (doc_family, product, region).
+3. Conflict resolution: latest version wins within (doc_family, product, region).
+4. Hybrid search over only the survivors, as approved on 2026-10-17.
 5. Similarity threshold.
 
 Includes:
@@ -24,7 +24,8 @@ from typing import Any
 
 from core.clock import KOLKATA_TZ, get_clock
 from core.config import get_config
-from core.llm import LLMClient
+from core.embeddings import Embedder, cosine, document_text, validate_vector, vector_key
+from core.llm import LLMClient, RealProviderAdapter
 from core.security import (
     detect_prompt_injection,
     has_access_level,
@@ -127,10 +128,33 @@ class PolicyRetrievalEngine:
         repo: DocumentRepository,
         llm: LLMClient | None = None,
         searcher: SemanticSearcher | None = None,
+        embedder: Embedder | None = None,
     ) -> None:
         self.repo = repo
         self.llm = llm
         self.searcher = searcher or SemanticSearcher()
+        self.embedder = embedder or (llm if getattr(llm, "supports_embeddings", False) else None)
+        self.embedding_failures = 0
+
+    def prepare_embedding(self, doc: Document) -> None:
+        """Only ingest/reindex dispatches document vectors; queries use cached survivors."""
+        start, end = self._parse_iso_date(doc.effective_date), self._parse_iso_date(doc.expiry_date)
+        if start is None or (doc.expiry_date and end is None) or (end and end <= start):
+            raise ValueError("Invalid policy validity interval")
+        if self.embedder is None or doc.is_injected or detect_prompt_injection(doc.content)[0]:
+            return
+        key, model = vector_key(doc), self.embedder.embedding_model
+        if self.repo.load_vector(key, model) is not None:
+            return
+        try:
+            vector = validate_vector(self.embedder.embed([document_text(doc)])[0])
+            self.repo.save_vector(key, model, vector)
+        except (RuntimeError, ValueError, KeyError, IndexError, OSError):
+            self.embedding_failures += 1
+
+    def reindex(self) -> None:
+        for doc in self.repo.list_all():
+            self.prepare_embedding(doc)
 
     def ingest_document(self, doc_data: dict[str, Any] | Document) -> Document:
         """Ingest document with prompt injection inspection and sanitization."""
@@ -156,6 +180,7 @@ class PolicyRetrievalEngine:
             doc.is_injected = True
             doc.content = neutralize_untrusted_text(doc.content)
 
+        self.prepare_embedding(doc)
         self.repo.upsert_document(doc)
         return doc
 
@@ -269,38 +294,44 @@ class PolicyRetrievalEngine:
         # ====================================================================
         # Stage 3: Semantic search over ONLY the survivors
         # ====================================================================
+        # Version resolution precedes all query similarity, including lexical scoring.
+        latest: dict[tuple[str, str, str], int] = {}
+        for doc in valid_docs:
+            group = (doc.doc_family, doc.product, doc.region)
+            latest[group] = max(latest.get(group, 0), doc.version)
+        valid_docs = [doc for doc in valid_docs if doc.version == latest[(doc.doc_family, doc.product, doc.region)]]
+        vectors: dict[str, list[float]] = {}
+        query_vector = None
+        if self.embedder is not None and valid_docs:
+            for doc in valid_docs:
+                vector = self.repo.load_vector(vector_key(doc), self.embedder.embedding_model)
+                if vector is not None:
+                    vectors[vector_key(doc)] = vector
+            if vectors:
+                try:
+                    query_vector = validate_vector(self.embedder.embed([query], "RETRIEVAL_QUERY")[0])
+                except (RuntimeError, ValueError, KeyError, IndexError, OSError):
+                    self.embedding_failures += 1
         scored_candidates: list[RetrievalResult] = []
         for doc in valid_docs:
-            sim = self.searcher.compute_similarity(query, f"{doc.section} {doc.product} {doc.content}")
-            scored_candidates.append(RetrievalResult(document=doc, score=sim))
+            sim = self.searcher.compute_similarity(query, document_text(doc))
+            vector = vectors.get(vector_key(doc))
+            threshold = min_threshold
+            if query_vector is not None and vector is not None:
+                try:
+                    semantic = cosine(query_vector, vector)
+                    sw, lw = float(cfg.get("retrieval.semantic_weight")), float(cfg.get("retrieval.lexical_weight"))
+                    if sw < 0 or lw < 0 or sw + lw <= 0:
+                        raise ValueError("Invalid hybrid weights")
+                    sim = (semantic * sw + sim * lw) / (sw + lw)
+                    threshold = float(cfg.get("retrieval.hybrid_threshold"))
+                except ValueError:
+                    self.embedding_failures += 1
+            if sim >= threshold:
+                scored_candidates.append(RetrievalResult(document=doc, score=sim))
 
-        # ====================================================================
-        # Stage 4: Conflict resolution (within doc_family+product+region: latest version wins)
-        # ====================================================================
-        family_groups: dict[tuple[str, str, str], list[RetrievalResult]] = {}
-        for cand in scored_candidates:
-            key = (cand.document.doc_family, cand.document.product, cand.document.region)
-            if key not in family_groups:
-                family_groups[key] = []
-            family_groups[key].append(cand)
-
-        resolved_candidates: list[RetrievalResult] = []
-        for items in family_groups.values():
-            # Keep only the candidate with the highest version
-            latest_version = max(c.document.version for c in items)
-            resolved_candidates.extend(c for c in items if c.document.version == latest_version)
-
-        # ====================================================================
-        # Stage 5: Similarity threshold filter
-        # ====================================================================
-        final_survivors = [
-            cand for cand in resolved_candidates
-            if cand.score >= min_threshold
-        ]
-
-        # Sort descending by score
-        final_survivors.sort(key=lambda c: c.score, reverse=True)
-        return final_survivors[:int(cfg.thresholds.get("max_retrieved_chunks", 5))]
+        scored_candidates.sort(key=lambda c: c.score, reverse=True)
+        return scored_candidates[:int(cfg.thresholds.get("max_retrieved_chunks", 5))]
 
     def verify_claim(self, claim: str, chunk_content: str) -> bool:
         """Conservative extractive verification; uncertain paraphrases fail closed."""
@@ -421,6 +452,9 @@ class PolicyRetrievalEngine:
         # Format answer citing source [doc id, version, section]
         source_cite = f"[{doc.doc_id}, v{doc.version}, {doc.section}]"
 
+        if isinstance(self.llm, RealProviderAdapter) and not (self.llm.api_key and self.llm.model):
+            return GenerationResult(answer="Live generation is not configured; please contact support.",
+                                    verified=False, refusal=True)
         if self.llm is not None:
             # Pass through structural isolation boundary
             isolated_context = isolate_untrusted_data(doc_content, source=doc.doc_id)

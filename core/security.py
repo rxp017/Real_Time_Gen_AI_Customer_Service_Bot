@@ -192,7 +192,16 @@ def neutralize_untrusted_text(text: str) -> str:
     if not is_injected:
         return text
 
-    return "[NEUTRALIZED_INSTRUCTION: untrusted chunk removed]"
+    sentences = re.split(r"(?<=[.!?])\s+|\n", text)
+    cleaned = []
+    for sentence in sentences:
+        matches = [match for pattern in INJECTION_PATTERNS for match in pattern.finditer(sentence)]
+        if matches:
+            start = min(match.start() for match in matches)
+            cleaned.append(sentence[:start] + "[NEUTRALIZED_INSTRUCTION: instruction span removed]")
+        else:
+            cleaned.append(sentence)
+    return " ".join(cleaned)
 
 
 def isolate_untrusted_data(data: str, source: str = "retrieved_document") -> str:

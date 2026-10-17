@@ -1,5 +1,11 @@
 timezone: "Asia/Kolkata"
 
+retrieval:
+  embedding_model: gemini-embedding-001
+  semantic_weight: 0.65
+  lexical_weight: 0.35
+  hybrid_threshold: 0.60
+
 tickets:
   fields: [customer, order, product, issue, evidence, contact]
   mandatory_fields: [customer, order, product, issue, evidence, contact]

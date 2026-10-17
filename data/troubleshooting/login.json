@@ -1,0 +1,6 @@
+{
+  "doc_id": "GUIDE-LOGIN", "version": 1, "product": "learning_portal", "region": "all",
+  "access_level": "public", "effective_date": "2026-01-01", "expiry_date": null,
+  "doc_family": "troubleshooting-login", "section": "Login troubleshooting",
+  "content": "If the learning portal rejects a password, use the password-reset link on the sign-in page."
+}

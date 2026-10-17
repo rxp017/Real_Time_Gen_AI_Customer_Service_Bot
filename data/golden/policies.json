@@ -19,7 +19,7 @@
   },
   {
     "id": "historical-laptop",
-    "question": "What were the laptop standards in 2024?",
+    "question": "What were the laptop standards on 2024-06-15?",
     "role": "customer",
     "answers": ["During the 2024 academic year, a basic laptop with 4GB RAM was standard for data science."]
   }

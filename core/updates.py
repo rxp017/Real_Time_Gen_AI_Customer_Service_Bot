@@ -10,6 +10,7 @@ from zoneinfo import ZoneInfo
 from core.audit import AuditLogger
 from core.clock import Clock
 from core.config import get_config
+from core.embeddings import Embedder
 from core.ingestion import InvalidFile, quarantine, read_policy
 from core.llm import LLMClient
 from core.metrics import MetricsCollector
@@ -21,10 +22,11 @@ from core.store import Document, SnapshotRepository, SnapshotView
 class UpdateService:
     def __init__(self, repo: SnapshotRepository, llm: LLMClient, clock: Clock,
                  audit: AuditLogger, metrics: MetricsCollector, quarantine_dir: Path,
-                 golden_dir: Path) -> None:
+                 golden_dir: Path, embedder: Embedder | None = None) -> None:
         self.repo, self.llm, self.clock = repo, llm, clock
         self.audit, self.metrics = audit, metrics
         self.quarantine_dir, self.golden_dir = quarantine_dir, golden_dir
+        self.embedder = embedder or (llm if getattr(llm, "supports_embeddings", False) else None)
         self.repo.ensure_active()
         job = self.repo.load_job()
         if job and job["status"] == "RUNNING":
@@ -80,7 +82,9 @@ class UpdateService:
             previous = docs.get(data["doc_id"])
             if previous:
                 data["version"] = max(data["version"], previous.version + 1)
-            docs[data["doc_id"]] = Document(**data)
+            document = Document(**data)
+            PolicyRetrievalEngine(self.repo, self.llm, embedder=self.embedder).prepare_embedding(document)
+            docs[data["doc_id"]] = document
             if old:
                 hashes.pop(old["hash"], None)
             manifest[name] = {"hash": digest, "doc_id": data["doc_id"], "version": data["version"]}
@@ -105,7 +109,7 @@ class UpdateService:
             cases.extend(data if isinstance(data, list) else [data])
         if not cases:
             raise ValueError("Golden Q&A set is empty")
-        engine = PolicyRetrievalEngine(SnapshotView(self.repo, version), self.llm)
+        engine = PolicyRetrievalEngine(SnapshotView(self.repo, version), self.llm, embedder=self.embedder)
         outcomes = []
         for case in cases:
             question, role = case["question"], case.get("role", "public")

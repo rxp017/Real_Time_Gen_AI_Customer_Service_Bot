@@ -157,6 +157,41 @@ class RealProviderAdapter(LLMClient):
         return models
 
     @property
+    def embedding_model(self) -> str:
+        return str(get_config().get("retrieval.embedding_model"))
+
+    @property
+    def supports_embeddings(self) -> bool:
+        return bool(self.api_key)
+
+    def embed(self, texts: list[str], task: str = "RETRIEVAL_DOCUMENT") -> list[list[float]]:
+        from core.embeddings import validate_vector
+
+        if not self.api_key or task not in {"RETRIEVAL_DOCUMENT", "RETRIEVAL_QUERY"}:
+            raise ValueError("Embedding credentials and a valid task are required")
+        if not texts:
+            return []
+        model = self.embedding_model
+        if not re.fullmatch(r"[A-Za-z0-9._-]+", model):
+            raise ValueError("Invalid embedding model")
+        try:
+            response = httpx.post(
+                f"https://generativelanguage.googleapis.com/v1beta/models/{model}:batchEmbedContents",
+                headers={"x-goog-api-key": self.api_key},
+                json={"requests": [{"model": "models/" + model, "content": {"parts": [{"text": text}]},
+                                    "taskType": task} for text in texts]},
+                timeout=float(get_config().get("provider.timeout_seconds")),
+            )
+        except httpx.RequestError:
+            raise RuntimeError("Embedding transport unavailable") from None
+        if response.status_code != 200:
+            raise RuntimeError(f"Embedding provider unavailable: HTTP {response.status_code}")
+        values = response.json().get("embeddings", [])
+        if len(values) != len(texts):
+            raise ValueError("Embedding response count mismatch")
+        return [validate_vector(item["values"]) for item in values]
+
+    @property
     def supports_vision(self) -> bool:
         return bool(self.api_key and self.model in get_config().get("provider.vision_capable_models", []))
 

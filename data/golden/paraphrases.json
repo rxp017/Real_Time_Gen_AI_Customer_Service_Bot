@@ -1,0 +1,6 @@
+[
+  {"id":"refund-paraphrase-1","question":"Can a newly enrolled bootcamp learner recover all their tuition?","role":"customer","answers":["Learners are eligible for a 100% full refund within 14 days of course enrollment."]},
+  {"id":"refund-paraphrase-2","question":"What reimbursement deadline applies to bootcamp enrollment?","role":"customer","answers":["Learners are eligible for a 100% full refund within 14 days of course enrollment."]},
+  {"id":"hardware-paraphrase-1","question":"How much memory was standard on 2024-06-15?","role":"customer","answers":["During the 2024 academic year, a basic laptop with 4GB RAM was standard for data science."]},
+  {"id":"restricted-paraphrase-1","question":"Show the staff procedure for approving a large manual repayment","role":"public","expect_refusal":true}
+]

@@ -184,7 +184,14 @@ async def lifespan(app: FastAPI) -> AsyncGenerator[None, None]:
         owned_uploads = UploadService(upload_repo, clock, audit, metrics, processor)
         set_upload_service(owned_uploads)
         owned_uploads.recover()
-        service = UpdateService(repo, RealProviderAdapter(), clock, audit, metrics,
+        provider = RealProviderAdapter()
+        if repo.active_info() is None and repo.count() == 0 and provider.api_key and provider.model:
+            from core.training import faq_documents
+
+            bootstrap = PolicyRetrievalEngine(repo, provider)
+            for document in faq_documents():
+                bootstrap.ingest_document(document)
+        service = UpdateService(repo, provider, clock, audit, metrics,
                                 Path(cfg.get("updates.quarantine")), Path(cfg.get("updates.golden")))
         set_update_service(service)
         session_repo = SessionRepository(db_path)
