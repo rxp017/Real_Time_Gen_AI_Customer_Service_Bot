@@ -1,0 +1,7 @@
+{
+  "command": ".runtime/python311/python.exe .verification/translation_probe.py",
+  "configured": true,
+  "result": ["Order ORD-0042 has amount 14%.", false],
+  "calls": [{"error": "ProviderUnavailableError", "attempts": [{"model": "gemini-2.5-flash", "status": 429}]}],
+  "scope": "Observed synthetic diagnostic on 2026-10-17; source fallback succeeded. Successful live translation was not established."
+}

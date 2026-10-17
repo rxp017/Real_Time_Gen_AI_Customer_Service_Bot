@@ -88,6 +88,7 @@ class QueryResponse(BaseModel):
     display_answer: str = ""
     tickets: list[dict[str, Any]] = Field(default_factory=list)
     ticket_questions: list[str] = Field(default_factory=list)
+    source_answer: str = ""
 
 
 # Optional reference to Task 4 pipeline or baseline chain
@@ -349,6 +350,7 @@ def handle_query(
                 display_answer=result.display_answer,
                 tickets=result.tickets,
                 ticket_questions=[t["question"] for t in result.tickets if t["question"]],
+                source_answer=result.source_answer,
             )
 
         # Baseline fallback execution

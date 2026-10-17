@@ -44,6 +44,7 @@ class ConversationResult:
     tone_prefix: str = ""
     display_answer: str = ""
     tickets: list[dict[str, Any]] = field(default_factory=list)
+    source_answer: str = ""
 
 
 class ConversationService:
@@ -95,7 +96,7 @@ class ConversationService:
             )
             restored_text = analysis.protected.restore(analysis.normalized)
             is_injected = detect_prompt_injection(restored_text)[0]
-            citations, answers, unresolved_requests = [], [], []
+            citations, answers, unresolved_requests, source_answers = [], [], [], []
             verified, refusal, answer_languages = True, False, []
             if is_injected:
                 answers = ["I cannot fulfill this request as it violates security policies."]
@@ -121,6 +122,7 @@ class ConversationService:
                                       if kind in request_data["context"]]
                     query += " " + " ".join(v for v in context_values if v not in query)
                     generated = responder(query.strip())
+                    source_answers.append(generated.answer)
                     localized, changed = self.language.localize(generated.answer, detection.language)
                     answers.append(localized)
                     answer_languages.append(detection.language if changed or detection.language == cfg.get("conversation.default_language") else cfg.get("conversation.default_language"))
@@ -152,4 +154,5 @@ class ConversationService:
                                       citations, verified and not is_injected, refusal, is_injected,
                                       ",".join(sorted(set(answer_languages))) if answer_languages else detection.language,
                                       support["sentiment"], support["high_risk"], support["escalations"],
-                                      presentation["tone_prefix"], presentation["display_answer"], tickets)
+                                      presentation["tone_prefix"], presentation["display_answer"], tickets,
+                                      source_answer="\n".join(source_answers) or answer)

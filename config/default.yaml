@@ -233,6 +233,8 @@ updates:
   golden: "data/golden"
 
 conversation:
+  provider_translation: true
+  max_translation_characters: 20000
   resource_directory: "resources/languages"
   default_language: "en"
   context_messages: 10
@@ -247,6 +249,8 @@ conversation:
   minimum_intent_evidence: 1
   entity_token_pattern: "__ENTITY_[a-f0-9]+_[0-9]+__"
   common_entity_patterns:
+    - kind: "name"
+      pattern: '\b(?:for|to|from)\s+(?P<value>(?-i:[A-ZÀ-ÖØ-Þ][\w\u0300-\u036f’''-]+(?:\s+[A-ZÀ-ÖØ-Þ][\w\u0300-\u036f’''-]+)+))'
     - kind: "citation"
       pattern: '(?P<value>\[[^\]\n]+, v[0-9]+, [^\]\n]+\])'
     - kind: "date"
