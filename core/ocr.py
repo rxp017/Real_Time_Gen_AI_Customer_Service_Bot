@@ -6,12 +6,13 @@ import os
 import shutil
 import subprocess
 from dataclasses import dataclass
+from pathlib import Path
 from threading import RLock
 from typing import Any
 
 from PIL import Image, ImageFilter, ImageOps, ImageStat
 
-from core.config import get_config
+from core.config import get_config, get_config_manager
 
 
 @dataclass(frozen=True)
@@ -38,15 +39,29 @@ class TesseractOCR:
 
     def _configuration(self) -> tuple[str, str, tuple[str, ...]]:
         cfg = get_config()
-        executable = os.getenv("TESSERACT_CMD") or cfg.get("uploads.ocr.executable")
-        executable = shutil.which(executable) or executable
-        return executable, cfg.get("uploads.ocr.tessdata_directory"), tuple(cfg.get("uploads.ocr.languages").values())
+        configured = str(cfg.get("uploads.ocr.executable"))
+        explicit = get_config_manager().has_runtime_override("uploads.ocr.executable")
+        executable = configured if explicit else os.getenv("TESSERACT_CMD") or configured
+        found = shutil.which(executable)
+        if found:
+            executable = found
+        elif executable == "tesseract" and os.name == "nt":
+            fallback = Path("C:/Program Files/Tesseract-OCR/tesseract.exe")
+            if fallback.is_file():
+                executable = str(fallback)
+        directory = cfg.get("uploads.ocr.tessdata_directory") or ""
+        if not directory:
+            local = Path(".runtime/tessdata")
+            if local.is_dir():
+                directory = str(local)
+        return executable, directory, tuple(cfg.get("uploads.ocr.languages").values())
 
     def check(self) -> dict[str, Any]:
         executable, directory, required = self._configuration()
         timeout = float(get_config().get("uploads.ocr.process_timeout_seconds"))
         version = subprocess.run([executable, "--version"], capture_output=True, timeout=timeout, check=True)
-        langs = subprocess.run([executable, "--tessdata-dir", directory, "--list-langs"],
+        options = ["--tessdata-dir", directory] if directory else []
+        langs = subprocess.run([executable, *options, "--list-langs"],
                                capture_output=True, timeout=timeout, check=True)
         available = [line.strip() for line in langs.stdout.decode("utf-8").splitlines()[1:] if line.strip()]
         missing = sorted(set(required) - set(available))
@@ -68,7 +83,7 @@ class TesseractOCR:
         data = io.BytesIO()
         ImageOps.autocontrast(image.convert("L")).save(data, format="PNG")
         response = subprocess.run(
-            [executable, "stdin", "stdout", "--tessdata-dir", directory,
+            [executable, "stdin", "stdout", *(["--tessdata-dir", directory] if directory else []),
              "-l", cfg.get("uploads.ocr.languages")[language], "--oem", "1",
              "--psm", str(cfg.get("uploads.ocr.page_segmentation")),
              "-c", "tessedit_create_tsv=1", "-c", "tessedit_create_txt=0"],

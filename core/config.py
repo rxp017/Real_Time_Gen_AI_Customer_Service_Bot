@@ -91,6 +91,7 @@ class ConfigManager:
             self._path = DEFAULT_CONFIG_PATH
 
         self._last_mtime: float = 0.0
+        self._runtime_overrides: dict[str, Any] = {}
         self._config: AppConfig = AppConfig()
         self.reload(force=True)
 
@@ -119,9 +120,12 @@ class ConfigManager:
                 data = yaml.safe_load(f) or {}
             self._config = AppConfig(raw_data=data)
             self._last_mtime = current_mtime
+            for key_path, value in self._runtime_overrides.items():
+                self.update_runtime_override(key_path, value)
 
     def update_runtime_override(self, key_path: str, value: Any) -> None:
         """Apply in-memory override for testing without writing to file."""
+        self._runtime_overrides[key_path] = value
         parts = key_path.split(".")
         target = self._config.raw_data
         for part in parts[:-1]:
@@ -129,6 +133,9 @@ class ConfigManager:
                 target[part] = {}
             target = target[part]
         target[parts[-1]] = value
+
+    def has_runtime_override(self, key_path: str) -> bool:
+        return key_path in self._runtime_overrides
 
 
 _GLOBAL_CONFIG_MANAGER: ConfigManager | None = None

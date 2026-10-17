@@ -5,6 +5,7 @@ import base64
 import hashlib
 import io
 import json
+import re
 import struct
 import zlib
 from pathlib import Path
@@ -197,7 +198,7 @@ def test_actual_fields_have_confidence_and_source_regions(name: str) -> None:
 
 def test_real_tesseract_and_all_configured_packs_installed() -> None:
     checked = TesseractOCR().check()
-    assert checked["version"].startswith("tesseract v")
+    assert re.match(r"^tesseract v?\d+\.\d+(?:\.\d+)?\b", checked["version"])
     assert set(checked["available_languages"]) >= {"eng", "hin", "tel", "spa"}
     assert checked["missing_languages"] == []
 
