@@ -1,0 +1,493 @@
+{
+  "provenance": "Authored and committed before classifier changes on 2026-10-17. Labels fixed before evaluation. No rule tuning against this set. Diagnostic, not independently blinded.",
+  "examples": [
+    {
+      "id": "new-en-01",
+      "language": "en",
+      "message": "The answer cleared everything up, much appreciated.",
+      "label": "positive",
+      "history": [],
+      "high_risk": []
+    },
+    {
+      "id": "new-en-02",
+      "language": "en",
+      "message": "Please tell me where to find my receipt.",
+      "label": "neutral",
+      "history": [],
+      "high_risk": []
+    },
+    {
+      "id": "new-en-03",
+      "language": "en",
+      "message": "My parcel turned up with the screen shattered.",
+      "label": "negative",
+      "history": [],
+      "high_risk": []
+    },
+    {
+      "id": "new-en-04",
+      "language": "en",
+      "message": "I have explained this four times and I am exhausted.",
+      "label": "frustrated",
+      "history": [
+        {
+          "role": "user",
+          "content": "My parcel turned up with the screen shattered."
+        }
+      ],
+      "high_risk": []
+    },
+    {
+      "id": "new-en-05",
+      "language": "en",
+      "message": "Please act now, I cannot wait until tomorrow.",
+      "label": "urgent",
+      "history": [],
+      "high_risk": []
+    },
+    {
+      "id": "new-en-06",
+      "language": "en",
+      "message": "Another day with no reply. Your speed is legendary.",
+      "label": "sarcastic",
+      "history": [
+        {
+          "role": "user",
+          "content": "My parcel turned up with the screen shattered."
+        }
+      ],
+      "high_risk": []
+    },
+    {
+      "id": "new-en-07",
+      "language": "en",
+      "message": "For your records, a person I do not recognise signed into my profile.",
+      "label": "neutral",
+      "history": [],
+      "high_risk": [
+        "account_compromise"
+      ]
+    },
+    {
+      "id": "new-en-08",
+      "language": "en",
+      "message": "The statement shows two debits for my single purchase.",
+      "label": "neutral",
+      "history": [],
+      "high_risk": [
+        "duplicate_payment"
+      ]
+    },
+    {
+      "id": "new-en-09",
+      "language": "en",
+      "message": "I have asked my solicitor to begin proceedings.",
+      "label": "neutral",
+      "history": [],
+      "high_risk": [
+        "legal_threat"
+      ]
+    },
+    {
+      "id": "new-en-10",
+      "language": "en",
+      "message": "Wonderful, a third promise instead of a solution.",
+      "label": "sarcastic",
+      "history": [
+        {
+          "role": "user",
+          "content": "My parcel turned up with the screen shattered."
+        }
+      ],
+      "high_risk": []
+    },
+    {
+      "id": "new-en-11",
+      "language": "en",
+      "message": "The replacement has exactly the same fault.",
+      "label": "negative",
+      "history": [],
+      "high_risk": []
+    },
+    {
+      "id": "new-en-12",
+      "language": "en",
+      "message": "How many more times must I repeat the order number?",
+      "label": "frustrated",
+      "history": [
+        {
+          "role": "user",
+          "content": "My parcel turned up with the screen shattered."
+        }
+      ],
+      "high_risk": []
+    },
+    {
+      "id": "new-hi-01",
+      "language": "hi",
+      "message": "आपके जवाब से मेरी परेशानी दूर हो गई, शुक्रिया।",
+      "label": "positive",
+      "history": [],
+      "high_risk": []
+    },
+    {
+      "id": "new-hi-02",
+      "language": "hi",
+      "message": "मेरी रसीद कहाँ मिलेगी, बता दीजिए।",
+      "label": "neutral",
+      "history": [],
+      "high_risk": []
+    },
+    {
+      "id": "new-hi-03",
+      "language": "hi",
+      "message": "पार्सल मिला लेकिन उसकी स्क्रीन टूटी हुई है।",
+      "label": "negative",
+      "history": [],
+      "high_risk": []
+    },
+    {
+      "id": "new-hi-04",
+      "language": "hi",
+      "message": "चार बार समझा चुका हूँ और अब थक गया हूँ।",
+      "label": "frustrated",
+      "history": [
+        {
+          "role": "user",
+          "content": "पार्सल मिला लेकिन उसकी स्क्रीन टूटी हुई है।"
+        }
+      ],
+      "high_risk": []
+    },
+    {
+      "id": "new-hi-05",
+      "language": "hi",
+      "message": "अभी मदद चाहिए, कल तक इंतजार नहीं कर सकता।",
+      "label": "urgent",
+      "history": [],
+      "high_risk": []
+    },
+    {
+      "id": "new-hi-06",
+      "language": "hi",
+      "message": "फिर एक दिन बिना जवाब के, आपकी रफ्तार कमाल है।",
+      "label": "sarcastic",
+      "history": [
+        {
+          "role": "user",
+          "content": "पार्सल मिला लेकिन उसकी स्क्रीन टूटी हुई है।"
+        }
+      ],
+      "high_risk": []
+    },
+    {
+      "id": "new-hi-07",
+      "language": "hi",
+      "message": "सूचना के लिए, किसी अनजान व्यक्ति ने मेरी प्रोफाइल में प्रवेश किया है।",
+      "label": "neutral",
+      "history": [],
+      "high_risk": [
+        "account_compromise"
+      ]
+    },
+    {
+      "id": "new-hi-08",
+      "language": "hi",
+      "message": "मेरी एक खरीद के लिए बैंक विवरण में दो बार पैसे कटे हैं।",
+      "label": "neutral",
+      "history": [],
+      "high_risk": [
+        "duplicate_payment"
+      ]
+    },
+    {
+      "id": "new-hi-09",
+      "language": "hi",
+      "message": "मैंने अपने वकील से कार्यवाही शुरू करने को कहा है।",
+      "label": "neutral",
+      "history": [],
+      "high_risk": [
+        "legal_threat"
+      ]
+    },
+    {
+      "id": "new-hi-10",
+      "language": "hi",
+      "message": "वाह, समाधान की जगह तीसरा वादा मिल गया।",
+      "label": "sarcastic",
+      "history": [
+        {
+          "role": "user",
+          "content": "पार्सल मिला लेकिन उसकी स्क्रीन टूटी हुई है।"
+        }
+      ],
+      "high_risk": []
+    },
+    {
+      "id": "new-hi-11",
+      "language": "hi",
+      "message": "बदले हुए सामान में भी वही खराबी है।",
+      "label": "negative",
+      "history": [],
+      "high_risk": []
+    },
+    {
+      "id": "new-hi-12",
+      "language": "hi",
+      "message": "ऑर्डर नंबर और कितनी बार दोहराना पड़ेगा?",
+      "label": "frustrated",
+      "history": [
+        {
+          "role": "user",
+          "content": "पार्सल मिला लेकिन उसकी स्क्रीन टूटी हुई है।"
+        }
+      ],
+      "high_risk": []
+    },
+    {
+      "id": "new-te-01",
+      "language": "te",
+      "message": "మీ సమాధానంతో నా సమస్య తీరింది, ధన్యవాదాలు.",
+      "label": "positive",
+      "history": [],
+      "high_risk": []
+    },
+    {
+      "id": "new-te-02",
+      "language": "te",
+      "message": "నా రసీదు ఎక్కడ దొరుకుతుందో చెప్పండి.",
+      "label": "neutral",
+      "history": [],
+      "high_risk": []
+    },
+    {
+      "id": "new-te-03",
+      "language": "te",
+      "message": "పార్సెల్ వచ్చింది కానీ తెర పగిలిపోయింది.",
+      "label": "negative",
+      "history": [],
+      "high_risk": []
+    },
+    {
+      "id": "new-te-04",
+      "language": "te",
+      "message": "నాలుగుసార్లు వివరించి అలసిపోయాను.",
+      "label": "frustrated",
+      "history": [
+        {
+          "role": "user",
+          "content": "పార్సెల్ వచ్చింది కానీ తెర పగిలిపోయింది."
+        }
+      ],
+      "high_risk": []
+    },
+    {
+      "id": "new-te-05",
+      "language": "te",
+      "message": "ఇప్పుడే సహాయం కావాలి, రేపటి వరకు ఆగలేను.",
+      "label": "urgent",
+      "history": [],
+      "high_risk": []
+    },
+    {
+      "id": "new-te-06",
+      "language": "te",
+      "message": "మరో రోజు జవాబు లేదు, మీ వేగం అద్భుతం.",
+      "label": "sarcastic",
+      "history": [
+        {
+          "role": "user",
+          "content": "పార్సెల్ వచ్చింది కానీ తెర పగిలిపోయింది."
+        }
+      ],
+      "high_risk": []
+    },
+    {
+      "id": "new-te-07",
+      "language": "te",
+      "message": "సమాచారం కోసం, తెలియని వ్యక్తి నా ప్రొఫైల్‌లోకి ప్రవేశించారు.",
+      "label": "neutral",
+      "history": [],
+      "high_risk": [
+        "account_compromise"
+      ]
+    },
+    {
+      "id": "new-te-08",
+      "language": "te",
+      "message": "నా ఒక్క కొనుగోలుకు బ్యాంకు వివరాల్లో రెండు చెల్లింపులు ఉన్నాయి.",
+      "label": "neutral",
+      "history": [],
+      "high_risk": [
+        "duplicate_payment"
+      ]
+    },
+    {
+      "id": "new-te-09",
+      "language": "te",
+      "message": "చట్టపరమైన చర్యలు ప్రారంభించమని నా న్యాయవాదిని కోరాను.",
+      "label": "neutral",
+      "history": [],
+      "high_risk": [
+        "legal_threat"
+      ]
+    },
+    {
+      "id": "new-te-10",
+      "language": "te",
+      "message": "బాగుంది, పరిష్కారం బదులు మూడో హామీ వచ్చింది.",
+      "label": "sarcastic",
+      "history": [
+        {
+          "role": "user",
+          "content": "పార్సెల్ వచ్చింది కానీ తెర పగిలిపోయింది."
+        }
+      ],
+      "high_risk": []
+    },
+    {
+      "id": "new-te-11",
+      "language": "te",
+      "message": "మార్చి ఇచ్చిన వస్తువులో కూడా అదే లోపం ఉంది.",
+      "label": "negative",
+      "history": [],
+      "high_risk": []
+    },
+    {
+      "id": "new-te-12",
+      "language": "te",
+      "message": "ఆర్డర్ నంబర్ ఇంకా ఎన్నిసార్లు చెప్పాలి?",
+      "label": "frustrated",
+      "history": [
+        {
+          "role": "user",
+          "content": "పార్సెల్ వచ్చింది కానీ తెర పగిలిపోయింది."
+        }
+      ],
+      "high_risk": []
+    },
+    {
+      "id": "new-es-01",
+      "language": "es",
+      "message": "Su respuesta aclaró todo, se lo agradezco.",
+      "label": "positive",
+      "history": [],
+      "high_risk": []
+    },
+    {
+      "id": "new-es-02",
+      "language": "es",
+      "message": "Indíqueme dónde puedo encontrar mi recibo.",
+      "label": "neutral",
+      "history": [],
+      "high_risk": []
+    },
+    {
+      "id": "new-es-03",
+      "language": "es",
+      "message": "Llegó el paquete con la pantalla hecha pedazos.",
+      "label": "negative",
+      "history": [],
+      "high_risk": []
+    },
+    {
+      "id": "new-es-04",
+      "language": "es",
+      "message": "Lo he explicado cuatro veces y estoy agotado.",
+      "label": "frustrated",
+      "history": [
+        {
+          "role": "user",
+          "content": "Llegó el paquete con la pantalla hecha pedazos."
+        }
+      ],
+      "high_risk": []
+    },
+    {
+      "id": "new-es-05",
+      "language": "es",
+      "message": "Necesito ayuda ahora, no puedo esperar hasta mañana.",
+      "label": "urgent",
+      "history": [],
+      "high_risk": []
+    },
+    {
+      "id": "new-es-06",
+      "language": "es",
+      "message": "Otro día sin respuesta, su rapidez es legendaria.",
+      "label": "sarcastic",
+      "history": [
+        {
+          "role": "user",
+          "content": "Llegó el paquete con la pantalla hecha pedazos."
+        }
+      ],
+      "high_risk": []
+    },
+    {
+      "id": "new-es-07",
+      "language": "es",
+      "message": "Para su información, alguien desconocido inició sesión en mi perfil.",
+      "label": "neutral",
+      "history": [],
+      "high_risk": [
+        "account_compromise"
+      ]
+    },
+    {
+      "id": "new-es-08",
+      "language": "es",
+      "message": "El extracto muestra dos cargos por una sola compra.",
+      "label": "neutral",
+      "history": [],
+      "high_risk": [
+        "duplicate_payment"
+      ]
+    },
+    {
+      "id": "new-es-09",
+      "language": "es",
+      "message": "He pedido a mi abogado que inicie acciones judiciales.",
+      "label": "neutral",
+      "history": [],
+      "high_risk": [
+        "legal_threat"
+      ]
+    },
+    {
+      "id": "new-es-10",
+      "language": "es",
+      "message": "Estupendo, una tercera promesa en lugar de una solución.",
+      "label": "sarcastic",
+      "history": [
+        {
+          "role": "user",
+          "content": "Llegó el paquete con la pantalla hecha pedazos."
+        }
+      ],
+      "high_risk": []
+    },
+    {
+      "id": "new-es-11",
+      "language": "es",
+      "message": "El artículo de reemplazo tiene el mismo defecto.",
+      "label": "negative",
+      "history": [],
+      "high_risk": []
+    },
+    {
+      "id": "new-es-12",
+      "language": "es",
+      "message": "¿Cuántas veces más debo repetir el número del pedido?",
+      "label": "frustrated",
+      "history": [
+        {
+          "role": "user",
+          "content": "Llegó el paquete con la pantalla hecha pedazos."
+        }
+      ],
+      "high_risk": []
+    }
+  ]
+}
