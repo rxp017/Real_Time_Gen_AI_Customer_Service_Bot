@@ -85,7 +85,7 @@ class EscalationService:
         cfg = get_config()
         with self.metrics.time_operation("sentiment_latency"), self.repo.issue(sid, generation, owner) as (state, records):
             recent = history if history else state["history"]
-            sentiment = self.classifier.classify(message, recent)
+            sentiment = self.classifier.classify(message, recent, session_id=f"{owner}:{sid}:{generation}")
             risks = self.risk.detect(message)
             state["history"] = [{"role": m["role"], "content": self.masked(str(m["content"]))}
                                 for m in (recent + [{"role": "user", "content": message}])[-int(cfg.get("support.history_messages")):]]

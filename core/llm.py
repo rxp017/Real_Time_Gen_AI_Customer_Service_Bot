@@ -18,6 +18,7 @@ import httpx
 
 from core.clock import Clock, get_clock
 from core.config import get_config
+from core.provider_retry import post_with_retry
 
 
 @dataclass
@@ -174,18 +175,21 @@ class RealProviderAdapter(LLMClient):
         model = self.embedding_model
         if not re.fullmatch(r"[A-Za-z0-9._-]+", model):
             raise ValueError("Invalid embedding model")
+        clock = self.clock or get_clock()
+        attempts: list[dict[str, Any]] = []
         try:
-            response = httpx.post(
+            response = post_with_retry(
                 f"https://generativelanguage.googleapis.com/v1beta/models/{model}:batchEmbedContents",
-                headers={"x-goog-api-key": self.api_key},
-                json={"requests": [{"model": "models/" + model, "content": {"parts": [{"text": text}]},
+                {"requests": [{"model": "models/" + model, "content": {"parts": [{"text": text}]},
                                     "taskType": task} for text in texts]},
-                timeout=float(get_config().get("provider.timeout_seconds")),
+                self.api_key, model, clock,
+                clock.monotonic() + float(get_config().get("provider.request_budget_seconds")), attempts,
+                int(get_config().get("provider.max_retries")),
             )
         except httpx.RequestError:
-            raise RuntimeError("Embedding transport unavailable") from None
+            raise ProviderUnavailableError([*attempts, {"model": model, "status": "transport"}]) from None
         if response.status_code != 200:
-            raise RuntimeError(f"Embedding provider unavailable: HTTP {response.status_code}")
+            raise ProviderUnavailableError(attempts)
         values = response.json().get("embeddings", [])
         if len(values) != len(texts):
             raise ValueError("Embedding response count mismatch")
@@ -251,13 +255,14 @@ class RealProviderAdapter(LLMClient):
                     continue
             url = f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent"
             try:
-                response = httpx.post(url, json=body, headers={"x-goog-api-key": self.api_key},
-                                      timeout=min(float(cfg.get("provider.timeout_seconds")), remaining))
+                # Preserve immediate fallback to another configured model, then retry the final model.
+                retries = min(int(cfg.get("provider.max_retries")),
+                              max(0, int(cfg.get("provider.max_model_attempts")) - len(attempts) - 1)) if model == models[-1] else 0
+                response = post_with_retry(url, body, self.api_key, model, clock, deadline, attempts, retries)
             except httpx.RequestError as exc:
                 attempts.append({"model": model, "status": type(exc).__name__})
                 self._cool_down(model, clock)
                 continue
-            attempts.append({"model": model, "status": response.status_code})
             if response.status_code in (401, 403):
                 raise ProviderAuthenticationError("Gemini credentials or permissions were rejected.") from None
             if response.status_code in cfg.get("provider.fallback_http_statuses"):

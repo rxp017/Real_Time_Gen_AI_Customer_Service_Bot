@@ -110,6 +110,9 @@ provider:
   timeout_seconds: 8
   request_budget_seconds: 20
   max_model_attempts: 6
+  max_retries: 2
+  retry_base_seconds: 1
+  retry_max_seconds: 8
   max_output_tokens: 1024
   fallback_http_statuses: [404, 408, 429, 500, 502, 503, 504]
   cooldown_seconds: 60
@@ -124,6 +127,9 @@ languages:
 support:
   llm_classification: true
   llm_confidence_threshold: 0.65
+  classification_cache_ttl_seconds: 120
+  classification_cache_max_entries: 256
+
   risk_clause_pattern: '[;.!?\n]+'
   history_messages: 10
   repeated_negative_count: 3
@@ -267,3 +273,8 @@ conversation:
       pattern: '(?P<value>\b(?:ORD|ORDER)[-_#][A-Za-z0-9_-]+\b)'
     - kind: "product_code"
       pattern: '(?P<value>\b(?:PRD|PROD|SKU|NULL)[-_#][A-Za-z0-9_-]+\b)'
+
+evaluation:
+  request_spacing_seconds: 6
+  max_infrastructure_failure_rate: 0.10
+  max_postfix_runs: 2

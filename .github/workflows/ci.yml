@@ -26,6 +26,7 @@ jobs:
         if: runner.os == 'Windows'
         run: python scripts/fetch_tessdata.py
       - run: python scripts/check_ocr.py
+      - run: python scripts/check_holdouts.py
       - run: python -m ruff check .
       - run: python -m pytest -q
   docker:
