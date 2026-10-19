@@ -3,5 +3,6 @@
   "all_pages_decoded": true,
   "local_username_absent": true,
   "final_and_fresh_pytest_counts_present": true,
-  "documentation_json_files_parsed": 68
+  "ci_repair_disclosure_present": true,
+  "documentation_json_files_parsed": 70
 }

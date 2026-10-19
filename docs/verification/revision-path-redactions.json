@@ -265,6 +265,11 @@
       "path": "docs/verification/revision-fresh-pytest.txt",
       "before_sha256": "39164f02aaa26804f8be5a50007700987ec7c343270c50408de59b2944d84561",
       "after_sha256": "899ff68a0a73fbbd4fadaf52d4c3030d6919bcbfacbe9f3cb542a1c0838cf4f4"
+    },
+    {
+      "path": "docs/verification/revision-ci-install-repair-pytest.txt",
+      "before_sha256": "4f54c8f56ff25316ab7960af013a52fab6bdc5282e4c9febcab924340e4cec57",
+      "after_sha256": "e2e95d96515f268b95464c79c41fe611b5038a4da950c61e9e862a7bbf648607"
     }
   ]
 }

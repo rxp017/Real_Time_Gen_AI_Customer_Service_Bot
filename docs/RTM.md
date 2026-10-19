@@ -245,3 +245,9 @@ Current outputs: [REPORT.md](REPORT.md). No universal NLP, OCR, injection or pro
 | README, REPORT Markdown/PDF contain only measured numbers, preserve attribution and original task/tests | README.md; docs/REPORT.md, REPORT.pdf | final pytest/Ruff; integrity check; PDF open check; final hosted CI linked in handoff | PASS artifacts; quota limits disclosed |
 
 Current revision does not convert historical PASS rows into universal NLP or production verification. See REPORT for invalid/unrun live evaluations and source evidence.
+
+## Hosted CI prerequisite correction
+
+| Requirement | File:function | Test / evidence | Status |
+| --- | --- | --- | --- |
+| Final Ubuntu/Windows pytest+Ruff and Docker verification | .github/workflows/ci.yml:Install OCR (Windows) | Chocolatey 503 logs retained; pinned vendor installer/hash replaces failing feed; full local pytest/Ruff rerun; final Actions run linked in handoff | Application/tests unchanged; final hosted outcome verified separately |

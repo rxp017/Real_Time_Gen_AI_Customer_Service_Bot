@@ -1,0 +1,17 @@
+{
+  "scope": "CI-only correction after hosted final-commit prerequisite failure; no application or evaluation changes",
+  "prior_run": "https://github.com/rxp017/Real_Time_Gen_AI_Customer_Service_Bot/actions/runs/39275846926",
+  "attempts": 2,
+  "failure": "Chocolatey feed HTTP 503; zero packages installed; Windows OCR executable absent",
+  "prior_ubuntu_and_docker": "success",
+  "runtime_files_unchanged_from_fresh_clone": 47,
+  "registered_config_hash": "980e44338656f551dbfe44b6babfe55972e109539920890619c8b6a8a15ae0c4",
+  "installer_verification": {
+    "installer_url": "https://github.com/UB-Mannheim/tesseract/releases/download/v5.4.0.20240606/tesseract-ocr-w64-setup-5.4.0.20240606.exe",
+    "bytes_downloaded_and_hashed": 50175248,
+    "sha256": "C885FFF6998E0608BA4BB8AB51436E1C6775C2BAFC2559A19B423E18678B60C9",
+    "matches_microsoft_winget_manifest": true,
+    "local_execution": false
+  },
+  "manifest_url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/u/UB-Mannheim/TesseractOCR/5.4.0.20240606/UB-Mannheim.TesseractOCR.installer.yaml"
+}

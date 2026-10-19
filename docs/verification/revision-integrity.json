@@ -10,7 +10,7 @@
     "tests/fixtures/task4/heldout_paraphrases.json": "413e80254b0d25da7269fbcac4dfb2ec8ca86420407301f3ad44eb38001bade9",
     "tests/fixtures/task5/heldout_sentiment.json": "bf58e610a821461b56d38d0d68a3370333b7db5d6ca63cd3f42d0d76dbbd76af"
   },
-  "publishable_files_scanned": 370,
+  "publishable_files_scanned": 376,
   "private_values_checked": 7,
   "secret_findings": [],
   "broken_active_markdown_links": []
