@@ -1,0 +1,8 @@
+{
+  "model": "gemini-embedding-001",
+  "sha256": "c700e382f0d4f19c1eb3bb502944ca3cca7df6194ed78883c92acc9a8d1efccb",
+  "vectors": 197,
+  "source": "Actual development-only provider responses; no held-out vectors",
+  "dev_cases_sha256": "8e527b58b5c6a30220041fad5f3de5704b0ee7c4ccc0c68c0ff17995d11beb74",
+  "dev_documents_sha256": "9b83bd5017e302f4a1e6653c2c2d1d78aef1df9bccf24c4bc0db6fa5528b1040"
+}

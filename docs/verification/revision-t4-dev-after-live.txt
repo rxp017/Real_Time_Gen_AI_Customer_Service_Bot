@@ -1,0 +1,88 @@
+STATUS QUOTA_BLOCKED: live call unavailable; fallback is not provider success
+STATUS PROVIDER_UNAVAILABLE_OR_COOLDOWN: live call unavailable; fallback is not provider success
+STATUS PROVIDER_UNAVAILABLE_OR_COOLDOWN: live call unavailable; fallback is not provider success
+STATUS PROVIDER_UNAVAILABLE_OR_COOLDOWN: live call unavailable; fallback is not provider success
+STATUS PROVIDER_UNAVAILABLE_OR_COOLDOWN: live call unavailable; fallback is not provider success
+STATUS PROVIDER_UNAVAILABLE_OR_COOLDOWN: live call unavailable; fallback is not provider success
+STATUS PROVIDER_UNAVAILABLE_OR_COOLDOWN: live call unavailable; fallback is not provider success
+STATUS PROVIDER_UNAVAILABLE_OR_COOLDOWN: live call unavailable; fallback is not provider success
+STATUS PROVIDER_UNAVAILABLE_OR_COOLDOWN: live call unavailable; fallback is not provider success
+STATUS PROVIDER_UNAVAILABLE_OR_COOLDOWN: live call unavailable; fallback is not provider success
+STATUS PROVIDER_UNAVAILABLE_OR_COOLDOWN: live call unavailable; fallback is not provider success
+STATUS PROVIDER_UNAVAILABLE_OR_COOLDOWN: live call unavailable; fallback is not provider success
+STATUS PROVIDER_UNAVAILABLE_OR_COOLDOWN: live call unavailable; fallback is not provider success
+STATUS PROVIDER_UNAVAILABLE_OR_COOLDOWN: live call unavailable; fallback is not provider success
+STATUS PROVIDER_UNAVAILABLE_OR_COOLDOWN: live call unavailable; fallback is not provider success
+STATUS PROVIDER_UNAVAILABLE_OR_COOLDOWN: live call unavailable; fallback is not provider success
+STATUS PROVIDER_UNAVAILABLE_OR_COOLDOWN: live call unavailable; fallback is not provider success
+STATUS PROVIDER_UNAVAILABLE_OR_COOLDOWN: live call unavailable; fallback is not provider success
+STATUS PROVIDER_UNAVAILABLE_OR_COOLDOWN: live call unavailable; fallback is not provider success
+STATUS PROVIDER_UNAVAILABLE_OR_COOLDOWN: live call unavailable; fallback is not provider success
+STATUS PROVIDER_UNAVAILABLE_OR_COOLDOWN: live call unavailable; fallback is not provider success
+STATUS PROVIDER_UNAVAILABLE_OR_COOLDOWN: live call unavailable; fallback is not provider success
+STATUS PROVIDER_UNAVAILABLE_OR_COOLDOWN: live call unavailable; fallback is not provider success
+STATUS PROVIDER_UNAVAILABLE_OR_COOLDOWN: live call unavailable; fallback is not provider success
+STATUS PROVIDER_UNAVAILABLE_OR_COOLDOWN: live call unavailable; fallback is not provider success
+STATUS PROVIDER_UNAVAILABLE_OR_COOLDOWN: live call unavailable; fallback is not provider success
+STATUS PROVIDER_UNAVAILABLE_OR_COOLDOWN: live call unavailable; fallback is not provider success
+STATUS PROVIDER_UNAVAILABLE_OR_COOLDOWN: live call unavailable; fallback is not provider success
+STATUS PROVIDER_UNAVAILABLE_OR_COOLDOWN: live call unavailable; fallback is not provider success
+STATUS PROVIDER_UNAVAILABLE_OR_COOLDOWN: live call unavailable; fallback is not provider success
+STATUS PROVIDER_UNAVAILABLE_OR_COOLDOWN: live call unavailable; fallback is not provider success
+STATUS PROVIDER_UNAVAILABLE_OR_COOLDOWN: live call unavailable; fallback is not provider success
+STATUS PROVIDER_UNAVAILABLE_OR_COOLDOWN: live call unavailable; fallback is not provider success
+STATUS PROVIDER_UNAVAILABLE_OR_COOLDOWN: live call unavailable; fallback is not provider success
+STATUS PROVIDER_UNAVAILABLE_OR_COOLDOWN: live call unavailable; fallback is not provider success
+STATUS PROVIDER_UNAVAILABLE_OR_COOLDOWN: live call unavailable; fallback is not provider success
+STATUS PROVIDER_UNAVAILABLE_OR_COOLDOWN: live call unavailable; fallback is not provider success
+STATUS PROVIDER_UNAVAILABLE_OR_COOLDOWN: live call unavailable; fallback is not provider success
+STATUS PROVIDER_UNAVAILABLE_OR_COOLDOWN: live call unavailable; fallback is not provider success
+STATUS PROVIDER_UNAVAILABLE_OR_COOLDOWN: live call unavailable; fallback is not provider success
+STATUS PROVIDER_UNAVAILABLE_OR_COOLDOWN: live call unavailable; fallback is not provider success
+STATUS PROVIDER_UNAVAILABLE_OR_COOLDOWN: live call unavailable; fallback is not provider success
+STATUS PROVIDER_UNAVAILABLE_OR_COOLDOWN: live call unavailable; fallback is not provider success
+STATUS PROVIDER_UNAVAILABLE_OR_COOLDOWN: live call unavailable; fallback is not provider success
+STATUS PROVIDER_UNAVAILABLE_OR_COOLDOWN: live call unavailable; fallback is not provider success
+STATUS PROVIDER_UNAVAILABLE_OR_COOLDOWN: live call unavailable; fallback is not provider success
+STATUS PROVIDER_UNAVAILABLE_OR_COOLDOWN: live call unavailable; fallback is not provider success
+STATUS PROVIDER_UNAVAILABLE_OR_COOLDOWN: live call unavailable; fallback is not provider success
+{
+  "scope": "Actual provider with cached measured embeddings",
+  "dev_sha256": "8e527b58b5c6a30220041fad5f3de5704b0ee7c4ccc0c68c0ff17995d11beb74",
+  "document_count": 111,
+  "answer_rate": {
+    "successes": 0,
+    "total": 48,
+    "rate": 0.0,
+    "wilson95": [
+      6.938893903907228e-18,
+      0.07410012966611748
+    ]
+  },
+  "correct_cited_rate": {
+    "successes": 0,
+    "total": 48,
+    "rate": 0.0,
+    "wilson95": [
+      6.938893903907228e-18,
+      0.07410012966611748
+    ]
+  },
+  "false_answer_rate": {
+    "successes": 0,
+    "total": 38,
+    "rate": 0.0,
+    "wilson95": [
+      0,
+      0.09180986822558396
+    ]
+  },
+  "decisions": {
+    "provider_failure": 48,
+    "rank_margin": 16,
+    "threshold": 9,
+    "unsupported_attribute": 13
+  },
+  "embedding_fallback_cases": 0,
+  "embedding_batch_errors": []
+}

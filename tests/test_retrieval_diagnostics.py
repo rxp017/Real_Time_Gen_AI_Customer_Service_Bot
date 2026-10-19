@@ -1,5 +1,6 @@
 """Diagnostic scores describe only authorized survivors and never change decisions."""
 
+from core.config import get_config
 from core.llm import FakeLLM
 from tests.test_hybrid import hybrid
 
@@ -15,7 +16,9 @@ def test_trace_scores_only_survivors_with_components_and_rank():
     assert "DOC-SOP-ADMIN" in filtered
     for item in trace["scores"]:
         assert item["embedding"] is not None and item["rank"] >= 1
-        assert abs(item["fused"] - (.65 * item["embedding"] + .35 * item["lexical"])) < 1e-9
+        cfg = get_config()
+        assert abs(item["fused"] - (cfg.get("retrieval.semantic_weight") * item["embedding"]
+                                  + cfg.get("retrieval.lexical_weight") * item["lexical"])) < 1e-9
         assert item["threshold_pass"] == (item["fused"] >= item["threshold"])
 
 

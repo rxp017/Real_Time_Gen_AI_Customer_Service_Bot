@@ -1,5 +1,6 @@
 """Evaluation-only pacing, reproducible vector cache and binomial intervals."""
 
+import gzip
 import hashlib
 import json
 from math import sqrt
@@ -40,7 +41,9 @@ class PacedProvider(LLMClient):
         self.next_call = self.clock.monotonic() + float(get_config().get("evaluation.request_spacing_seconds"))
 
     def generate(self, *args: Any, **kwargs: Any):
-        self.wait()
+        if any(self.delegate._cooldowns.get(model, 0) <= self.clock.monotonic()
+               for model in self.delegate.configured_models()):
+            self.wait()
         try:
             return self.delegate.generate(*args, **kwargs)
         except ProviderUnavailableError as exc:
@@ -56,7 +59,9 @@ class EvaluationVectors:
         self.provider = provider
         self.embedding_model = provider.delegate.embedding_model
         self.path = path
-        self.values = json.loads(path.read_text()) if path.exists() else {}
+        artifact = Path("docs/verification/revision-dev-vectors.json.gz")
+        self.values = (json.loads(path.read_text()) if path.exists() else
+                       json.loads(gzip.decompress(artifact.read_bytes())) if artifact.exists() else {})
         self.errors: list[dict[str, Any]] = []
 
     def key(self, text: str, task: str) -> str:
@@ -72,7 +77,9 @@ class EvaluationVectors:
                 for text, vector in zip(batch, vectors, strict=True):
                     self.values[self.key(text, task)] = validate_vector(vector)
                 self.path.parent.mkdir(parents=True, exist_ok=True)
-                self.path.write_text(json.dumps(self.values))
+                temporary = self.path.with_suffix(".tmp")
+                temporary.write_text(json.dumps(self.values))
+                temporary.replace(self.path)
             except (RuntimeError, ValueError, OSError) as exc:
                 self.errors.append({"batch_size": len(batch), "attempts": getattr(exc, "attempts", []), "error": type(exc).__name__})
                 print("STATUS EMBEDDING_UNAVAILABLE: lexical fallback will be reported", flush=True)

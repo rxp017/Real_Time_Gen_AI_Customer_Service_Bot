@@ -1,0 +1,6 @@
+[
+  {"id":"eligibility-condition","question":"State the full enrolment reimbursement condition, including its time limit.","role":"customer","answers":["Learners are eligible for a 100% full refund within 14 days of course enrollment."]},
+  {"id":"eligibility-period","question":"Which period after enrolment permits a learner to receive the complete course fee back?","role":"customer","answers":["Learners are eligible for a 100% full refund within 14 days of course enrollment."]},
+  {"id":"absent-insurance","question":"Does enrolment reimbursement include travel insurance?","role":"customer","expect_refusal":true},
+  {"id":"absent-tax","question":"Is the tuition reimbursement a tax deduction?","role":"customer","expect_refusal":true}
+]

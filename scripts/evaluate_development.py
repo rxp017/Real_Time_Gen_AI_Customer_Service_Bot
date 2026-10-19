@@ -5,6 +5,7 @@ import hashlib
 import json
 import sys
 from collections import Counter
+from functools import lru_cache
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
@@ -12,12 +13,12 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from core.clock import FakeClock, set_global_clock  # noqa: E402
 from core.embeddings import document_text  # noqa: E402
 from core.llm import FakeLLM  # noqa: E402
-from core.retrieval import PolicyRetrievalEngine  # noqa: E402
+from core.retrieval import PolicyRetrievalEngine, retrieval_view  # noqa: E402
 from core.store import DocumentRepository  # noqa: E402
 from scripts.evaluation_support import EvaluationVectors, PacedProvider, wilson  # noqa: E402
 
 
-def evaluate(live: bool, output: Path) -> dict:
+def evaluate(live: bool, output: Path, replay: bool = False) -> dict:
     path = Path("tests/fixtures/task4/dev/cases.json")
     corpus = json.loads(path.read_text(encoding="utf-8"))
     set_global_clock(FakeClock(corpus["clock"]))
@@ -25,12 +26,15 @@ def evaluate(live: bool, output: Path) -> dict:
     engine = PolicyRetrievalEngine(DocumentRepository(), provider or FakeLLM())
     for doc in json.loads((path.parent / corpus["documents"]).read_text(encoding="utf-8")):
         engine.ingest_document(doc)
-    if provider:
-        vectors = EvaluationVectors(provider, Path(".verification/dev4-vectors.json"))
-        vectors.warm([document_text(d) for d in engine.repo.list_all() if not d.is_injected], "RETRIEVAL_DOCUMENT")
-        vectors.warm([c["question"] for c in corpus["cases"]], "RETRIEVAL_QUERY")
+    if provider or replay:
+        vectors = EvaluationVectors(provider or PacedProvider(), Path(".verification/dev4-vectors.json"))
+        if live:
+            views = [view for d in engine.repo.list_all() if (view := retrieval_view(d)) is not None]
+            vectors.warm([document_text(d) for d in views], "RETRIEVAL_DOCUMENT")
+            vectors.warm([c["question"] for c in corpus["cases"]], "RETRIEVAL_QUERY")
         engine.embedder = vectors
         engine.reindex()
+        engine.repo.load_vector = lru_cache(maxsize=None)(engine.repo.load_vector)
     outcomes = []
     for case in corpus["cases"]:
         try:
@@ -50,14 +54,14 @@ def evaluate(live: bool, output: Path) -> dict:
         output.write_text(json.dumps({"progress": len(outcomes), "outcomes": outcomes}, ensure_ascii=False, indent=2), encoding="utf-8")
     positive = [o for o in outcomes if not o["expected_refusal"]]
     negative = [o for o in outcomes if o["expected_refusal"]]
-    report = {"scope": "Actual provider with cached measured embeddings" if live else "Offline lexical / deterministic extraction; not provider accuracy",
+    report = {"scope": "Actual provider with cached measured embeddings" if live else "Cached actual embeddings / deterministic extraction; not live generation accuracy" if replay else "Offline lexical / deterministic extraction; not provider accuracy",
               "dev_sha256": hashlib.sha256(path.read_bytes()).hexdigest(), "document_count": engine.repo.count(),
               "answer_rate": wilson(sum(o["answered"] for o in positive), len(positive)),
               "correct_cited_rate": wilson(sum(o["correct"] for o in positive), len(positive)),
               "false_answer_rate": wilson(sum(o["false_answer"] for o in negative), len(negative)),
               "decisions": dict(Counter(o["trace"].get("decision") for o in outcomes)),
               "embedding_fallback_cases": sum(bool(o["trace"].get("embedding_fallback")) for o in outcomes),
-              "embedding_batch_errors": vectors.errors if provider else [], "outcomes": outcomes}
+              "embedding_batch_errors": vectors.errors if provider or replay else [], "outcomes": outcomes}
     output.write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding="utf-8")
     engine.repo.close()
     return {key: value for key, value in report.items() if key != "outcomes"}
@@ -66,9 +70,10 @@ def evaluate(live: bool, output: Path) -> dict:
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--live", action="store_true")
+    parser.add_argument("--replay-vectors", action="store_true")
     parser.add_argument("--output", type=Path, required=True)
     args = parser.parse_args()
     if args.live:
         from dotenv import load_dotenv
         load_dotenv()
-    print(json.dumps(evaluate(args.live, args.output), indent=2))
+    print(json.dumps(evaluate(args.live, args.output, args.replay_vectors), indent=2))

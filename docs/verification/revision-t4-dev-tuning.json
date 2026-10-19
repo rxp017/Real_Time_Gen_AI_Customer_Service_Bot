@@ -1,0 +1,475 @@
+{
+  "scope": "Dev-only measured-vector replay and deterministic quote generation; not live accuracy",
+  "candidate_count": 36,
+  "selected": null,
+  "candidates": [
+    {
+      "settings": {
+        "thresholds.similarity_threshold": 0.45,
+        "retrieval.hybrid_threshold": 0.4,
+        "retrieval.lexical_weight": 0.2,
+        "retrieval.semantic_weight": 0.8,
+        "retrieval.minimum_rank_margin": 0.04
+      },
+      "correct": 48,
+      "answered": 48,
+      "false_answers": 1,
+      "embedding_fallback_cases": 0
+    },
+    {
+      "settings": {
+        "thresholds.similarity_threshold": 0.45,
+        "retrieval.hybrid_threshold": 0.4,
+        "retrieval.lexical_weight": 0.2,
+        "retrieval.semantic_weight": 0.8,
+        "retrieval.minimum_rank_margin": 0.08
+      },
+      "correct": 48,
+      "answered": 48,
+      "false_answers": 1,
+      "embedding_fallback_cases": 0
+    },
+    {
+      "settings": {
+        "thresholds.similarity_threshold": 0.45,
+        "retrieval.hybrid_threshold": 0.4,
+        "retrieval.lexical_weight": 0.5,
+        "retrieval.semantic_weight": 0.5,
+        "retrieval.minimum_rank_margin": 0.04
+      },
+      "correct": 48,
+      "answered": 48,
+      "false_answers": 2,
+      "embedding_fallback_cases": 0
+    },
+    {
+      "settings": {
+        "thresholds.similarity_threshold": 0.45,
+        "retrieval.hybrid_threshold": 0.4,
+        "retrieval.lexical_weight": 0.5,
+        "retrieval.semantic_weight": 0.5,
+        "retrieval.minimum_rank_margin": 0.08
+      },
+      "correct": 47,
+      "answered": 47,
+      "false_answers": 2,
+      "embedding_fallback_cases": 0
+    },
+    {
+      "settings": {
+        "thresholds.similarity_threshold": 0.45,
+        "retrieval.hybrid_threshold": 0.5,
+        "retrieval.lexical_weight": 0.2,
+        "retrieval.semantic_weight": 0.8,
+        "retrieval.minimum_rank_margin": 0.04
+      },
+      "correct": 48,
+      "answered": 48,
+      "false_answers": 1,
+      "embedding_fallback_cases": 0
+    },
+    {
+      "settings": {
+        "thresholds.similarity_threshold": 0.45,
+        "retrieval.hybrid_threshold": 0.5,
+        "retrieval.lexical_weight": 0.2,
+        "retrieval.semantic_weight": 0.8,
+        "retrieval.minimum_rank_margin": 0.08
+      },
+      "correct": 48,
+      "answered": 48,
+      "false_answers": 1,
+      "embedding_fallback_cases": 0
+    },
+    {
+      "settings": {
+        "thresholds.similarity_threshold": 0.45,
+        "retrieval.hybrid_threshold": 0.5,
+        "retrieval.lexical_weight": 0.5,
+        "retrieval.semantic_weight": 0.5,
+        "retrieval.minimum_rank_margin": 0.04
+      },
+      "correct": 44,
+      "answered": 44,
+      "false_answers": 1,
+      "embedding_fallback_cases": 0
+    },
+    {
+      "settings": {
+        "thresholds.similarity_threshold": 0.45,
+        "retrieval.hybrid_threshold": 0.5,
+        "retrieval.lexical_weight": 0.5,
+        "retrieval.semantic_weight": 0.5,
+        "retrieval.minimum_rank_margin": 0.08
+      },
+      "correct": 44,
+      "answered": 44,
+      "false_answers": 1,
+      "embedding_fallback_cases": 0
+    },
+    {
+      "settings": {
+        "thresholds.similarity_threshold": 0.45,
+        "retrieval.hybrid_threshold": 0.6,
+        "retrieval.lexical_weight": 0.2,
+        "retrieval.semantic_weight": 0.8,
+        "retrieval.minimum_rank_margin": 0.04
+      },
+      "correct": 48,
+      "answered": 48,
+      "false_answers": 1,
+      "embedding_fallback_cases": 0
+    },
+    {
+      "settings": {
+        "thresholds.similarity_threshold": 0.45,
+        "retrieval.hybrid_threshold": 0.6,
+        "retrieval.lexical_weight": 0.2,
+        "retrieval.semantic_weight": 0.8,
+        "retrieval.minimum_rank_margin": 0.08
+      },
+      "correct": 48,
+      "answered": 48,
+      "false_answers": 1,
+      "embedding_fallback_cases": 0
+    },
+    {
+      "settings": {
+        "thresholds.similarity_threshold": 0.45,
+        "retrieval.hybrid_threshold": 0.6,
+        "retrieval.lexical_weight": 0.5,
+        "retrieval.semantic_weight": 0.5,
+        "retrieval.minimum_rank_margin": 0.04
+      },
+      "correct": 38,
+      "answered": 38,
+      "false_answers": 1,
+      "embedding_fallback_cases": 0
+    },
+    {
+      "settings": {
+        "thresholds.similarity_threshold": 0.45,
+        "retrieval.hybrid_threshold": 0.6,
+        "retrieval.lexical_weight": 0.5,
+        "retrieval.semantic_weight": 0.5,
+        "retrieval.minimum_rank_margin": 0.08
+      },
+      "correct": 38,
+      "answered": 38,
+      "false_answers": 1,
+      "embedding_fallback_cases": 0
+    },
+    {
+      "settings": {
+        "thresholds.similarity_threshold": 0.55,
+        "retrieval.hybrid_threshold": 0.4,
+        "retrieval.lexical_weight": 0.2,
+        "retrieval.semantic_weight": 0.8,
+        "retrieval.minimum_rank_margin": 0.04
+      },
+      "correct": 48,
+      "answered": 48,
+      "false_answers": 1,
+      "embedding_fallback_cases": 0
+    },
+    {
+      "settings": {
+        "thresholds.similarity_threshold": 0.55,
+        "retrieval.hybrid_threshold": 0.4,
+        "retrieval.lexical_weight": 0.2,
+        "retrieval.semantic_weight": 0.8,
+        "retrieval.minimum_rank_margin": 0.08
+      },
+      "correct": 48,
+      "answered": 48,
+      "false_answers": 1,
+      "embedding_fallback_cases": 0
+    },
+    {
+      "settings": {
+        "thresholds.similarity_threshold": 0.55,
+        "retrieval.hybrid_threshold": 0.4,
+        "retrieval.lexical_weight": 0.5,
+        "retrieval.semantic_weight": 0.5,
+        "retrieval.minimum_rank_margin": 0.04
+      },
+      "correct": 48,
+      "answered": 48,
+      "false_answers": 2,
+      "embedding_fallback_cases": 0
+    },
+    {
+      "settings": {
+        "thresholds.similarity_threshold": 0.55,
+        "retrieval.hybrid_threshold": 0.4,
+        "retrieval.lexical_weight": 0.5,
+        "retrieval.semantic_weight": 0.5,
+        "retrieval.minimum_rank_margin": 0.08
+      },
+      "correct": 47,
+      "answered": 47,
+      "false_answers": 2,
+      "embedding_fallback_cases": 0
+    },
+    {
+      "settings": {
+        "thresholds.similarity_threshold": 0.55,
+        "retrieval.hybrid_threshold": 0.5,
+        "retrieval.lexical_weight": 0.2,
+        "retrieval.semantic_weight": 0.8,
+        "retrieval.minimum_rank_margin": 0.04
+      },
+      "correct": 48,
+      "answered": 48,
+      "false_answers": 1,
+      "embedding_fallback_cases": 0
+    },
+    {
+      "settings": {
+        "thresholds.similarity_threshold": 0.55,
+        "retrieval.hybrid_threshold": 0.5,
+        "retrieval.lexical_weight": 0.2,
+        "retrieval.semantic_weight": 0.8,
+        "retrieval.minimum_rank_margin": 0.08
+      },
+      "correct": 48,
+      "answered": 48,
+      "false_answers": 1,
+      "embedding_fallback_cases": 0
+    },
+    {
+      "settings": {
+        "thresholds.similarity_threshold": 0.55,
+        "retrieval.hybrid_threshold": 0.5,
+        "retrieval.lexical_weight": 0.5,
+        "retrieval.semantic_weight": 0.5,
+        "retrieval.minimum_rank_margin": 0.04
+      },
+      "correct": 44,
+      "answered": 44,
+      "false_answers": 1,
+      "embedding_fallback_cases": 0
+    },
+    {
+      "settings": {
+        "thresholds.similarity_threshold": 0.55,
+        "retrieval.hybrid_threshold": 0.5,
+        "retrieval.lexical_weight": 0.5,
+        "retrieval.semantic_weight": 0.5,
+        "retrieval.minimum_rank_margin": 0.08
+      },
+      "correct": 44,
+      "answered": 44,
+      "false_answers": 1,
+      "embedding_fallback_cases": 0
+    },
+    {
+      "settings": {
+        "thresholds.similarity_threshold": 0.55,
+        "retrieval.hybrid_threshold": 0.6,
+        "retrieval.lexical_weight": 0.2,
+        "retrieval.semantic_weight": 0.8,
+        "retrieval.minimum_rank_margin": 0.04
+      },
+      "correct": 48,
+      "answered": 48,
+      "false_answers": 1,
+      "embedding_fallback_cases": 0
+    },
+    {
+      "settings": {
+        "thresholds.similarity_threshold": 0.55,
+        "retrieval.hybrid_threshold": 0.6,
+        "retrieval.lexical_weight": 0.2,
+        "retrieval.semantic_weight": 0.8,
+        "retrieval.minimum_rank_margin": 0.08
+      },
+      "correct": 48,
+      "answered": 48,
+      "false_answers": 1,
+      "embedding_fallback_cases": 0
+    },
+    {
+      "settings": {
+        "thresholds.similarity_threshold": 0.55,
+        "retrieval.hybrid_threshold": 0.6,
+        "retrieval.lexical_weight": 0.5,
+        "retrieval.semantic_weight": 0.5,
+        "retrieval.minimum_rank_margin": 0.04
+      },
+      "correct": 38,
+      "answered": 38,
+      "false_answers": 1,
+      "embedding_fallback_cases": 0
+    },
+    {
+      "settings": {
+        "thresholds.similarity_threshold": 0.55,
+        "retrieval.hybrid_threshold": 0.6,
+        "retrieval.lexical_weight": 0.5,
+        "retrieval.semantic_weight": 0.5,
+        "retrieval.minimum_rank_margin": 0.08
+      },
+      "correct": 38,
+      "answered": 38,
+      "false_answers": 1,
+      "embedding_fallback_cases": 0
+    },
+    {
+      "settings": {
+        "thresholds.similarity_threshold": 0.65,
+        "retrieval.hybrid_threshold": 0.4,
+        "retrieval.lexical_weight": 0.2,
+        "retrieval.semantic_weight": 0.8,
+        "retrieval.minimum_rank_margin": 0.04
+      },
+      "correct": 48,
+      "answered": 48,
+      "false_answers": 1,
+      "embedding_fallback_cases": 0
+    },
+    {
+      "settings": {
+        "thresholds.similarity_threshold": 0.65,
+        "retrieval.hybrid_threshold": 0.4,
+        "retrieval.lexical_weight": 0.2,
+        "retrieval.semantic_weight": 0.8,
+        "retrieval.minimum_rank_margin": 0.08
+      },
+      "correct": 48,
+      "answered": 48,
+      "false_answers": 1,
+      "embedding_fallback_cases": 0
+    },
+    {
+      "settings": {
+        "thresholds.similarity_threshold": 0.65,
+        "retrieval.hybrid_threshold": 0.4,
+        "retrieval.lexical_weight": 0.5,
+        "retrieval.semantic_weight": 0.5,
+        "retrieval.minimum_rank_margin": 0.04
+      },
+      "correct": 48,
+      "answered": 48,
+      "false_answers": 2,
+      "embedding_fallback_cases": 0
+    },
+    {
+      "settings": {
+        "thresholds.similarity_threshold": 0.65,
+        "retrieval.hybrid_threshold": 0.4,
+        "retrieval.lexical_weight": 0.5,
+        "retrieval.semantic_weight": 0.5,
+        "retrieval.minimum_rank_margin": 0.08
+      },
+      "correct": 47,
+      "answered": 47,
+      "false_answers": 2,
+      "embedding_fallback_cases": 0
+    },
+    {
+      "settings": {
+        "thresholds.similarity_threshold": 0.65,
+        "retrieval.hybrid_threshold": 0.5,
+        "retrieval.lexical_weight": 0.2,
+        "retrieval.semantic_weight": 0.8,
+        "retrieval.minimum_rank_margin": 0.04
+      },
+      "correct": 48,
+      "answered": 48,
+      "false_answers": 1,
+      "embedding_fallback_cases": 0
+    },
+    {
+      "settings": {
+        "thresholds.similarity_threshold": 0.65,
+        "retrieval.hybrid_threshold": 0.5,
+        "retrieval.lexical_weight": 0.2,
+        "retrieval.semantic_weight": 0.8,
+        "retrieval.minimum_rank_margin": 0.08
+      },
+      "correct": 48,
+      "answered": 48,
+      "false_answers": 1,
+      "embedding_fallback_cases": 0
+    },
+    {
+      "settings": {
+        "thresholds.similarity_threshold": 0.65,
+        "retrieval.hybrid_threshold": 0.5,
+        "retrieval.lexical_weight": 0.5,
+        "retrieval.semantic_weight": 0.5,
+        "retrieval.minimum_rank_margin": 0.04
+      },
+      "correct": 44,
+      "answered": 44,
+      "false_answers": 1,
+      "embedding_fallback_cases": 0
+    },
+    {
+      "settings": {
+        "thresholds.similarity_threshold": 0.65,
+        "retrieval.hybrid_threshold": 0.5,
+        "retrieval.lexical_weight": 0.5,
+        "retrieval.semantic_weight": 0.5,
+        "retrieval.minimum_rank_margin": 0.08
+      },
+      "correct": 44,
+      "answered": 44,
+      "false_answers": 1,
+      "embedding_fallback_cases": 0
+    },
+    {
+      "settings": {
+        "thresholds.similarity_threshold": 0.65,
+        "retrieval.hybrid_threshold": 0.6,
+        "retrieval.lexical_weight": 0.2,
+        "retrieval.semantic_weight": 0.8,
+        "retrieval.minimum_rank_margin": 0.04
+      },
+      "correct": 48,
+      "answered": 48,
+      "false_answers": 1,
+      "embedding_fallback_cases": 0
+    },
+    {
+      "settings": {
+        "thresholds.similarity_threshold": 0.65,
+        "retrieval.hybrid_threshold": 0.6,
+        "retrieval.lexical_weight": 0.2,
+        "retrieval.semantic_weight": 0.8,
+        "retrieval.minimum_rank_margin": 0.08
+      },
+      "correct": 48,
+      "answered": 48,
+      "false_answers": 1,
+      "embedding_fallback_cases": 0
+    },
+    {
+      "settings": {
+        "thresholds.similarity_threshold": 0.65,
+        "retrieval.hybrid_threshold": 0.6,
+        "retrieval.lexical_weight": 0.5,
+        "retrieval.semantic_weight": 0.5,
+        "retrieval.minimum_rank_margin": 0.04
+      },
+      "correct": 38,
+      "answered": 38,
+      "false_answers": 1,
+      "embedding_fallback_cases": 0
+    },
+    {
+      "settings": {
+        "thresholds.similarity_threshold": 0.65,
+        "retrieval.hybrid_threshold": 0.6,
+        "retrieval.lexical_weight": 0.5,
+        "retrieval.semantic_weight": 0.5,
+        "retrieval.minimum_rank_margin": 0.08
+      },
+      "correct": 38,
+      "answered": 38,
+      "false_answers": 1,
+      "embedding_fallback_cases": 0
+    }
+  ]
+}

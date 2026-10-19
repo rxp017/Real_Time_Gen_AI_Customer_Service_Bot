@@ -26,7 +26,7 @@ def check(root: Path = Path(".")) -> dict:
         examples.update(normalized(row.get("question", row.get("message", "")))
                         for row in payload.get("cases", payload.get("examples", [])))
     leaks = []
-    for directory in ("core", "app", "scripts", "resources", "config", "tests"):
+    for directory in ("core", "app", "scripts", "resources", "config", "tests", "data/golden"):
         for path in (root / directory).rglob("*"):
             if not path.is_file() or "fixtures" in path.parts or path.suffix not in {".py", ".json", ".yaml", ".js", ".html"}:
                 continue
