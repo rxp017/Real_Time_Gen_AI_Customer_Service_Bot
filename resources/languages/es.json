@@ -178,24 +178,36 @@
         {
           "pattern": "\\b(?:gracias|excelente|genial|maravilloso|contento|feliz)\\b",
           "exclude": "\\bno (?:estoy )?(?:contento|feliz)\\b"
+        },
+        {
+          "pattern": "\\b(?:content[oa]|satisfech[oa])\\b"
         }
       ],
       "negative": [
         {
           "pattern": "\\b(?:malo|mal|terrible|decepcionado|roto|tarde|no funciona|problema|pésimo)\\b",
           "exclude": "\\b(?:no hay problema|no está roto)\\b"
+        },
+        {
+          "pattern": "\\b(?:mala|roto|rompió|pendiente|inutilizable)\\b"
         }
       ],
       "frustrated": [
         {
           "pattern": "\\b(?:frustrado|harto|cansado de|tercera vez|inaceptable)\\b",
           "exclude": "\\bno (?:estoy )?frustrado\\b"
+        },
+        {
+          "pattern": "\\b(?:siguen pidiendo|no arreglan nada|misma foto otra vez)\\b"
         }
       ],
       "urgent": [
         {
           "pattern": "\\b(?:urgente|emergencia|inmediatamente|ahora mismo)\\b",
           "exclude": "\\bno es urgente\\b"
+        },
+        {
+          "pattern": "\\b(?:ayuda ya|ayuda ahora|desplomado)\\b"
         }
       ],
       "sarcastic": [
@@ -207,6 +219,9 @@
     "sarcasm_with_history": [
       {
         "pattern": "\\b(?:genial|maravilloso|excelente|fantástico)\\b"
+      },
+      {
+        "pattern": "velocidad de la luz|tan maravillosa"
       }
     ],
     "frustration_with_history": [
@@ -219,18 +234,27 @@
         {
           "pattern": "\\b(?:cuenta.{0,25}(?:hackeada|comprometida)|alguien.{0,25}(?:accedió|entró).{0,25}cuenta)\\b",
           "exclude": "\\bno (?:está|fue) (?:hackeada|comprometida)\\b"
+        },
+        {
+          "pattern": "dispositivo desconocido.{0,50}cuenta"
         }
       ],
       "duplicate_payment": [
         {
           "pattern": "\\b(?:cobraron dos veces|cobrado dos veces|pago duplicado|cargo duplicado|pagué dos veces)\\b",
           "exclude": "\\b(?:no .{0,15}(?:cobraron|cobrado) dos veces|sin (?:pago|cargo) duplicado)\\b"
+        },
+        {
+          "pattern": "misma compra.{0,60}dos cargos"
         }
       ],
       "legal_threat": [
         {
           "pattern": "\\b(?:voy a demandar|presentaré una demanda|tomaré acciones legales|voy a tomar acciones legales)\\b",
           "exclude": "\\bno voy a demandar\\b"
+        },
+        {
+          "pattern": "abogado.{0,60}(?:demanda|reclamación)"
         }
       ]
     },

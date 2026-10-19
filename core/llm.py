@@ -117,8 +117,10 @@ class FakeLLM(LLMClient):
 class ProviderUnavailableError(RuntimeError):
     """All configured models failed, cooled down, or exceeded the request budget."""
 
-    def __init__(self, attempts: list[dict[str, Any]]) -> None:
-        super().__init__("No configured Gemini model is available; retry later.")
+    def __init__(self, attempts: list[dict[str, Any]], reason: str | None = None) -> None:
+        self.reason = reason or ("quota" if any(a.get("status") == 429 for a in attempts) else "infrastructure")
+        super().__init__("Live AI quota is blocked; retry later." if self.reason.startswith("quota")
+                         else "No configured Gemini model is available; retry later.")
         self.attempts = attempts
 
 
@@ -140,6 +142,7 @@ class RealProviderAdapter(LLMClient):
         self.fallback_models = fallback_models
         self.clock = clock
         self._cooldowns: dict[str, float] = {}
+        self._last_failure_status: int | None = None
         self._lock = RLock()
 
     def configured_models(self) -> list[str]:
@@ -266,6 +269,7 @@ class RealProviderAdapter(LLMClient):
             if response.status_code in (401, 403):
                 raise ProviderAuthenticationError("Gemini credentials or permissions were rejected.") from None
             if response.status_code in cfg.get("provider.fallback_http_statuses"):
+                self._last_failure_status = response.status_code
                 self._cool_down(model, clock, response.headers.get("retry-after"))
                 continue
             if response.status_code != 200:
@@ -291,4 +295,5 @@ class RealProviderAdapter(LLMClient):
                 self._cool_down(model, clock)
                 continue
             return LLMResponse(content=text, model=model, usage=usage, attempts=attempts)
-        raise ProviderUnavailableError(attempts) from None
+        reason = "quota_cooldown" if not attempts and self._last_failure_status == 429 else None
+        raise ProviderUnavailableError(attempts, reason) from None

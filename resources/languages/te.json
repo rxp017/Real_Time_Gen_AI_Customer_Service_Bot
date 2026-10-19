@@ -145,21 +145,33 @@
       "positive": [
         {
           "pattern": "ధన్యవాదాలు|చాలా బాగుంది|సంతోషం|\\b(?:dhanyavadalu|chala bagundi|santhosham)\\b"
+        },
+        {
+          "pattern": "సంతోష|చక్కగా"
         }
       ],
       "negative": [
         {
           "pattern": "చెడ్డ|బాగాలేదు|నిరాశ|పనిచేయడం లేదు|ఆలస్యం|సమస్య|\\b(?:bagaledu|niraasha|pani cheyatledu|alasyam|samasya)\\b"
+        },
+        {
+          "pattern": "బాగోలేదు|విరిగింది|పూర్తికాలేదు|లోపం.{0,15}అలాగే"
         }
       ],
       "frustrated": [
         {
           "pattern": "విసిగిపోయా|విసుగు|మూడోసారి|\\b(?:visigipoya|visugu|moodosari)\\b"
+        },
+        {
+          "pattern": "మళ్లీ మళ్లీ.{0,60}పరిష్కారం లేదు|విసిగిపోయా"
         }
       ],
       "urgent": [
         {
           "pattern": "అత్యవసరం|వెంటనే|తక్షణం|\\b(?:atyavasaram|ventane|takshanam)\\b"
+        },
+        {
+          "pattern": "ఇప్పుడే సహాయం|పొగ వస్తో"
         }
       ],
       "sarcastic": [
@@ -171,6 +183,9 @@
     "sarcasm_with_history": [
       {
         "pattern": "వావ్|చాలా బాగుంది|అద్భుతం|\\b(?:wow|chala bagundi|adbhutam)\\b"
+      },
+      {
+        "pattern": "అద్భుతమైన పని|ఎంత వేగమైన"
       }
     ],
     "frustration_with_history": [
@@ -183,18 +198,27 @@
         {
           "pattern": "(?:ఖాతా|అకౌంట్).{0,25}హ్యాక్|\\b(?:khata|account).{0,25}hack\\b",
           "exclude": "హ్యాక్ కాలేదు|\\bhack kaaledu\\b"
+        },
+        {
+          "pattern": "తెలియని పరికరం.{0,50}ఖాతా"
         }
       ],
       "duplicate_payment": [
         {
           "pattern": "రెండుసార్లు.{0,25}(?:డబ్బు|చెల్లింపు)|(?:డబ్బు|చెల్లింపు).{0,25}రెండుసార్లు|\\brendusarlu.{0,25}(?:dabbu|payment)\\b",
           "exclude": "రెండుసార్లు కాదు|\\brendusarlu kaadu\\b"
+        },
+        {
+          "pattern": "ఒకే.{0,60}రెండు చెల్లింపులు"
         }
       ],
       "legal_threat": [
         {
           "pattern": "న్యాయపరమైన చర్య తీసుకుంటా|కేసు వేస్తా|\\b(?:nyayaparamaina charya teesukunta|case vesta)\\b",
           "exclude": "కేసు వేయను|\\bcase veyanu\\b"
+        },
+        {
+          "pattern": "న్యాయవాది.{0,60}దావా"
         }
       ]
     },

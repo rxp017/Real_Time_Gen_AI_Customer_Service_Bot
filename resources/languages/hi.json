@@ -161,22 +161,34 @@
         {
           "pattern": "धन्यवाद|बहुत अच्छा|बहुत बढ़िया|खुश|\\b(?:shukriya|dhanyavaad|bahut accha|khush)\\b",
           "exclude": "खुश नहीं|\\bkhush nahi\\b"
+        },
+        {
+          "pattern": "संतुष्ट|प्रसन्न"
         }
       ],
       "negative": [
         {
           "pattern": "खराब|निराश|काम नहीं|देर|समस्या|\\b(?:kharab|niraash|bekar|kaam nahi|der|samasya)\\b"
+        },
+        {
+          "pattern": "टूटा|अधूरी|दिक्कत.{0,15}बाकी"
         }
       ],
       "frustrated": [
         {
           "pattern": "परेशान|तंग आ|तीसरी बार|\\b(?:pareshan|tang aa|teesri baar)\\b",
           "exclude": "परेशान नहीं|\\bpareshan nahi\\b"
+        },
+        {
+          "pattern": "बार बार.{0,60}(?:सुधार नहीं|वही)|तंग आ"
         }
       ],
       "urgent": [
         {
           "pattern": "तुरंत|अत्यावश्यक|आपातकाल|\\b(?:turant|abhi chahiye|emergency)\\b"
+        },
+        {
+          "pattern": "अभी सहायता|अभी मदद|धुआँ"
         }
       ],
       "sarcastic": [
@@ -188,6 +200,9 @@
     "sarcasm_with_history": [
       {
         "pattern": "वाह|बहुत बढ़िया|बहुत अच्छा|\\b(?:wah|bahut badhiya|bahut accha)\\b"
+      },
+      {
+        "pattern": "कमाल की तेज|वाह.{0,15}बढ़िया"
       }
     ],
     "frustration_with_history": [
@@ -200,18 +215,27 @@
         {
           "pattern": "(?:खाता|अकाउंट).{0,25}(?:हैक|अनधिकृत)|\\b(?:account|khata).{0,25}(?:hack|compromise)\\b",
           "exclude": "हैक नहीं|\\bhack nahi\\b"
+        },
+        {
+          "pattern": "अनजान उपकरण.{0,50}खाते"
         }
       ],
       "duplicate_payment": [
         {
           "pattern": "दो बार.{0,25}(?:भुगतान|पैसे|कटे)|(?:पैसे|भुगतान).{0,25}दो बार|\\b(?:do baar.{0,25}(?:paise|payment|kate)|(?:paise|payment).{0,25}do baar)\\b",
           "exclude": "दो बार नहीं|\\bdo baar nahi\\b"
+        },
+        {
+          "pattern": "(?:उसी|एक ही).{0,60}दो भुगतान"
         }
       ],
       "legal_threat": [
         {
           "pattern": "कानूनी कार्रवाई करूँ|कानूनी कार्रवाई करूंगा|मुकदमा करूँ|\\b(?:kanooni karwai karunga|mukadma karunga)\\b",
           "exclude": "कार्रवाई नहीं|\\bkarwai nahi\\b"
+        },
+        {
+          "pattern": "वकील.{0,60}(?:दावा|मुकदमा)"
         }
       ]
     },

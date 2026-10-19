@@ -41,13 +41,14 @@ class PacedProvider(LLMClient):
         self.next_call = self.clock.monotonic() + float(get_config().get("evaluation.request_spacing_seconds"))
 
     def generate(self, *args: Any, **kwargs: Any):
-        if any(self.delegate._cooldowns.get(model, 0) <= self.clock.monotonic()
-               for model in self.delegate.configured_models()):
-            self.wait()
+        models = self.delegate.configured_models()
+        earliest = min(self.delegate._cooldowns.get(model, 0) for model in models)
+        self.next_call = max(self.next_call, earliest)
+        self.wait()
         try:
             return self.delegate.generate(*args, **kwargs)
         except ProviderUnavailableError as exc:
-            status = "QUOTA_BLOCKED" if any(a.get("status") == 429 for a in exc.attempts) else "PROVIDER_UNAVAILABLE_OR_COOLDOWN"
+            status = "QUOTA_BLOCKED" if exc.reason.startswith("quota") else "PROVIDER_UNAVAILABLE_OR_COOLDOWN"
             print(f"STATUS {status}: live call unavailable; fallback is not provider success", flush=True)
             raise
 

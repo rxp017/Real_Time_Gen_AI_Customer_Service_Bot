@@ -220,24 +220,36 @@
         {
           "pattern": "\\b(?:thanks|thank you|great|excellent|happy|helpful|wonderful|love)\\b",
           "exclude": "\\b(?:not|never)\\s+(?:very\\s+)?(?:happy|great|helpful|excellent)\\b"
+        },
+        {
+          "pattern": "\\b(?:pleased|delighted|satisfied)\\b"
         }
       ],
       "negative": [
         {
           "pattern": "\\b(?:bad|terrible|unhappy|disappointed|broken|late|not working|failed|poor|unresolved|problem|awful|not happy)\\b",
           "exclude": "\\b(?:not unhappy|not disappointed|not broken|not late|no problem)\\b"
+        },
+        {
+          "pattern": "\\b(?:snapped|unfinished|unusable|fault remains)\\b"
         }
       ],
       "frustrated": [
         {
           "pattern": "\\b(?:frustrated|fed up|sick of|tired of|unacceptable|third time|fourth time)\\b",
           "exclude": "\\bnot frustrated\\b"
+        },
+        {
+          "pattern": "\\b(?:keep asking|nothing gets fixed|same photo again)\\b"
         }
       ],
       "urgent": [
         {
           "pattern": "\\b(?:urgent|urgently|emergency|immediately|asap)\\b",
           "exclude": "\\bnot (?:urgent|an emergency)\\b"
+        },
+        {
+          "pattern": "\\b(?:right away|collapsed under|send help now)\\b"
         }
       ],
       "sarcastic": [
@@ -249,6 +261,9 @@
     "sarcasm_with_history": [
       {
         "pattern": "\\b(?:great|wonderful|excellent|amazing|brilliant|thanks for nothing)\\b"
+      },
+      {
+        "pattern": "\\b(?:lightning.fast|wonderful|such speed)\\b"
       }
     ],
     "frustration_with_history": [
@@ -261,18 +276,27 @@
         {
           "pattern": "\\b(?:account (?:was |is |has been )?(?:hacked|compromised)|someone (?:else )?(?:accessed|logged into) my account|unauthori[sz]ed (?:access|login))\\b",
           "exclude": "\\b(?:account (?:was |is |has been )?not (?:hacked|compromised)|no unauthori[sz]ed (?:access|login)|if (?:my )?account (?:is |was )?(?:hacked|compromised))\\b"
+        },
+        {
+          "pattern": "\\b(?:unknown|unrecognized) (?:device|person).{0,60}(?:account|signed|logged)"
         }
       ],
       "duplicate_payment": [
         {
           "pattern": "\\b(?:charged (?:me )?twice|charged (?:me )?two times|duplicate (?:payment|charge)|paid twice|debited twice|two charges for one (?:order|purchase))\\b",
           "exclude": "\\b(?:not (?:been )?(?:charged|paid|debited) twice|no duplicate (?:payment|charge)|if .{0,25}charged twice)\\b"
+        },
+        {
+          "pattern": "\\bsame .{0,70}two (?:settled )?charges\\b"
         }
       ],
       "legal_threat": [
         {
           "pattern": "\\b(?:will sue|going to sue|file (?:a )?lawsuit|taking legal action|will take legal action|pursue legal action)\\b",
           "exclude": "\\b(?:not (?:going to |planning to )?sue|no legal action|if .{0,25}legal action)\\b"
+        },
+        {
+          "pattern": "\\b(?:solicitor|lawyer|attorney).{0,60}(?:file|claim|sue)\\b"
         }
       ]
     },

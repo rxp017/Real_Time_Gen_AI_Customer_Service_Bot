@@ -1,0 +1,801 @@
+{
+  "scope": "Pattern-only development baseline",
+  "corpus_sha256": "e6160ce443eb9fad9f0043d9a241ce71685d3d756973a1bb525ce81525ce288b",
+  "pipeline": {
+    "successes": 59,
+    "total": 60,
+    "rate": 0.9833333333333333,
+    "wilson95": [
+      0.9114487027240993,
+      0.9970518402052136
+    ]
+  },
+  "model_assisted": {
+    "successes": 0,
+    "total": 0,
+    "rate": null,
+    "wilson95": null
+  },
+  "fallback": {
+    "successes": 59,
+    "total": 60,
+    "rate": 0.9833333333333333,
+    "wilson95": [
+      0.9114487027240993,
+      0.9970518402052136
+    ]
+  },
+  "provider_status_counts": {
+    "disabled": 60
+  },
+  "outcomes": [
+    {
+      "id": "dev5-en-1",
+      "language": "en",
+      "label": "positive",
+      "predicted": "positive",
+      "correct": true,
+      "confidence": 0.85,
+      "provider_status": "disabled",
+      "provider_attempts": [],
+      "expected_risk": [],
+      "risk": []
+    },
+    {
+      "id": "dev5-en-2",
+      "language": "en",
+      "label": "positive",
+      "predicted": "neutral",
+      "correct": false,
+      "confidence": 0.35,
+      "provider_status": "disabled",
+      "provider_attempts": [],
+      "expected_risk": [],
+      "risk": []
+    },
+    {
+      "id": "dev5-en-3",
+      "language": "en",
+      "label": "neutral",
+      "predicted": "neutral",
+      "correct": true,
+      "confidence": 0.35,
+      "provider_status": "disabled",
+      "provider_attempts": [],
+      "expected_risk": [],
+      "risk": []
+    },
+    {
+      "id": "dev5-en-4",
+      "language": "en",
+      "label": "neutral",
+      "predicted": "neutral",
+      "correct": true,
+      "confidence": 0.35,
+      "provider_status": "disabled",
+      "provider_attempts": [],
+      "expected_risk": [],
+      "risk": []
+    },
+    {
+      "id": "dev5-en-5",
+      "language": "en",
+      "label": "negative",
+      "predicted": "negative",
+      "correct": true,
+      "confidence": 0.85,
+      "provider_status": "disabled",
+      "provider_attempts": [],
+      "expected_risk": [],
+      "risk": []
+    },
+    {
+      "id": "dev5-en-6",
+      "language": "en",
+      "label": "negative",
+      "predicted": "negative",
+      "correct": true,
+      "confidence": 0.85,
+      "provider_status": "disabled",
+      "provider_attempts": [],
+      "expected_risk": [],
+      "risk": []
+    },
+    {
+      "id": "dev5-en-7",
+      "language": "en",
+      "label": "frustrated",
+      "predicted": "frustrated",
+      "correct": true,
+      "confidence": 0.85,
+      "provider_status": "disabled",
+      "provider_attempts": [],
+      "expected_risk": [],
+      "risk": []
+    },
+    {
+      "id": "dev5-en-8",
+      "language": "en",
+      "label": "frustrated",
+      "predicted": "frustrated",
+      "correct": true,
+      "confidence": 0.85,
+      "provider_status": "disabled",
+      "provider_attempts": [],
+      "expected_risk": [],
+      "risk": []
+    },
+    {
+      "id": "dev5-en-9",
+      "language": "en",
+      "label": "urgent",
+      "predicted": "urgent",
+      "correct": true,
+      "confidence": 0.85,
+      "provider_status": "disabled",
+      "provider_attempts": [],
+      "expected_risk": [],
+      "risk": []
+    },
+    {
+      "id": "dev5-en-10",
+      "language": "en",
+      "label": "urgent",
+      "predicted": "urgent",
+      "correct": true,
+      "confidence": 0.85,
+      "provider_status": "disabled",
+      "provider_attempts": [],
+      "expected_risk": [],
+      "risk": []
+    },
+    {
+      "id": "dev5-en-11",
+      "language": "en",
+      "label": "sarcastic",
+      "predicted": "sarcastic",
+      "correct": true,
+      "confidence": 0.9,
+      "provider_status": "disabled",
+      "provider_attempts": [],
+      "expected_risk": [],
+      "risk": []
+    },
+    {
+      "id": "dev5-en-12",
+      "language": "en",
+      "label": "sarcastic",
+      "predicted": "sarcastic",
+      "correct": true,
+      "confidence": 0.9,
+      "provider_status": "disabled",
+      "provider_attempts": [],
+      "expected_risk": [],
+      "risk": []
+    },
+    {
+      "id": "dev5-en-13",
+      "language": "en",
+      "label": "neutral",
+      "predicted": "neutral",
+      "correct": true,
+      "confidence": 0.35,
+      "provider_status": "disabled",
+      "provider_attempts": [],
+      "expected_risk": [
+        "account_compromise"
+      ],
+      "risk": [
+        "account_compromise"
+      ]
+    },
+    {
+      "id": "dev5-en-14",
+      "language": "en",
+      "label": "neutral",
+      "predicted": "neutral",
+      "correct": true,
+      "confidence": 0.35,
+      "provider_status": "disabled",
+      "provider_attempts": [],
+      "expected_risk": [
+        "duplicate_payment"
+      ],
+      "risk": [
+        "duplicate_payment"
+      ]
+    },
+    {
+      "id": "dev5-en-15",
+      "language": "en",
+      "label": "neutral",
+      "predicted": "neutral",
+      "correct": true,
+      "confidence": 0.35,
+      "provider_status": "disabled",
+      "provider_attempts": [],
+      "expected_risk": [
+        "legal_threat"
+      ],
+      "risk": [
+        "legal_threat"
+      ]
+    },
+    {
+      "id": "dev5-hi-1",
+      "language": "hi",
+      "label": "positive",
+      "predicted": "positive",
+      "correct": true,
+      "confidence": 0.85,
+      "provider_status": "disabled",
+      "provider_attempts": [],
+      "expected_risk": [],
+      "risk": []
+    },
+    {
+      "id": "dev5-hi-2",
+      "language": "hi",
+      "label": "positive",
+      "predicted": "positive",
+      "correct": true,
+      "confidence": 0.85,
+      "provider_status": "disabled",
+      "provider_attempts": [],
+      "expected_risk": [],
+      "risk": []
+    },
+    {
+      "id": "dev5-hi-3",
+      "language": "hi",
+      "label": "neutral",
+      "predicted": "neutral",
+      "correct": true,
+      "confidence": 0.35,
+      "provider_status": "disabled",
+      "provider_attempts": [],
+      "expected_risk": [],
+      "risk": []
+    },
+    {
+      "id": "dev5-hi-4",
+      "language": "hi",
+      "label": "neutral",
+      "predicted": "neutral",
+      "correct": true,
+      "confidence": 0.35,
+      "provider_status": "disabled",
+      "provider_attempts": [],
+      "expected_risk": [],
+      "risk": []
+    },
+    {
+      "id": "dev5-hi-5",
+      "language": "hi",
+      "label": "negative",
+      "predicted": "negative",
+      "correct": true,
+      "confidence": 0.85,
+      "provider_status": "disabled",
+      "provider_attempts": [],
+      "expected_risk": [],
+      "risk": []
+    },
+    {
+      "id": "dev5-hi-6",
+      "language": "hi",
+      "label": "negative",
+      "predicted": "negative",
+      "correct": true,
+      "confidence": 0.85,
+      "provider_status": "disabled",
+      "provider_attempts": [],
+      "expected_risk": [],
+      "risk": []
+    },
+    {
+      "id": "dev5-hi-7",
+      "language": "hi",
+      "label": "frustrated",
+      "predicted": "frustrated",
+      "correct": true,
+      "confidence": 0.85,
+      "provider_status": "disabled",
+      "provider_attempts": [],
+      "expected_risk": [],
+      "risk": []
+    },
+    {
+      "id": "dev5-hi-8",
+      "language": "hi",
+      "label": "frustrated",
+      "predicted": "frustrated",
+      "correct": true,
+      "confidence": 0.85,
+      "provider_status": "disabled",
+      "provider_attempts": [],
+      "expected_risk": [],
+      "risk": []
+    },
+    {
+      "id": "dev5-hi-9",
+      "language": "hi",
+      "label": "urgent",
+      "predicted": "urgent",
+      "correct": true,
+      "confidence": 0.85,
+      "provider_status": "disabled",
+      "provider_attempts": [],
+      "expected_risk": [],
+      "risk": []
+    },
+    {
+      "id": "dev5-hi-10",
+      "language": "hi",
+      "label": "urgent",
+      "predicted": "urgent",
+      "correct": true,
+      "confidence": 0.85,
+      "provider_status": "disabled",
+      "provider_attempts": [],
+      "expected_risk": [],
+      "risk": []
+    },
+    {
+      "id": "dev5-hi-11",
+      "language": "hi",
+      "label": "sarcastic",
+      "predicted": "sarcastic",
+      "correct": true,
+      "confidence": 0.9,
+      "provider_status": "disabled",
+      "provider_attempts": [],
+      "expected_risk": [],
+      "risk": []
+    },
+    {
+      "id": "dev5-hi-12",
+      "language": "hi",
+      "label": "sarcastic",
+      "predicted": "sarcastic",
+      "correct": true,
+      "confidence": 0.9,
+      "provider_status": "disabled",
+      "provider_attempts": [],
+      "expected_risk": [],
+      "risk": []
+    },
+    {
+      "id": "dev5-hi-13",
+      "language": "hi",
+      "label": "neutral",
+      "predicted": "neutral",
+      "correct": true,
+      "confidence": 0.35,
+      "provider_status": "disabled",
+      "provider_attempts": [],
+      "expected_risk": [
+        "account_compromise"
+      ],
+      "risk": [
+        "account_compromise"
+      ]
+    },
+    {
+      "id": "dev5-hi-14",
+      "language": "hi",
+      "label": "neutral",
+      "predicted": "neutral",
+      "correct": true,
+      "confidence": 0.35,
+      "provider_status": "disabled",
+      "provider_attempts": [],
+      "expected_risk": [
+        "duplicate_payment"
+      ],
+      "risk": [
+        "duplicate_payment"
+      ]
+    },
+    {
+      "id": "dev5-hi-15",
+      "language": "hi",
+      "label": "neutral",
+      "predicted": "neutral",
+      "correct": true,
+      "confidence": 0.35,
+      "provider_status": "disabled",
+      "provider_attempts": [],
+      "expected_risk": [
+        "legal_threat"
+      ],
+      "risk": [
+        "legal_threat"
+      ]
+    },
+    {
+      "id": "dev5-te-1",
+      "language": "te",
+      "label": "positive",
+      "predicted": "positive",
+      "correct": true,
+      "confidence": 0.85,
+      "provider_status": "disabled",
+      "provider_attempts": [],
+      "expected_risk": [],
+      "risk": []
+    },
+    {
+      "id": "dev5-te-2",
+      "language": "te",
+      "label": "positive",
+      "predicted": "positive",
+      "correct": true,
+      "confidence": 0.85,
+      "provider_status": "disabled",
+      "provider_attempts": [],
+      "expected_risk": [],
+      "risk": []
+    },
+    {
+      "id": "dev5-te-3",
+      "language": "te",
+      "label": "neutral",
+      "predicted": "neutral",
+      "correct": true,
+      "confidence": 0.35,
+      "provider_status": "disabled",
+      "provider_attempts": [],
+      "expected_risk": [],
+      "risk": []
+    },
+    {
+      "id": "dev5-te-4",
+      "language": "te",
+      "label": "neutral",
+      "predicted": "neutral",
+      "correct": true,
+      "confidence": 0.35,
+      "provider_status": "disabled",
+      "provider_attempts": [],
+      "expected_risk": [],
+      "risk": []
+    },
+    {
+      "id": "dev5-te-5",
+      "language": "te",
+      "label": "negative",
+      "predicted": "negative",
+      "correct": true,
+      "confidence": 0.85,
+      "provider_status": "disabled",
+      "provider_attempts": [],
+      "expected_risk": [],
+      "risk": []
+    },
+    {
+      "id": "dev5-te-6",
+      "language": "te",
+      "label": "negative",
+      "predicted": "negative",
+      "correct": true,
+      "confidence": 0.85,
+      "provider_status": "disabled",
+      "provider_attempts": [],
+      "expected_risk": [],
+      "risk": []
+    },
+    {
+      "id": "dev5-te-7",
+      "language": "te",
+      "label": "frustrated",
+      "predicted": "frustrated",
+      "correct": true,
+      "confidence": 0.85,
+      "provider_status": "disabled",
+      "provider_attempts": [],
+      "expected_risk": [],
+      "risk": []
+    },
+    {
+      "id": "dev5-te-8",
+      "language": "te",
+      "label": "frustrated",
+      "predicted": "frustrated",
+      "correct": true,
+      "confidence": 0.85,
+      "provider_status": "disabled",
+      "provider_attempts": [],
+      "expected_risk": [],
+      "risk": []
+    },
+    {
+      "id": "dev5-te-9",
+      "language": "te",
+      "label": "urgent",
+      "predicted": "urgent",
+      "correct": true,
+      "confidence": 0.85,
+      "provider_status": "disabled",
+      "provider_attempts": [],
+      "expected_risk": [],
+      "risk": []
+    },
+    {
+      "id": "dev5-te-10",
+      "language": "te",
+      "label": "urgent",
+      "predicted": "urgent",
+      "correct": true,
+      "confidence": 0.85,
+      "provider_status": "disabled",
+      "provider_attempts": [],
+      "expected_risk": [],
+      "risk": []
+    },
+    {
+      "id": "dev5-te-11",
+      "language": "te",
+      "label": "sarcastic",
+      "predicted": "sarcastic",
+      "correct": true,
+      "confidence": 0.9,
+      "provider_status": "disabled",
+      "provider_attempts": [],
+      "expected_risk": [],
+      "risk": []
+    },
+    {
+      "id": "dev5-te-12",
+      "language": "te",
+      "label": "sarcastic",
+      "predicted": "sarcastic",
+      "correct": true,
+      "confidence": 0.9,
+      "provider_status": "disabled",
+      "provider_attempts": [],
+      "expected_risk": [],
+      "risk": []
+    },
+    {
+      "id": "dev5-te-13",
+      "language": "te",
+      "label": "neutral",
+      "predicted": "neutral",
+      "correct": true,
+      "confidence": 0.35,
+      "provider_status": "disabled",
+      "provider_attempts": [],
+      "expected_risk": [
+        "account_compromise"
+      ],
+      "risk": [
+        "account_compromise"
+      ]
+    },
+    {
+      "id": "dev5-te-14",
+      "language": "te",
+      "label": "neutral",
+      "predicted": "neutral",
+      "correct": true,
+      "confidence": 0.35,
+      "provider_status": "disabled",
+      "provider_attempts": [],
+      "expected_risk": [
+        "duplicate_payment"
+      ],
+      "risk": [
+        "duplicate_payment"
+      ]
+    },
+    {
+      "id": "dev5-te-15",
+      "language": "te",
+      "label": "neutral",
+      "predicted": "neutral",
+      "correct": true,
+      "confidence": 0.35,
+      "provider_status": "disabled",
+      "provider_attempts": [],
+      "expected_risk": [
+        "legal_threat"
+      ],
+      "risk": [
+        "legal_threat"
+      ]
+    },
+    {
+      "id": "dev5-es-1",
+      "language": "es",
+      "label": "positive",
+      "predicted": "positive",
+      "correct": true,
+      "confidence": 0.85,
+      "provider_status": "disabled",
+      "provider_attempts": [],
+      "expected_risk": [],
+      "risk": []
+    },
+    {
+      "id": "dev5-es-2",
+      "language": "es",
+      "label": "positive",
+      "predicted": "positive",
+      "correct": true,
+      "confidence": 0.85,
+      "provider_status": "disabled",
+      "provider_attempts": [],
+      "expected_risk": [],
+      "risk": []
+    },
+    {
+      "id": "dev5-es-3",
+      "language": "es",
+      "label": "neutral",
+      "predicted": "neutral",
+      "correct": true,
+      "confidence": 0.35,
+      "provider_status": "disabled",
+      "provider_attempts": [],
+      "expected_risk": [],
+      "risk": []
+    },
+    {
+      "id": "dev5-es-4",
+      "language": "es",
+      "label": "neutral",
+      "predicted": "neutral",
+      "correct": true,
+      "confidence": 0.35,
+      "provider_status": "disabled",
+      "provider_attempts": [],
+      "expected_risk": [],
+      "risk": []
+    },
+    {
+      "id": "dev5-es-5",
+      "language": "es",
+      "label": "negative",
+      "predicted": "negative",
+      "correct": true,
+      "confidence": 0.85,
+      "provider_status": "disabled",
+      "provider_attempts": [],
+      "expected_risk": [],
+      "risk": []
+    },
+    {
+      "id": "dev5-es-6",
+      "language": "es",
+      "label": "negative",
+      "predicted": "negative",
+      "correct": true,
+      "confidence": 0.85,
+      "provider_status": "disabled",
+      "provider_attempts": [],
+      "expected_risk": [],
+      "risk": []
+    },
+    {
+      "id": "dev5-es-7",
+      "language": "es",
+      "label": "frustrated",
+      "predicted": "frustrated",
+      "correct": true,
+      "confidence": 0.85,
+      "provider_status": "disabled",
+      "provider_attempts": [],
+      "expected_risk": [],
+      "risk": []
+    },
+    {
+      "id": "dev5-es-8",
+      "language": "es",
+      "label": "frustrated",
+      "predicted": "frustrated",
+      "correct": true,
+      "confidence": 0.85,
+      "provider_status": "disabled",
+      "provider_attempts": [],
+      "expected_risk": [],
+      "risk": []
+    },
+    {
+      "id": "dev5-es-9",
+      "language": "es",
+      "label": "urgent",
+      "predicted": "urgent",
+      "correct": true,
+      "confidence": 0.85,
+      "provider_status": "disabled",
+      "provider_attempts": [],
+      "expected_risk": [],
+      "risk": []
+    },
+    {
+      "id": "dev5-es-10",
+      "language": "es",
+      "label": "urgent",
+      "predicted": "urgent",
+      "correct": true,
+      "confidence": 0.85,
+      "provider_status": "disabled",
+      "provider_attempts": [],
+      "expected_risk": [],
+      "risk": []
+    },
+    {
+      "id": "dev5-es-11",
+      "language": "es",
+      "label": "sarcastic",
+      "predicted": "sarcastic",
+      "correct": true,
+      "confidence": 0.9,
+      "provider_status": "disabled",
+      "provider_attempts": [],
+      "expected_risk": [],
+      "risk": []
+    },
+    {
+      "id": "dev5-es-12",
+      "language": "es",
+      "label": "sarcastic",
+      "predicted": "sarcastic",
+      "correct": true,
+      "confidence": 0.9,
+      "provider_status": "disabled",
+      "provider_attempts": [],
+      "expected_risk": [],
+      "risk": []
+    },
+    {
+      "id": "dev5-es-13",
+      "language": "es",
+      "label": "neutral",
+      "predicted": "neutral",
+      "correct": true,
+      "confidence": 0.35,
+      "provider_status": "disabled",
+      "provider_attempts": [],
+      "expected_risk": [
+        "account_compromise"
+      ],
+      "risk": [
+        "account_compromise"
+      ]
+    },
+    {
+      "id": "dev5-es-14",
+      "language": "es",
+      "label": "neutral",
+      "predicted": "neutral",
+      "correct": true,
+      "confidence": 0.35,
+      "provider_status": "disabled",
+      "provider_attempts": [],
+      "expected_risk": [
+        "duplicate_payment"
+      ],
+      "risk": [
+        "duplicate_payment"
+      ]
+    },
+    {
+      "id": "dev5-es-15",
+      "language": "es",
+      "label": "neutral",
+      "predicted": "neutral",
+      "correct": true,
+      "confidence": 0.35,
+      "provider_status": "disabled",
+      "provider_attempts": [],
+      "expected_risk": [
+        "legal_threat"
+      ],
+      "risk": [
+        "legal_threat"
+      ]
+    }
+  ]
+}

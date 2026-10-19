@@ -31,7 +31,7 @@ from core.audit import get_audit_logger, set_audit_logger
 from core.clock import get_clock
 from core.config import get_config
 from core.conversation import ConversationService
-from core.llm import RealProviderAdapter
+from core.llm import ProviderUnavailableError, RealProviderAdapter
 from core.metrics import get_metrics, set_metrics
 from core.retrieval import PolicyRetrievalEngine
 from core.security import (
@@ -328,6 +328,10 @@ def handle_query(
                 raise HTTPException(status_code=403, detail="Session belongs to another caller") from exc
             except ValueError as exc:
                 raise HTTPException(status_code=422, detail=mask_pii(str(exc))) from exc
+            except ProviderUnavailableError as exc:
+                audit.log_error("query_provider_failure", role, exc.reason)
+                detail = "Live AI quota is blocked; please retry later." if exc.reason.startswith("quota") else "Live AI is temporarily unavailable."
+                raise HTTPException(status_code=503, detail=detail) from exc
             except Exception as exc:
                 audit.log_error("query_provider_failure", role, type(exc).__name__)
                 raise HTTPException(status_code=503, detail="Query dependency unavailable") from exc

@@ -306,6 +306,6 @@ conversation:
       pattern: '(?P<value>\b(?:PRD|PROD|SKU|NULL)[-_#][A-Za-z0-9_-]+\b)'
 
 evaluation:
-  request_spacing_seconds: 6
+  request_spacing_seconds: 15
   max_infrastructure_failure_rate: 0.10
   max_postfix_runs: 2

@@ -49,6 +49,16 @@ def post_with_retry(url: str, body: dict[str, Any], key: str, model: str, clock:
         response = httpx.post(url, json=body, headers={"x-goog-api-key": key},
                               timeout=min(float(cfg.get("provider.timeout_seconds")), remaining))
         attempts.append({"model": model, "status": response.status_code})
+        if response.status_code == 429:
+            try:
+                limits = []
+                for detail in response.json().get("error", {}).get("details", []):
+                    if str(detail.get("@type", "")).endswith("google.rpc.QuotaFailure"):
+                        for item in detail.get("violations", []):
+                            limits.append({key: str(item[key])[:160] for key in ("quotaId", "quotaValue") if key in item})
+                attempts[-1]["quota_limits"] = limits
+            except (ValueError, TypeError, AttributeError):
+                attempts[-1]["quota_limits"] = []
         if response.status_code != 429 or index == retries:
             return response
         delay = retry_delay(response, clock, index)
