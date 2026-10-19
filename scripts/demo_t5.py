@@ -46,6 +46,7 @@ def main() -> None:
         report["background_timer_records"] = service.support.tick()
         report["metrics"] = service.metrics.get_summary()
         print(json.dumps(report, ensure_ascii=False, indent=2))
+        service.tickets.repo.close()
         service.support.repo.close()
         sessions.close()
         engine.repo.close()

@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="520" viewBox="0 0 1440 520" role="img" aria-labelledby="title description">
+  <title id="title">Real-Time Gen AI Customer Service Bot</title>
+  <desc id="description">Answers with sources. Support with context. Six workflows share one service desk: knowledge updates, documents, tickets, policies, escalation, and multilingual sessions.</desc>
+  <defs>
+    <linearGradient id="background" x2="1" y2="1"><stop stop-color="#102b28"/><stop offset="1" stop-color="#081b1b"/></linearGradient>
+    <linearGradient id="panel" x2="0" y2="1"><stop stop-color="#24443d"/><stop offset="1" stop-color="#17342e"/></linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#c8eadb" stroke-opacity=".035"/></pattern>
+  </defs>
+  <rect width="1440" height="520" rx="28" fill="url(#background)"/>
+  <rect width="1440" height="520" rx="28" fill="url(#grid)"/>
+  <path d="M0 480C380 340 780 570 1440 260" fill="none" stroke="#b8dd93" stroke-opacity=".12" stroke-width="100"/>
+  <g font-family="Segoe UI, Arial, sans-serif">
+    <rect x="56" y="47" width="44" height="5" rx="2.5" fill="#d5ee9b"/>
+    <text x="116" y="56" fill="#adc7bb" font-size="15" letter-spacing="3">REAL-TIME GEN AI</text>
+    <text x="56" y="160" fill="#f4f7ed" font-size="64" font-weight="700" letter-spacing="-2.5">Answers with sources.</text>
+    <text x="56" y="239" fill="#d5ee9b" font-size="64" font-weight="700" letter-spacing="-2.5">Support with context.</text>
+    <text x="59" y="291" fill="#b6cbc0" font-size="20">A customer service bot built around evidence,</text>
+    <text x="59" y="322" fill="#b6cbc0" font-size="20">conversation, and a clear path to human support.</text>
+    <g font-size="14" fill="#d3e3d7">
+      <rect x="58" y="368" width="103" height="34" rx="17" fill="#29453a"/><text x="78" y="390">Python 3.11</text>
+      <rect x="172" y="368" width="86" height="34" rx="17" fill="#29453a"/><text x="189" y="390">FastAPI</text>
+      <rect x="269" y="368" width="85" height="34" rx="17" fill="#29453a"/><text x="288" y="390">SQLite</text>
+      <rect x="365" y="368" width="104" height="34" rx="17" fill="#29453a"/><text x="383" y="390">Tesseract</text>
+    </g>
+    <text x="59" y="461" fill="#8da99a" font-size="13" letter-spacing="2">SIX WORKFLOWS / ONE SHARED FOUNDATION</text>
+    <g transform="translate(815 62)">
+      <rect width="565" height="397" rx="24" fill="url(#panel)" stroke="#466252"/>
+      <text x="28" y="39" fill="#b8cec0" font-size="12" letter-spacing="2">THE SERVICE DESK</text>
+      <circle cx="526" cy="34" r="5" fill="#d5ee9b"/>
+      <g stroke="#64816b" stroke-width="1.5" fill="none">
+        <path d="M282 155V115M282 237V283M201 197H159M363 197H406"/>
+        <path d="M201 176L159 114M363 217L406 283" stroke-dasharray="4 5"/>
+      </g>
+      <rect x="201" y="155" width="162" height="82" rx="14" fill="#d5ee9b"/>
+      <text x="282" y="188" text-anchor="middle" fill="#17392e" font-size="19" font-weight="700">One conversation.</text>
+      <text x="282" y="213" text-anchor="middle" fill="#35513d" font-size="13">Chat / upload / tickets</text>
+      <g fill="#18372e" stroke="#4e6b54">
+        <rect x="27" y="75" width="132" height="60" rx="11"/><rect x="215" y="64" width="135" height="51" rx="11"/>
+        <rect x="406" y="167" width="132" height="60" rx="11"/><rect x="406" y="270" width="132" height="60" rx="11"/>
+        <rect x="215" y="283" width="135" height="60" rx="11"/><rect x="27" y="167" width="132" height="60" rx="11"/>
+      </g>
+      <g fill="#e7ede0" font-size="14" text-anchor="middle">
+        <text x="93" y="99">T1 / Knowledge</text><text x="93" y="120" fill="#9eb89f" font-size="12">Update &amp; rollback</text>
+        <text x="282" y="85">T4 / Policies</text><text x="282" y="104" fill="#9eb89f" font-size="12">Retrieve &amp; cite</text>
+        <text x="472" y="191">T2 / Documents</text><text x="472" y="213" fill="#9eb89f" font-size="12">Extract &amp; compare</text>
+        <text x="472" y="294">T3 / Tickets</text><text x="472" y="316" fill="#9eb89f" font-size="12">Route &amp; track SLA</text>
+        <text x="282" y="307">T5 / Escalation</text><text x="282" y="328" fill="#9eb89f" font-size="12">Detect &amp; hand off</text>
+        <text x="93" y="191">T6 / Context</text><text x="93" y="213" fill="#9eb89f" font-size="12">Language &amp; sessions</text>
+      </g>
+      <text x="282" y="374" text-anchor="middle" fill="#92af98" font-size="12">Clock / configuration / security / audit / metrics</text>
+    </g>
+  </g>
+</svg>

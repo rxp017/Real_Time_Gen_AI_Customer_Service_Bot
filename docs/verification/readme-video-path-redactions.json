@@ -1,0 +1,10 @@
+{
+  "scope": "Path/user text only. Metrics, verdicts, timestamps and original recorded hashes remain unchanged.",
+  "changed": [
+    {
+      "path": "docs/verification/readme-video-pytest.txt",
+      "before_sha256": "f2170bc79500e9c19b2aca8a4aa30ccd819ab8f5fef5a796f28b3c59a8338b08",
+      "after_sha256": "96bff6535ab89ff7d4fecfd1d06fe99855f3a57f8639cd89ee93239afa61a361"
+    }
+  ]
+}

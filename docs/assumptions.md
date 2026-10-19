@@ -1,5 +1,13 @@
 # Project assumptions - current revision 2026-10-19
 
+## README and video presentation
+
+- The user selected Google Vids, English, landscape and approximately three minutes, and already chose an avatar. The production kit reuses that avatar and its saved voice without inventing a replacement appearance.
+- The edit target is 192 seconds, planned as 24 eight-second scenes: ten avatar scenes and fourteen real captures. Eight seconds is a conservative common unit; current Vids help lists a 3–10 second selector while the Veo 3.1 API lists 4/6/8 seconds. Dedicated Vids avatar segments have a separate up-to-60-second limit. Actual model, controls, timing and plan quota must be checked in the user's Vids interface.
+- The README uses illustrative SVG diagrams and an existing actual local UI capture. Video materials are prompts and capture directions only; no generation, spending, real deployment or completed video is claimed. Software footage must preserve actual outputs, with fixture runs labelled offline.
+
+## Application and evaluation assumptions
+
 - The approved revision sequence governs these changes; original task files remain unchanged. Latest applicable family/product/region resolution occurs before lexical or embedding scoring. Historical/future policy vectors may exist for authorized as-of queries but cannot bypass current-date filters.
 - T4 and T5 development sets were committed separately before implementation changes. Only these development sets drove thresholds, prompts and resources. Existing exposed frozen sets are re-evaluated after source/config registration; no outcome drove further tuning. CI checks immutable hashes and complete normalized text contamination.
 - T4 retains the flagged parent for audit. Independent safe sentences are projected into an unflagged retrieval/embedding view; neutralized instructions never become evidence. Pure injected content remains excluded, and T1 still quarantines injection-flagged source files. Sentence adjacency can conservatively lose safe text.

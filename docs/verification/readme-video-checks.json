@@ -1,0 +1,30 @@
+{
+  "scope": "Documentation/prompt validation, not generated video or model-quality validation",
+  "documents_checked": 4,
+  "broken_local_links": [],
+  "readme_test_names_found": true,
+  "svg_assets_parse_and_have_accessible_names": true,
+  "storyboard_scenes": 24,
+  "avatar_scenes": 10,
+  "actual_capture_scenes": 14,
+  "total_planned_seconds": 192,
+  "maximum_narration_words_per_scene": 18,
+  "standalone_presenter_prompts": 10,
+  "selected_avatar_preserved_in_instructions": true,
+  "application_config_tasks_fixtures_and_tests_unchanged": true,
+  "secret_findings": [],
+  "video_generated": false,
+  "paid_generation_performed": false,
+  "demo_command_checks": {
+    "demo_t1.py": 0,
+    "demo_t2.py": 0,
+    "demo_t3.py": 0,
+    "demo_t4.py": 0,
+    "demo_t5.py": 0
+  },
+  "demo_cleanup_fix": "Initial demo_t5 run printed results then failed Windows temporary-directory cleanup because its ticket repository remained open. Closing that repository made the unchanged demonstration exit 0.",
+  "asset_sha256": {
+    "docs/assets/readme-hero.svg": "f11e0d87959666d6a3c381b6d0d72612e74877d05c317e26d112e4cc9c65b3d0",
+    "docs/assets/readme-proof.svg": "b5fb4f198f1adfb52c1ba4e4a86b3cb0de2b3852cdca7addc7e2999cb6baa486"
+  }
+}

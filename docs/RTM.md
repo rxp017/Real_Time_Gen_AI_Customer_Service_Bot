@@ -251,3 +251,13 @@ Current revision does not convert historical PASS rows into universal NLP or pro
 | Requirement | File:function | Test / evidence | Status |
 | --- | --- | --- | --- |
 | Final Ubuntu/Windows pytest+Ruff and Docker verification | .github/workflows/ci.yml:Install OCR (Windows) | Chocolatey 503 logs retained; pinned vendor installer/hash replaces failing feed; full local pytest/Ruff rerun; final Actions run linked in handoff | Application/tests unchanged; final hosted outcome verified separately |
+
+## Approved README and video presentation
+
+| Requirement | File / artifact | Verification / evidence | Status |
+| --- | --- | --- | --- |
+| Upgrade the GitHub README visually while retaining real evidence and mentor attribution | README.md; docs/assets/readme-hero.svg, readme-proof.svg | Browser graphics preview; link/asset/test-name checks in readme-video-checks.json; earlier measurements retained with invalid/unverified labels | PASS documentation |
+| Plan for the actual Google Vids per-generation duration | docs/video/google-vids-production.md | Dated primary Google sources distinguish 3–10 second Vids clips, separate 60-second avatar segments and Veo 3.1 API 4/6/8 second clips | PASS sourced planning; actual account controls may differ |
+| Reuse the already-chosen avatar, English, landscape and roughly three minutes | docs/video/storyboard.json; production kit | 24 contiguous eight-second scenes total 192 seconds; ten existing-avatar scenes and fourteen actual recordings | PASS plan; no video generated |
+| Clear per-scene dialogue, lens intent, camera movement, background, lighting and consistency | docs/video/scene-prompts.md; prompts/scene-*.txt | Ten self-contained presenter prompts, fourteen capture specifications; narration at most 18 words per scene; same selected identity/voice and room reference | PASS prompt coverage; generated consistency not claimed |
+| Demo commands used in the README exit successfully | scripts/demo_t1.py through demo_t5.py | All five run offline; demo_t5 ticket repository handle closed after observed Windows cleanup failure; full pytest/Ruff rerun | PASS actual commands; no feature or evaluation changes |

@@ -1,0 +1,17 @@
+Generate one eight-second, 16:9 presenter shot, 24 fps where supported, 1080p if available. No cuts inside the shot. The exact lens numbers below describe visual intent, not guaranteed camera metadata.
+
+Use the exact avatar already selected in this Google Vids document as the identity and voice reference. Preserve its face, body, hair, clothing and accessories; one presenter only. Reuse the approved background reference: a sage wall, pale oak desk at the lower edge, matte closed laptop image-left, terracotta mug image-right, small plant far image-left, warm table lamp far image-right. Keep all prop positions unchanged.
+
+Lighting is identical to the approved reference: large soft 5000 K key from camera-left at 45 degrees and slightly above eye level, broad camera-right fill one stop lower, faint neutral edge light behind image-right, dim 2700 K background practical. Natural skin texture, subtle catchlights, controlled highlights, fixed exposure and white balance. Background slightly darker than the face.
+
+English speech, using the selected avatar's saved voice and existing accent, around 140–150 words per minute. Relaxed and specific, like explaining a useful project to one friend. Dry close voice, quiet room tone, no music, no additional voices. Small natural gestures and blinking. No sales-pitch intonation or formal newsreader posture.
+
+CAMERA AND OPTICS: 50 mm full-frame equivalent, f/2.8 intent; chest-up medium shot, eye-level. Focus on the avatar's eyes. Natural perspective, mild background blur, level horizon, no autofocus hunting.
+CAMERA MOVEMENT: Locked tripod; match scene 01's camera axis.
+PERFORMANCE: A small nod on the first sentence; keep the second sentence clear and matter-of-fact.
+
+TIMING: 0.0–0.35 seconds: settle into the shot. Around 0.35–7.5 seconds: speak the following English line once, naturally, with synchronized mouth movement. Keep a small pause where punctuation suggests it; finish the whole sentence. Remaining time: a quiet natural hold.
+DIALOGUE, exactly: "Before searching policies, it checks access, dates, and versions. Then the answer has to cite its evidence."
+
+CONTINUITY: Same selected avatar, saved voice, outfit, room, prop positions and light direction as the approved reference and every other presenter shot. Do not invent a different person, accent or location. Keep hands anatomically natural.
+PICTURE EXCLUSIONS: No subtitles, logos, readable screens, generated UI, animated statistics, extra people, watermarks added by the prompt, transitions or music. Platform-applied labels remain untouched. Titles/captions are added later in the editor.
