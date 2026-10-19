@@ -55,7 +55,7 @@ Local checkout, official portable Python 3.11.9:
 ..................................................................       [100%]
 ============================== warnings summary ===============================
 .runtime\python311\Lib\site-packages\fastapi\testclient.py:1
-  C:\Users\rajashekar\Desktop\Projects_Backup\Real_Time_Gen_AI_Customer_Service_Bot\.runtime\python311\Lib\site-packages\fastapi\testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
+  WORKSPACE\.runtime\python311\Lib\site-packages\fastapi\testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
     from starlette.testclient import TestClient as TestClient  # noqa
 
 -- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
@@ -201,7 +201,7 @@ Exact README OCR block output:
 
 ```text
 {
-  "executable": "C:/Program Files/Tesseract-OCR/tesseract.exe",
+  "executable": "TESSERACT_INSTALL/tesseract.exe",
   "version": "tesseract v5.4.0.20240606",
   "available_languages": [
     "eng",
@@ -231,7 +231,7 @@ Clone's own interpreter, from its root:
 ..................................................................       [100%]
 ============================== warnings summary ===============================
 .runtime\python311\Lib\site-packages\fastapi\testclient.py:1
-  C:\Users\rajashekar\Desktop\Projects_Backup\Real_Time_Gen_AI_Customer_Service_Bot\.verification\audit-recheck-public\.runtime\python311\Lib\site-packages\fastapi\testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
+  WORKSPACE\.verification\audit-recheck-public\.runtime\python311\Lib\site-packages\fastapi\testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
     from starlette.testclient import TestClient as TestClient  # noqa
 
 -- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html

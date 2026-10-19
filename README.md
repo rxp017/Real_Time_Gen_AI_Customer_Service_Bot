@@ -56,7 +56,7 @@ No OCR environment overrides are needed. The system language directory is detect
 Run from the cloned project root in PowerShell. The bootstrap creates an isolated official Python 3.11.9 runtime and installs pinned dependencies/language resources, preserving an existing `.env`:
 
 ```powershell
-if (-not (Get-Command tesseract -ErrorAction SilentlyContinue) -and -not (Test-Path 'C:/Program Files/Tesseract-OCR/tesseract.exe')) {
+if (-not (Get-Command tesseract -ErrorAction SilentlyContinue) -and -not (Test-Path (Join-Path $env:ProgramFiles 'Tesseract-OCR/tesseract.exe'))) {
     winget install --id UB-Mannheim.TesseractOCR --source winget --exact --version 5.4.0.20240606 --silent --accept-package-agreements --accept-source-agreements
 }
 .\scripts\bootstrap_windows.ps1
@@ -96,6 +96,13 @@ python scripts/export_report.py
 
 On Windows, substitute `.\.runtime\python311\python.exe` for `python`. [CI](https://github.com/rxp017/Real_Time_Gen_AI_Customer_Service_Bot/actions/workflows/ci.yml) installs OCR and runs the full suite/Ruff on Ubuntu and Windows, plus a Docker build/OCR check. Current command outputs and frozen-set measurements are in [the report](docs/REPORT.md). Historical audits and verification exhaust are preserved in [docs/archive](docs/archive/README.md).
 
-## Limits
+## Measured results and limits
 
-The frozen live retrieval set answered 3/20 supported questions with correct citations and 0/52 false answers; recall is limited. The new sentiment pipeline scored 22/48, with only six accepted provider classifications. Live translation hit HTTP 429; source fallback preserved entities, while successful live translation remains unverified. Rules/OCR/name recognition are bounded; source verification does not independently certify translation meaning. The legacy Streamlit chain is unverified. SQLite, scheduling and rate budgets require one worker; external alerts are local records. Render Free sleeps and loses ephemeral state, so it is suitable for a demonstration, not durable support operations. See [details](docs/REPORT.md).
+Pre-fix exposed sets: T4 3/20 correct-cited answers (15.00%), 0/52 false answers; T5 pipeline 22/48 (45.83%), six accepted provider classifications. Post-fix T4 observed 12/20 correct-cited answers and 0/52 false answers, but the run is **invalid**: provider failures affected 10/72 cases (13.89%), above the preregistered 10% limit. The user chose quota-limited completion; no optional rerun or live T5 post-fix run was taken. Separate T5 pattern-only re-evaluation: 20/48 (41.67%). These exposed sets were not used for tuning. [All runs, Wilson intervals and protocol](docs/REPORT.md).
+
+The independent tuned T4 dev regression achieved 48/48 correct-cited answers and 0/38 false answers with 100 distractors using recorded real embeddings and deterministic source quotation; this is not live generation accuracy. Live translation still hit HTTP 429, so no live translation success is claimed. Rules/OCR/name recognition are bounded; translation bytes do not certify meaning. The legacy Streamlit chain is unverified. SQLite and timers require one worker; external alerts remain local records. Render Free sleeps and loses ephemeral state. Live URL: not deployed.
+## Measured results and limits
+
+Pre-fix exposed sets: T4 3/20 correct-cited answers (15.00%), 0/52 false answers; T5 pipeline 22/48 (45.83%), six accepted provider classifications. Post-fix T4 observed 12/20 correct-cited answers and 0/52 false answers, but the run is **invalid**: provider failures affected 10/72 cases (13.89%), above the preregistered 10% limit. The user chose quota-limited completion; no optional rerun or live T5 post-fix run was taken. Separate T5 pattern-only re-evaluation: 20/48 (41.67%). These exposed sets were not used for tuning. [All runs, Wilson intervals and protocol](docs/REPORT.md).
+
+The independent tuned T4 dev regression achieved 48/48 correct-cited answers and 0/38 false answers with 100 distractors using recorded real embeddings and deterministic source quotation; this is not live generation accuracy. Live translation still hit HTTP 429, so no live translation success is claimed. Rules/OCR/name recognition are bounded; translation bytes do not certify meaning. The legacy Streamlit chain is unverified. SQLite and timers require one worker; external alerts remain local records. Render Free sleeps and loses ephemeral state. Live URL: not deployed.

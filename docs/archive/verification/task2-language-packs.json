@@ -1,18 +1,18 @@
 [
   {
-    "Path": "C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.runtime\\tessdata\\eng.traineddata",
+    "Path": "WORKSPACE\\.runtime\\tessdata\\eng.traineddata",
     "Hash": "7D4322BD2A7749724879683FC3912CB542F19906C83BCC1A52132556427170B2"
   },
   {
-    "Path": "C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.runtime\\tessdata\\hin.traineddata",
+    "Path": "WORKSPACE\\.runtime\\tessdata\\hin.traineddata",
     "Hash": "4C73FFC59D497C186B19D1E90F5D721D678EA6B2E277B719BEE4E2AF12271825"
   },
   {
-    "Path": "C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.runtime\\tessdata\\spa.traineddata",
+    "Path": "WORKSPACE\\.runtime\\tessdata\\spa.traineddata",
     "Hash": "6F2E04D02774A18F01BED44B1111F2CD7F3BA7AC9DC4373CD3F898A40EA6B464"
   },
   {
-    "Path": "C:\\Users\\rajashekar\\Desktop\\Projects_Backup\\Real_Time_Gen_AI_Customer_Service_Bot\\.runtime\\tessdata\\tel.traineddata",
+    "Path": "WORKSPACE\\.runtime\\tessdata\\tel.traineddata",
     "Hash": "D10691FDDD5B67802E1C12800EBB321D3B8BCD8D24A2AC3FF206F93188C04AB5"
   }
 ]

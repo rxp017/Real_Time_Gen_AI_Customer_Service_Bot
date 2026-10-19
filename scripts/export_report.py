@@ -69,7 +69,7 @@ def export(source: Path = Path("docs/REPORT.md"), destination: Path = Path("docs
         canvas.saveState()
         canvas.setFont("Helvetica", 8)
         canvas.setFillColor(colors.HexColor("#52685b"))
-        canvas.drawString(44, 25, "Customer service bot | Engineering report | 2026-10-17")
+        canvas.drawString(44, 25, "Customer service bot | Engineering report | 2026-10-19")
         canvas.drawRightString(A4[0] - 44, 25, str(document.page))
         canvas.restoreState()
     SimpleDocTemplate(str(destination), pagesize=A4, leftMargin=44, rightMargin=44, topMargin=42, bottomMargin=42,

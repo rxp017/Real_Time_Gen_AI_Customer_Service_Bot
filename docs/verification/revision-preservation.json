@@ -1,0 +1,33 @@
+{
+  "release_baseline": "5526924",
+  "existing_test_files_checked": 16,
+  "existing_test_functions_checked": 221,
+  "changed_or_deleted_test_functions": [],
+  "archive_files_verified_path_only": [
+    "docs/archive/audit-recheck.md",
+    "docs/archive/audit.md",
+    "docs/archive/task2.md",
+    "docs/archive/verification/audit-baseline-pytest.txt",
+    "docs/archive/verification/audit-final-pytest.txt",
+    "docs/archive/verification/audit-fresh-clone-before.txt",
+    "docs/archive/verification/audit-fresh-clone-pytest.txt",
+    "docs/archive/verification/audit-fresh-clone.txt",
+    "docs/archive/verification/audit-fresh-install-final.txt",
+    "docs/archive/verification/audit-fresh-install.txt",
+    "docs/archive/verification/audit-ocr.txt",
+    "docs/archive/verification/audit-readme-install.txt",
+    "docs/archive/verification/audit-recheck-fresh-ocr.txt",
+    "docs/archive/verification/audit-recheck-fresh-pytest.txt",
+    "docs/archive/verification/audit-recheck-pytest.txt",
+    "docs/archive/verification/audit-reproductions-after.txt",
+    "docs/archive/verification/audit-reproductions-before.txt",
+    "docs/archive/verification/pytest-provider.txt",
+    "docs/archive/verification/pytest-t6.txt",
+    "docs/archive/verification/pytest-task2.txt",
+    "docs/archive/verification/pytest-task3.txt",
+    "docs/archive/verification/pytest-task5.txt",
+    "docs/archive/verification/pytest.txt",
+    "docs/archive/verification/task2-language-packs.json",
+    "docs/archive/verification/task2-ocr-installation.json"
+  ]
+}

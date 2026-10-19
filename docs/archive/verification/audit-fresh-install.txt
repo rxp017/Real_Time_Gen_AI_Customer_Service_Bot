@@ -109,7 +109,7 @@ Successfully installed Pillow-12.3.0 PyYAML-6.0.3 Pygments-2.21.0 annotated-doc-
 Python 3.11.9
 No broken requirements found.
 {
-  "executable": "C:/Program Files/Tesseract-OCR/tesseract.exe",
+  "executable": "TESSERACT_INSTALL/tesseract.exe",
   "version": "tesseract v5.4.0.20240606",
   "available_languages": [
     "eng",

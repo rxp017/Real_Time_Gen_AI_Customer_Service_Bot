@@ -49,16 +49,16 @@
 2026-10-17T15:03:24.1387577Z ##[endgroup]
 2026-10-17T15:03:24.2136794Z Syncing repository: rxp017/Real_Time_Gen_AI_Customer_Service_Bot
 2026-10-17T15:03:24.2138981Z ##[group]Getting Git version info
-2026-10-17T15:03:24.2140050Z Working directory is '/home/runner/work/Real_Time_Gen_AI_Customer_Service_Bot/Real_Time_Gen_AI_Customer_Service_Bot'
+2026-10-17T15:03:24.2140050Z Working directory is 'CI_WORKSPACE'
 2026-10-17T15:03:24.2141922Z [command]/usr/bin/git version
 2026-10-17T15:03:24.2183954Z git version 2.55.0
 2026-10-17T15:03:24.2197782Z ##[endgroup]
-2026-10-17T15:03:24.2206389Z Temporarily overriding HOME='/home/runner/work/_temp/3a5a2207-1ee9-4407-9409-9fda5b6fea37' before making global git config changes
+2026-10-17T15:03:24.2206389Z Temporarily overriding HOME='CI_WORKSPACE' before making global git config changes
 2026-10-17T15:03:24.2208035Z Adding repository directory to the temporary git global config as a safe directory
-2026-10-17T15:03:24.2209502Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/Real_Time_Gen_AI_Customer_Service_Bot/Real_Time_Gen_AI_Customer_Service_Bot
-2026-10-17T15:03:24.2311811Z Deleting the contents of '/home/runner/work/Real_Time_Gen_AI_Customer_Service_Bot/Real_Time_Gen_AI_Customer_Service_Bot'
+2026-10-17T15:03:24.2209502Z [command]/usr/bin/git config --global --add safe.directory CI_WORKSPACE
+2026-10-17T15:03:24.2311811Z Deleting the contents of 'CI_WORKSPACE'
 2026-10-17T15:03:24.2314644Z ##[group]Initializing the repository
-2026-10-17T15:03:24.2315947Z [command]/usr/bin/git init /home/runner/work/Real_Time_Gen_AI_Customer_Service_Bot/Real_Time_Gen_AI_Customer_Service_Bot
+2026-10-17T15:03:24.2315947Z [command]/usr/bin/git init CI_WORKSPACE
 2026-10-17T15:03:24.2703091Z hint: Using 'master' as the name for the initial branch. This default branch name
 2026-10-17T15:03:24.2704857Z hint: will change to "main" in Git 3.0. To configure the initial branch name
 2026-10-17T15:03:24.2706104Z hint: to use in all of your new repositories, which will suppress this warning,
@@ -72,7 +72,7 @@
 2026-10-17T15:03:24.2713216Z hint: 	git branch -m <name>
 2026-10-17T15:03:24.2713627Z hint:
 2026-10-17T15:03:24.2714151Z hint: Disable this message with "git config set advice.defaultBranchName false"
-2026-10-17T15:03:24.2715109Z Initialized empty Git repository in /home/runner/work/Real_Time_Gen_AI_Customer_Service_Bot/Real_Time_Gen_AI_Customer_Service_Bot/.git/
+2026-10-17T15:03:24.2715109Z Initialized empty Git repository in CI_WORKSPACE/.git/
 2026-10-17T15:03:24.2716650Z [command]/usr/bin/git remote add origin https://github.com/rxp017/Real_Time_Gen_AI_Customer_Service_Bot
 2026-10-17T15:03:24.2912733Z ##[endgroup]
 2026-10-17T15:03:24.2913683Z ##[group]Disabling automatic garbage collection
@@ -566,7 +566,7 @@
 2026-10-17T15:03:44.0877461Z #10 1.943   Downloading iniconfig-2.3.1-py3-none-any.whl.metadata (2.8 kB)
 2026-10-17T15:03:44.0878339Z #10 1.974 Collecting opentelemetry-api==1.45.1 (from -r requirements.txt (line 18))
 2026-10-17T15:03:44.2350345Z #10 1.987   Downloading opentelemetry_api-1.45.1-py3-none-any.whl.metadata (1.4 kB)
-2026-10-17T15:03:44.2351438Z #10 1.988 Requirement already satisfied: packaging==26.3 in /usr/local/lib/python3.11/site-packages (from -r requirements.txt (line 19)) (26.3)
+2026-10-17T15:03:44.2351438Z #10 1.988 Requirement already satisfied: packaging==26.3 in PYTHON_PACKAGES (from -r requirements.txt (line 19)) (26.3)
 2026-10-17T15:03:44.2352170Z #10 2.011 Collecting pluggy==1.6.0 (from -r requirements.txt (line 20))
 2026-10-17T15:03:44.2352740Z #10 2.023   Downloading pluggy-1.6.0-py3-none-any.whl.metadata (4.8 kB)
 2026-10-17T15:03:44.2353281Z #10 2.122 Collecting pydantic==2.14.1 (from -r requirements.txt (line 21))
@@ -688,9 +688,9 @@
 2026-10-17T15:03:50.6034993Z Post job cleanup.
 2026-10-17T15:03:50.6627752Z [command]/usr/bin/git version
 2026-10-17T15:03:50.6657424Z git version 2.55.0
-2026-10-17T15:03:50.6682196Z Temporarily overriding HOME='/home/runner/work/_temp/7867e76a-ca84-4f76-ab8a-498ef85899d8' before making global git config changes
+2026-10-17T15:03:50.6682196Z Temporarily overriding HOME='CI_WORKSPACE' before making global git config changes
 2026-10-17T15:03:50.6683140Z Adding repository directory to the temporary git global config as a safe directory
-2026-10-17T15:03:50.6686284Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/Real_Time_Gen_AI_Customer_Service_Bot/Real_Time_Gen_AI_Customer_Service_Bot
+2026-10-17T15:03:50.6686284Z [command]/usr/bin/git config --global --add safe.directory CI_WORKSPACE
 2026-10-17T15:03:50.6712585Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
 2026-10-17T15:03:50.6736015Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
 2026-10-17T15:03:50.6886788Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader

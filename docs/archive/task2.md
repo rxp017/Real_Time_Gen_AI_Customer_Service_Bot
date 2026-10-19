@@ -34,7 +34,7 @@ New-Item -ItemType Directory -Force .runtime/tessdata | Out-Null
 foreach ($code in @('eng','hin','tel','spa')) {
     Invoke-WebRequest -Uri "https://raw.githubusercontent.com/tesseract-ocr/tessdata_fast/4.1.0/$code.traineddata" -OutFile ".runtime/tessdata/$code.traineddata"
 }
-$env:TESSERACT_CMD = 'C:/Program Files/Tesseract-OCR/tesseract.exe'
+$env:TESSERACT_CMD = 'TESSERACT_INSTALL/tesseract.exe'
 & $env:TESSERACT_CMD --version
 & $env:TESSERACT_CMD --tessdata-dir .runtime/tessdata --list-langs
 .\.runtime\python311\python.exe -m pip install -r requirements.txt

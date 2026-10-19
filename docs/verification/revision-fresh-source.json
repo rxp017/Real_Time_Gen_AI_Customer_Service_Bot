@@ -1,0 +1,9 @@
+{
+  "cloned_commit": "5905d7bbc3b2a991a9b2784f733c64b9f10d049e",
+  "runtime_source_files_compared": 48,
+  "runtime_source_matches_current": true,
+  "scope": "Fresh application clone of step 7; runtime code, configuration, resources, pinned dependencies, workflow and Dockerfile identical to final revision. Final extra three tests only cover documentation redaction; docs/export maintenance changes are separate.",
+  "installation": "README Windows bootstrap, official portable Python 3.11.9 and pinned dependencies; all four OCR packs fetched and checked. Existing host Tesseract reused; not a fresh operating system.",
+  "install_command": ".\\scripts\\bootstrap_windows.ps1",
+  "differences": []
+}

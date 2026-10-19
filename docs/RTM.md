@@ -1,4 +1,4 @@
-# Requirements trace matrix - 2026-10-17
+# Requirements trace matrix - 2026-10-19
 
 Original task documents are unchanged. The approved 2026-10-17 instruction supersedes the historical T4 ordering: authorization, validity/injection exclusion and latest-version resolution now precede all similarity. PASS means the stated local contract is tested, not general accuracy. Partial capability limits remain explicit. Actual outputs and held-out measurements: [REPORT.md](REPORT.md). Earlier RTM and audit evidence are retained in [archive](archive/README.md).
 
@@ -194,7 +194,7 @@ Original task documents are unchanged. The approved 2026-10-17 instruction super
 | Create 30+ fixture conversations per language in tests/fixtures/. | `scripts/create_t6_fixtures.py:write_fixtures`, `tests/fixtures/{en,hi,te,es}.json` | `test_fixture_conversations_per_language` verifies 35 unique initial messages and three turns per conversation in each language | PASS |
 | Finish with RTM for T6 and pytest output. | `docs/RTM.md`, `docs/verification/pytest-t6.txt`, `docs/README.md` | Captured full-suite command output; all 14 required named tests exist | PASS |
 
-## Approved release additions
+## Previous release additions (historical measured rates retained)
 
 | Requirement | File:function | Test / evidence | Status |
 | --- | --- | --- | --- |
@@ -219,3 +219,29 @@ Original task documents are unchanged. The approved 2026-10-17 instruction super
 | Shared architecture wraps existing training chain | app/chatbot.py:handle_query; preserved src/langchain_helper.py | original FAQ content imported; normal runtime uses shared RAG, not the old chain | PARTIAL legacy-chain execution remains unverified |
 
 Current outputs: [REPORT.md](REPORT.md). No universal NLP, OCR, injection or production reliability claim follows from PASS rows.
+
+## Approved diagnosis revision - 2026-10-19
+
+| Requirement | File:function | Test / evidence | Status |
+| --- | --- | --- | --- |
+| Freeze independent T4 dev data with 60+ paraphrases, authorized-restricted, scope conflicts, safe partial injection and 100 distractors | tests/fixtures/task4/dev/; scripts/evaluate_development.py | 49e77ee; 86 cases / 111 docs; SHA in REPORT | PASS provenance; dev-only tuning |
+| Log lexical, embedding, fused scores, threshold/rank decisions and refusal stage | core/retrieval.py:PolicyRetrievalEngine.retrieve, query | test_trace_scores_only_survivors_with_components_and_rank; test_trace_distinguishes_threshold_verifier_and_embedding_fallback; dev trace JSON | PASS |
+| Filters and latest version before every score, no excluded-content leakage | core/retrieval.py:PolicyRetrievalEngine.retrieve; retrieval_view | test_filters_and_versions_precede_all_similarity; original restricted/expired/future tests | PASS contracts |
+| Margin/rank acceptance, top-k with per-cited-source verifier; dev lookalikes stay at zero | core/retrieval.py:PolicyRetrievalEngine.retrieve, query | test_rank_margin_rejects_near_tied_weak_evidence; test_top_k_generation_verifies_each_citation_against_its_own_source; test_uncited_or_wrong_source_claims_are_removed; test_dev_lookalikes_zero_false_answers_with_one_hundred_distractors | PASS dev regression 48/48 and 0/38; not live accuracy |
+| Neutralize injected span and permit independent safe evidence | core/retrieval.py:retrieval_view, ingest_document | test_injected_document_independent_safe_sentences_can_answer; test_prompt_injected_doc_ignored | PASS bounded sentence projection; T1 quarantine retained |
+| Update golden set and same hybrid quality gate | data/golden/retrieval_regressions.json; core/updates.py:UpdateService.evaluate | test_quality_gate_uses_ingested_hybrid_vectors; quality accuracy/grounding drop tests | PASS |
+| Freeze separate multilingual T5 dev set and improve only from it | tests/fixtures/task5/dev_sentiment.json; resources/languages/; core/sentiment.py | 3e6add5; patterns 59/60 dev; live dev accepted 6, quota fallback 54 | PASS provenance; limited model coverage |
+| Diagnose confidence/schema/quota/injection outcomes without inventing old failure reasons | core/sentiment.py:SentimentClassifier._provider_result | test_classifier_rejection_reasons_are_explicit; dev status counts; REPORT | PASS current reasons; old 42 rejection reasons unavailable |
+| Bounded 429 retry/backoff honors retry-after and request deadline for generation/embedding/translation | core/provider_retry.py; core/llm.py | test_quota_retries_honour_retry_after_within_deadline; test_retry_hint_beyond_deadline_never_waits_or_sends | PASS offline contracts; live quota remains |
+| Masked-text/history-hash per-session bounded TTL classification cache | core/sentiment.py:SentimentClassifier | test_classification_cache_session_history_ttl_bound_and_no_raw_pii | PASS |
+| Keep enum/injection controls and independent high-risk detector | core/sentiment.py; core/risk.py | test_classifier_output_enum_and_schema_validation; test_classifier_prompt_injection_never_obeyed; test_high_risk_independent_of_provider_positive_label | PASS contracts; bounded rule vocabulary |
+| Preregister >10% invalidation, at most one identical-hash rerun, report all runs | docs/evaluation-preregistration.json; scripts/postfix_protocol.py | test_more_than_ten_percent_infrastructure_invalidates_run; test_only_one_invalid_run_rerun_with_identical_hash | PASS protocol; T4 run 1 invalid, rerun not taken |
+| Report pre-fix exposure, post-fix answer/correct-cited/false rates and Wilson intervals | scripts/run_postfix.py; scripts/evaluation_support.py:wilson | revision-t4-postfix-run1.json; REPORT | PASS disclosure; no valid post-fix live accuracy claim |
+| Separate model-assisted and fallback classification results | scripts/evaluate_sentiment_development.py:measure | revision-t5-dev-live.json; revision-t5-postfix-fallback-only.json | PARTIAL live post-fix skipped under quota; fallback 20/48, no model denominator |
+| Provider spacing only in evaluation and rate budgets; honest quota status | scripts/evaluation_support.py:PacedProvider; app/chatbot.py | test_evaluation_waits_for_cooldown_before_starting_next_request_deadline; sequence stdout | PASS |
+| Real translation success only with recorded provider evidence | core/language.py:LanguageProcessor.localize; scripts/verify_translation_live.py | revision-translation-live.json; protected-translation contract tests | PASS honest fallback; live success UNVERIFIED (429) |
+| Held-out hashes checked in CI and full-text contamination rejected | scripts/check_holdouts.py; .github/workflows/ci.yml | test_heldout_hashes_and_no_implementation_contamination; test_guard_rejects_heldout_text_in_implementation_or_examples | PASS bounded full-text guard |
+| Redact current tracked docs/verification path and username text, retain archive measurements | scripts/redact_document_paths.py | test_document_redaction_preserves_measurements_and_valid_json; test_document_redaction_keeps_task_sources; revision-path-redactions.json | PASS current files; history not rewritten |
+| README, REPORT Markdown/PDF contain only measured numbers, preserve attribution and original task/tests | README.md; docs/REPORT.md, REPORT.pdf | final pytest/Ruff; integrity check; PDF open check; final hosted CI linked in handoff | PASS artifacts; quota limits disclosed |
+
+Current revision does not convert historical PASS rows into universal NLP or production verification. See REPORT for invalid/unrun live evaluations and source evidence.

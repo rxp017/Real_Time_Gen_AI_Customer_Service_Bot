@@ -59,7 +59,7 @@ _ test_audit_policy_validity_compares_instants[2026-01-01T23:00:00+00:00-2026-01
 
 effective = '2026-01-01T23:00:00+00:00', expiry = '2026-01-02T00:00:00+05:30'
 valid = False
-tmp_path = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/pytest/test_audit_policy_validity_com0')
+tmp_path = WindowsPath('WORKSPACE/.verification/pytest/test_audit_policy_validity_com0')
 
     @pytest.mark.parametrize("effective,expiry,valid", [
         ("2026-01-01T23:00:00+00:00", "2026-01-02T00:00:00+05:30", False),
@@ -81,7 +81,7 @@ _ test_audit_policy_validity_compares_instants[2026-01-02T00:00:00+05:30-2026-01
 
 effective = '2026-01-02T00:00:00+05:30', expiry = '2026-01-01T23:00:00+00:00'
 valid = True
-tmp_path = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/pytest/test_audit_policy_validity_com1')
+tmp_path = WindowsPath('WORKSPACE/.verification/pytest/test_audit_policy_validity_com1')
 
     @pytest.mark.parametrize("effective,expiry,valid", [
         ("2026-01-01T23:00:00+00:00", "2026-01-02T00:00:00+05:30", False),
@@ -99,7 +99,7 @@ tmp_path = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Ge
 tests\test_audit_regressions.py:94: 
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 
-path = WindowsPath('C:/Users/rajashekar/Desktop/Projects_Backup/Real_Time_Gen_AI_Customer_Service_Bot/.verification/pytest/test_audit_policy_validity_com1/offsets.json')
+path = WindowsPath('WORKSPACE/.verification/pytest/test_audit_policy_validity_com1/offsets.json')
 
     def read_policy(path: Path) -> tuple[dict[str, Any], str]:
         if path.stat().st_size > int(get_config().get("updates.max_file_bytes")):

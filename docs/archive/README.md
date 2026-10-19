@@ -41,7 +41,7 @@ The production agent roster is intentionally empty; configure actual agents unde
 ..........................................................               [100%]
 ============================== warnings summary ===============================
 .runtime\python311\Lib\site-packages\fastapi\testclient.py:1
-  C:\Users\rajashekar\Desktop\Projects_Backup\Real_Time_Gen_AI_Customer_Service_Bot\.runtime\python311\Lib\site-packages\fastapi\testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
+  WORKSPACE\.runtime\python311\Lib\site-packages\fastapi\testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
     from starlette.testclient import TestClient as TestClient  # noqa
 
 -- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
@@ -106,7 +106,7 @@ Command:
 ................................                                         [100%]
 ============================== warnings summary ===============================
 .runtime\python311\Lib\site-packages\fastapi\testclient.py:1
-  C:\Users\rajashekar\Desktop\Projects_Backup\Real_Time_Gen_AI_Customer_Service_Bot\.runtime\python311\Lib\site-packages\fastapi\testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
+  WORKSPACE\.runtime\python311\Lib\site-packages\fastapi\testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
     from starlette.testclient import TestClient as TestClient  # noqa
 
 -- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
@@ -133,7 +133,7 @@ Command: `.\.runtime\python311\python.exe -X utf8 scripts/check_ocr.py`
 
 ```json
 {
-  "executable": "C:/Program Files/Tesseract-OCR/tesseract.exe",
+  "executable": "TESSERACT_INSTALL/tesseract.exe",
   "version": "tesseract v5.4.0.20240606",
   "available_languages": [
     "eng",
@@ -256,7 +256,7 @@ Command:
 .........................................................                [100%]
 ============================== warnings summary ===============================
 .runtime\python311\Lib\site-packages\fastapi\testclient.py:1
-  C:\Users\rajashekar\Desktop\Projects_Backup\Real_Time_Gen_AI_Customer_Service_Bot\.runtime\python311\Lib\site-packages\fastapi\testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
+  WORKSPACE\.runtime\python311\Lib\site-packages\fastapi\testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
     from starlette.testclient import TestClient as TestClient  # noqa
 
 -- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
@@ -343,7 +343,7 @@ Command:
 .                                                                        [100%]
 ============================== warnings summary ===============================
 .runtime\python311\Lib\site-packages\fastapi\testclient.py:1
-  C:\Users\rajashekar\Desktop\Projects_Backup\Real_Time_Gen_AI_Customer_Service_Bot\.runtime\python311\Lib\site-packages\fastapi\testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
+  WORKSPACE\.runtime\python311\Lib\site-packages\fastapi\testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
     from starlette.testclient import TestClient as TestClient  # noqa
 
 -- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
@@ -393,7 +393,7 @@ Command:
 ...............................................                          [100%]
 ============================== warnings summary ===============================
 .runtime\python311\Lib\site-packages\fastapi\testclient.py:1
-  C:\Users\rajashekar\Desktop\Projects_Backup\Real_Time_Gen_AI_Customer_Service_Bot\.runtime\python311\Lib\site-packages\fastapi\testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
+  WORKSPACE\.runtime\python311\Lib\site-packages\fastapi\testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
     from starlette.testclient import TestClient as TestClient  # noqa
 
 -- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
@@ -463,7 +463,7 @@ Command:
 ........................................................................ [100%]
 ============================== warnings summary ===============================
 .runtime\python311\Lib\site-packages\fastapi\testclient.py:1
-  C:\Users\rajashekar\Desktop\Projects_Backup\Real_Time_Gen_AI_Customer_Service_Bot\.runtime\python311\Lib\site-packages\fastapi\testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
+  WORKSPACE\.runtime\python311\Lib\site-packages\fastapi\testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
     from starlette.testclient import TestClient as TestClient  # noqa
 
 -- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
@@ -525,3 +525,8 @@ Full Task 4 command output: [demo-t4.txt](verification/demo-t4.txt), generated w
 ## Traceability and local usage
 
 [RTM.md](../RTM.md) maps each Task 1 design sentence to implementation and named tests. [The root README](../../README.md) contains local run commands, API workflow, role keys, and scheduler configuration. No git repository is present in this workspace; no commit or publication was performed.
+
+
+## Path-only redaction - 2026-10-19
+
+Local workstation/runner path and username text was replaced with neutral tokens. Numeric results, verdicts, timestamps and original recorded hash fields retain their historical meaning. Historical hashes may describe pre-redaction bytes; the current [redaction manifest](../verification/revision-path-redactions.json) maps changed files. Git history was not rewritten. Pre-revision REPORT, RTM, gap and assumption snapshots are retained here; current documents supersede their design/status claims.

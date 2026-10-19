@@ -50,16 +50,16 @@
 2026-10-17T15:03:25.2060764Z ##[endgroup]
 2026-10-17T15:03:25.2888793Z Syncing repository: rxp017/Real_Time_Gen_AI_Customer_Service_Bot
 2026-10-17T15:03:25.2892152Z ##[group]Getting Git version info
-2026-10-17T15:03:25.2894303Z Working directory is '/home/runner/work/Real_Time_Gen_AI_Customer_Service_Bot/Real_Time_Gen_AI_Customer_Service_Bot'
+2026-10-17T15:03:25.2894303Z Working directory is 'CI_WORKSPACE'
 2026-10-17T15:03:25.2897375Z [command]/usr/bin/git version
 2026-10-17T15:03:25.2987325Z git version 2.55.0
 2026-10-17T15:03:25.3004963Z ##[endgroup]
-2026-10-17T15:03:25.3016731Z Temporarily overriding HOME='/home/runner/work/_temp/d91b4263-4acd-476e-8c47-5dbb54cf5567' before making global git config changes
+2026-10-17T15:03:25.3016731Z Temporarily overriding HOME='CI_WORKSPACE' before making global git config changes
 2026-10-17T15:03:25.3019150Z Adding repository directory to the temporary git global config as a safe directory
-2026-10-17T15:03:25.3021972Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/Real_Time_Gen_AI_Customer_Service_Bot/Real_Time_Gen_AI_Customer_Service_Bot
-2026-10-17T15:03:25.3126798Z Deleting the contents of '/home/runner/work/Real_Time_Gen_AI_Customer_Service_Bot/Real_Time_Gen_AI_Customer_Service_Bot'
+2026-10-17T15:03:25.3021972Z [command]/usr/bin/git config --global --add safe.directory CI_WORKSPACE
+2026-10-17T15:03:25.3126798Z Deleting the contents of 'CI_WORKSPACE'
 2026-10-17T15:03:25.3133599Z ##[group]Initializing the repository
-2026-10-17T15:03:25.3135950Z [command]/usr/bin/git init /home/runner/work/Real_Time_Gen_AI_Customer_Service_Bot/Real_Time_Gen_AI_Customer_Service_Bot
+2026-10-17T15:03:25.3135950Z [command]/usr/bin/git init CI_WORKSPACE
 2026-10-17T15:03:25.4321493Z hint: Using 'master' as the name for the initial branch. This default branch name
 2026-10-17T15:03:25.4323841Z hint: will change to "main" in Git 3.0. To configure the initial branch name
 2026-10-17T15:03:25.4326006Z hint: to use in all of your new repositories, which will suppress this warning,
@@ -73,7 +73,7 @@
 2026-10-17T15:03:25.4336947Z hint: 	git branch -m <name>
 2026-10-17T15:03:25.4337947Z hint:
 2026-10-17T15:03:25.4339342Z hint: Disable this message with "git config set advice.defaultBranchName false"
-2026-10-17T15:03:25.4347528Z Initialized empty Git repository in /home/runner/work/Real_Time_Gen_AI_Customer_Service_Bot/Real_Time_Gen_AI_Customer_Service_Bot/.git/
+2026-10-17T15:03:25.4347528Z Initialized empty Git repository in CI_WORKSPACE/.git/
 2026-10-17T15:03:25.4356734Z [command]/usr/bin/git remote add origin https://github.com/rxp017/Real_Time_Gen_AI_Customer_Service_Bot
 2026-10-17T15:03:25.4496151Z ##[endgroup]
 2026-10-17T15:03:25.4496871Z ##[group]Disabling automatic garbage collection
@@ -119,25 +119,25 @@
 2026-10-17T15:03:26.1110458Z (Use `node --trace-deprecation ...` to show where the warning was created)
 2026-10-17T15:03:26.1111045Z Successfully set up CPython (3.11.17)
 2026-10-17T15:03:26.1111616Z ##[endgroup]
-2026-10-17T15:03:26.1566993Z [command]/opt/hostedtoolcache/Python/3.11.17/x64/bin/pip cache dir
-2026-10-17T15:03:26.4170974Z /home/runner/.cache/pip
+2026-10-17T15:03:26.1566993Z [command]PYTHON_RUNTIME/bin/pip cache dir
+2026-10-17T15:03:26.4170974Z USER_HOME/.cache/pip
 2026-10-17T15:03:26.5313384Z Cache hit for: setup-python-Linux-x64-24.04-Ubuntu-python-3.11.17-pip-330c82fa54f6a9f2ec180a7352150d00aacac5a6ceb6d285556c3f6317d07d97
 2026-10-17T15:03:26.5392853Z (node:2080) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
 2026-10-17T15:03:27.1445998Z Received 31569213 of 31569213 (100.0%), 60.9 MBs/sec
 2026-10-17T15:03:27.1446357Z Cache Size: ~30 MB (31569213 B)
-2026-10-17T15:03:27.1494741Z [command]/usr/bin/tar -xf /home/runner/work/_temp/ac0639ca-7603-45d4-9933-8b354d3c3901/cache.tzst -P -C /home/runner/work/Real_Time_Gen_AI_Customer_Service_Bot/Real_Time_Gen_AI_Customer_Service_Bot --use-compress-program unzstd
+2026-10-17T15:03:27.1494741Z [command]/usr/bin/tar -xf CI_WORKSPACE/cache.tzst -P -C CI_WORKSPACE --use-compress-program unzstd
 2026-10-17T15:03:27.2074215Z Cache restored successfully
 2026-10-17T15:03:27.2090955Z Cache restored from key: setup-python-Linux-x64-24.04-Ubuntu-python-3.11.17-pip-330c82fa54f6a9f2ec180a7352150d00aacac5a6ceb6d285556c3f6317d07d97
 2026-10-17T15:03:27.2231510Z ##[group]Run sudo apt-get update && sudo apt-get install -y tesseract-ocr tesseract-ocr-eng tesseract-ocr-hin tesseract-ocr-tel tesseract-ocr-spa
 2026-10-17T15:03:27.2232620Z [36;1msudo apt-get update && sudo apt-get install -y tesseract-ocr tesseract-ocr-eng tesseract-ocr-hin tesseract-ocr-tel tesseract-ocr-spa[0m
 2026-10-17T15:03:27.2463233Z shell: /usr/bin/bash -e {0}
 2026-10-17T15:03:27.2463490Z env:
-2026-10-17T15:03:27.2463731Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.17/x64
-2026-10-17T15:03:27.2464093Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.17/x64/lib/pkgconfig
-2026-10-17T15:03:27.2464446Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.17/x64
-2026-10-17T15:03:27.2464754Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.17/x64
-2026-10-17T15:03:27.2465052Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.17/x64
-2026-10-17T15:03:27.2465371Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.17/x64/lib
+2026-10-17T15:03:27.2463731Z   pythonLocation: PYTHON_RUNTIME
+2026-10-17T15:03:27.2464093Z   PKG_CONFIG_PATH: PYTHON_RUNTIME/lib/pkgconfig
+2026-10-17T15:03:27.2464446Z   Python_ROOT_DIR: PYTHON_RUNTIME
+2026-10-17T15:03:27.2464754Z   Python2_ROOT_DIR: PYTHON_RUNTIME
+2026-10-17T15:03:27.2465052Z   Python3_ROOT_DIR: PYTHON_RUNTIME
+2026-10-17T15:03:27.2465371Z   LD_LIBRARY_PATH: PYTHON_RUNTIME/lib
 2026-10-17T15:03:27.2465715Z ##[endgroup]
 2026-10-17T15:03:27.3149239Z Get:1 file:/etc/apt/apt-mirrors.txt Mirrorlist [144 B]
 2026-10-17T15:03:27.3419855Z Hit:2 http://azure.archive.ubuntu.com/ubuntu noble InRelease
@@ -259,12 +259,12 @@
 2026-10-17T15:03:39.5629782Z [36;1mpython -m pip install -r requirements.txt[0m
 2026-10-17T15:03:39.5686063Z shell: /usr/bin/bash -e {0}
 2026-10-17T15:03:39.5686277Z env:
-2026-10-17T15:03:39.5686500Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.17/x64
-2026-10-17T15:03:39.5686856Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.17/x64/lib/pkgconfig
-2026-10-17T15:03:39.5687213Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.17/x64
-2026-10-17T15:03:39.5687510Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.17/x64
-2026-10-17T15:03:39.5687798Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.17/x64
-2026-10-17T15:03:39.5688111Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.17/x64/lib
+2026-10-17T15:03:39.5686500Z   pythonLocation: PYTHON_RUNTIME
+2026-10-17T15:03:39.5686856Z   PKG_CONFIG_PATH: PYTHON_RUNTIME/lib/pkgconfig
+2026-10-17T15:03:39.5687213Z   Python_ROOT_DIR: PYTHON_RUNTIME
+2026-10-17T15:03:39.5687510Z   Python2_ROOT_DIR: PYTHON_RUNTIME
+2026-10-17T15:03:39.5687798Z   Python3_ROOT_DIR: PYTHON_RUNTIME
+2026-10-17T15:03:39.5688111Z   LD_LIBRARY_PATH: PYTHON_RUNTIME/lib
 2026-10-17T15:03:39.5688365Z ##[endgroup]
 2026-10-17T15:03:40.1982576Z Collecting Pillow==12.3.0 (from -r requirements.txt (line 3))
 2026-10-17T15:03:40.1999127Z   Using cached pillow-12.3.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (9.1 kB)
@@ -363,12 +363,12 @@
 2026-10-17T15:03:46.3940953Z [36;1mpython scripts/check_ocr.py[0m
 2026-10-17T15:03:46.3998020Z shell: /usr/bin/bash -e {0}
 2026-10-17T15:03:46.3998238Z env:
-2026-10-17T15:03:46.3998471Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.17/x64
-2026-10-17T15:03:46.3998845Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.17/x64/lib/pkgconfig
-2026-10-17T15:03:46.3999190Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.17/x64
-2026-10-17T15:03:46.3999487Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.17/x64
-2026-10-17T15:03:46.3999790Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.17/x64
-2026-10-17T15:03:46.4000085Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.17/x64/lib
+2026-10-17T15:03:46.3998471Z   pythonLocation: PYTHON_RUNTIME
+2026-10-17T15:03:46.3998845Z   PKG_CONFIG_PATH: PYTHON_RUNTIME/lib/pkgconfig
+2026-10-17T15:03:46.3999190Z   Python_ROOT_DIR: PYTHON_RUNTIME
+2026-10-17T15:03:46.3999487Z   Python2_ROOT_DIR: PYTHON_RUNTIME
+2026-10-17T15:03:46.3999790Z   Python3_ROOT_DIR: PYTHON_RUNTIME
+2026-10-17T15:03:46.4000085Z   LD_LIBRARY_PATH: PYTHON_RUNTIME/lib
 2026-10-17T15:03:46.4000339Z ##[endgroup]
 2026-10-17T15:03:46.4990996Z {
 2026-10-17T15:03:46.4991341Z   "executable": "/usr/bin/tesseract",
@@ -392,24 +392,24 @@
 2026-10-17T15:03:46.5104720Z [36;1mpython -m ruff check .[0m
 2026-10-17T15:03:46.5159636Z shell: /usr/bin/bash -e {0}
 2026-10-17T15:03:46.5159843Z env:
-2026-10-17T15:03:46.5160068Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.17/x64
-2026-10-17T15:03:46.5160415Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.17/x64/lib/pkgconfig
-2026-10-17T15:03:46.5160759Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.17/x64
-2026-10-17T15:03:46.5161055Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.17/x64
-2026-10-17T15:03:46.5161357Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.17/x64
-2026-10-17T15:03:46.5161815Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.17/x64/lib
+2026-10-17T15:03:46.5160068Z   pythonLocation: PYTHON_RUNTIME
+2026-10-17T15:03:46.5160415Z   PKG_CONFIG_PATH: PYTHON_RUNTIME/lib/pkgconfig
+2026-10-17T15:03:46.5160759Z   Python_ROOT_DIR: PYTHON_RUNTIME
+2026-10-17T15:03:46.5161055Z   Python2_ROOT_DIR: PYTHON_RUNTIME
+2026-10-17T15:03:46.5161357Z   Python3_ROOT_DIR: PYTHON_RUNTIME
+2026-10-17T15:03:46.5161815Z   LD_LIBRARY_PATH: PYTHON_RUNTIME/lib
 2026-10-17T15:03:46.5162168Z ##[endgroup]
 2026-10-17T15:03:46.5540187Z All checks passed!
 2026-10-17T15:03:46.5572103Z ##[group]Run python -m pytest -q
 2026-10-17T15:03:46.5572381Z [36;1mpython -m pytest -q[0m
 2026-10-17T15:03:46.5625843Z shell: /usr/bin/bash -e {0}
 2026-10-17T15:03:46.5626057Z env:
-2026-10-17T15:03:46.5626289Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.17/x64
-2026-10-17T15:03:46.5626648Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.17/x64/lib/pkgconfig
-2026-10-17T15:03:46.5626986Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.17/x64
-2026-10-17T15:03:46.5627283Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.17/x64
-2026-10-17T15:03:46.5627587Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.17/x64
-2026-10-17T15:03:46.5627884Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.17/x64/lib
+2026-10-17T15:03:46.5626289Z   pythonLocation: PYTHON_RUNTIME
+2026-10-17T15:03:46.5626648Z   PKG_CONFIG_PATH: PYTHON_RUNTIME/lib/pkgconfig
+2026-10-17T15:03:46.5626986Z   Python_ROOT_DIR: PYTHON_RUNTIME
+2026-10-17T15:03:46.5627283Z   Python2_ROOT_DIR: PYTHON_RUNTIME
+2026-10-17T15:03:46.5627587Z   Python3_ROOT_DIR: PYTHON_RUNTIME
+2026-10-17T15:03:46.5627884Z   LD_LIBRARY_PATH: PYTHON_RUNTIME/lib
 2026-10-17T15:03:46.5628150Z ##[endgroup]
 2026-10-17T15:03:48.9129870Z ........................................................................ [ 21%]
 2026-10-17T15:03:56.4997999Z ........................................................................ [ 43%]
@@ -417,8 +417,8 @@
 2026-10-17T15:04:05.6817311Z ........................................................................ [ 87%]
 2026-10-17T15:04:17.7408726Z .........................................                                [100%]
 2026-10-17T15:04:17.7409277Z =============================== warnings summary ===============================
-2026-10-17T15:04:17.7409955Z ../../../../../opt/hostedtoolcache/Python/3.11.17/x64/lib/python3.11/site-packages/fastapi/testclient.py:1
-2026-10-17T15:04:17.7411240Z   /opt/hostedtoolcache/Python/3.11.17/x64/lib/python3.11/site-packages/fastapi/testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
+2026-10-17T15:04:17.7409955Z ../../../../..PYTHON_RUNTIME/lib/python3.11/site-packages/fastapi/testclient.py:1
+2026-10-17T15:04:17.7411240Z   PYTHON_RUNTIME/lib/python3.11/site-packages/fastapi/testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
 2026-10-17T15:04:17.7412619Z     from starlette.testclient import TestClient as TestClient  # noqa
 2026-10-17T15:04:17.7412961Z 
 2026-10-17T15:04:17.7413232Z -- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
@@ -430,9 +430,9 @@
 2026-10-17T15:04:17.9297383Z Post job cleanup.
 2026-10-17T15:04:17.9980019Z [command]/usr/bin/git version
 2026-10-17T15:04:18.0014624Z git version 2.55.0
-2026-10-17T15:04:18.0041587Z Temporarily overriding HOME='/home/runner/work/_temp/67a0b7d5-1e10-492a-a8d1-3e626b1e7bde' before making global git config changes
+2026-10-17T15:04:18.0041587Z Temporarily overriding HOME='CI_WORKSPACE' before making global git config changes
 2026-10-17T15:04:18.0042997Z Adding repository directory to the temporary git global config as a safe directory
-2026-10-17T15:04:18.0045832Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/Real_Time_Gen_AI_Customer_Service_Bot/Real_Time_Gen_AI_Customer_Service_Bot
+2026-10-17T15:04:18.0045832Z [command]/usr/bin/git config --global --add safe.directory CI_WORKSPACE
 2026-10-17T15:04:18.0075880Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
 2026-10-17T15:04:18.0106066Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
 2026-10-17T15:04:18.0360330Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader

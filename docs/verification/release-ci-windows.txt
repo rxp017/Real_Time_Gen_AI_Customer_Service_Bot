@@ -50,46 +50,46 @@
 2026-10-17T15:03:25.2029921Z ##[endgroup]
 2026-10-17T15:03:25.3425734Z Syncing repository: rxp017/Real_Time_Gen_AI_Customer_Service_Bot
 2026-10-17T15:03:25.3429476Z ##[group]Getting Git version info
-2026-10-17T15:03:25.3431411Z Working directory is 'D:\a\Real_Time_Gen_AI_Customer_Service_Bot\Real_Time_Gen_AI_Customer_Service_Bot'
-2026-10-17T15:03:25.4058550Z [command]"C:\Program Files\Git\bin\git.exe" version
+2026-10-17T15:03:25.3431411Z Working directory is 'CI_WORKSPACE/Real_Time_Gen_AI_Customer_Service_Bot\Real_Time_Gen_AI_Customer_Service_Bot'
+2026-10-17T15:03:25.4058550Z [command]"PROGRAM_FILES\Git\bin\git.exe" version
 2026-10-17T15:03:25.7955157Z git version 2.56.0.windows.2
 2026-10-17T15:03:25.7998657Z ##[endgroup]
-2026-10-17T15:03:25.8017081Z Temporarily overriding HOME='D:\a\_temp\fde7ac74-9f11-435d-af85-18e32acf223c' before making global git config changes
+2026-10-17T15:03:25.8017081Z Temporarily overriding HOME='CI_WORKSPACE/_temp\fde7ac74-9f11-435d-af85-18e32acf223c' before making global git config changes
 2026-10-17T15:03:25.8018841Z Adding repository directory to the temporary git global config as a safe directory
-2026-10-17T15:03:25.8027420Z [command]"C:\Program Files\Git\bin\git.exe" config --global --add safe.directory D:\a\Real_Time_Gen_AI_Customer_Service_Bot\Real_Time_Gen_AI_Customer_Service_Bot
-2026-10-17T15:03:26.0440004Z Deleting the contents of 'D:\a\Real_Time_Gen_AI_Customer_Service_Bot\Real_Time_Gen_AI_Customer_Service_Bot'
+2026-10-17T15:03:25.8027420Z [command]"PROGRAM_FILES\Git\bin\git.exe" config --global --add safe.directory CI_WORKSPACE/Real_Time_Gen_AI_Customer_Service_Bot\Real_Time_Gen_AI_Customer_Service_Bot
+2026-10-17T15:03:26.0440004Z Deleting the contents of 'CI_WORKSPACE/Real_Time_Gen_AI_Customer_Service_Bot\Real_Time_Gen_AI_Customer_Service_Bot'
 2026-10-17T15:03:26.0445956Z ##[group]Initializing the repository
-2026-10-17T15:03:26.0457624Z [command]"C:\Program Files\Git\bin\git.exe" init D:\a\Real_Time_Gen_AI_Customer_Service_Bot\Real_Time_Gen_AI_Customer_Service_Bot
-2026-10-17T15:03:26.2178469Z Initialized empty Git repository in D:/a/Real_Time_Gen_AI_Customer_Service_Bot/Real_Time_Gen_AI_Customer_Service_Bot/.git/
-2026-10-17T15:03:26.2226532Z [command]"C:\Program Files\Git\bin\git.exe" remote add origin https://github.com/rxp017/Real_Time_Gen_AI_Customer_Service_Bot
+2026-10-17T15:03:26.0457624Z [command]"PROGRAM_FILES\Git\bin\git.exe" init CI_WORKSPACE/Real_Time_Gen_AI_Customer_Service_Bot\Real_Time_Gen_AI_Customer_Service_Bot
+2026-10-17T15:03:26.2178469Z Initialized empty Git repository in CI_WORKSPACE/Real_Time_Gen_AI_Customer_Service_Bot/Real_Time_Gen_AI_Customer_Service_Bot/.git/
+2026-10-17T15:03:26.2226532Z [command]"PROGRAM_FILES\Git\bin\git.exe" remote add origin https://github.com/rxp017/Real_Time_Gen_AI_Customer_Service_Bot
 2026-10-17T15:03:26.4103634Z ##[endgroup]
 2026-10-17T15:03:26.4104612Z ##[group]Disabling automatic garbage collection
-2026-10-17T15:03:26.4114967Z [command]"C:\Program Files\Git\bin\git.exe" config --local gc.auto 0
+2026-10-17T15:03:26.4114967Z [command]"PROGRAM_FILES\Git\bin\git.exe" config --local gc.auto 0
 2026-10-17T15:03:26.4505157Z ##[endgroup]
 2026-10-17T15:03:26.4505766Z ##[group]Setting up auth
-2026-10-17T15:03:26.4518147Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp core\.sshCommand
-2026-10-17T15:03:26.4859127Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :\""
-2026-10-17T15:03:28.4026331Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
-2026-10-17T15:03:28.4391914Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :\""
-2026-10-17T15:03:28.9990799Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp ^includeIf\.gitdir:
-2026-10-17T15:03:29.0345371Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "git config --local --show-origin --name-only --get-regexp remote.origin.url"
-2026-10-17T15:03:29.5556770Z [command]"C:\Program Files\Git\bin\git.exe" config --local http.https://github.com/.extraheader "AUTHORIZATION: basic ***"
+2026-10-17T15:03:26.4518147Z [command]"PROGRAM_FILES\Git\bin\git.exe" config --local --name-only --get-regexp core\.sshCommand
+2026-10-17T15:03:26.4859127Z [command]"PROGRAM_FILES\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :\""
+2026-10-17T15:03:28.4026331Z [command]"PROGRAM_FILES\Git\bin\git.exe" config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-17T15:03:28.4391914Z [command]"PROGRAM_FILES\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :\""
+2026-10-17T15:03:28.9990799Z [command]"PROGRAM_FILES\Git\bin\git.exe" config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-17T15:03:29.0345371Z [command]"PROGRAM_FILES\Git\bin\git.exe" submodule foreach --recursive "git config --local --show-origin --name-only --get-regexp remote.origin.url"
+2026-10-17T15:03:29.5556770Z [command]"PROGRAM_FILES\Git\bin\git.exe" config --local http.https://github.com/.extraheader "AUTHORIZATION: basic ***"
 2026-10-17T15:03:29.5913693Z ##[endgroup]
 2026-10-17T15:03:29.5914287Z ##[group]Fetching the repository
-2026-10-17T15:03:29.5925634Z [command]"C:\Program Files\Git\bin\git.exe" -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +2f6620fc2c3353b8c6f8793bf5bef468fddba99f:refs/remotes/origin/main
+2026-10-17T15:03:29.5925634Z [command]"PROGRAM_FILES\Git\bin\git.exe" -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +2f6620fc2c3353b8c6f8793bf5bef468fddba99f:refs/remotes/origin/main
 2026-10-17T15:03:30.9503892Z From https://github.com/rxp017/Real_Time_Gen_AI_Customer_Service_Bot
 2026-10-17T15:03:30.9504717Z  * [new ref]         2f6620fc2c3353b8c6f8793bf5bef468fddba99f -> origin/main
 2026-10-17T15:03:30.9547160Z ##[endgroup]
 2026-10-17T15:03:30.9547678Z ##[group]Determining the checkout info
 2026-10-17T15:03:30.9549612Z ##[endgroup]
-2026-10-17T15:03:30.9559038Z [command]"C:\Program Files\Git\bin\git.exe" sparse-checkout disable
-2026-10-17T15:03:31.0730394Z [command]"C:\Program Files\Git\bin\git.exe" config --local --unset-all extensions.worktreeConfig
+2026-10-17T15:03:30.9559038Z [command]"PROGRAM_FILES\Git\bin\git.exe" sparse-checkout disable
+2026-10-17T15:03:31.0730394Z [command]"PROGRAM_FILES\Git\bin\git.exe" config --local --unset-all extensions.worktreeConfig
 2026-10-17T15:03:31.1096161Z ##[group]Checking out the ref
-2026-10-17T15:03:31.1105218Z [command]"C:\Program Files\Git\bin\git.exe" checkout --progress --force -B main refs/remotes/origin/main
+2026-10-17T15:03:31.1105218Z [command]"PROGRAM_FILES\Git\bin\git.exe" checkout --progress --force -B main refs/remotes/origin/main
 2026-10-17T15:03:31.2213022Z Switched to a new branch 'main'
 2026-10-17T15:03:31.2272757Z branch 'main' set up to track 'origin/main'.
 2026-10-17T15:03:31.2320808Z ##[endgroup]
-2026-10-17T15:03:31.2783858Z [command]"C:\Program Files\Git\bin\git.exe" log -1 --format=%H
+2026-10-17T15:03:31.2783858Z [command]"PROGRAM_FILES\Git\bin\git.exe" log -1 --format=%H
 2026-10-17T15:03:31.3095039Z 2f6620fc2c3353b8c6f8793bf5bef468fddba99f
 2026-10-17T15:03:31.3617274Z ##[group]Run actions/setup-python@v5
 2026-10-17T15:03:31.3617782Z with:
@@ -110,18 +110,18 @@
 2026-10-17T15:03:35.7982234Z (node:9176) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
 2026-10-17T15:03:36.9866835Z Received 31121387 of 31121387 (100.0%), 32.1 MBs/sec
 2026-10-17T15:03:36.9868595Z Cache Size: ~30 MB (31121387 B)
-2026-10-17T15:03:36.9942518Z [command]"C:\Program Files\Git\usr\bin\tar.exe" -xf D:/a/_temp/fd419282-0ff4-43d3-9298-cbb27434967b/cache.tzst -P -C D:/a/Real_Time_Gen_AI_Customer_Service_Bot/Real_Time_Gen_AI_Customer_Service_Bot --force-local --use-compress-program "zstd -d"
+2026-10-17T15:03:36.9942518Z [command]"PROGRAM_FILES\Git\usr\bin\tar.exe" -xf CI_WORKSPACE/_temp/fd419282-0ff4-43d3-9298-cbb27434967b/cache.tzst -P -C CI_WORKSPACE/Real_Time_Gen_AI_Customer_Service_Bot/Real_Time_Gen_AI_Customer_Service_Bot --force-local --use-compress-program "zstd -d"
 2026-10-17T15:03:38.4896425Z Cache restored successfully
 2026-10-17T15:03:38.4928933Z Cache restored from key: setup-python-Windows-x64-python-3.11.9-pip-330c82fa54f6a9f2ec180a7352150d00aacac5a6ceb6d285556c3f6317d07d97
 2026-10-17T15:03:38.5239665Z ##[group]Run choco install tesseract --no-progress -y
 2026-10-17T15:03:38.5240104Z [36;1mchoco install tesseract --no-progress -y[0m
-2026-10-17T15:03:38.6029207Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+2026-10-17T15:03:38.6029207Z shell: PROGRAM_FILES\PowerShell\7\pwsh.EXE -command ". '{0}'"
 2026-10-17T15:03:38.6029525Z env:
-2026-10-17T15:03:38.6029777Z   pythonLocation: C:\hostedtoolcache\windows\Python\3.11.9\x64
-2026-10-17T15:03:38.6030150Z   PKG_CONFIG_PATH: C:\hostedtoolcache\windows\Python\3.11.9\x64/lib/pkgconfig
-2026-10-17T15:03:38.6030511Z   Python_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.11.9\x64
-2026-10-17T15:03:38.6030849Z   Python2_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.11.9\x64
-2026-10-17T15:03:38.6031155Z   Python3_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.11.9\x64
+2026-10-17T15:03:38.6029777Z   pythonLocation: PYTHON_RUNTIME
+2026-10-17T15:03:38.6030150Z   PKG_CONFIG_PATH: PYTHON_RUNTIME/lib/pkgconfig
+2026-10-17T15:03:38.6030511Z   Python_ROOT_DIR: PYTHON_RUNTIME
+2026-10-17T15:03:38.6030849Z   Python2_ROOT_DIR: PYTHON_RUNTIME
+2026-10-17T15:03:38.6031155Z   Python3_ROOT_DIR: PYTHON_RUNTIME
 2026-10-17T15:03:38.6031417Z ##[endgroup]
 2026-10-17T15:03:42.6234224Z Chocolatey v2.7.4
 2026-10-17T15:03:42.8531721Z Installing the following packages:
@@ -133,7 +133,7 @@
 2026-10-17T15:03:49.0575129Z tesseract package files install completed. Performing other installation steps.
 2026-10-17T15:03:53.2237971Z Installing 64-bit tesseract...
 2026-10-17T15:04:02.3647993Z tesseract has been installed.
-2026-10-17T15:04:02.3710767Z PATH environment variable does not have C:\Program Files\Tesseract-OCR in it. Adding...
+2026-10-17T15:04:02.3710767Z PATH environment variable does not have TESSERACT_INSTALL in it. Adding...
 2026-10-17T15:04:03.1156750Z   tesseract can be automatically uninstalled.
 2026-10-17T15:04:03.1229216Z Environment Vars (like PATH) have changed. Close/reopen your shell to
 2026-10-17T15:04:03.1235242Z  see the changes (or in powershell/cmd.exe just type `refreshenv`).
@@ -141,16 +141,16 @@
 2026-10-17T15:04:03.4727179Z   Software installed as 'exe', install location is likely default.
 2026-10-17T15:04:03.4854500Z 
 2026-10-17T15:04:03.4854805Z Chocolatey installed 1/1 packages. 
-2026-10-17T15:04:03.4855151Z  See the log for details (C:\ProgramData\chocolatey\logs\chocolatey.log).
+2026-10-17T15:04:03.4855151Z  See the log for details (PROGRAM_DATA\chocolatey\logs\chocolatey.log).
 2026-10-17T15:04:03.6416376Z ##[group]Run python -m pip install -r requirements.txt
 2026-10-17T15:04:03.6416794Z [36;1mpython -m pip install -r requirements.txt[0m
-2026-10-17T15:04:03.6477593Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+2026-10-17T15:04:03.6477593Z shell: PROGRAM_FILES\PowerShell\7\pwsh.EXE -command ". '{0}'"
 2026-10-17T15:04:03.6477884Z env:
-2026-10-17T15:04:03.6478111Z   pythonLocation: C:\hostedtoolcache\windows\Python\3.11.9\x64
-2026-10-17T15:04:03.6478670Z   PKG_CONFIG_PATH: C:\hostedtoolcache\windows\Python\3.11.9\x64/lib/pkgconfig
-2026-10-17T15:04:03.6479018Z   Python_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.11.9\x64
-2026-10-17T15:04:03.6479336Z   Python2_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.11.9\x64
-2026-10-17T15:04:03.6479640Z   Python3_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.11.9\x64
+2026-10-17T15:04:03.6478111Z   pythonLocation: PYTHON_RUNTIME
+2026-10-17T15:04:03.6478670Z   PKG_CONFIG_PATH: PYTHON_RUNTIME/lib/pkgconfig
+2026-10-17T15:04:03.6479018Z   Python_ROOT_DIR: PYTHON_RUNTIME
+2026-10-17T15:04:03.6479336Z   Python2_ROOT_DIR: PYTHON_RUNTIME
+2026-10-17T15:04:03.6479640Z   Python3_ROOT_DIR: PYTHON_RUNTIME
 2026-10-17T15:04:03.6479895Z ##[endgroup]
 2026-10-17T15:04:06.9196534Z Collecting Pillow==12.3.0 (from -r requirements.txt (line 3))
 2026-10-17T15:04:06.9229984Z   Using cached pillow-12.3.0-cp311-cp311-win_amd64.whl.metadata (9.3 kB)
@@ -247,13 +247,13 @@
 2026-10-17T15:04:29.7319053Z Successfully installed Pillow-12.3.0 PyYAML-6.0.3 Pygments-2.21.0 annotated-doc-0.0.5 annotated-types-0.8.0 anyio-4.15.1 certifi-2026.7.22 click-8.5.0 colorama-0.4.6 fastapi-0.143.0 h11-0.16.0 httpcore-1.0.9 httpx-0.28.1 idna-3.20 iniconfig-2.3.1 opentelemetry-api-1.45.1 packaging-26.3 pluggy-1.6.0 pydantic-2.14.1 pydantic_core-2.50.1 pypdfium2-5.14.0 pytest-9.1.1 python-dotenv-1.0.0 python-multipart-0.0.32 ruff-0.17.0 starlette-1.8.0 typing-inspection-0.4.4 typing_extensions-4.16.0 tzdata-2026.5 uvicorn-0.54.0
 2026-10-17T15:04:29.9524974Z ##[group]Run python scripts/fetch_tessdata.py
 2026-10-17T15:04:29.9525321Z [36;1mpython scripts/fetch_tessdata.py[0m
-2026-10-17T15:04:29.9582898Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+2026-10-17T15:04:29.9582898Z shell: PROGRAM_FILES\PowerShell\7\pwsh.EXE -command ". '{0}'"
 2026-10-17T15:04:29.9583196Z env:
-2026-10-17T15:04:29.9583434Z   pythonLocation: C:\hostedtoolcache\windows\Python\3.11.9\x64
-2026-10-17T15:04:29.9583799Z   PKG_CONFIG_PATH: C:\hostedtoolcache\windows\Python\3.11.9\x64/lib/pkgconfig
-2026-10-17T15:04:29.9584184Z   Python_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.11.9\x64
-2026-10-17T15:04:29.9584514Z   Python2_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.11.9\x64
-2026-10-17T15:04:29.9584828Z   Python3_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.11.9\x64
+2026-10-17T15:04:29.9583434Z   pythonLocation: PYTHON_RUNTIME
+2026-10-17T15:04:29.9583799Z   PKG_CONFIG_PATH: PYTHON_RUNTIME/lib/pkgconfig
+2026-10-17T15:04:29.9584184Z   Python_ROOT_DIR: PYTHON_RUNTIME
+2026-10-17T15:04:29.9584514Z   Python2_ROOT_DIR: PYTHON_RUNTIME
+2026-10-17T15:04:29.9584828Z   Python3_ROOT_DIR: PYTHON_RUNTIME
 2026-10-17T15:04:29.9585079Z ##[endgroup]
 2026-10-17T15:04:31.3514935Z Installed eng: 4113088 bytes
 2026-10-17T15:04:31.3515212Z Installed hin: 1122751 bytes
@@ -261,16 +261,16 @@
 2026-10-17T15:04:31.3515836Z Installed spa: 2294433 bytes
 2026-10-17T15:04:31.4767386Z ##[group]Run python scripts/check_ocr.py
 2026-10-17T15:04:31.4767707Z [36;1mpython scripts/check_ocr.py[0m
-2026-10-17T15:04:31.4825891Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+2026-10-17T15:04:31.4825891Z shell: PROGRAM_FILES\PowerShell\7\pwsh.EXE -command ". '{0}'"
 2026-10-17T15:04:31.4826178Z env:
-2026-10-17T15:04:31.4826402Z   pythonLocation: C:\hostedtoolcache\windows\Python\3.11.9\x64
-2026-10-17T15:04:31.4826758Z   PKG_CONFIG_PATH: C:\hostedtoolcache\windows\Python\3.11.9\x64/lib/pkgconfig
-2026-10-17T15:04:31.4827126Z   Python_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.11.9\x64
-2026-10-17T15:04:31.4827445Z   Python2_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.11.9\x64
-2026-10-17T15:04:31.4827750Z   Python3_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.11.9\x64
+2026-10-17T15:04:31.4826402Z   pythonLocation: PYTHON_RUNTIME
+2026-10-17T15:04:31.4826758Z   PKG_CONFIG_PATH: PYTHON_RUNTIME/lib/pkgconfig
+2026-10-17T15:04:31.4827126Z   Python_ROOT_DIR: PYTHON_RUNTIME
+2026-10-17T15:04:31.4827445Z   Python2_ROOT_DIR: PYTHON_RUNTIME
+2026-10-17T15:04:31.4827750Z   Python3_ROOT_DIR: PYTHON_RUNTIME
 2026-10-17T15:04:31.4827994Z ##[endgroup]
 2026-10-17T15:04:31.8732523Z {
-2026-10-17T15:04:31.8732881Z   "executable": "C:\\Program Files\\Tesseract-OCR\\tesseract.exe",
+2026-10-17T15:04:31.8732881Z   "executable": "TESSERACT_INSTALL\\tesseract.exe",
 2026-10-17T15:04:31.8733196Z   "version": "tesseract v5.5.3.20260724",
 2026-10-17T15:04:31.8733502Z   "available_languages": [
 2026-10-17T15:04:31.8733677Z     "eng",
@@ -288,24 +288,24 @@
 2026-10-17T15:04:31.8757863Z }
 2026-10-17T15:04:31.9831726Z ##[group]Run python -m ruff check .
 2026-10-17T15:04:31.9832169Z [36;1mpython -m ruff check .[0m
-2026-10-17T15:04:31.9891616Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+2026-10-17T15:04:31.9891616Z shell: PROGRAM_FILES\PowerShell\7\pwsh.EXE -command ". '{0}'"
 2026-10-17T15:04:31.9891916Z env:
-2026-10-17T15:04:31.9892142Z   pythonLocation: C:\hostedtoolcache\windows\Python\3.11.9\x64
-2026-10-17T15:04:31.9892644Z   PKG_CONFIG_PATH: C:\hostedtoolcache\windows\Python\3.11.9\x64/lib/pkgconfig
-2026-10-17T15:04:31.9893065Z   Python_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.11.9\x64
-2026-10-17T15:04:31.9893395Z   Python2_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.11.9\x64
-2026-10-17T15:04:31.9893704Z   Python3_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.11.9\x64
+2026-10-17T15:04:31.9892142Z   pythonLocation: PYTHON_RUNTIME
+2026-10-17T15:04:31.9892644Z   PKG_CONFIG_PATH: PYTHON_RUNTIME/lib/pkgconfig
+2026-10-17T15:04:31.9893065Z   Python_ROOT_DIR: PYTHON_RUNTIME
+2026-10-17T15:04:31.9893395Z   Python2_ROOT_DIR: PYTHON_RUNTIME
+2026-10-17T15:04:31.9893704Z   Python3_ROOT_DIR: PYTHON_RUNTIME
 2026-10-17T15:04:31.9893947Z ##[endgroup]
 2026-10-17T15:04:32.3005117Z All checks passed!
 2026-10-17T15:04:32.4024381Z ##[group]Run python -m pytest -q
 2026-10-17T15:04:32.4024700Z [36;1mpython -m pytest -q[0m
-2026-10-17T15:04:32.4082530Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+2026-10-17T15:04:32.4082530Z shell: PROGRAM_FILES\PowerShell\7\pwsh.EXE -command ". '{0}'"
 2026-10-17T15:04:32.4082818Z env:
-2026-10-17T15:04:32.4083034Z   pythonLocation: C:\hostedtoolcache\windows\Python\3.11.9\x64
-2026-10-17T15:04:32.4083386Z   PKG_CONFIG_PATH: C:\hostedtoolcache\windows\Python\3.11.9\x64/lib/pkgconfig
-2026-10-17T15:04:32.4083730Z   Python_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.11.9\x64
-2026-10-17T15:04:32.4084049Z   Python2_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.11.9\x64
-2026-10-17T15:04:32.4084354Z   Python3_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.11.9\x64
+2026-10-17T15:04:32.4083034Z   pythonLocation: PYTHON_RUNTIME
+2026-10-17T15:04:32.4083386Z   PKG_CONFIG_PATH: PYTHON_RUNTIME/lib/pkgconfig
+2026-10-17T15:04:32.4083730Z   Python_ROOT_DIR: PYTHON_RUNTIME
+2026-10-17T15:04:32.4084049Z   Python2_ROOT_DIR: PYTHON_RUNTIME
+2026-10-17T15:04:32.4084354Z   Python3_ROOT_DIR: PYTHON_RUNTIME
 2026-10-17T15:04:32.4084597Z ##[endgroup]
 2026-10-17T15:04:36.7927755Z ........................................................................ [ 21%]
 2026-10-17T15:04:44.3301036Z ........................................................................ [ 43%]
@@ -313,8 +313,8 @@
 2026-10-17T15:04:55.9526434Z ........................................................................ [ 87%]
 2026-10-17T15:05:10.7100558Z .........................................                                [100%]
 2026-10-17T15:05:10.7101135Z ============================== warnings summary ===============================
-2026-10-17T15:05:10.7101709Z C:\hostedtoolcache\windows\Python\3.11.9\x64\Lib\site-packages\fastapi\testclient.py:1
-2026-10-17T15:05:10.7102850Z   C:\hostedtoolcache\windows\Python\3.11.9\x64\Lib\site-packages\fastapi\testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
+2026-10-17T15:05:10.7101709Z PYTHON_RUNTIME\Lib\site-packages\fastapi\testclient.py:1
+2026-10-17T15:05:10.7102850Z   PYTHON_RUNTIME\Lib\site-packages\fastapi\testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
 2026-10-17T15:05:10.7104385Z     from starlette.testclient import TestClient as TestClient  # noqa
 2026-10-17T15:05:10.7104749Z 
 2026-10-17T15:05:10.7105037Z -- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
@@ -324,18 +324,18 @@
 2026-10-17T15:05:11.0751760Z (node:7268) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
 2026-10-17T15:05:11.0752274Z (Use `node --trace-deprecation ...` to show where the warning was created)
 2026-10-17T15:05:11.1017865Z Post job cleanup.
-2026-10-17T15:05:11.2414475Z [command]"C:\Program Files\Git\bin\git.exe" version
+2026-10-17T15:05:11.2414475Z [command]"PROGRAM_FILES\Git\bin\git.exe" version
 2026-10-17T15:05:11.2722234Z git version 2.56.0.windows.2
-2026-10-17T15:05:11.2787779Z Temporarily overriding HOME='D:\a\_temp\80d458dc-97e0-43e9-8bbc-93cd25eba0a9' before making global git config changes
+2026-10-17T15:05:11.2787779Z Temporarily overriding HOME='CI_WORKSPACE/_temp\80d458dc-97e0-43e9-8bbc-93cd25eba0a9' before making global git config changes
 2026-10-17T15:05:11.2788713Z Adding repository directory to the temporary git global config as a safe directory
-2026-10-17T15:05:11.2798902Z [command]"C:\Program Files\Git\bin\git.exe" config --global --add safe.directory D:\a\Real_Time_Gen_AI_Customer_Service_Bot\Real_Time_Gen_AI_Customer_Service_Bot
-2026-10-17T15:05:11.3190566Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp core\.sshCommand
-2026-10-17T15:05:11.3570836Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :\""
-2026-10-17T15:05:11.9225080Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-17T15:05:11.2798902Z [command]"PROGRAM_FILES\Git\bin\git.exe" config --global --add safe.directory CI_WORKSPACE/Real_Time_Gen_AI_Customer_Service_Bot\Real_Time_Gen_AI_Customer_Service_Bot
+2026-10-17T15:05:11.3190566Z [command]"PROGRAM_FILES\Git\bin\git.exe" config --local --name-only --get-regexp core\.sshCommand
+2026-10-17T15:05:11.3570836Z [command]"PROGRAM_FILES\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :\""
+2026-10-17T15:05:11.9225080Z [command]"PROGRAM_FILES\Git\bin\git.exe" config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
 2026-10-17T15:05:11.9525652Z http.https://github.com/.extraheader
-2026-10-17T15:05:11.9570738Z [command]"C:\Program Files\Git\bin\git.exe" config --local --unset-all http.https://github.com/.extraheader
-2026-10-17T15:05:11.9923114Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :\""
-2026-10-17T15:05:12.5379067Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp ^includeIf\.gitdir:
-2026-10-17T15:05:12.5720358Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "git config --local --show-origin --name-only --get-regexp remote.origin.url"
+2026-10-17T15:05:11.9570738Z [command]"PROGRAM_FILES\Git\bin\git.exe" config --local --unset-all http.https://github.com/.extraheader
+2026-10-17T15:05:11.9923114Z [command]"PROGRAM_FILES\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :\""
+2026-10-17T15:05:12.5379067Z [command]"PROGRAM_FILES\Git\bin\git.exe" config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-17T15:05:12.5720358Z [command]"PROGRAM_FILES\Git\bin\git.exe" submodule foreach --recursive "git config --local --show-origin --name-only --get-regexp remote.origin.url"
 2026-10-17T15:05:13.0770505Z Cleaning up orphan processes
 2026-10-17T15:05:13.0823520Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-python@v5. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
