@@ -1,0 +1,92 @@
+STATUS QUOTA_BLOCKED: live call unavailable; fallback is not provider success
+STATUS TRANSLATION_FALLBACK language=hi
+STATUS QUOTA_BLOCKED: live call unavailable; fallback is not provider success
+STATUS TRANSLATION_FALLBACK language=te
+STATUS QUOTA_BLOCKED: live call unavailable; fallback is not provider success
+STATUS TRANSLATION_FALLBACK language=es
+{
+  "scope": "Real provider, synthetic entity-preservation probe; meaning is not independently certified",
+  "outcomes": [
+    {
+      "language": "hi",
+      "source": "Order ORD-7418 for Ravi Kumar has amount EUR 42.50 on 2026-10-19 for SKU-M72.",
+      "answer": "Order ORD-7418 for Ravi Kumar has amount EUR 42.50 on 2026-10-19 for SKU-M72.",
+      "entity_bytes_preserved": true,
+      "successful_live_translation": false,
+      "calls": [
+        {
+          "error": "ProviderUnavailableError",
+          "attempts": [
+            {
+              "model": "gemini-2.5-flash",
+              "status": 429,
+              "quota_limits": [
+                {
+                  "quotaId": "GenerateRequestsPerDayPerProjectPerModel-FreeTier",
+                  "quotaValue": "20"
+                }
+              ],
+              "retry_after_seconds": 57554.0,
+              "retry_skipped": "deadline"
+            }
+          ],
+          "http_success": false
+        }
+      ]
+    },
+    {
+      "language": "te",
+      "source": "Order ORD-7418 for Ravi Kumar has amount EUR 42.50 on 2026-10-19 for SKU-M72.",
+      "answer": "Order ORD-7418 for Ravi Kumar has amount EUR 42.50 on 2026-10-19 for SKU-M72.",
+      "entity_bytes_preserved": true,
+      "successful_live_translation": false,
+      "calls": [
+        {
+          "error": "ProviderUnavailableError",
+          "attempts": [
+            {
+              "model": "gemini-2.5-flash",
+              "status": 429,
+              "quota_limits": [
+                {
+                  "quotaId": "GenerateRequestsPerDayPerProjectPerModel-FreeTier",
+                  "quotaValue": "20"
+                }
+              ],
+              "retry_after_seconds": 57492.0,
+              "retry_skipped": "deadline"
+            }
+          ],
+          "http_success": false
+        }
+      ]
+    },
+    {
+      "language": "es",
+      "source": "Order ORD-7418 for Ravi Kumar has amount EUR 42.50 on 2026-10-19 for SKU-M72.",
+      "answer": "Order ORD-7418 for Ravi Kumar has amount EUR 42.50 on 2026-10-19 for SKU-M72.",
+      "entity_bytes_preserved": true,
+      "successful_live_translation": false,
+      "calls": [
+        {
+          "error": "ProviderUnavailableError",
+          "attempts": [
+            {
+              "model": "gemini-2.5-flash",
+              "status": 429,
+              "quota_limits": [
+                {
+                  "quotaId": "GenerateRequestsPerDayPerProjectPerModel-FreeTier",
+                  "quotaValue": "20"
+                }
+              ],
+              "retry_after_seconds": 57431.0,
+              "retry_skipped": "deadline"
+            }
+          ],
+          "http_success": false
+        }
+      ]
+    }
+  ]
+}

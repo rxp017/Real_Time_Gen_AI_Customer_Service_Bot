@@ -1,0 +1,638 @@
+{
+  "scope": "Post-fix fallback-only re-evaluation of previously exposed frozen sentiment labels; no provider calls",
+  "corpus_sha256": "bf58e610a821461b56d38d0d68a3370333b7db5d6ca63cd3f42d0d76dbbd76af",
+  "pipeline": {
+    "successes": 20,
+    "total": 48,
+    "rate": 0.4166666666666667,
+    "wilson95": [
+      0.2884966777841157,
+      0.5571866771602373
+    ]
+  },
+  "model_assisted": {
+    "successes": 0,
+    "total": 0,
+    "rate": null,
+    "wilson95": null
+  },
+  "fallback": {
+    "successes": 20,
+    "total": 48,
+    "rate": 0.4166666666666667,
+    "wilson95": [
+      0.2884966777841157,
+      0.5571866771602373
+    ]
+  },
+  "provider_status_counts": {
+    "disabled": 48
+  },
+  "outcomes": [
+    {
+      "id": "new-en-01",
+      "language": "en",
+      "label": "positive",
+      "predicted": "neutral",
+      "correct": false,
+      "confidence": 0.35,
+      "provider_status": "disabled",
+      "provider_attempts": [],
+      "expected_risk": [],
+      "risk": []
+    },
+    {
+      "id": "new-en-02",
+      "language": "en",
+      "label": "neutral",
+      "predicted": "neutral",
+      "correct": true,
+      "confidence": 0.35,
+      "provider_status": "disabled",
+      "provider_attempts": [],
+      "expected_risk": [],
+      "risk": []
+    },
+    {
+      "id": "new-en-03",
+      "language": "en",
+      "label": "negative",
+      "predicted": "neutral",
+      "correct": false,
+      "confidence": 0.35,
+      "provider_status": "disabled",
+      "provider_attempts": [],
+      "expected_risk": [],
+      "risk": []
+    },
+    {
+      "id": "new-en-04",
+      "language": "en",
+      "label": "frustrated",
+      "predicted": "neutral",
+      "correct": false,
+      "confidence": 0.35,
+      "provider_status": "disabled",
+      "provider_attempts": [],
+      "expected_risk": [],
+      "risk": []
+    },
+    {
+      "id": "new-en-05",
+      "language": "en",
+      "label": "urgent",
+      "predicted": "neutral",
+      "correct": false,
+      "confidence": 0.35,
+      "provider_status": "disabled",
+      "provider_attempts": [],
+      "expected_risk": [],
+      "risk": []
+    },
+    {
+      "id": "new-en-06",
+      "language": "en",
+      "label": "sarcastic",
+      "predicted": "neutral",
+      "correct": false,
+      "confidence": 0.35,
+      "provider_status": "disabled",
+      "provider_attempts": [],
+      "expected_risk": [],
+      "risk": []
+    },
+    {
+      "id": "new-en-07",
+      "language": "en",
+      "label": "neutral",
+      "predicted": "neutral",
+      "correct": true,
+      "confidence": 0.35,
+      "provider_status": "disabled",
+      "provider_attempts": [],
+      "expected_risk": [
+        "account_compromise"
+      ],
+      "risk": []
+    },
+    {
+      "id": "new-en-08",
+      "language": "en",
+      "label": "neutral",
+      "predicted": "neutral",
+      "correct": true,
+      "confidence": 0.35,
+      "provider_status": "disabled",
+      "provider_attempts": [],
+      "expected_risk": [
+        "duplicate_payment"
+      ],
+      "risk": []
+    },
+    {
+      "id": "new-en-09",
+      "language": "en",
+      "label": "neutral",
+      "predicted": "neutral",
+      "correct": true,
+      "confidence": 0.35,
+      "provider_status": "disabled",
+      "provider_attempts": [],
+      "expected_risk": [
+        "legal_threat"
+      ],
+      "risk": []
+    },
+    {
+      "id": "new-en-10",
+      "language": "en",
+      "label": "sarcastic",
+      "predicted": "positive",
+      "correct": false,
+      "confidence": 0.85,
+      "provider_status": "disabled",
+      "provider_attempts": [],
+      "expected_risk": [],
+      "risk": []
+    },
+    {
+      "id": "new-en-11",
+      "language": "en",
+      "label": "negative",
+      "predicted": "neutral",
+      "correct": false,
+      "confidence": 0.35,
+      "provider_status": "disabled",
+      "provider_attempts": [],
+      "expected_risk": [],
+      "risk": []
+    },
+    {
+      "id": "new-en-12",
+      "language": "en",
+      "label": "frustrated",
+      "predicted": "neutral",
+      "correct": false,
+      "confidence": 0.35,
+      "provider_status": "disabled",
+      "provider_attempts": [],
+      "expected_risk": [],
+      "risk": []
+    },
+    {
+      "id": "new-hi-01",
+      "language": "hi",
+      "label": "positive",
+      "predicted": "frustrated",
+      "correct": false,
+      "confidence": 0.85,
+      "provider_status": "disabled",
+      "provider_attempts": [],
+      "expected_risk": [],
+      "risk": []
+    },
+    {
+      "id": "new-hi-02",
+      "language": "hi",
+      "label": "neutral",
+      "predicted": "neutral",
+      "correct": true,
+      "confidence": 0.35,
+      "provider_status": "disabled",
+      "provider_attempts": [],
+      "expected_risk": [],
+      "risk": []
+    },
+    {
+      "id": "new-hi-03",
+      "language": "hi",
+      "label": "negative",
+      "predicted": "neutral",
+      "correct": false,
+      "confidence": 0.35,
+      "provider_status": "disabled",
+      "provider_attempts": [],
+      "expected_risk": [],
+      "risk": []
+    },
+    {
+      "id": "new-hi-04",
+      "language": "hi",
+      "label": "frustrated",
+      "predicted": "neutral",
+      "correct": false,
+      "confidence": 0.35,
+      "provider_status": "disabled",
+      "provider_attempts": [],
+      "expected_risk": [],
+      "risk": []
+    },
+    {
+      "id": "new-hi-05",
+      "language": "hi",
+      "label": "urgent",
+      "predicted": "urgent",
+      "correct": true,
+      "confidence": 0.85,
+      "provider_status": "disabled",
+      "provider_attempts": [],
+      "expected_risk": [],
+      "risk": []
+    },
+    {
+      "id": "new-hi-06",
+      "language": "hi",
+      "label": "sarcastic",
+      "predicted": "neutral",
+      "correct": false,
+      "confidence": 0.35,
+      "provider_status": "disabled",
+      "provider_attempts": [],
+      "expected_risk": [],
+      "risk": []
+    },
+    {
+      "id": "new-hi-07",
+      "language": "hi",
+      "label": "neutral",
+      "predicted": "neutral",
+      "correct": true,
+      "confidence": 0.35,
+      "provider_status": "disabled",
+      "provider_attempts": [],
+      "expected_risk": [
+        "account_compromise"
+      ],
+      "risk": []
+    },
+    {
+      "id": "new-hi-08",
+      "language": "hi",
+      "label": "neutral",
+      "predicted": "neutral",
+      "correct": true,
+      "confidence": 0.35,
+      "provider_status": "disabled",
+      "provider_attempts": [],
+      "expected_risk": [
+        "duplicate_payment"
+      ],
+      "risk": [
+        "duplicate_payment"
+      ]
+    },
+    {
+      "id": "new-hi-09",
+      "language": "hi",
+      "label": "neutral",
+      "predicted": "neutral",
+      "correct": true,
+      "confidence": 0.35,
+      "provider_status": "disabled",
+      "provider_attempts": [],
+      "expected_risk": [
+        "legal_threat"
+      ],
+      "risk": []
+    },
+    {
+      "id": "new-hi-10",
+      "language": "hi",
+      "label": "sarcastic",
+      "predicted": "neutral",
+      "correct": false,
+      "confidence": 0.35,
+      "provider_status": "disabled",
+      "provider_attempts": [],
+      "expected_risk": [],
+      "risk": []
+    },
+    {
+      "id": "new-hi-11",
+      "language": "hi",
+      "label": "negative",
+      "predicted": "negative",
+      "correct": true,
+      "confidence": 0.85,
+      "provider_status": "disabled",
+      "provider_attempts": [],
+      "expected_risk": [],
+      "risk": []
+    },
+    {
+      "id": "new-hi-12",
+      "language": "hi",
+      "label": "frustrated",
+      "predicted": "neutral",
+      "correct": false,
+      "confidence": 0.35,
+      "provider_status": "disabled",
+      "provider_attempts": [],
+      "expected_risk": [],
+      "risk": []
+    },
+    {
+      "id": "new-te-01",
+      "language": "te",
+      "label": "positive",
+      "predicted": "negative",
+      "correct": false,
+      "confidence": 0.85,
+      "provider_status": "disabled",
+      "provider_attempts": [],
+      "expected_risk": [],
+      "risk": []
+    },
+    {
+      "id": "new-te-02",
+      "language": "te",
+      "label": "neutral",
+      "predicted": "neutral",
+      "correct": true,
+      "confidence": 0.35,
+      "provider_status": "disabled",
+      "provider_attempts": [],
+      "expected_risk": [],
+      "risk": []
+    },
+    {
+      "id": "new-te-03",
+      "language": "te",
+      "label": "negative",
+      "predicted": "neutral",
+      "correct": false,
+      "confidence": 0.35,
+      "provider_status": "disabled",
+      "provider_attempts": [],
+      "expected_risk": [],
+      "risk": []
+    },
+    {
+      "id": "new-te-04",
+      "language": "te",
+      "label": "frustrated",
+      "predicted": "neutral",
+      "correct": false,
+      "confidence": 0.35,
+      "provider_status": "disabled",
+      "provider_attempts": [],
+      "expected_risk": [],
+      "risk": []
+    },
+    {
+      "id": "new-te-05",
+      "language": "te",
+      "label": "urgent",
+      "predicted": "urgent",
+      "correct": true,
+      "confidence": 0.85,
+      "provider_status": "disabled",
+      "provider_attempts": [],
+      "expected_risk": [],
+      "risk": []
+    },
+    {
+      "id": "new-te-06",
+      "language": "te",
+      "label": "sarcastic",
+      "predicted": "neutral",
+      "correct": false,
+      "confidence": 0.35,
+      "provider_status": "disabled",
+      "provider_attempts": [],
+      "expected_risk": [],
+      "risk": []
+    },
+    {
+      "id": "new-te-07",
+      "language": "te",
+      "label": "neutral",
+      "predicted": "neutral",
+      "correct": true,
+      "confidence": 0.35,
+      "provider_status": "disabled",
+      "provider_attempts": [],
+      "expected_risk": [
+        "account_compromise"
+      ],
+      "risk": []
+    },
+    {
+      "id": "new-te-08",
+      "language": "te",
+      "label": "neutral",
+      "predicted": "neutral",
+      "correct": true,
+      "confidence": 0.35,
+      "provider_status": "disabled",
+      "provider_attempts": [],
+      "expected_risk": [
+        "duplicate_payment"
+      ],
+      "risk": []
+    },
+    {
+      "id": "new-te-09",
+      "language": "te",
+      "label": "neutral",
+      "predicted": "neutral",
+      "correct": true,
+      "confidence": 0.35,
+      "provider_status": "disabled",
+      "provider_attempts": [],
+      "expected_risk": [
+        "legal_threat"
+      ],
+      "risk": []
+    },
+    {
+      "id": "new-te-10",
+      "language": "te",
+      "label": "sarcastic",
+      "predicted": "neutral",
+      "correct": false,
+      "confidence": 0.35,
+      "provider_status": "disabled",
+      "provider_attempts": [],
+      "expected_risk": [],
+      "risk": []
+    },
+    {
+      "id": "new-te-11",
+      "language": "te",
+      "label": "negative",
+      "predicted": "neutral",
+      "correct": false,
+      "confidence": 0.35,
+      "provider_status": "disabled",
+      "provider_attempts": [],
+      "expected_risk": [],
+      "risk": []
+    },
+    {
+      "id": "new-te-12",
+      "language": "te",
+      "label": "frustrated",
+      "predicted": "neutral",
+      "correct": false,
+      "confidence": 0.35,
+      "provider_status": "disabled",
+      "provider_attempts": [],
+      "expected_risk": [],
+      "risk": []
+    },
+    {
+      "id": "new-es-01",
+      "language": "es",
+      "label": "positive",
+      "predicted": "neutral",
+      "correct": false,
+      "confidence": 0.35,
+      "provider_status": "disabled",
+      "provider_attempts": [],
+      "expected_risk": [],
+      "risk": []
+    },
+    {
+      "id": "new-es-02",
+      "language": "es",
+      "label": "neutral",
+      "predicted": "neutral",
+      "correct": true,
+      "confidence": 0.35,
+      "provider_status": "disabled",
+      "provider_attempts": [],
+      "expected_risk": [],
+      "risk": []
+    },
+    {
+      "id": "new-es-03",
+      "language": "es",
+      "label": "negative",
+      "predicted": "neutral",
+      "correct": false,
+      "confidence": 0.35,
+      "provider_status": "disabled",
+      "provider_attempts": [],
+      "expected_risk": [],
+      "risk": []
+    },
+    {
+      "id": "new-es-04",
+      "language": "es",
+      "label": "frustrated",
+      "predicted": "neutral",
+      "correct": false,
+      "confidence": 0.35,
+      "provider_status": "disabled",
+      "provider_attempts": [],
+      "expected_risk": [],
+      "risk": []
+    },
+    {
+      "id": "new-es-05",
+      "language": "es",
+      "label": "urgent",
+      "predicted": "urgent",
+      "correct": true,
+      "confidence": 0.85,
+      "provider_status": "disabled",
+      "provider_attempts": [],
+      "expected_risk": [],
+      "risk": []
+    },
+    {
+      "id": "new-es-06",
+      "language": "es",
+      "label": "sarcastic",
+      "predicted": "neutral",
+      "correct": false,
+      "confidence": 0.35,
+      "provider_status": "disabled",
+      "provider_attempts": [],
+      "expected_risk": [],
+      "risk": []
+    },
+    {
+      "id": "new-es-07",
+      "language": "es",
+      "label": "neutral",
+      "predicted": "neutral",
+      "correct": true,
+      "confidence": 0.35,
+      "provider_status": "disabled",
+      "provider_attempts": [],
+      "expected_risk": [
+        "account_compromise"
+      ],
+      "risk": []
+    },
+    {
+      "id": "new-es-08",
+      "language": "es",
+      "label": "neutral",
+      "predicted": "neutral",
+      "correct": true,
+      "confidence": 0.35,
+      "provider_status": "disabled",
+      "provider_attempts": [],
+      "expected_risk": [
+        "duplicate_payment"
+      ],
+      "risk": []
+    },
+    {
+      "id": "new-es-09",
+      "language": "es",
+      "label": "neutral",
+      "predicted": "neutral",
+      "correct": true,
+      "confidence": 0.35,
+      "provider_status": "disabled",
+      "provider_attempts": [],
+      "expected_risk": [
+        "legal_threat"
+      ],
+      "risk": []
+    },
+    {
+      "id": "new-es-10",
+      "language": "es",
+      "label": "sarcastic",
+      "predicted": "neutral",
+      "correct": false,
+      "confidence": 0.35,
+      "provider_status": "disabled",
+      "provider_attempts": [],
+      "expected_risk": [],
+      "risk": []
+    },
+    {
+      "id": "new-es-11",
+      "language": "es",
+      "label": "negative",
+      "predicted": "neutral",
+      "correct": false,
+      "confidence": 0.35,
+      "provider_status": "disabled",
+      "provider_attempts": [],
+      "expected_risk": [],
+      "risk": []
+    },
+    {
+      "id": "new-es-12",
+      "language": "es",
+      "label": "frustrated",
+      "predicted": "neutral",
+      "correct": false,
+      "confidence": 0.35,
+      "provider_status": "disabled",
+      "provider_attempts": [],
+      "expected_risk": [],
+      "risk": []
+    }
+  ],
+  "config_hash": "980e44338656f551dbfe44b6babfe55972e109539920890619c8b6a8a15ae0c4",
+  "prior_exposure": true,
+  "registered_live_run": false
+}
