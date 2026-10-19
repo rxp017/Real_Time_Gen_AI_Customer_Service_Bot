@@ -1,14 +1,6 @@
-# Project assumptions - current revision 2026-10-19
+# Design assumptions
 
-## README and video presentation
-
-- The user selected Google Vids, English, landscape and approximately three minutes, and already chose an avatar. The production kit reuses that avatar and its saved voice without inventing a replacement appearance.
-- The edit target is 192 seconds, planned as 24 eight-second scenes: ten avatar scenes and fourteen real captures. Eight seconds is a conservative common unit; current Vids help lists a 3–10 second selector while the Veo 3.1 API lists 4/6/8 seconds. Dedicated Vids avatar segments have a separate up-to-60-second limit. Actual model, controls, timing and plan quota must be checked in the user's Vids interface.
-- The README uses illustrative SVG diagrams and an existing actual local UI capture. Video materials are prompts and capture directions only; no generation, spending, real deployment or completed video is claimed. Software footage must preserve actual outputs, with fixture runs labelled offline.
-
-## Application and evaluation assumptions
-
-- The approved revision sequence governs these changes; original task files remain unchanged. Latest applicable family/product/region resolution occurs before lexical or embedding scoring. Historical/future policy vectors may exist for authorized as-of queries but cannot bypass current-date filters.
+- Latest applicable family/product/region resolution occurs before lexical or embedding scoring. Historical/future policy vectors may exist for authorized as-of queries but cannot bypass current-date filters.
 - T4 and T5 development sets were committed separately before implementation changes. Only these development sets drove thresholds, prompts and resources. Existing exposed frozen sets are re-evaluated after source/config registration; no outcome drove further tuning. CI checks immutable hashes and complete normalized text contamination.
 - T4 retains the flagged parent for audit. Independent safe sentences are projected into an unflagged retrieval/embedding view; neutralized instructions never become evidence. Pure injected content remains excluded, and T1 still quarantines injection-flagged source files. Sentence adjacency can conservatively lose safe text.
 - Hybrid rank/margin and requested-attribute gates supplement thresholds; top-k claims still require support by each cited source. Development replay uses measured cached vectors and deterministic FakeLLM quotation, so its metrics are not live generation quality.
@@ -17,6 +9,11 @@
 - Original FAQ bytes and mentor attribution remain. The normal API imports FAQs to shared metadata-bearing RAG for a new configured empty store; preserved legacy entry points remain unverified. Existing ACTIVE snapshots are not overwritten by bootstrap.
 - Names/order IDs/dates/products are protected before normalization; unknown names remain a bounded-recognition limit. Translation retains canonical source_answer and actual answer_language. Provider failure or token validation failure uses curated/source fallback, never an invented success.
 - OCR uses runtime override before environment and then configured/PATH discovery, with standard Windows fallback. One worker/instance, no browser-persisted keys, bounded uploads and restricted origins remain supported deployment assumptions. Render Free sleeps and ephemeral disk are explicit demonstration limits.
-- Local/runner paths and usernames in current tracked docs and verification are redacted. Archive metrics, verdicts, timestamps and original hash fields are retained; the redaction manifest maps changed bytes. Git history is not rewritten.
 
-Earlier design notes and superseded provider/model assumptions are preserved verbatim except local path text in [the pre-revision archive](archive/assumptions-pre-revision-2026-10-17.md). They describe their recorded dates, not current successful verification.
+
+## Uploads and ticket inputs
+
+- Upload validation reads bounded format headers before content decoding. The allowlist is PNG, JPEG and a conservative PDF subset. Unsupported PDF features are rejected; this is not universal malware containment.
+- Field extraction uses explicitly labelled document values. Missing values remain null. Message values are used for comparison and never fill document gaps. OCR confidence does not prove authenticity.
+- Upload completion is delivered through owner-bound job polling. Retention removes stored bytes and result content; minimal expiry tombstones remain.
+- Ticket severity and impact are explicit inputs. Omitted values use recorded configuration defaults. Mandatory customer/contact fields must be supplied before final creation. Alerts and queue destinations are local records.

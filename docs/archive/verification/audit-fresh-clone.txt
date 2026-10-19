@@ -1,9 +1,0 @@
-Cloning into '.verification/audit-fresh-clone'...
-fatal: detected dubious ownership in repository at 'WORKSPACE/.git'
-'WORKSPACE/.git' is owned by:
-	VICTUS/CodexSandboxOffline (S-1-5-21-586186926-621812777-1917746124-1003)
-but the current user is:
-	VICTUS/LOCAL_USER (S-1-5-21-586186926-621812777-1917746124-1001)
-To add an exception for this directory, call:
-
-	git config --global --add safe.directory WORKSPACE/.git

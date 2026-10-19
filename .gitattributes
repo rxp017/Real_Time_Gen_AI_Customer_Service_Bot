@@ -10,8 +10,3 @@
 *.jpg -text
 *.jpeg -text
 *.csv -text
-docs/archive/audit-disclosures-verbatim.md -text
-docs/archive/known_gaps-2026-10-15.md -text
-docs/archive/assumptions-2026-10-15.md -text
-docs/archive/** -whitespace
-docs/verification/release-ci-*.txt -whitespace

@@ -1,6 +1,0 @@
-{
-  "stored_vectors": 197,
-  "batch_errors": [],
-  "model": "gemini-embedding-001",
-  "scope": "Only independently authored dev text; no held-out data"
-}

@@ -1,6 +1,6 @@
 # Requirements trace matrix - 2026-10-19
 
-Original task documents are unchanged. The approved 2026-10-17 instruction supersedes the historical T4 ordering: authorization, validity/injection exclusion and latest-version resolution now precede all similarity. PASS means the stated local contract is tested, not general accuracy. Partial capability limits remain explicit. Actual outputs and held-out measurements: [REPORT.md](REPORT.md). Earlier RTM and audit evidence are retained in [archive](archive/README.md).
+Original task documents are unchanged. The approved 2026-10-17 instruction supersedes the historical T4 ordering: authorization, validity/injection exclusion and latest-version resolution now precede all similarity. PASS means the stated local contract is tested, not general accuracy. Partial capability limits remain explicit. Actual outputs and held-out measurements: [REPORT.md](REPORT.md).
 
 ## Task 1
 
@@ -18,7 +18,7 @@ Original task documents are unchanged. The approved 2026-10-17 instruction super
 | Versioning: immutable snapshots; one ACTIVE pointer; rollback(version) swaps the pointer atomically. | `core/store.py:SnapshotRepository.create_snapshot, swap_active`, immutable SQL triggers | `test_manual_rollback`, `test_atomic_pointer_compare_and_swap`, `test_snapshot_and_schedule_survive_restart` | PASS |
 | Quality gate on a candidate snapshot: run a golden Q&A set (data/golden/) and measure accuracy and grounding (cited-source validity). | `core/updates.py:UpdateService.evaluate, _quality_gate` | `test_quality_gate_rejects_accuracy_drop`, `test_quality_gate_rejects_grounding_drop` | PASS |
 | Reject if either is lower than the active version (tolerance configurable, default 0). | `core/updates.py:UpdateService._quality_gate`, `config/default.yaml:updates` | `test_quality_gate_rejects_accuracy_drop`, `test_quality_gate_rejects_grounding_drop`, `test_quality_tolerance_hot_reload` | PASS |
-| Report real numbers. | `core/updates.py:UpdateService._quality_gate`, `scripts/demo_t1.py:run_demo` | Quality tests assert measured active/candidate fractions; saved `demo-t1.txt` | PASS |
+| Report real numbers. | `core/updates.py:UpdateService._quality_gate`, `scripts/demo_t1.py:run_demo` | Quality tests assert measured active/candidate fractions; scripts/demo_t1.py output | PASS |
 | Scheduler: configurable run time, driven by Clock. | `core/updates.py:UpdateService.schedule, tick`, `app/chatbot.py:maintenance_worker` | `test_retry_15_30_60`, `test_daily_scheduler_discovers_files_added_after_schedule` | PASS |
 | On failure retry at +15, +30, +60 minutes, then mark FAILED and alert. | `core/updates.py:UpdateService.tick` | `test_retry_15_30_60`, `test_late_failure_retry_offsets_start_at_failure` | PASS |
 | Exactly these three retries. | `core/updates.py:UpdateService.tick` | `test_retry_15_30_60` verifies four attempts and one durable alert | PASS |
@@ -40,7 +40,7 @@ Original task documents are unchanged. The approved 2026-10-17 instruction super
 | test_service_outage_during_update (vector store down, LLM down) | tests/test_task1.py:test_service_outage_during_update | test_service_outage_during_update | PASS |
 | test_unauthorised_access_rejected | tests/test_task1.py:test_unauthorised_access_rejected | test_unauthorised_access_rejected | PASS |
 | test_manual_rollback | tests/test_task1.py:test_manual_rollback | test_manual_rollback | PASS |
-| Finish with RTM for T1, pytest output, and a demo script that simulates a full maintenance-window day. | `docs/RTM.md`, `docs/verification/pytest.txt`, `scripts/demo_t1.py:run_demo` | Current suite output and actual `demo-t1.txt` include day assertions, quality scores, activation and both rollback paths | PASS |
+| Finish with RTM for T1, pytest output, and a demo script that simulates a full maintenance-window day. | `docs/RTM.md`, `docs/verification/tests.txt`, `scripts/demo_t1.py:run_demo` | Current suite output and scripts/demo_t1.py output include day assertions, quality scores, activation and both rollback paths | PASS |
 
 ## Task 2
 
@@ -48,7 +48,7 @@ Original task documents are unchanged. The approved 2026-10-17 instruction super
 | --- | --- | --- | --- |
 | Read RULES.md, docs/tasks/T2.md. | Shared config/security/audit/metrics/Clock/LLMClient/SQLite; app/chatbot.py:lifespan, maintenance_worker | test_api_owner_binding_delivery_and_early_body_limit, test_application_worker_purges_bytes_without_customer_poll | PASS |
 | Reuse core/*, security, and Clock. | Shared config/security/audit/metrics/Clock/LLMClient/SQLite; app/chatbot.py:lifespan, maintenance_worker | test_api_owner_binding_delivery_and_early_body_limit, test_application_worker_purges_bytes_without_customer_poll | PASS |
-| Implement Task 2 exactly as in T2.md. | core/upload_gate.py, ocr.py, document_extraction.py, upload_fields.py, upload_processing.py, uploads.py; shared store and API | Required named scenarios below; documented scope in docs/task2_assumptions.md | PARTIAL: bounded detector; unmatched instruction wording remains a gap |
+| Implement Task 2 exactly as in T2.md. | core/upload_gate.py, ocr.py, document_extraction.py, upload_fields.py, upload_processing.py, uploads.py; shared store and API | Required named scenarios below; documented scope in docs/assumptions.md | PARTIAL: bounded detector; unmatched instruction wording remains a gap |
 | Upload gate first: validate magic bytes, size, type allowlist, decompression-bomb limits, and active content in PDFs. | app/upload_api.py:UploadBodyLimit; core/upload_gate.py:UploadGate.validate, _png, _jpeg, _pdf, bounded_inflate | test_unsafe_file_rejected, test_gate_adversarial_variants_before_decoding, test_image_bomb_limits_apply_before_decoder, test_pdf_compression_limit_survives_name_obfuscation | PASS |
 | Unsafe -> reject and audit before any parsing. | core/upload_gate.py:UploadGate.validate, core/uploads.py:UploadService.submit, _run | test_unsafe_file_rejected replaces image/PDF/processing entry points with fail-fast spies and checks the rejection audit and absent stored bytes/jobs; structural header inspection is the gate itself | PASS |
 | Extraction: OCR (verify Tesseract and language packs are installed with a real check; document install steps) and PDF text with a raster fallback. | core/ocr.py:TesseractOCR.check, recognize; core/document_extraction.py:DocumentExtractor.extract; scripts/check_ocr.py; docs/task2.md | test_real_tesseract_and_all_configured_packs_installed, test_actual_fields_have_confidence_and_source_regions (native and scanned PDF); actual task2-ocr-installation.json, language hashes and documented Windows install commands | PASS |
@@ -68,7 +68,7 @@ Original task documents are unchanged. The approved 2026-10-17 instruction super
 | Test deletion actually removes the bytes from disk. | core/uploads.py:UploadService.purge | test_expired_files_deleted reads the original bytes, advances FakeClock to expiry and asserts the path no longer exists; worker integration proves automatic deletion during a maintenance failure | PASS |
 | Tests (named): test_blurred_image_requests_new_file, test_mismatched_invoice_asks_clarification, test_missing_field_not_invented, test_delayed_processing_moves_to_queue_and_notifies, test_expired_files_deleted, test_prompt_injection_in_image_rejected, test_unsafe_file_rejected, test_pii_masked_in_logs. | tests/test_task2.py:test_blurred_image_requests_new_file; tests/test_task2.py:test_mismatched_invoice_asks_clarification; tests/test_task2.py:test_missing_field_not_invented; tests/test_task2.py:test_delayed_processing_moves_to_queue_and_notifies; tests/test_task2.py:test_expired_files_deleted; tests/test_task2.py:test_prompt_injection_in_image_rejected; tests/test_task2.py:test_unsafe_file_rejected; tests/test_task2.py:test_pii_masked_in_logs | test_blurred_image_requests_new_file, test_mismatched_invoice_asks_clarification, test_missing_field_not_invented, test_delayed_processing_moves_to_queue_and_notifies, test_expired_files_deleted, test_prompt_injection_in_image_rejected, test_unsafe_file_rejected, test_pii_masked_in_logs | PASS |
 | Create real fixture files (clean, blurred, mismatched, injected, malformed) in tests/fixtures/. | scripts/create_t2_fixtures.py:main; tests/fixtures/task2 actual encoded files and README | Real fixture decoding/extraction in the named tests, plus native/scanned PDF, product/no-text, hidden-instruction and active-PDF scenarios | PASS |
-| Finish with RTM for T2 and pytest output. | docs/RTM.md, docs/README.md, docs/verification/pytest-task2.txt | Actual captured command: .\.runtime\python311\python.exe -X utf8 -m pytest -q; 248 passed, 1 warning in 53.07s | PASS |
+| Finish with RTM for T2 and pytest output. | docs/RTM.md, docs/README.md, docs/verification/tests.txt | Full-suite output in docs/verification/tests.txt | PASS |
 
 ## Task 3
 
@@ -76,7 +76,7 @@ Original task documents are unchanged. The approved 2026-10-17 instruction super
 | --- | --- | --- | --- |
 | Read RULES.md, docs/tasks/T3.md. | `core/tickets.py:TicketService`; `core/conversation.py:ConversationService.turn`; `core/business_time.py:BusinessCalendar`; existing config/security/audit/store/sentiment/sessions | `test_ticket_priority_uses_existing_history_aware_sentiment`, `test_unresolved_chat_collects_separate_drafts_and_reuses_summaries`, `test_background_ticket_sla_runs_without_next_message` | PASS |
 | Reuse core/*, sentiment from P4, Clock, and session summaries. | `core/tickets.py:TicketService`; `core/conversation.py:ConversationService.turn`; `core/business_time.py:BusinessCalendar`; existing config/security/audit/store/sentiment/sessions | `test_ticket_priority_uses_existing_history_aware_sentiment`, `test_unresolved_chat_collects_separate_drafts_and_reuses_summaries`, `test_background_ticket_sla_runs_without_next_message` | PASS |
-| Implement Task 3 exactly as in T3.md. | `core/tickets.py:TicketService`, `app/chatbot.py:collect_ticket`, shared modules | All 12 required named tests below; interpretations in `docs/task3_assumptions.md` | PASS |
+| Implement Task 3 exactly as in T3.md. | `core/tickets.py:TicketService`, `app/chatbot.py:collect_ticket`, shared modules | All 12 required named tests below; interpretations in `docs/assumptions.md` | PASS |
 | Unresolved conversation -> structured ticket (customer, order, product, issue, evidence, contact). | `core/conversation.py:ConversationService.turn`; `core/tickets.py:TicketService.collect, unresolved, requested_handoff` | `test_unresolved_chat_collects_separate_drafts_and_reuses_summaries`, `test_ticket_api_access_and_draft_completion`, `test_explicit_unresolved_request_creates_draft_despite_factual_answer` | PASS |
 | Mandatory fields missing -> ask the customer; do not create a final ticket with invented values. | `core/tickets.py:TicketService.collect`; `app/chatbot.py:handle_query` returns `ticket_questions` | `test_missing_mandatory_requested`, `test_ticket_api_access_and_draft_completion` | PASS |
 | Priority = documented, configurable weighted score over severity, sentiment, waiting time, customer impact, SLA state. | `core/priority.py:priority_score`; `core/tickets.py:TicketService._refresh`; `config/default.yaml:tickets.priority` | `test_priority_formula`, `test_ticket_priority_uses_existing_history_aware_sentiment` | PASS |
@@ -91,7 +91,7 @@ Original task documents are unchanged. The approved 2026-10-17 instruction super
 | Keep unrelated issues as separate tickets, even in the same conversation. | `core/tickets.py:TicketService.collect, _similar, unresolved` | `test_related_grouped_unrelated_separate`, `test_similar_wording_with_conflicting_details_is_not_merged`, `test_dedup_does_not_cross_customer_order_product_or_owner` | PASS |
 | Handoff summary: masked, no card numbers, phones, or emails. | `core/tickets.py:TicketService.collect`; existing `core/security.py:mask_pii`, `core/escalation.py:EscalationService.masked` | `test_handoff_summary_masked` | PASS |
 | Tests (named): test_duplicate_ticket_merged, test_related_grouped_unrelated_separate, test_missing_mandatory_requested, test_priority_formula, test_routing_skills_workload, test_team_unavailable_queued, test_after_hours_request, test_sla_excludes_weekends_and_holidays, test_sla_75_percent_warning, test_breach_auto_escalates, test_runtime_sla_change_recomputes, test_handoff_summary_masked. | tests/test_task3.py:test_duplicate_ticket_merged; tests/test_task3.py:test_related_grouped_unrelated_separate; tests/test_task3.py:test_missing_mandatory_requested; tests/test_task3.py:test_priority_formula; tests/test_task3.py:test_routing_skills_workload; tests/test_task3.py:test_team_unavailable_queued; tests/test_task3.py:test_after_hours_request; tests/test_task3.py:test_sla_excludes_weekends_and_holidays; tests/test_task3.py:test_sla_75_percent_warning; tests/test_task3.py:test_breach_auto_escalates; tests/test_task3.py:test_runtime_sla_change_recomputes; tests/test_task3.py:test_handoff_summary_masked | test_duplicate_ticket_merged, test_related_grouped_unrelated_separate, test_missing_mandatory_requested, test_priority_formula, test_routing_skills_workload, test_team_unavailable_queued, test_after_hours_request, test_sla_excludes_weekends_and_holidays, test_sla_75_percent_warning, test_breach_auto_escalates, test_runtime_sla_change_recomputes, test_handoff_summary_masked | PASS |
-| Finish with RTM for T3 and pytest output. | `docs/RTM.md`, `docs/README.md`, `docs/verification/pytest-task3.txt` | Actual captured full command output; Task 3 acceptance output and offline demonstration | PASS |
+| Finish with RTM for T3 and pytest output. | `docs/RTM.md`, `docs/README.md`, `docs/verification/tests.txt` | Actual captured full command output; Task 3 acceptance output and offline demonstration | PASS |
 
 ## Task 4
 
@@ -130,8 +130,8 @@ Original task documents are unchanged. The approved 2026-10-17 instruction super
 | test_prompt_injected_doc_ignored | tests/test_task4.py:test_prompt_injected_doc_ignored | test_prompt_injected_doc_ignored | PASS |
 | Fixture corpus in data/sample_docs/ covering every case above. | `data/sample_docs/*.json` | All 10 named Task 4 tests load and exercise the fixture corpus | PASS |
 | Requirements Trace Matrix (docs/RTM.md) for T4. | `docs/RTM.md` and `docs/audit-rtm.md` | Sentence/row audit and existing Task 4 trace table | PASS |
-| pytest output pasted. | `docs/verification/audit-final-pytest.txt`, `docs/audit.md` | Actual full-suite command output | PASS |
-| Demo script that prints real outputs. | `scripts/demo_t4.py` | Existing executable fixture demo; historical captured output `docs/verification/demo-t4.txt` | PASS |
+| pytest output pasted. | `docs/verification/tests.txt`, `docs/REPORT.md` | Actual full-suite command output | PASS |
+| Demo script that prints real outputs. | `scripts/demo_t4.py` | Run python scripts/demo_t4.py for actual offline fixture output | PASS |
 
 ## Task 5
 
@@ -139,7 +139,7 @@ Original task documents are unchanged. The approved 2026-10-17 instruction super
 | --- | --- | --- | --- |
 | Read RULES.md, docs/tasks/T5.md. | `core/sentiment.py:SentimentClassifier`, `core/escalation.py:EscalationService`, existing language/config/security/audit/metrics/store, `app/chatbot.py:handle_query` | `test_api_support_layer_and_resolution_access`, `test_simulated_time_change`, `test_tone_changes_policy_unchanged` | PASS |
 | Reuse core/*, the language layer from P3, and the Clock. | `core/sentiment.py:SentimentClassifier`, `core/escalation.py:EscalationService`, existing language/config/security/audit/metrics/store, `app/chatbot.py:handle_query` | `test_api_support_layer_and_resolution_access`, `test_simulated_time_change`, `test_tone_changes_policy_unchanged` | PASS |
-| Implement Task 5 exactly as in T5.md. | `core/sentiment.py`, `core/risk.py`, `core/tone.py`, `core/escalation.py`, shared store and orchestrator | Named scenarios below; interpretation/provenance in `docs/task5_assumptions.md` | PARTIAL: named risks pass; unrepresented wording can be missed |
+| Implement Task 5 exactly as in T5.md. | `core/sentiment.py`, `core/risk.py`, `core/tone.py`, `core/escalation.py`, shared store and orchestrator | Named scenarios below; interpretation/provenance in `docs/assumptions.md` | PARTIAL: named risks pass; unrepresented wording can be missed |
 | Classifier returns label + confidence for: positive, neutral, negative, frustrated, urgent, sarcastic. | `core/sentiment.py:Sentiment, SentimentClassifier.classify`, language support resources | `test_classifier_labels_and_confidence_from_authored_set` asserts all six expected explicit labels in each language and confidence bounds | PASS |
 | It takes the current message AND recent history (sarcasm and frustration depend on history). | `core/sentiment.py:SentimentClassifier.classify`, `core/escalation.py:EscalationService.observe` | `test_sarcasm_detected_with_history` compares identical current text with and without history for both sarcasm and frustration | PASS |
 | Multilingual via the P3 language layer. | `core/language.py:LanguageProcessor.protect, transform, detect`, `resources/languages/{en,hi,te,es}.json:support` | `test_classifier_labels_and_confidence_from_authored_set`, `test_multilingual_risk_independent_of_intent`, `test_tone_changes_policy_unchanged` | PASS |
@@ -152,7 +152,7 @@ Original task documents are unchanged. The approved 2026-10-17 instruction super
 | Routing by time: urgent + outside business hours -> on-call queue; normal complaints outside hours -> scheduled next working day (skip weekends/holidays from config). | `core/escalation.py:EscalationRouter.route`, shared business calendar/timezone/Clock | `test_urgent_after_hours_goes_oncall`, `test_normal_after_hours_next_working_day`, `test_business_hour_boundaries`, `test_urgency_upgrades_scheduled_record` | PASS |
 | Every escalation record stores: reason, activated condition, conversation summary (masked). | `core/escalation.py:EscalationService._record, masked`, `core/store.py:EscalationRepository.issue`, shared `core/security.py:mask_pii` | `test_escalation_record_complete` verifies stored/audited reason, condition, summary and names/email/phone/Luhn-card masking while preserving order ID | PASS |
 | Tests (named): test_sarcasm_detected_with_history, test_calm_account_compromise_escalates, test_calm_duplicate_payment_escalates, test_calm_legal_threat_escalates, test_repeated_negative_escalates, test_urgent_after_hours_goes_oncall, test_normal_after_hours_next_working_day, test_unresolved_negative_15min_escalates, test_simulated_time_change, test_tone_changes_policy_unchanged, test_escalation_record_complete. | tests/test_task5.py:test_sarcasm_detected_with_history; tests/test_task5.py:test_calm_account_compromise_escalates; tests/test_task5.py:test_calm_duplicate_payment_escalates; tests/test_task5.py:test_calm_legal_threat_escalates; tests/test_task5.py:test_repeated_negative_escalates; tests/test_task5.py:test_urgent_after_hours_goes_oncall; tests/test_task5.py:test_normal_after_hours_next_working_day; tests/test_task5.py:test_unresolved_negative_15min_escalates; tests/test_task5.py:test_simulated_time_change; tests/test_task5.py:test_tone_changes_policy_unchanged; tests/test_task5.py:test_escalation_record_complete | test_sarcasm_detected_with_history, test_calm_account_compromise_escalates, test_calm_duplicate_payment_escalates, test_calm_legal_threat_escalates, test_repeated_negative_escalates, test_urgent_after_hours_goes_oncall, test_normal_after_hours_next_working_day, test_unresolved_negative_15min_escalates, test_simulated_time_change, test_tone_changes_policy_unchanged, test_escalation_record_complete | PASS |
-| Finish with RTM for T5 and pytest output. | `docs/RTM.md`, `docs/README.md`, `docs/verification/pytest-task5.txt` | Actual captured `.\.runtime\python311\python.exe -X utf8 -m pytest -q`: 201 passed, one warning | PASS |
+| Finish with RTM for T5 and pytest output. | `docs/RTM.md`, `docs/README.md`, `docs/verification/tests.txt` | Full-suite output in docs/verification/tests.txt | PASS |
 | Report classifier accuracy ONLY from a labelled test set you created, with the set committed. | `scripts/evaluate_t5.py:evaluate`, `tests/fixtures/task5/labelled_sentiment.json` | scripts/evaluate_sentiment_holdout.py; frozen 9ecebee; release-t5-live.json (22/48, six provider decisions) | PASS |
 
 ## Task 6
@@ -192,7 +192,7 @@ Original task documents are unchanged. The approved 2026-10-17 instruction super
 | test_config_changes_thresholds_without_code | tests/test_task6.py:test_config_changes_thresholds_without_code | test_config_changes_thresholds_without_code | PASS |
 | test_unseen_conversation_set | tests/test_task6.py:test_unseen_conversation_set | test_unseen_conversation_set | PASS |
 | Create 30+ fixture conversations per language in tests/fixtures/. | `scripts/create_t6_fixtures.py:write_fixtures`, `tests/fixtures/{en,hi,te,es}.json` | `test_fixture_conversations_per_language` verifies 35 unique initial messages and three turns per conversation in each language | PASS |
-| Finish with RTM for T6 and pytest output. | `docs/RTM.md`, `docs/verification/pytest-t6.txt`, `docs/README.md` | Captured full-suite command output; all 14 required named tests exist | PASS |
+| Finish with RTM for T6 and pytest output. | `docs/RTM.md`, `docs/verification/tests.txt`, `docs/README.md` | Captured full-suite command output; all 14 required named tests exist | PASS |
 
 ## Previous release additions (historical measured rates retained)
 
@@ -212,15 +212,14 @@ Original task documents are unchanged. The approved 2026-10-17 instruction super
 | Restricted origins, rate limiting and request/upload bounds | app/security_middleware.py:CustomerBoundary; app/upload_api.py:UploadBodyLimit | test_unknown_cross_origin_is_rejected_before_processing; test_rate_limiting_uses_clock_and_survives_key_changes; test_json_body_limit_before_application_parsing; upload gate tests | PASS single-worker boundaries |
 | Docker OCR packs, one worker, Ubuntu/Windows pytest+Ruff and Docker CI | Dockerfile; .github/workflows/ci.yml | actual hosted jobs linked in REPORT; local/fresh outputs | PASS completed jobs; final run status linked separately |
 | Render free sleep/ephemeral-storage limitations documented | docs/deploy-render.md | official Render sources and explicit limits | PASS documentation; live service not deployed |
-| REPORT Markdown/PDF, 2–5 minute recording script, README architecture/quickstarts/table/limits | docs/REPORT.md, REPORT.pdf, demo-script.md; scripts/export_report.py | actual PDF export/open check; fresh README install; six-task trace table | PASS artifacts; live URL unavailable |
-| Historical audit/output retained under archive, mentor attribution retained, no code-authorship assertion | docs/archive/; README.md | archived content, link check and original dataset/task hashes | PASS |
+| REPORT Markdown/PDF and README architecture/quickstarts/table/limits | docs/REPORT.md, REPORT.pdf; scripts/export_report.py | actual PDF export/open check; fresh README install; six-task trace table | PASS artifacts; live URL unavailable |
 | Example fallback models require successful provider evidence; secrets excluded | .env.example; docs/verification/provider-flash-probe.json | GOOGLE_FALLBACK_MODELS empty; secret scan before publication | PASS |
 | Existing tests retained; only approved OCR-format assertion generalized | tests/test_task2.py; all original tests | AST comparison against 8ba4911; original 68 scenario names present; full suite green | PASS |
 | Shared architecture wraps existing training chain | app/chatbot.py:handle_query; preserved src/langchain_helper.py | original FAQ content imported; normal runtime uses shared RAG, not the old chain | PARTIAL legacy-chain execution remains unverified |
 
 Current outputs: [REPORT.md](REPORT.md). No universal NLP, OCR, injection or production reliability claim follows from PASS rows.
 
-## Approved diagnosis revision - 2026-10-19
+## Retrieval and provider checks
 
 | Requirement | File:function | Test / evidence | Status |
 | --- | --- | --- | --- |
@@ -241,23 +240,6 @@ Current outputs: [REPORT.md](REPORT.md). No universal NLP, OCR, injection or pro
 | Provider spacing only in evaluation and rate budgets; honest quota status | scripts/evaluation_support.py:PacedProvider; app/chatbot.py | test_evaluation_waits_for_cooldown_before_starting_next_request_deadline; sequence stdout | PASS |
 | Real translation success only with recorded provider evidence | core/language.py:LanguageProcessor.localize; scripts/verify_translation_live.py | revision-translation-live.json; protected-translation contract tests | PASS honest fallback; live success UNVERIFIED (429) |
 | Held-out hashes checked in CI and full-text contamination rejected | scripts/check_holdouts.py; .github/workflows/ci.yml | test_heldout_hashes_and_no_implementation_contamination; test_guard_rejects_heldout_text_in_implementation_or_examples | PASS bounded full-text guard |
-| Redact current tracked docs/verification path and username text, retain archive measurements | scripts/redact_document_paths.py | test_document_redaction_preserves_measurements_and_valid_json; test_document_redaction_keeps_task_sources; revision-path-redactions.json | PASS current files; history not rewritten |
-| README, REPORT Markdown/PDF contain only measured numbers, preserve attribution and original task/tests | README.md; docs/REPORT.md, REPORT.pdf | final pytest/Ruff; integrity check; PDF open check; final hosted CI linked in handoff | PASS artifacts; quota limits disclosed |
+| README, REPORT Markdown/PDF contain only measured numbers, preserve attribution and original task/tests | README.md; docs/REPORT.md, REPORT.pdf | full pytest/Ruff output; source and fixture checks; PDF export | PASS artifacts; quota limits disclosed |
 
 Current revision does not convert historical PASS rows into universal NLP or production verification. See REPORT for invalid/unrun live evaluations and source evidence.
-
-## Hosted CI prerequisite correction
-
-| Requirement | File:function | Test / evidence | Status |
-| --- | --- | --- | --- |
-| Final Ubuntu/Windows pytest+Ruff and Docker verification | .github/workflows/ci.yml:Install OCR (Windows) | Chocolatey 503 logs retained; pinned vendor installer/hash replaces failing feed; full local pytest/Ruff rerun; final Actions run linked in handoff | Application/tests unchanged; final hosted outcome verified separately |
-
-## Approved README and video presentation
-
-| Requirement | File / artifact | Verification / evidence | Status |
-| --- | --- | --- | --- |
-| Upgrade the GitHub README visually while retaining real evidence and mentor attribution | README.md; docs/assets/readme-hero.svg, readme-proof.svg | Browser graphics preview; link/asset/test-name checks in readme-video-checks.json; earlier measurements retained with invalid/unverified labels | PASS documentation |
-| Plan for the actual Google Vids per-generation duration | docs/video/google-vids-production.md | Dated primary Google sources distinguish 3–10 second Vids clips, separate 60-second avatar segments and Veo 3.1 API 4/6/8 second clips | PASS sourced planning; actual account controls may differ |
-| Reuse the already-chosen avatar, English, landscape and roughly three minutes | docs/video/storyboard.json; production kit | 24 contiguous eight-second scenes total 192 seconds; ten existing-avatar scenes and fourteen actual recordings | PASS plan; no video generated |
-| Clear per-scene dialogue, lens intent, camera movement, background, lighting and consistency | docs/video/scene-prompts.md; prompts/scene-*.txt | Ten self-contained presenter prompts, fourteen capture specifications; narration at most 18 words per scene; same selected identity/voice and room reference | PASS prompt coverage; generated consistency not claimed |
-| Demo commands used in the README exit successfully | scripts/demo_t1.py through demo_t5.py | All five run offline; demo_t5 ticket repository handle closed after observed Windows cleanup failure; full pytest/Ruff rerun | PASS actual commands; no feature or evaluation changes |

@@ -1,7 +1,0 @@
-{
-  "anonymous_https_clone": true,
-  "dotenv_absent": true,
-  "tested_application_files_compared": 101,
-  "differences_from_tested_clean_clone": [],
-  "public_disclosures_byte_exact": true
-}

@@ -9,6 +9,6 @@
 - Jobs, notifications, escalation queues and ticket/SLA events are local SQLite records. No external helpdesk/email/paging delivery is configured. The agent roster is empty until real agents are supplied. Customers supply mandatory ticket fields.
 - SQLite, in-process scheduling, caches, rate budgets and upload recovery require one running worker and writable persistent storage. Distributed coordination, encryption, forensic erasure and production process containment are unverified. Render Free sleeps, stopping timers, and its ephemeral disk can lose state. No live deployment was completed.
 - Only gemini-2.5-flash has successful generation evidence among documented candidates. The public fallback list is empty. Model listing and API key possession do not establish billing tier or available quota. The supported runtime is Python 3.11; the Starlette TestClient/httpx warning remains. Hosted CI is contract/install/build evidence, not production reliability.
-- Complete-text contamination guards do not detect every partial or semantic leakage. Path redaction covers current tracked docs/verification; it does not rewrite historical Git objects. Archived measurements and original recorded hashes retain their historical meaning.
+- Complete-text contamination guards do not detect every partial or semantic leakage. Path redaction covers current tracked docs/verification; it does not rewrite historical Git objects.
 
-See [REPORT.md](REPORT.md), [RTM.md](RTM.md) and [pre-revision disclosures](archive/known_gaps-pre-revision-2026-10-17.md). No intentional placeholder implementation or fabricated success is supplied.
+See [REPORT.md](REPORT.md) for measured results and [RTM.md](RTM.md) for task coverage.

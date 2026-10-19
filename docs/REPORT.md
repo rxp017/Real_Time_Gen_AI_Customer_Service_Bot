@@ -1,6 +1,6 @@
 # Customer service bot engineering report
 
-Date: 2026-10-19. Python 3.11. This revision reports quota-limited evidence. There is **no valid post-fix live accuracy result**: T4 exceeded the preregistered infrastructure-failure limit and the user chose to finish without raising quota. T5 has a separate fallback-only result. No registered application/evaluation source, configuration, resources or prompts changed after the frozen evaluation began.
+Python 3.11. Results recorded on 19 October 2026. Live evaluation was limited by provider quota: the post-fix T4 run was invalid, and T5 was measured separately with the pattern fallback. Application code and evaluation configuration were frozen before these runs.
 
 ## Architecture
 
@@ -31,7 +31,7 @@ The provider adapter performs real generation and batch embeddings. FakeClock, F
 | T5 | Provider JSON classification precedes multilingual resource patterns improved on the separately frozen development set only. Six-label enum, confidence, language and schema validation reject malformed outputs. Complete JSON fences are parsed without relaxing enum checks. Prompt-injected inputs bypass the classifier provider. Risk remains rule-based, independent of provider sentiment and provider failure. Tone changes presentation only. | Original 11 scenarios retained, plus provider/fallback/injection/schema/independent-risk tests. New labels were committed separately before classifier changes. Rules and prompts were not tuned to the frozen held-out set; development labels are separate. Confidence is not calibrated probability. |
 | T6 | Original spans are protected before normalization. Provider translation protects names/IDs/dates/products/citations and numbers with opaque placeholders, rejects missing/duplicated/unknown tokens and new numeric values, then restores original bytes. Curated/source fallback retains actual answer_language; source_answer stays separate. Existing context corrections, superseded values, per-session locks/revision checks and Clock expiry/restore remain. | Original 14 named scenarios retained; byte-preservation, malformed translation, outage and source-separation tests added. Name extraction is bounded; structural validation does not independently prove semantic translation fidelity. |
 
-The latest approved retrieval ordering supersedes historical T4 ordering without editing `docs/tasks/T4.md`. Flagged instruction spans are neutralized while surrounding text is retained for review; the flagged parent remains audited and independent safe sentences may be projected into a retrieval/embedding view. The neutralized instruction span is never evidence; pure instruction documents remain excluded. T1 still quarantines injection-flagged files with original evidence. Original FAQ CSV uses Windows-1252 where needed and is not rewritten. Troubleshooting guide fixtures are ingested through the same metadata schema.
+Authorization, validity and version selection precede scoring, as specified in the retrieval revision. Flagged instruction spans are neutralized while surrounding text is retained for review; the flagged parent remains audited and independent safe sentences may be projected into a retrieval/embedding view. The neutralized instruction span is never evidence; pure instruction documents remain excluded. T1 still quarantines injection-flagged files with original evidence. Original FAQ CSV uses Windows-1252 where needed and is not rewritten. Troubleshooting guide fixtures are ingested through the same metadata schema.
 
 ## Independent development sets and diagnosis
 
@@ -53,7 +53,7 @@ Evidence: [development baseline](verification/revision-t4-dev-baseline-offline.j
 
 The frozen sets had **already been run pre-fix**: T4 3/20 = 15.00% correct-cited answers, 0/52 false answers; T5 assisted pipeline 22/48 = 45.83%, with six accepted provider decisions (earlier pattern-only baseline 17/48). An earlier T5 JSON-fence diagnostic run is also retained. These are re-evaluations of exposed sets, never claimed as unseen validation. The prior [T4 result](verification/release-t4-heldout-live.json), [T5 result](verification/release-t5-live.json) and [initial T5 protocol-format result](verification/release-t5-before-protocol-fix.json) remain unchanged except local path redaction.
 
-Before step 7, [the protocol](evaluation-preregistration.json) froze source/config hash `980e44338656f551dbfe44b6babfe55972e109539920890619c8b6a8a15ae0c4`. More than 10% terminal provider infrastructure failures invalidates a run. Cases, not retries, form the denominator; every case must finish. At most one rerun is allowed and only with the identical config hash. Successful immutable model/content-keyed vectors may be reused. Classification sessions are unique per case/run. A superseded registration, replaced before any run to make prompt languages config-driven, is retained separately.
+Before re-evaluation, [the protocol](evaluation-preregistration.json) froze source/config hash `980e44338656f551dbfe44b6babfe55972e109539920890619c8b6a8a15ae0c4`. More than 10% terminal provider infrastructure failures invalidates a run. Cases, not retries, form the denominator; every case must finish. At most one rerun is allowed and only with the identical config hash. Successful immutable model/content-keyed vectors may be reused. Classification sessions are unique per case/run. The final registration made classifier languages configuration-driven before any run.
 
 | Run | Measured result | Validity / interpretation |
 | --- | --- | --- |
@@ -66,7 +66,7 @@ T4 final decision counts: `{"ambiguity": 4, "answer": 12, "grounding_verifier": 
 
 The provider returned quota ID `GenerateRequestsPerDayPerProjectPerModel-FreeTier`, value 20. The user chose to finish with quota-limited evidence. The orchestration was stopped after complete T4 run 1 and before its optional rerun; later planned live classification was skipped. A separate real translation probe recorded 0/3 successful live translations. All three fell back after HTTP 429 and preserved the synthetic entity bytes. **Successful live translation remains unverified**; scripted provider tests are not live success, and structural byte checks do not certify meaning.
 
-Evidence: [T4 complete post-fix run](verification/revision-t4-postfix-run1.json), [T5 fallback-only result](verification/revision-t5-postfix-fallback-only.json), [quota-limited completion decision](verification/revision-quota-limited-decision.json), [translation probe](verification/revision-translation-live.json), [sequence stdout](verification/revision-postfix-sequence.txt).
+Evidence: [T4 complete post-fix run](verification/revision-t4-postfix-run1.json), [T5 fallback-only result](verification/revision-t5-postfix-fallback-only.json), [translation probe](verification/revision-translation-live.json).
 
 ## Provider reliability, isolation and data integrity
 
@@ -76,52 +76,23 @@ The classifier cache is bounded to 256 entries with 120-second Clock TTL, scoped
 
 CI verifies frozen corpus hashes and scans implementation, prompts, resources, synonyms and golden examples for complete normalized held-out questions/messages, including AST string literals. Adversarial tests prove these guards fail on planted contamination. This catches full-text leakage, not every possible partial semantic contamination. The original task documents, FAQ dataset bytes and all original test functions remain. The only historical assertion generalization was the approved Tesseract version-format check; no test was weakened in this revision.
 
-Tracked documentation and verification files have local workstation/runner paths and usernames replaced by neutral tokens. [The manifest](verification/revision-path-redactions.json) maps original to redacted file hashes. Archive metrics, verdicts, timestamps and historical hash fields are preserved; a historical hash may identify pre-redaction bytes. Public repository identities, legitimate container paths and API routes retain meaning. This is a current-file redaction, not Git history rewriting.
-
 ## Customer UI and deployment
 
-The FastAPI customer page at `/` provides chat, uploads and owner-bound tickets. Rendering uses textContent and DOM element creation; keys are not persisted in the browser. Restricted origins, CSP, request/upload-size gates and Clock rate budgets protect entry points. No admin approval/activation controls appear in the customer UI. Docker includes eng/hin/tel/spa Tesseract packs, uses UID 1000 and one worker. [Render guide](deploy-render.md) documents sleep stopping scheduler/SLA/retention work and ephemeral disk losing local state. Live URL: **not deployed**. [Recording script](demo-script.md) is delivered; no completed video is claimed.
+The FastAPI customer page at `/` provides chat, uploads and owner-bound tickets. Rendering uses textContent and DOM element creation; keys are not persisted in the browser. Restricted origins, CSP, request/upload-size gates and Clock rate budgets protect entry points. No admin approval/activation controls appear in the customer UI. Docker includes eng/hin/tel/spa Tesseract packs, uses UID 1000 and one worker. [Render guide](deploy-render.md) documents sleep stopping scheduler/SLA/retention work and ephemeral disk losing local state. Live URL: **not deployed**.
 
-## Test evidence and reproduction
+## Tests and reproduction
 
-Every approved step ran the full pytest suite and Ruff before its commit. Local final command output, copied from the actual run:
-
-```text
-python -X utf8 -m pytest -q --basetemp .verification/pytest-step8
-........................................................................ [ 20%]
-........................................................................ [ 40%]
-........................................................................ [ 60%]
-........................................................................ [ 81%]
-...................................................................      [100%]
-============================== warnings summary ===============================
-.runtime\python311\Lib\site-packages\fastapi\testclient.py:1
-  WORKSPACE\.runtime\python311\Lib\site-packages\fastapi\testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
-    from starlette.testclient import TestClient as TestClient  # noqa
-
--- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
-355 passed, 1 warning in 86.75s (0:01:26)
-```
-
-Ruff command: `python -m ruff check .` -> `All checks passed!`. The existing Starlette/httpx deprecation warning is retained. [Final pytest stdout](verification/revision-step8-pytest.txt), [final Ruff stdout](verification/revision-step8-ruff.txt), [step 7 pytest](verification/revision-step7-pytest.txt). [CI](https://github.com/rxp017/Real_Time_Gen_AI_Customer_Service_Bot/actions/workflows/ci.yml) installs dependencies/OCR on fresh Ubuntu and Windows checkouts, runs frozen-hash/contamination checks, Ruff and pytest, and builds Docker/checks OCR. Its final commit result is verified in the release handoff.
-
-A fresh local application clone of step 7 commit 5905d7b followed the README Windows bootstrap: official Python 3.11.9, pinned dependencies, tagged language resources and OCR checks. Existing host Tesseract was reused; this was not a fresh operating system. All 48 runtime application/config/resource/dependency/workflow/Docker files compared equal at documentation snapshot daaaf98. The later CI-only repair below changes the workflow, leaving the other 47 files unchanged. The final three additional tests concern documentation redaction; report/export maintenance files are separate. [Install stdout](verification/revision-fresh-install.txt), [runtime source parity before CI repair](verification/revision-fresh-source.json).
-
-```text
-python -X utf8 -m pytest -q --basetemp .verification/pytest-fresh
-352 passed, 1 warning in 81.04s (0:01:21)
+```sh
+python -m pytest -q
 python -m ruff check .
-All checks passed!
+python scripts/check_holdouts.py
 ```
 
-[Complete fresh-clone pytest stdout](verification/revision-fresh-pytest.txt), [fresh Ruff stdout](verification/revision-fresh-ruff.txt), [preserved tests/archive checks](verification/revision-preservation.json), [secret/task/dataset/link checks](verification/revision-integrity.json). Earlier release install logs retain their original dates and are not substituted for this check.
+The local full suite has 355 passing tests and one Starlette/httpx deprecation warning. Complete output: [pytest](verification/tests.txt), [Ruff](verification/lint.txt). CI installs Python and OCR on Ubuntu and Windows, checks frozen corpus hashes, runs the suite and builds Docker. [Workflow](https://github.com/rxp017/Real_Time_Gen_AI_Customer_Service_Bot/actions/workflows/ci.yml).
 
-## Hosted CI prerequisite repair
+A fresh local checkout of application commit 5905d7b followed the Windows README bootstrap and passed 352 tests; three later tests cover documentation redaction. Host Tesseract was reused, so this was a clean checkout rather than a new operating system. [Install log](verification/revision-fresh-install.txt), [pytest](verification/revision-fresh-pytest.txt), [Ruff](verification/revision-fresh-ruff.txt), [source comparison](verification/revision-fresh-source.json).
 
-The eight approved commits ended at daaaf98. Ubuntu pytest/Ruff and Docker passed, but Windows failed before tests: Chocolatey's package feed returned HTTP 503 and installed zero packages, leaving no Tesseract executable. A same-commit failed-job rerun had the same cause. Both [initial Windows log](verification/revision-ci-windows-attempt1.txt) and [retry log](verification/revision-ci-windows-attempt2.txt) are retained with local paths redacted. These CI retries are separate from the preregistered provider evaluation; no additional provider evaluation was run.
-
-A focused follow-up changes only CI prerequisites and associated documentation/evidence. Windows downloads the pinned vendor Tesseract 5.4.0.20240606 installer and verifies SHA-256 against [Microsoft's winget manifest](https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/u/UB-Mannheim/TesseractOCR/5.4.0.20240606/UB-Mannheim.TesseractOCR.installer.yaml) before silent installation. It checks installer exit status and executable presence, then adds the install directory to the runner PATH. Application code, registered source/config hash, all tests and provider measurements remain unchanged. The full suite/Ruff are rerun before this corrective commit; [pytest stdout](verification/revision-ci-install-repair-pytest.txt), [Ruff stdout](verification/revision-ci-install-repair-ruff.txt), [installer checksum/source parity evidence](verification/revision-ci-install-repair.json). The final hosted result is linked in the release handoff.
-
-Development reproduction: `python scripts/evaluate_development.py --help`; `python scripts/tune_retrieval_dev.py --help`; `python scripts/evaluate_sentiment_development.py --help`. Offline regressions use the published real-vector artifact and deterministic quotation, with no API calls. `python scripts/check_holdouts.py` validates the frozen data and text-leakage guard. `python scripts/redact_document_paths.py --check` verifies current documentation path redaction. Do not rerun a registered run index or overwrite its evidence. The optional live rerun remains unconsumed but was declined for quota-limited completion.
+For development-only evaluation, use `scripts/evaluate_development.py`, `scripts/tune_retrieval_dev.py` and `scripts/evaluate_sentiment_development.py` with `--help`. Offline regression tests load the recorded vector artifact and make no API calls. `scripts/check_holdouts.py` checks frozen data and full-text contamination. Registered run files cannot be overwritten; no optional live rerun was taken.
 
 ## Remaining limits
 

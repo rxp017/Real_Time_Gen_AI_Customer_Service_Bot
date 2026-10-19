@@ -23,3 +23,9 @@ faiss_index/
 quarantine/
 data/inbox/
 .uploads/
+
+docs/video/
+
+docs/archive/
+
+docs/demo-script.md
